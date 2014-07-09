@@ -17,4 +17,5 @@ tar -C $TOOLS_DIR -czf $BUILD_DIR/core_phylogenomics_pipeline.tar.gz core_phylog
 tar -C $WORKFLOWS_DIR -czf $BUILD_DIR/core_phylogenomics_pipeline_workflow.tar.gz core_phylogenomics_pipeline_workflow
 
 echo "Successfully built tarballs"
-ls $BUILD_DIR/*.tar.gz
+ls -l $BUILD_DIR/*.tar.gz
+echo "Please upload these into a Galaxy Tool Shed"
