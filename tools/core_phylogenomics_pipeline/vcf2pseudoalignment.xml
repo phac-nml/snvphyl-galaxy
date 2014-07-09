@@ -1,0 +1,66 @@
+<tool id="vcf2pseudoalignment" name="VCF 2 pseudoalignment" version ="0.0.9">
+  <description>create a pseudo alignment from multiple VCFs files</description>
+        <requirements>
+                <requirement type="package" version="1.1">core-phylogenomics</requirement>
+		<!--requirement type="package" version="1.0">smalt</requirement>
+		<requirement type="package" version="1.0">samtools</requirement>
+		<requirement type="package" version="1.0">freebayes</requirement>
+		<requirement type="package" version="1.0">bcftools_view</requirement>
+		<requirement type="package" version="1.0">msa_datatypes</requirement-->
+        </requirements>
+
+  <command interpreter="bash">
+	vcf2pseudoalignment.sh $positions $phylip $fasta
+	-r "$reference"
+	#if str($invalid) != 'None':
+		--invalid-pos "$invalid"
+	#end if
+  	-c "$coverage"
+	-f fasta
+	-f phylip
+	-v	
+	--numcpus $numcpus
+	$ambiguous
+
+	#for $f in $freebayes_collection.keys# --vcfsplit "$f=$freebayes_collection[$f]" #end for#
+	#for $f in $mpileup_collection.keys# --mpileup "$f=$mpileup_collection[$f]" #end for#
+
+
+
+  </command>
+  <inputs>
+    <param name="reference" type="text"  label="Reference Name" value='reference' format="fasta"/>
+    <param name="invalid" type="data"  label="Invalid position file" format="tabular" optional="true"/>
+    <param name="coverage" type="integer" value="15" label="minimum coverage"/>
+    <param name="ambiguous" truevalue="--keep-ambiguous" falsevalue="" type="boolean" checked="false" label="Keep ambiguous base pair"/>
+
+    <param name="freebayes_collection" type="data_collection" label="FreeBayes filtered VCF" help="" optional="false" format="vcf" collection_type="list" />
+    <param name="mpileup_collection" type="data_collection" label="Mpileup VCF" help="" optional="false" format="tabular" collection_type="list" />
+    <param name="numcpus" type="select" label="Number of CPUS" multiple="false" optional="false">
+	<option value="4">4</option>
+	<option value="8">8</option>
+	<option value="16">16</option>
+	<option value="32">32</option>
+    </param>
+
+  </inputs>
+  <outputs>
+    <data format="tabular" name="positions" />
+    <data format="fasta" name="fasta" />
+    <data format="phylip" name="phylip" />
+  </outputs>
+  <stdio>
+    	<exit_code range="1:" level="fatal" description="Unknown error has occured"/>
+  </stdio>
+  <!--tests>
+    <test>
+      <param name="input" value="fa_gc_content_input.fa"/>
+      <output name="out_file1" file="fa_gc_content_output.txt"/>
+    </test>
+  </tests-->
+
+  <help>
+Best metaalignment program ever!
+  </help>
+
+</tool>

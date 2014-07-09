@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<repositories description="Core SNP pipekine requires theses tools to run the workflow.">
+    <!--repository changeset_revision="43fe916a5987" name="smalt" owner="phil" toolshed="http://galaxy-toolshed-dev.corefacility.ca" />
+    <repository changeset_revision="af65bfb54977" name="suite_samtools_0_1_19" owner="devteam" toolshed="http://toolshed.g2.bx.psu.edu" />
+    <repository changeset_revision="7ea28286cd75" name="freebayes" owner="phil" toolshed="http://galaxy-toolshed-dev.corefacility.ca" />
+    <repository changeset_revision="20b7bdc20b19" name="bcftools_view" owner="phil" toolshed="http://galaxy-toolshed-dev.corefacility.ca" />
+    <repository changeset_revision="c6433f2d1c06" name="msa_datatypes" owner="phil" toolshed="http://galaxy-toolshed-dev.corefacility.ca" /-->
+</repositories>

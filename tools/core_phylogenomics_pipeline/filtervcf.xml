@@ -1,0 +1,25 @@
+<tool id="filtervcf" name="Filter vcf" version ="0.0.1">
+  <description>filter out indels and complex SNPS</description>
+        <requirements>
+                <requirement type="package" version="1.1">core-phylogenomics</requirement>
+        </requirements>
+  <command interpreter="perl">
+	/\$VCF_LIB/filterVcf.pl --noindels  $vcf
+	-o $vcfout
+  </command>
+  <inputs>
+    <param name="vcf" type="data"  label="VCF file" format="vcf"/>
+  </inputs>
+  <outputs>
+    <data format="vcf" name="vcfout" />
+  </outputs>
+  <stdio>
+  </stdio>
+  <!--tests>
+    </tests-->
+
+  <help>
+  Filter out indels and complex variants from VCF file
+  </help>
+
+</tool>
