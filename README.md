@@ -3,6 +3,14 @@ Galaxy Core Phylogenomics Pipeline
 
 This contains the Galaxy tool definitions and workflow definitions needed to install the [Core Phylogenomis Pipeline](https://github.com/apetkau/core-phylogenomics) into Galaxy.
 
+[pipeline-screenshot.png](pipeline-screenshot.png)
+
+Authors
+=======
+
+Philip Mabon, Aaron Petkau
+
+
 Building Tool Shed Packages
 ---------------------------
 
