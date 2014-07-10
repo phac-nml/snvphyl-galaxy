@@ -17,8 +17,8 @@
             "name": "Input dataset", 
             "outputs": [], 
             "position": {
-                "left": 199.75286865234375, 
-                "top": 199.75283718109131
+                "left": 200, 
+                "top": 200
             }, 
             "tool_errors": null, 
             "tool_id": null, 
@@ -34,18 +34,18 @@
             "inputs": [
                 {
                     "description": "", 
-                    "name": "Input Dataset Collection"
+                    "name": "Paired end Illumina"
                 }
             ], 
             "name": "Input dataset collection", 
             "outputs": [], 
             "position": {
-                "left": 199.75286865234375, 
-                "top": 282.93466091156006
+                "left": 200, 
+                "top": 370
             }, 
             "tool_errors": null, 
             "tool_id": null, 
-            "tool_state": "{\"collection_type\": \"list\", \"name\": \"Input Dataset Collection\"}", 
+            "tool_state": "{\"collection_type\": \"list:paired\", \"name\": \"Paired end Illumina\"}", 
             "tool_version": null, 
             "type": "data_collection_input", 
             "user_outputs": []
@@ -53,6 +53,35 @@
         "2": {
             "annotation": "", 
             "id": 2, 
+            "input_connections": {
+                "fasta": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Find Repeats", 
+            "outputs": [
+                {
+                    "name": "out", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 462, 
+                "top": 200
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "galaxy-toolshed-dev.corefacility.ca/repos/phil/core_pipeline/findrepeat/0.0.2", 
+            "tool_state": "{\"__page__\": 0, \"fasta\": \"null\", \"__rerun_remap_job_id__\": null, \"pid\": \"\\\"90\\\"\", \"length\": \"\\\"150\\\"\"}", 
+            "tool_version": "0.0.2", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "3": {
+            "annotation": "", 
+            "id": 3, 
             "input_connections": {
                 "reference": {
                     "id": 0, 
@@ -72,43 +101,14 @@
                 }
             ], 
             "position": {
-                "left": 462.93466186523438, 
-                "top": 199.75283718109131
+                "left": 462, 
+                "top": 313
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
-            "tool_id": "galaxy-shed.corefacility.ca/repos/phil/smalt/smalt_index/0.0.3", 
-            "tool_state": "{\"__page__\": 0, \"k\": \"\\\"13\\\"\", \"__rerun_remap_job_id__\": null, \"s\": \"\\\"6\\\"\", \"reference\": \"null\"}", 
+            "tool_id": "galaxy-toolshed-dev.corefacility.ca/repos/phil/smalt_collection/smalt_index/0.0.3", 
+            "tool_state": "{\"__page__\": 0, \"k\": \"\\\"13\\\"\", \"__rerun_remap_job_id__\": null, \"s\": \"\\\"7\\\"\", \"reference\": \"null\"}", 
             "tool_version": "0.0.3", 
-            "type": "tool", 
-            "user_outputs": []
-        }, 
-        "3": {
-            "annotation": "", 
-            "id": 3, 
-            "input_connections": {
-                "fasta": {
-                    "id": 0, 
-                    "output_name": "output"
-                }
-            }, 
-            "inputs": [], 
-            "name": "Find Repeats", 
-            "outputs": [
-                {
-                    "name": "out", 
-                    "type": "tabular"
-                }
-            ], 
-            "position": {
-                "left": 462.93466186523438, 
-                "top": 336.94033718109131
-            }, 
-            "post_job_actions": {}, 
-            "tool_errors": null, 
-            "tool_id": "galaxy-shed.corefacility.ca/repos/phil/core_phylogenomics/findrepeat/0.0.2", 
-            "tool_state": "{\"__page__\": 0, \"fasta\": \"null\", \"__rerun_remap_job_id__\": null, \"pid\": \"\\\"90\\\"\", \"length\": \"\\\"150\\\"\"}", 
-            "tool_version": "0.0.2", 
             "type": "tool", 
             "user_outputs": []
         }, 
@@ -116,16 +116,16 @@
             "annotation": "", 
             "id": 4, 
             "input_connections": {
-                "singlePaired|sInput1": {
+                "singlePaired|fastq_collection": {
                     "id": 1, 
                     "output_name": "output"
                 }, 
                 "sma": {
-                    "id": 2, 
+                    "id": 3, 
                     "output_name": "output2"
                 }, 
                 "smi": {
-                    "id": 2, 
+                    "id": 3, 
                     "output_name": "output"
                 }
             }, 
@@ -138,13 +138,13 @@
                 }
             ], 
             "position": {
-                "left": 698.10509490966797, 
-                "top": 199.75283718109131
+                "left": 690, 
+                "top": 200
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
-            "tool_id": "galaxy-shed.corefacility.ca/repos/phil/smalt/smalt_map/0.0.3", 
-            "tool_state": "{\"minbasq\": \"\\\"\\\"\", \"__page__\": 0, \"insertmin\": \"\\\"\\\"\", \"mincover\": \"\\\"\\\"\", \"insfil\": \"null\", \"scordiff\": \"\\\"\\\"\", \"insertmax\": \"\\\"\\\"\", \"singlePaired\": \"{\\\"sInput1\\\": null, \\\"sPaired\\\": \\\"single\\\", \\\"__current_case__\\\": 0}\", \"minid\": \"\\\"0.5\\\"\", \"__rerun_remap_job_id__\": null, \"search_harder\": \"\\\"False\\\"\", \"seed\": \"\\\"-1\\\"\", \"threads\": \"\\\"6\\\"\", \"sw_weighted\": \"\\\"False\\\"\", \"smi\": \"null\", \"outformat\": \"\\\"samsoft\\\"\", \"pairtype\": \"\\\"se\\\"\", \"minscor\": \"\\\"\\\"\", \"sma\": \"null\"}", 
+            "tool_id": "galaxy-toolshed-dev.corefacility.ca/repos/phil/smalt_collection/smalt_map/0.0.3", 
+            "tool_state": "{\"minbasq\": \"\\\"\\\"\", \"__page__\": 0, \"insertmin\": \"\\\"\\\"\", \"mincover\": \"\\\"\\\"\", \"insfil\": \"null\", \"scordiff\": \"\\\"\\\"\", \"insertmax\": \"\\\"\\\"\", \"singlePaired\": \"{\\\"fastq_collection\\\": null, \\\"sPaired\\\": \\\"collections\\\", \\\"__current_case__\\\": 3}\", \"minid\": \"\\\"0.5\\\"\", \"__rerun_remap_job_id__\": null, \"search_harder\": \"\\\"False\\\"\", \"seed\": \"\\\"-1\\\"\", \"threads\": \"\\\"8\\\"\", \"sw_weighted\": \"\\\"False\\\"\", \"smi\": \"null\", \"outformat\": \"\\\"samsoft\\\"\", \"pairtype\": \"\\\"pe\\\"\", \"minscor\": \"\\\"\\\"\", \"sma\": \"null\"}", 
             "tool_version": "0.0.3", 
             "type": "tool", 
             "user_outputs": []
@@ -171,8 +171,8 @@
                 }
             ], 
             "position": {
-                "left": 1026.2868957519531, 
-                "top": 199.75283718109131
+                "left": 1017, 
+                "top": 200
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
@@ -208,8 +208,8 @@
                 }
             ], 
             "position": {
-                "left": 1261.4687194824219, 
-                "top": 199.74999904632568
+                "left": 1245, 
+                "top": 200
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
@@ -249,13 +249,13 @@
                 }
             ], 
             "position": {
-                "left": 1267.4658813476562, 
-                "top": 373.92895412445068
+                "left": 1252, 
+                "top": 429
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
             "tool_id": "galaxy-shed.corefacility.ca/repos/phil/freebayes/freebayes/0.0.4", 
-            "tool_state": "{\"reference_source\": \"{\\\"ref_file\\\": null, \\\"reference_source_selector\\\": \\\"history\\\", \\\"input_bams\\\": [{\\\"__index__\\\": 0, \\\"input_bam\\\": null}], \\\"__current_case__\\\": 1}\", \"__rerun_remap_job_id__\": null, \"options_type\": \"{\\\"section_mappability_priors_expectations_type\\\": {\\\"section_mappability_priors_expectations_type_selector\\\": \\\"do_not_set\\\", \\\"__current_case__\\\": 0}, \\\"haplotype_basis_alleles\\\": null, \\\"output_trace_option\\\": \\\"False\\\", \\\"dont_left_align_indels\\\": \\\"False\\\", \\\"options_type_selector\\\": \\\"advanced\\\", \\\"input_variant_type\\\": {\\\"input_variant_type_selector\\\": \\\"do_not_provide\\\", \\\"__current_case__\\\": 0}, \\\"report_all_haplotype_alleles\\\": \\\"False\\\", \\\"section_algorithmic_features_type\\\": {\\\"exclude_unobserved_genotypes\\\": \\\"False\\\", \\\"genotyping_max_iterations\\\": \\\"1000\\\", \\\"report_genotype_likelihood_max\\\": \\\"False\\\", \\\"genotype_variant_threshold\\\": \\\"\\\", \\\"posterior_integration_limits_m\\\": \\\"3\\\", \\\"posterior_integration_limits_n\\\": \\\"1\\\", \\\"harmonic_indel_quality\\\": \\\"False\\\", \\\"section_algorithmic_features_type_selector\\\": \\\"set\\\", \\\"site_selection_max_iterations\\\": \\\"5\\\", \\\"read_dependence_factor\\\": \\\"0.9\\\", \\\"__current_case__\\\": 1, \\\"use_mapping_quality\\\": \\\"False\\\", \\\"genotyping_max_banddepth\\\": \\\"7\\\", \\\"genotype_qualities\\\": \\\"False\\\"}, \\\"input_populations_file\\\": null, \\\"section_reporting_type\\\": {\\\"section_reporting_type_selector\\\": \\\"do_not_set\\\", \\\"__current_case__\\\": 0}, \\\"section_population_priors_type\\\": {\\\"section_population_priors_type_selector\\\": \\\"do_not_set\\\", \\\"__current_case__\\\": 0}, \\\"section_allele_scope_type\\\": {\\\"section_allele_scope_type_selector\\\": \\\"do_not_set\\\", \\\"__current_case__\\\": 0}, \\\"section_input_filters_type\\\": {\\\"min_alternate_count\\\": \\\"2\\\", \\\"section_input_filters_type_selector\\\": \\\"set\\\", \\\"__current_case__\\\": 1, \\\"min_coverage\\\": \\\"5\\\", \\\"mismatch_base_quality_threshold\\\": \\\"10\\\", \\\"read_snp_limit\\\": \\\"\\\", \\\"quality_filter_type\\\": {\\\"min_supporting_allele_qsum\\\": \\\"0\\\", \\\"min_base_quality\\\": \\\"30\\\", \\\"min_mapping_quality\\\": \\\"30\\\", \\\"quality_filter_type_selector\\\": \\\"apply_filters\\\", \\\"__current_case__\\\": 1, \\\"min_supporting_mapping_qsum\\\": \\\"0\\\"}, \\\"read_max_mismatch_fraction\\\": \\\"1.0\\\", \\\"min_alternate_fraction\\\": \\\"0.75\\\", \\\"read_indel_limit\\\": \\\"\\\", \\\"use_duplicate_reads\\\": \\\"False\\\", \\\"min_alternate_total\\\": \\\"1\\\", \\\"read_mismatch_limit\\\": \\\"\\\", \\\"indel_exclusion_window\\\": \\\"-1\\\", \\\"min_alternate_qsum\\\": \\\"0\\\"}, \\\"__current_case__\\\": 1, \\\"section_population_model_type\\\": {\\\"section_population_model_type_selector\\\": \\\"set\\\", \\\"pooled_continuous\\\": \\\"False\\\", \\\"pooled_discrete\\\": \\\"False\\\", \\\"__current_case__\\\": 1, \\\"theta\\\": \\\"0.001\\\", \\\"ploidy\\\": \\\"1\\\"}, \\\"use_reference_allele_type\\\": {\\\"use_reference_allele_type_selector\\\": \\\"do_not_include_reference_allele\\\", \\\"__current_case__\\\": 0}, \\\"output_failed_alleles_option\\\": \\\"False\\\", \\\"target_limit_type\\\": {\\\"target_limit_type_selector\\\": \\\"do_not_limit\\\", \\\"__current_case__\\\": 0}, \\\"input_cnv_map_bed\\\": null, \\\"input_sample_file\\\": null}\", \"__page__\": 0}", 
+            "tool_state": "{\"reference_source\": \"{\\\"ref_file\\\": null, \\\"reference_source_selector\\\": \\\"history\\\", \\\"input_bams\\\": [{\\\"__index__\\\": 0, \\\"input_bam\\\": null}], \\\"__current_case__\\\": 1}\", \"__rerun_remap_job_id__\": null, \"options_type\": \"{\\\"section_mappability_priors_expectations_type\\\": {\\\"section_mappability_priors_expectations_type_selector\\\": \\\"do_not_set\\\", \\\"__current_case__\\\": 0}, \\\"haplotype_basis_alleles\\\": null, \\\"output_trace_option\\\": \\\"False\\\", \\\"dont_left_align_indels\\\": \\\"False\\\", \\\"options_type_selector\\\": \\\"advanced\\\", \\\"input_variant_type\\\": {\\\"input_variant_type_selector\\\": \\\"do_not_provide\\\", \\\"__current_case__\\\": 0}, \\\"report_all_haplotype_alleles\\\": \\\"False\\\", \\\"section_algorithmic_features_type\\\": {\\\"exclude_unobserved_genotypes\\\": \\\"False\\\", \\\"genotyping_max_iterations\\\": \\\"1000\\\", \\\"report_genotype_likelihood_max\\\": \\\"False\\\", \\\"genotype_variant_threshold\\\": \\\"\\\", \\\"posterior_integration_limits_m\\\": \\\"3\\\", \\\"posterior_integration_limits_n\\\": \\\"1\\\", \\\"harmonic_indel_quality\\\": \\\"False\\\", \\\"section_algorithmic_features_type_selector\\\": \\\"set\\\", \\\"site_selection_max_iterations\\\": \\\"5\\\", \\\"read_dependence_factor\\\": \\\"0.9\\\", \\\"__current_case__\\\": 1, \\\"use_mapping_quality\\\": \\\"False\\\", \\\"genotyping_max_banddepth\\\": \\\"7\\\", \\\"genotype_qualities\\\": \\\"False\\\"}, \\\"input_populations_file\\\": null, \\\"section_reporting_type\\\": {\\\"section_reporting_type_selector\\\": \\\"do_not_set\\\", \\\"__current_case__\\\": 0}, \\\"section_population_priors_type\\\": {\\\"section_population_priors_type_selector\\\": \\\"do_not_set\\\", \\\"__current_case__\\\": 0}, \\\"section_allele_scope_type\\\": {\\\"section_allele_scope_type_selector\\\": \\\"do_not_set\\\", \\\"__current_case__\\\": 0}, \\\"section_input_filters_type\\\": {\\\"min_alternate_count\\\": \\\"2\\\", \\\"section_input_filters_type_selector\\\": \\\"set\\\", \\\"__current_case__\\\": 1, \\\"min_coverage\\\": \\\"20\\\", \\\"mismatch_base_quality_threshold\\\": \\\"10\\\", \\\"read_snp_limit\\\": \\\"\\\", \\\"quality_filter_type\\\": {\\\"min_supporting_allele_qsum\\\": \\\"0\\\", \\\"min_base_quality\\\": \\\"30\\\", \\\"min_mapping_quality\\\": \\\"30\\\", \\\"quality_filter_type_selector\\\": \\\"apply_filters\\\", \\\"__current_case__\\\": 1, \\\"min_supporting_mapping_qsum\\\": \\\"0\\\"}, \\\"read_max_mismatch_fraction\\\": \\\"1.0\\\", \\\"min_alternate_fraction\\\": \\\"0.75\\\", \\\"read_indel_limit\\\": \\\"\\\", \\\"use_duplicate_reads\\\": \\\"False\\\", \\\"min_alternate_total\\\": \\\"1\\\", \\\"read_mismatch_limit\\\": \\\"\\\", \\\"indel_exclusion_window\\\": \\\"-1\\\", \\\"min_alternate_qsum\\\": \\\"0\\\"}, \\\"__current_case__\\\": 1, \\\"section_population_model_type\\\": {\\\"section_population_model_type_selector\\\": \\\"set\\\", \\\"pooled_continuous\\\": \\\"False\\\", \\\"pooled_discrete\\\": \\\"False\\\", \\\"__current_case__\\\": 1, \\\"theta\\\": \\\"0.001\\\", \\\"ploidy\\\": \\\"1\\\"}, \\\"use_reference_allele_type\\\": {\\\"use_reference_allele_type_selector\\\": \\\"do_not_include_reference_allele\\\", \\\"__current_case__\\\": 0}, \\\"output_failed_alleles_option\\\": \\\"False\\\", \\\"target_limit_type\\\": {\\\"target_limit_type_selector\\\": \\\"do_not_limit\\\", \\\"__current_case__\\\": 0}, \\\"input_cnv_map_bed\\\": null, \\\"input_sample_file\\\": null}\", \"__page__\": 0}", 
             "tool_version": "0.0.4", 
             "type": "tool", 
             "user_outputs": []
@@ -278,8 +278,8 @@
                 }
             ], 
             "position": {
-                "left": 1589.6675415039062, 
-                "top": 199.75283718109131
+                "left": 1573, 
+                "top": 200
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
@@ -307,12 +307,12 @@
                 }
             ], 
             "position": {
-                "left": 1589.6675415039062, 
-                "top": 335.93179225921631
+                "left": 1573, 
+                "top": 338
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
-            "tool_id": "galaxy-shed.corefacility.ca/repos/phil/core_phylogenomics/filtervcf/0.0.1", 
+            "tool_id": "galaxy-toolshed-dev.corefacility.ca/repos/phil/core_pipeline/filtervcf/0.0.1", 
             "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"vcf\": \"null\"}", 
             "tool_version": "0.0.1", 
             "type": "tool", 
@@ -327,7 +327,7 @@
                     "output_name": "vcfout"
                 }, 
                 "invalid": {
-                    "id": 3, 
+                    "id": 2, 
                     "output_name": "out"
                 }, 
                 "mpileup_collection": {
@@ -352,8 +352,8 @@
                 }
             ], 
             "position": {
-                "left": 1839.8521728515625, 
-                "top": 199.75283718109131
+                "left": 1814, 
+                "top": 200
             }, 
             "post_job_actions": {
                 "RenameDatasetActionphylip": {
@@ -372,8 +372,8 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "galaxy-shed.corefacility.ca/repos/phil/core_phylogenomics/vcf2pseudoalignment/0.0.9", 
-            "tool_state": "{\"ambiguous\": \"\\\"False\\\"\", \"reference\": \"\\\"Reference\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"invalid\": \"null\", \"coverage\": \"\\\"5\\\"\", \"freebayes_collection\": \"null\", \"numcpus\": \"\\\"32\\\"\", \"mpileup_collection\": \"null\"}", 
+            "tool_id": "galaxy-toolshed-dev.corefacility.ca/repos/phil/core_pipeline/vcf2pseudoalignment/0.0.9", 
+            "tool_state": "{\"ambiguous\": \"\\\"False\\\"\", \"reference\": \"\\\"Reference\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"invalid\": \"null\", \"coverage\": \"\\\"20\\\"\", \"freebayes_collection\": \"null\", \"numcpus\": \"\\\"32\\\"\", \"mpileup_collection\": \"null\"}", 
             "tool_version": "0.0.9", 
             "type": "tool", 
             "user_outputs": []
@@ -400,8 +400,8 @@
                 }
             ], 
             "position": {
-                "left": 2103.0340576171875, 
-                "top": 199.75283718109131
+                "left": 2077, 
+                "top": 200
             }, 
             "post_job_actions": {
                 "RenameDatasetActionoutput_tree": {
@@ -437,8 +437,8 @@
                 }
             ], 
             "position": {
-                "left": 2103.0340576171875, 
-                "top": 352.93466091156006
+                "left": 2077, 
+                "top": 357
             }, 
             "post_job_actions": {
                 "RenameDatasetActioncsv": {
@@ -450,7 +450,7 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "galaxy-shed.corefacility.ca/repos/phil/core_phylogenomics/snpmatrix/0.0.1", 
+            "tool_id": "galaxy-toolshed-dev.corefacility.ca/repos/phil/core_pipeline/snpmatrix/0.0.1", 
             "tool_state": "{\"__page__\": 0, \"phylip\": \"null\", \"__rerun_remap_job_id__\": null}", 
             "tool_version": "0.0.1", 
             "type": "tool", 
