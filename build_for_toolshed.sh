@@ -13,8 +13,8 @@ then
 	mkdir $BUILD_DIR
 fi
 
-tar -C $TOOLS_DIR -czf $BUILD_DIR/core_phylogenomics_pipeline.tar.gz core_phylogenomics_pipeline
-tar -C $WORKFLOWS_DIR -czf $BUILD_DIR/core_phylogenomics_pipeline_workflow.tar.gz core_phylogenomics_pipeline_workflow
+tar -C $TOOLS_DIR/core_phylogenomics_pipeline -czf $BUILD_DIR/core_phylogenomics_pipeline.tar.gz .
+tar -C $WORKFLOWS_DIR/core_phylogenomics_pipeline_workflow -czf $BUILD_DIR/core_phylogenomics_pipeline_workflow.tar.gz .
 
 echo "Successfully built tarballs"
 ls -l $BUILD_DIR/*.tar.gz
