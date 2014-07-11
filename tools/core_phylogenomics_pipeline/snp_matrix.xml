@@ -1,8 +1,8 @@
 <tool id="snpmatrix" name="SNP Matrix" version ="0.0.1">
   <description>Create SNP matrix from Phylip file</description>
-        <requirements>
-                <requirement type="package" version="1.1">core-phylogenomics</requirement>
-        </requirements>
+  <requirements>
+    <requirement type="package" version="1.1">core-phylogenomics</requirement>
+  </requirements>
 
   <command interpreter="perl">
 	/\$SCRIPTS/snp_matrix.pl   $phylip
