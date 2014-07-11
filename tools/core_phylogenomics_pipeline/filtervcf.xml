@@ -15,8 +15,12 @@
   </outputs>
   <stdio>
   </stdio>
-  <!--tests>
-    </tests-->
+  <tests>
+    <test>
+      <param name="vcf" value="filterVcf.input.1.vcf"/>
+      <output name="vcfout" file="filterVcf.output.1.vcf"/>
+    </test>
+  </tests>
 
   <help>
   Filter out indels and complex variants from VCF file
