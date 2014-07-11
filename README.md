@@ -56,4 +56,48 @@ Once you have uploaded the packages to a Galaxy Tool Shed, you can install to a 
 Step 5: Test out your tool in Galaxy
 ------------------------------------
 
-Once you've finished installing your tool, you should be able to test it out within Galaxy.
+Once you've finished installing your tool, you should be able to test it out within Galaxy.  This can be automated by running the functional tests using the commands (from https://wiki.galaxyproject.org/TestingInstalledTools):
+
+```bash
+$ export GALAXY_TOOL_DEPENDENCY_DIR=/path/to/tool-dependencies
+$ sh run_functional_tests.sh -installed
+```
+
+This should generate a report in the file `run_functional_tests.html`.
+
+Test
+====
+
+Testing tools can be performed once installed to a Tool Shed using the following steps.  This is a summary of the information found at https://wiki.galaxyproject.org/AutomatedToolTests.
+
+Step 1: Check for Valid Tests
+-----------------------------
+
+This will check all repositories in the Tool Shed for any valid tests.  This can be performed by running:
+
+```bash
+$ python lib/tool_shed/scripts/check_repositories_for_functional_tests.py
+```
+
+This will return a report of valid tests found within the repositories and mark any valid tests as being runnable.
+
+Step 2: Run Functional Tests
+----------------------------
+
+This step will build a clean install of Galaxy, install any tools marked as runnable from **Step 1** and attempt to run all functional tests.  This step can be run by setting the following environment variables and running the given script:
+
+```bash
+export GALAXY_INSTALL_TEST_TOOL_SHED_API_KEY=key
+export GALAXY_INSTALL_TEST_TOOL_SHED_URL=http://location/to/toolshed
+export GALAXY_INSTALL_TEST_TOOL_DEPENDENCY_DIR=/tmp/location/to/tmp/dir
+
+sh install_and_test_tool_shed_repositories.sh
+```
+
+It's also possible to run with the below command, from https://wiki.galaxyproject.org/HostingALocalToolShed.
+
+```bash
+$ sh run_tool_shed_functional_tests.sh
+```
+
+Also see https://wiki.galaxyproject.org/InstallAndTestCertification.

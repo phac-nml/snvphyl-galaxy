@@ -9,15 +9,19 @@
 	-o $csv
   </command>
   <inputs>
-    <param name="phylip" type="data"  label="Phylip file" format="phylip"/>
+    <param name="phylip" type="data" label="Phylip file" format="phylip"/>
   </inputs>
   <outputs>
-    <data format="csv" name="csv" />
+    <data format="csv" name="csv"/>
   </outputs>
   <stdio>
   </stdio>
-  <!--tests>
-    </tests-->
+  <tests>
+    <test>
+      <param name="phylip" value="pseudoalign-3.phy"/>
+      <output name="csv" file="pseudoalign-3.phy.out"/>
+    </test>
+  </tests>
 
   <help>
   Create SNP matrix from Phylip file format
