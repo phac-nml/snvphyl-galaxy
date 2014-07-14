@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<toolbox>
+  <section name="Smalt Tools" id="smalt">
+    <label text="Smalt Tools" id="smalt_tools" />
+    <tool file="smalt/tools/smalt/smalt_check.xml" />
+    <tool file="smalt/tools/smalt/smalt_index.xml" />
+  </section>
+</toolbox>

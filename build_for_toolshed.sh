@@ -13,8 +13,12 @@ then
 	mkdir $BUILD_DIR
 fi
 
-tar -C $TOOLS_DIR/core_phylogenomics_pipeline -czf $BUILD_DIR/core_phylogenomics_pipeline.tar.gz .
-tar -C $TOOLS_DIR/phyml -czf $BUILD_DIR/phyml.tar.gz .
+# build all tools under $TOOLS_DIR
+for i in $TOOLS_DIR/*
+do
+	name=`basename $i`
+	tar -C $TOOLS_DIR/$name -czf $BUILD_DIR/$name.tar.gz .
+done
 
 tar -C $WORKFLOWS_DIR/core_phylogenomics_pipeline_workflow -czf $BUILD_DIR/core_phylogenomics_pipeline_workflow.tar.gz .
 

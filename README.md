@@ -59,6 +59,7 @@ Step 5: Install Additional Dependencies
 The following additional dependency packages included in this repository need to be installed to the Galaxy Tool Shed, and then into Galaxy.  These are located under `tools/`.  The full list of dependencies is:
 
 * phyml
+* smalt_collection
 
 In order to install the dependencies, use the following steps.
 
