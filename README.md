@@ -66,3 +66,10 @@ $ sh run_functional_tests.sh -installed
 
 This should generate a report in the file `run_functional_tests.html`.
 
+[Core Phylogenomis Pipeline]: https://github.com/apetkau/core-phylogenomics
+[Galaxy Tool Shed]: https://wiki.galaxyproject.org/ToolShed
+[Testing Installed Tools]: https://wiki.galaxyproject.org/TestingInstalledTools
+[IRIDA Galaxy Setup]: https://irida.corefacility.ca/gitlab/irida/irida-install-documentation/tree/master/galaxy
+[Automated Tool Tests]: https://wiki.galaxyproject.org/AutomatedToolTests
+[Hosting a Local Tool Shed]: https://wiki.galaxyproject.org/HostingALocalToolShed
+[Install and Test Certification]: https://wiki.galaxyproject.org/InstallAndTestCertification
