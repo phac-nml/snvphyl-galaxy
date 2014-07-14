@@ -66,10 +66,10 @@ $ sh run_functional_tests.sh -installed
 
 This should generate a report in the file `run_functional_tests.html`.
 
-Test
-====
+Test Tool Installation from Tool Shed
+=====================================
 
-Testing tools can be performed once installed to a Tool Shed using the following steps.  This is a summary of the information found at [Automated Tool Tests][].
+Testing the entire process of installing tools into a Galaxy instance can be performed using the following steps.  This is a summary of the information found at [Automated Tool Tests][].
 
 Step 1: Check for Valid Tests
 -----------------------------
@@ -77,7 +77,7 @@ Step 1: Check for Valid Tests
 This will check all repositories in the Tool Shed for any valid tests.  This can be performed by running:
 
 ```bash
-$ python lib/tool_shed/scripts/check_repositories_for_functional_tests.py
+$ python lib/tool_shed/scripts/check_repositories_for_functional_tests.py tool_shed_wsgi.ini
 ```
 
 This will return a report of valid tests found within the repositories and mark any valid tests as being runnable.

@@ -52,7 +52,7 @@
   <stdio>
     	<exit_code range="1:" level="fatal" description="Unknown error has occured"/>
   </stdio>
-  <tests>
+  <!--tests>
     <test>
       <param name="reference" value="vcf2pseudoalignment.input.1.reference.fasta"/>
       <param name="coverage" value="4"/>
@@ -76,7 +76,7 @@
       <output name="fasta" file="vcf2pseudoalignment.output.1.expected.fasta"/>
       <output name="phylip" file="vcf2pseudoalignment.output.1.expected.phy"/>
     </test>
-  </tests>
+  </tests-->
 
   <help>
 Best metaalignment program ever!
