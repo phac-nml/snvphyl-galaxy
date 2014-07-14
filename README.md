@@ -1,7 +1,7 @@
 Galaxy Core Phylogenomics Pipeline
 ==================================
 
-This contains the Galaxy tool definitions and workflow definitions needed to install the [Core Phylogenomis Pipeline](https://github.com/apetkau/core-phylogenomics) into Galaxy.
+This contains the Galaxy tool definitions and workflow definitions needed to install the [Core Phylogenomis Pipeline][] into Galaxy.
 
 Authors
 =======
@@ -11,7 +11,7 @@ Philip Mabon, Aaron Petkau
 Install
 =======
 
-This repository contains two main sections.  A set of tools under `tools/` and a workflow implementing the core phylogenomics pipeline under `workflows/`.  These can be packaged up and uploaded into a [Galaxy Tool Shed](https://wiki.galaxyproject.org/ToolShed) and then later installed to an instance of Galaxy.  Instructions on how to install your own local Galaxy Tool Shed and Galaxy can be found at https://irida.corefacility.ca/gitlab/irida/irida-install-documentation/tree/feature/galaxy-setup/galaxy.
+This repository contains two main sections.  A set of tools under `tools/` and a workflow implementing the core phylogenomics pipeline under `workflows/`.  These can be packaged up and uploaded into a [Galaxy Tool Shed][] and then later installed to an instance of Galaxy.  Instructions on how to install your own local Galaxy Tool Shed and Galaxy can be found at [IRIDA Galaxy Setup][].
 
 Step 1: Building Tool Shed Packages
 -----------------------------------
@@ -56,7 +56,7 @@ Once you have uploaded the packages to a Galaxy Tool Shed, you can install to a 
 Step 5: Test out your tool in Galaxy
 ------------------------------------
 
-Once you've finished installing your tool, you should be able to test it out within Galaxy.  This can be automated by running the functional tests using the commands (from https://wiki.galaxyproject.org/TestingInstalledTools):
+Once you've finished installing your tool, you should be able to test it out within Galaxy.  This can be automated by running the functional tests using the commands.  This is adapted from the [Testing Installed Tools][] document.
 
 ```bash
 $ export GALAXY_TOOL_DEPENDENCY_DIR=/path/to/tool-dependencies
@@ -69,7 +69,7 @@ This should generate a report in the file `run_functional_tests.html`.
 Test
 ====
 
-Testing tools can be performed once installed to a Tool Shed using the following steps.  This is a summary of the information found at https://wiki.galaxyproject.org/AutomatedToolTests.
+Testing tools can be performed once installed to a Tool Shed using the following steps.  This is a summary of the information found at [Automated Tool Tests][].
 
 Step 1: Check for Valid Tests
 -----------------------------
@@ -95,10 +95,18 @@ export GALAXY_INSTALL_TEST_TOOL_DEPENDENCY_DIR=/tmp/location/to/tmp/dir
 sh install_and_test_tool_shed_repositories.sh
 ```
 
-It's also possible to run with the below command, from https://wiki.galaxyproject.org/HostingALocalToolShed.
+It's also possible to run with the below command, from [Hosting a Local Tool Shed][].
 
 ```bash
 $ sh run_tool_shed_functional_tests.sh
 ```
 
-Also see https://wiki.galaxyproject.org/InstallAndTestCertification.
+Also see [Install and Test Certification][].
+
+[Core Phylogenomis Pipeline]: https://github.com/apetkau/core-phylogenomics
+[Galaxy Tool Shed]: https://wiki.galaxyproject.org/ToolShed
+[Testing Installed Tools]: https://wiki.galaxyproject.org/TestingInstalledTools
+[IRIDA Galaxy Setup]: https://irida.corefacility.ca/gitlab/irida/irida-install-documentation/tree/master/galaxy
+[Automated Tool Tests]: https://wiki.galaxyproject.org/AutomatedToolTests
+[Hosting a Local Tool Shed]: https://wiki.galaxyproject.org/HostingALocalToolShed
+[Install and Test Certification]: https://wiki.galaxyproject.org/InstallAndTestCertification
