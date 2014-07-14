@@ -60,6 +60,7 @@ Once you've finished installing your tool, you should be able to test it out wit
 
 ```bash
 $ export GALAXY_TOOL_DEPENDENCY_DIR=/path/to/tool-dependencies
+$ for i in `find $GALAXY_TOOL_DEPENDENCY_DIR -iname 'env.sh'`; do echo $i; source $i; done # must source all environments for tool dependencies
 $ sh run_functional_tests.sh -installed
 ```
 
