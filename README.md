@@ -1,17 +1,17 @@
 Galaxy Core Phylogenomics Pipeline
 ==================================
 
-This contains the Galaxy tool definitions and workflow definitions needed to install the [Core Phylogenomis Pipeline][] into Galaxy.
+This contains the Galaxy tool definitions and workflow definitions needed to install the [Core Phylogenomis Pipeline][] into Galaxy.  This repository contains two main sections.  A set of tools under `tools/` and a workflow implementing the core phylogenomics pipeline under `workflows/`.  These can be packaged up and uploaded into a [Galaxy Tool Shed][] and then later installed to an instance of Galaxy.  Instructions on how to install your own local Galaxy Tool Shed and Galaxy can be found at [IRIDA Galaxy Setup][].
 
 Authors
 =======
 
 Philip Mabon, Aaron Petkau
 
-Install
-=======
+Installing the Tools
+====================
 
-This repository contains two main sections.  A set of tools under `tools/` and a workflow implementing the core phylogenomics pipeline under `workflows/`.  These can be packaged up and uploaded into a [Galaxy Tool Shed][] and then later installed to an instance of Galaxy.  Instructions on how to install your own local Galaxy Tool Shed and Galaxy can be found at [IRIDA Galaxy Setup][].
+The tools under the `tools/` directory can be installed to a Galaxy Tool Shed and then to Galaxy using the following steps.
 
 Step 1: Building Tool Shed Packages
 -----------------------------------
@@ -53,7 +53,31 @@ Once you have uploaded the packages to a Galaxy Tool Shed, you can install to a 
 3. Click on the arrow next to the tool and click on **Preview and install**.
 4. Wait for Galaxy to install your tool.
 
-Step 5: Test out your tool in Galaxy
+Step 5: Install Additional Dependencies
+---------------------------------------
+
+The following additional dependency packages included in this repository need to be installed to the Galaxy Tool Shed, and then into Galaxy.  These are located under `tools/`.  The full list of dependencies is:
+
+* phyml
+
+In order to install the dependencies, use the following steps.
+
+1. Build dependencies using `build_for_toolshed.sh`.
+2. Log into a Galaxy Tool Shed and create repositories for each dependency.
+3. Upload tarball packages for each dependency.
+4. Log into Galaxy and install dependency packages.
+
+Step 6: Install Dependency Packages to Galaxy
+---------------------------------------------
+
+Some dependency packages need to be installed separately to Galaxy.  This can be accomplished with the following steps from within your running Galaxy instance.
+
+1. Go to **Admin** and then **Search and browse tool sheds**.
+2. Find the **Galaxy main tool shed** and click on **Browse valid repositories**.
+3. Do a search for `msa_datatypes`.  This should give a package with a collection of datatypes for multiple sequence alignments.
+4. Install this package to Galaxy.  The particular data type we are looking for is the `phylip` datatype.
+
+Step 7: Test out your tool in Galaxy
 ------------------------------------
 
 Once you've finished installing your tool, you should be able to test it out within Galaxy.  This can be automated by running the functional tests using the commands.  This is adapted from the [Testing Installed Tools][] document.
@@ -65,6 +89,29 @@ $ sh run_functional_tests.sh -installed
 ```
 
 This should generate a report in the file `run_functional_tests.html`.
+
+Installing the Workflow
+=======================
+
+Once the tools are installed the workflow under `workflows/` can be installed.  This can be accomplished using the following steps.
+
+Step 1: Upload Workflow to Tool Shed
+------------------------------------
+
+The workflow can be uploaded to a Galaxy Tool Shed  using the following commands.
+
+1. Run the script `build_for_toolshed.sh`.  This will generate a file `build/core_phylogenomics_pipeline_workflow.tar.gz` containing the workflow.
+2. In the Galaxy Tool Shed, create a new repository to contain your workflow.
+3. From the button at the top right that says **Upload files to repository** please upload the file containing the workflow `build/core_phylogenomics_pipeline_workflow.tar.gz`.
+
+Step 2: Install Workflow from Tool Shed to Galaxy
+-------------------------------------------------
+
+To install a workflow from the Tool Shed into a running Galaxy instance please use the following steps.
+
+1. From the Galaxy instance go to **Admin** and then to **Search and browse tool sheds**.
+2. Find the particular tool shed containing your workflow and then find the workflow repository you just uploaded.
+3. Install this workflow into Galaxy.
 
 [Core Phylogenomis Pipeline]: https://github.com/apetkau/core-phylogenomics
 [Galaxy Tool Shed]: https://wiki.galaxyproject.org/ToolShed

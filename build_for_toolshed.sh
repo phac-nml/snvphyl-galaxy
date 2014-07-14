@@ -14,6 +14,8 @@ then
 fi
 
 tar -C $TOOLS_DIR/core_phylogenomics_pipeline -czf $BUILD_DIR/core_phylogenomics_pipeline.tar.gz .
+tar -C $TOOLS_DIR/phyml -czf $BUILD_DIR/phyml.tar.gz .
+
 tar -C $WORKFLOWS_DIR/core_phylogenomics_pipeline_workflow -czf $BUILD_DIR/core_phylogenomics_pipeline_workflow.tar.gz .
 
 echo "Successfully built tarballs"
