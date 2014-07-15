@@ -111,13 +111,15 @@ Once the tools are installed the workflow under `workflows/` can be installed.  
 Step 1: Generating a Galaxy workflow file
 -----------------------------------------
 
-The core snp pipeline workflow is stored as a Galaxy workflow, which contains references to all tools used + tool sheds used to install these tools.  For example freebayes is refered to as `galaxy-shed.corefacility.ca/repos/phil/freebayes/freebayes/0.0.4`.  If you have installed any of the local tools in a differently named tool shed, than this full path will not work.  To work around this issue, a template file is included for the workflow `workflows/core_phylogenomics_pipeline_workflow/Galaxy-Workflow-Core_SNP_Pipeline.ga.tt`.  We can generate the Galaxy-usable workflow file from this template file b y using a command similar to:
+The core snp pipeline workflow is stored as a Galaxy workflow, which contains references to all tools used + tool sheds used to install these tools.  For example freebayes is refered to as `galaxy-shed.corefacility.ca/repos/phil/freebayes/freebayes/0.0.4`.  If you have installed any of the local tools in a differently named tool shed, than this full path will not work.  To work around this issue, a template file is included for the workflow `workflows/core_phylogenomics_pipeline_workflow/Galaxy-Workflow-Core_SNP_Pipeline.ga.tt`.  We can generate the Galaxy-usable workflow file from this template file by using a command similar to:
 
 ```bash
 $ perl generate_galaxy_workflow.pl --local-toolshed localhost:9009/repos/aaron workflows/core_phylogenomics_pipeline_workflow/Galaxy-Workflow-Core_SNP_Pipeline.ga.tt > workflows/core_phylogenomics_pipeline_workflow/Galaxy-Workflow-Core_SNP_Pipeline.ga
 ```
 
-Step 1: Upload Workflow to Tool Shed
+Once this Galaxy workflow file has been generated we directly upload to Galaxy instance or a Galaxy tool shed using the below steps.
+
+Step 2: Upload Workflow to Tool Shed
 ------------------------------------
 
 The workflow can be uploaded to a Galaxy Tool Shed  using the following commands.
@@ -126,7 +128,7 @@ The workflow can be uploaded to a Galaxy Tool Shed  using the following commands
 2. In the Galaxy Tool Shed, create a new repository to contain your workflow.
 3. From the button at the top right that says **Upload files to repository** please upload the file containing the workflow `build/core_phylogenomics_pipeline_workflow.tar.gz`.
 
-Step 2: Install Workflow from Tool Shed to Galaxy
+Step 3: Install Workflow from Tool Shed to Galaxy
 -------------------------------------------------
 
 To install a workflow from the Tool Shed into a running Galaxy instance please use the following steps.
@@ -138,7 +140,7 @@ To install a workflow from the Tool Shed into a running Galaxy instance please u
 Updating Workflow
 =================
 
-The pipeline workflow is stored as a Galaxy workflow, which contains references to all tools used + tool sheds used to install these tools.  For example freebayes is refered to as `galaxy-shed.corefacility.ca/repos/phil/freebayes/freebayes/0.0.4`.  If you have installed any of the local tools in a differently named tool shed, than this full path will not work.  A template file is also included for the workflow `workflows/core_phylogenomics_pipeline_workflow/Galaxy-Workflow-Core_SNP_Pipeline.ga.tt`.  If you wish to update the workflow, the template file can be generated with a command like:
+If you wish to update the workflow, the template file can be generated with a command like:
 
 ```bash
 sed -e 's/"[^"]*core_pipeline/"[% LOCAL_REPOSITORY %]\/core_pipeline/' -e 's/"[^"]*smalt_collection/"[% LOCAL_REPOSITORY %]\/smalt_collection/' -e 's/"[^"]*phyml/"[% LOCAL_REPOSITORY %]\/phyml/' -e 's/"[^"]*freebayes/"[% LOCAL_REPOSITORY %]\/freebayes/' path/to/Galaxy-Workflow-Core_SNP_Pipeline.ga > workflows/core_phylogenomics_pipeline_workflow/Galaxy-Workflow-Core_SNP_Pipeline.ga.tt
