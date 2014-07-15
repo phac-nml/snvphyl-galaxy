@@ -143,7 +143,7 @@ Updating Workflow
 If you wish to update the workflow, the template file can be generated with a command like:
 
 ```bash
-sed -e 's/"[^"]*core_pipeline/"[% LOCAL_REPOSITORY %]\/core_pipeline/' -e 's/"[^"]*smalt_collection/"[% LOCAL_REPOSITORY %]\/smalt_collection/' -e 's/"[^"]*phyml/"[% LOCAL_REPOSITORY %]\/phyml/' -e 's/"[^"]*freebayes/"[% LOCAL_REPOSITORY %]\/freebayes/' path/to/Galaxy-Workflow-Core_SNP_Pipeline.ga > workflows/core_phylogenomics_pipeline_workflow/Galaxy-Workflow-Core_SNP_Pipeline.ga.tt
+$ perl -pe 's/"[^"]+?core_pipeline\//"[% LOCAL_REPOSITORY %]\/core_pipeline\//; s/"[^"]+?smalt_collection\//"[% LOCAL_REPOSITORY %]\/smalt_collection\//; s/"[^"]+?phyml\//"[% LOCAL_REPOSITORY %]\/phyml\//; s/"[^"]+?freebayes\//"[% LOCAL_REPOSITORY %]\/freebayes\//' path/to/Galaxy-Workflow-Core_SNP_Pipeline.ga > workflows/core_phylogenomics_pipeline_workflow/Galaxy-Workflow-Core_SNP_Pipeline.ga.tt
 ```
 
 [Core Phylogenomis Pipeline]: https://github.com/apetkau/core-phylogenomics
