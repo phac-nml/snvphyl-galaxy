@@ -53,8 +53,8 @@ Once you have uploaded the packages to a Galaxy Tool Shed, you can install to a 
 3. Click on the arrow next to the tool and click on **Preview and install**.
 4. Wait for Galaxy to install your tool.
 
-Step 5: Install Additional Dependencies
----------------------------------------
+Step 5: Install Additional Local Dependencies
+---------------------------------------------
 
 The following additional dependency packages included in this repository need to be installed to the Galaxy Tool Shed, and then into Galaxy.  These are located under `tools/`.  The full list of dependencies is:
 
@@ -66,17 +66,28 @@ In order to install the dependencies, use the following steps.
 1. Build dependencies using `build_for_toolshed.sh`.
 2. Log into a Galaxy Tool Shed and create repositories for each dependency.
 3. Upload tarball packages for each dependency.
-4. Log into Galaxy and install dependency packages.
 
 Step 6: Install Dependency Packages to Galaxy
 ---------------------------------------------
 
-Some dependency packages need to be installed separately to Galaxy.  This can be accomplished with the following steps from within your running Galaxy instance.
+Once the above local dependency packages have been installed to the Tool Shed, we can begin to install the packages along with other remote dependencies into Galaxy.  The list of packages that need to be installed includes.
+
+* phyml (local)
+* smalt_collection (local)
+* freebayes (local)
+* core-pipeline tools (local)
+* http://toolshed.g2.bx.psu.edu/repos/devteam/sam_to_bam/sam_to_bam/1.1.4
+* http://toolshed.g2.bx.psu.edu/repos/devteam/samtools_mpileup/samtools_mpileup/0.0.3
+* http://toolshed.g2.bx.psu.edu/repos/gregory-minevich/bcftools_view/bcftools_view/0.0.1
+* http://toolshed.g2.bx.psu.edu/view/iuc/msa_datatypes 
+
+This can be accomplished with the following steps from within your running Galaxy instance.
 
 1. Go to **Admin** and then **Search and browse tool sheds**.
 2. Find the **Galaxy main tool shed** and click on **Browse valid repositories**.
-3. Do a search for `msa_datatypes`.  This should give a package with a collection of datatypes for multiple sequence alignments.
-4. Install this package to Galaxy.  The particular data type we are looking for is the `phylip` datatype.
+3. Do a search for each one of the packages.  This should give you a page to install the package.
+4. Install the package into Galaxy.
+5. Repeat for each of the packages listed above.
 
 Step 7: Test out your tool in Galaxy
 ------------------------------------
