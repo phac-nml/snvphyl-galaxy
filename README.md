@@ -75,6 +75,7 @@ Once the above local dependency packages have been installed to the Tool Shed, w
 * phyml (local)
 * smalt_collection (local)
 * freebayes (local)
+* package_freebayes_0_9_9_296a0fad (local)
 * core-pipeline tools (local)
 * http://toolshed.g2.bx.psu.edu/repos/devteam/sam_to_bam/sam_to_bam/1.1.4
 * http://toolshed.g2.bx.psu.edu/repos/devteam/samtools_mpileup/samtools_mpileup/0.0.3
