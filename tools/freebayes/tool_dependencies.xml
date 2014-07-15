@@ -1,6 +1,4 @@
 <?xml version="1.0"?>
 <tool_dependency>
-    <package name="freebayes" version="0.9.9_296a0fad5b73377e0c4498c65d53ad743225d6b9">
-        <repository changeset_revision="7fb112154e45" name="package_freebayes_0_9_9_296a0fad" owner="phil" toolshed="http://galaxy-toolshed-dev.corefacility.ca/" />
-    </package>
+    <package name="freebayes" version="0.9.9_296a0fad5b73377e0c4498c65d53ad743225d6b9"/>
 </tool_dependency>
