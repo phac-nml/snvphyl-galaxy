@@ -1,20 +1,31 @@
 Galaxy Core Phylogenomics Pipeline
 ==================================
 
-This contains the Galaxy tool definitions and workflow definitions needed to install the [Core Phylogenomis Pipeline][] into Galaxy.
+This contains the Galaxy tool definitions and workflow definitions needed to install the [Core Phylogenomis Pipeline][] into Galaxy.  This repository contains two main sections.  A set of tools under `tools/` and a workflow implementing the core phylogenomics pipeline under `workflows/`.  These can be packaged up and uploaded into a [Galaxy Tool Shed][] and then later installed to an instance of Galaxy.  Instructions on how to install your own local Galaxy Tool Shed and Galaxy can be found at [IRIDA Galaxy Setup][].
 
 Authors
 =======
 
 Philip Mabon, Aaron Petkau
 
-Install
-=======
+Installing the Tools
+====================
 
-This repository contains two main sections.  A set of tools under `tools/` and a workflow implementing the core phylogenomics pipeline under `workflows/`.  These can be packaged up and uploaded into a [Galaxy Tool Shed][] and then later installed to an instance of Galaxy.  Instructions on how to install your own local Galaxy Tool Shed and Galaxy can be found at [IRIDA Galaxy Setup][].
+The Core Phylogenomics Pipeline makes use of a mixture of local (installed in a local Galaxy Tool Shed) tools as well as tools in the main [Galaxy Tool Shed][].  To install these dependency tools please follow the steps in both sections below.
 
-Step 1: Building Tool Shed Packages
------------------------------------
+Installing Local Tools
+----------------------
+
+The local tools are meant to be installed in a local Galaxy Tool Shed.  These are located under the `tools/` directory and include the following:
+
+* **phyml**
+* **smalt_collection**
+* **freebayes**
+* **core-pipeline tools**
+
+These can be installed to a Galaxy Tool Shed and then to Galaxy using the following steps.
+
+### Step 1: Building Tool Shed Packages
 
 In order to build packages that can be uploaded to a Galaxy Tool Shed please run the following command.
 
@@ -25,26 +36,23 @@ $ ./build_for_toolshed.sh
 This will build a number of `.tar.gz` files within the `build/` directory that can then be uploaded into a Galaxy Tool Shed.
 
 
-Step 2: Creating Repositories for Tool Shed Packages
-----------------------------------------------------
+### Step 2: Creating Repositories for Tool Shed Packages
 
 In order to install tools into your own local instance of a Galaxy Tool Shed, you first need to create empty repositories.  This can be accomplished by:
 
 1. Log into your Galaxy Tool Shed.  On the left panel please find and click on the **Create new repository** link.
-2. Fill out the name of the repository, for example for `core_phylogenomics_pipeline.tar.gz` you can fill out **core_phylogenomics_pipeline**.  Fill out any other information.
+2. Fill out the name of the repository, for example for `core_phylogenomics_pipeline.tar.gz` you can fill out **core_phylogenomics_pipeline** (please make sure to name the repository the same name as the tarball minus `.tar.gz`).  Fill out any other information.
 3. Click on **Save**.
 4. Repeat for any other files under `build/`.
 
-Step 3: Upload Tool Shed Packages
----------------------------------
+### Step 3: Upload Tool Shed Packages
 
 1. Find and click on one of your new empty repositories.
 2. In the upper right click on **Upload files to repostory**.
 3. From here **Browse** to one of the tool shed packages under `build/` and upload this package.
 4. In the upper right corner under **Repository Actions** click on **Reset all repository metadata**.  You should now see a screen listing the tools and dependencies of this repository.
 
-Step 4: Install Packages to Galaxy
-----------------------------------
+### Step 4: Install Packages to Galaxy
 
 Once you have uploaded the packages to a Galaxy Tool Shed, you can install to a local version of Galaxy linked up to the Tool Shed by following the below steps.
 
@@ -53,10 +61,28 @@ Once you have uploaded the packages to a Galaxy Tool Shed, you can install to a 
 3. Click on the arrow next to the tool and click on **Preview and install**.
 4. Wait for Galaxy to install your tool.
 
-Step 5: Test out your tool in Galaxy
-------------------------------------
+Installing External Tools
+-------------------------
 
-Once you've finished installing your tool, you should be able to test it out within Galaxy.  This can be automated by running the functional tests using the commands.  This is adapted from the [Testing Installed Tools][] document.
+Once the above local dependency packages have been installed to the Tool Shed, we can begin to install the external dependencies into Galaxy.  The list of packages that need to be installed includes.
+
+* http://toolshed.g2.bx.psu.edu/repos/devteam/sam_to_bam/sam_to_bam/1.1.4
+* http://toolshed.g2.bx.psu.edu/repos/devteam/samtools_mpileup/samtools_mpileup/0.0.3
+* http://toolshed.g2.bx.psu.edu/repos/gregory-minevich/bcftools_view/bcftools_view/0.0.1
+* http://toolshed.g2.bx.psu.edu/view/iuc/msa_datatypes 
+
+This can be accomplished with the following steps from within your running Galaxy instance.
+
+1. Go to **Admin** and then **Search and browse tool sheds**.
+2. Find the **Galaxy main tool shed** and click on **Browse valid repositories**.
+3. Do a search for each one of the packages.  This should give you a page to install the package.
+4. Install the package into Galaxy.
+5. Repeat for each of the packages listed above.
+
+Testing Tools in Galaxy
+-----------------------
+
+Once you've finished installing both your local and external tools, you should be able to test it out within Galaxy.  This can be automated by running the functional tests using the commands.  This is adapted from the [Testing Installed Tools][] document.
 
 ```bash
 $ export GALAXY_TOOL_DEPENDENCY_DIR=/path/to/tool-dependencies
@@ -65,6 +91,61 @@ $ sh run_functional_tests.sh -installed
 ```
 
 This should generate a report in the file `run_functional_tests.html`.
+
+Installing the Workflow
+=======================
+
+Once the tools are installed the workflow under `workflows/` can be installed.  This can be accomplished using the following.
+
+Generating a Galaxy workflow file
+---------------------------------
+
+The core snp pipeline workflow is stored as a Galaxy workflow, which contains references to all tools used + tool sheds used to install these tools.  For example freebayes is refered to as `galaxy-shed.corefacility.ca/repos/phil/freebayes/freebayes/0.0.4`.  If you have installed any of the local tools in a differently named tool shed, than this full path will not work.  To work around this issue, a template file is included for the workflow `workflows/core_phylogenomics_pipeline_workflow/Galaxy-Workflow-Core_SNP_Pipeline.ga.tt`.  We can generate the Galaxy-usable workflow file from this template file by using a command similar to:
+
+```bash
+$ perl generate_galaxy_workflow.pl --local-toolshed localhost:9009/repos/aaron workflows/core_phylogenomics_pipeline_workflow/Galaxy-Workflow-Core_SNP_Pipeline.ga.tt > workflows/core_phylogenomics_pipeline_workflow/Galaxy-Workflow-Core_SNP_Pipeline.ga
+```
+
+Please replace `localhost:9009/repos/aaron` with the location and user of the tools under your local toolshed.  Once this Galaxy workflow file has been generated we can either directly upload the workflow to Galaxy instance or upload to a Galaxy tool shed using the below steps.
+
+Upload Workflow to a Tool Shed
+------------------------------
+
+The workflow can be uploaded to a local Tool Shed and then installed to Galaxy using the following steps.
+
+### Step 1: Upload Workflow to Tool Shed
+
+1. Run the script `build_for_toolshed.sh`.  This will generate a file `build/core_phylogenomics_pipeline_workflow.tar.gz` containing the workflow.
+2. In the Galaxy Tool Shed, create a new repository to contain your workflow.
+3. From the button at the top right that says **Upload files to repository** please upload the file containing the workflow `build/core_phylogenomics_pipeline_workflow.tar.gz`.
+
+### Step 2: Install Workflow from Tool Shed to Galaxy
+
+1. From the Galaxy instance go to **Admin** and then to **Search and browse tool sheds**.
+2. Find the particular tool shed containing your workflow and then find the workflow repository you just uploaded.
+3. Install this workflow into Galaxy.
+4. Once the workflow is installed, you should be able to view the workflow from **Admin > Maange installed tool shed repositories**.
+5. From here you should be able to view the workflow repository details.  You should then be able to click on the workflow **Core SNP Pipeline** to view an image of this workflow.
+6. Then, click on **Repository Actions** in the top right corner and there should be an option **Import workflow to Galaxy**.
+
+Upload Workflow Directly to a Galaxy Instance
+---------------------------------------------
+
+To upload the workflow directly to a running Galaxy instance the following steps can be performed.
+
+1. Log into Galaxy and in the top menu click on **Workflow**.
+2. Click on the button to **Upload or import workflow**.
+3. Find and browse for the workflow file `Galaxy-Workflow-Core_SNP_Pipeline.ga`.
+4. Upload this workflow into Galaxy.
+
+Updating Workflow
+-----------------
+
+If you wish to update the workflow, the template file can be generated with a command like:
+
+```bash
+$ perl -pe 's/"[^"]+?core_pipeline\//"[% LOCAL_REPOSITORY %]\/core_pipeline\//; s/"[^"]+?smalt_collection\//"[% LOCAL_REPOSITORY %]\/smalt_collection\//; s/"[^"]+?phyml\//"[% LOCAL_REPOSITORY %]\/phyml\//; s/"[^"]+?freebayes\//"[% LOCAL_REPOSITORY %]\/freebayes\//' path/to/Galaxy-Workflow-Core_SNP_Pipeline.ga > workflows/core_phylogenomics_pipeline_workflow/Galaxy-Workflow-Core_SNP_Pipeline.ga.tt
+```
 
 [Core Phylogenomis Pipeline]: https://github.com/apetkau/core-phylogenomics
 [Galaxy Tool Shed]: https://wiki.galaxyproject.org/ToolShed

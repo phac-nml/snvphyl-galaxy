@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<tool_dependency>
+    <package name="phyml" version="3.1">
+        <install version="1.0">
+                <actions>
+		    <action type="download_by_url">http://www.atgc-montpellier.fr/download/binaries/phyml/PhyML-3.1.zip</action>
+		    <action type="shell_command">mv PhyML-3.1_linux64 phyml_3.1</action>
+		    <action type="move_file">
+			<source>phyml_3.1</source>
+			<destination>$INSTALL_DIR/bin</destination>
+		    </action>
+		   <action type="chmod">
+			<file mode="750">$INSTALL_DIR/bin/phyml_3.1</file>
+		   </action>
+                <action type="set_environment">
+                    <environment_variable name="PATH" action="prepend_to">$INSTALL_DIR/bin</environment_variable>
+                </action>
+	      </actions>
+        </install>
+        <readme>
+FreeBayes requires g++ and the standard C and C++ development libraries.
+Additionally, cmake is required for building the BamTools API.
+        </readme>
+    </package>
+</tool_dependency>
