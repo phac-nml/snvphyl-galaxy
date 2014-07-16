@@ -82,10 +82,12 @@ This can be accomplished with the following steps from within your running Galax
 Testing Tools in Galaxy
 -----------------------
 
-Once you've finished installing both your local and external tools, you should be able to test it out within Galaxy.  This can be automated by running the functional tests using the commands.  This is adapted from the [Testing Installed Tools][] document.
+Once you've finished installing both your local and external tools, you should be able to test it out within Galaxy.  This can be automated by running the functional tests using the commands.  This method of running functional tests will start up a new instance of Galaxy and execute the tools via the API and compare the results to expected output files.  This is adapted from the [Testing Installed Tools][] document and also from [Tool Testing Enhancements][] post.
 
 ```bash
+$ export GALAXY_TEST_DB_TEMPLATE=https://github.com/jmchilton/galaxy-downloads/raw/master/db_gx_rev_0117.sqlite # speeds up database construction
 $ export GALAXY_TOOL_DEPENDENCY_DIR=/path/to/tool-dependencies
+$ export GALAXY_TEST_DEFAULT_INTERACTOR=api
 $ for i in `find $GALAXY_TOOL_DEPENDENCY_DIR -iname 'env.sh'`; do echo $i; source $i; done # must source all environments for tool dependencies
 $ sh run_functional_tests.sh -installed
 ```
@@ -154,3 +156,4 @@ $ perl -pe 's/"[^"]+?core_pipeline\//"[% LOCAL_REPOSITORY %]\/core_pipeline\//; 
 [Automated Tool Tests]: https://wiki.galaxyproject.org/AutomatedToolTests
 [Hosting a Local Tool Shed]: https://wiki.galaxyproject.org/HostingALocalToolShed
 [Install and Test Certification]: https://wiki.galaxyproject.org/InstallAndTestCertification
+[Tool Testing Enhancements][]: http://dev.list.galaxyproject.org/Tool-Testing-Enhancements-td4663799.html
