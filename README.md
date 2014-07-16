@@ -124,6 +124,9 @@ The workflow can be uploaded to a local Tool Shed and then installed to Galaxy u
 1. From the Galaxy instance go to **Admin** and then to **Search and browse tool sheds**.
 2. Find the particular tool shed containing your workflow and then find the workflow repository you just uploaded.
 3. Install this workflow into Galaxy.
+4. Once the workflow is installed, you should be able to view the workflow from **Admin > Maange installed tool shed repositories**.
+5. From here you should be able to view the workflow repository details.  You should then be able to click on the workflow **Core SNP Pipeline** to view an image of this workflow.
+6. Then, click on **Repository Actions** in the top right corner and there should be an option **Import workflow to Galaxy**.
 
 Upload Workflow Directly to a Galaxy Instance
 ---------------------------------------------
