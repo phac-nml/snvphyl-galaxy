@@ -3,6 +3,8 @@ Galaxy Core Phylogenomics Pipeline
 
 This contains the Galaxy tool definitions and workflow definitions needed to install the [Core Phylogenomis Pipeline][] into Galaxy.  This repository contains two main sections.  A set of tools under `tools/` and a workflow implementing the core phylogenomics pipeline under `workflows/`.  These can be packaged up and uploaded into a [Galaxy Tool Shed][] and then later installed to an instance of Galaxy.  Instructions on how to install your own local Galaxy Tool Shed and Galaxy can be found at [IRIDA Galaxy Setup][].
 
+One small point when setting up Galaxy is that for the pipeline to work properly the default **SQLite** database cannot be used.  Instructions on setting up a better database for Galaxy can be found at the [Production Server Setup][] documentation.
+
 Authors
 =======
 
@@ -137,6 +139,7 @@ perl -pe 's/"[^"]+?core_pipeline\//"[% LOCAL_REPOSITORY %]\/core_pipeline\//; s/
 
 [Core Phylogenomis Pipeline]: https://github.com/apetkau/core-phylogenomics
 [Galaxy Tool Shed]: https://wiki.galaxyproject.org/ToolShed
+[Production Server Setup]: https://wiki.galaxyproject.org/Admin/Config/Performance/ProductionServer
 [Testing Installed Tools]: https://wiki.galaxyproject.org/TestingInstalledTools
 [IRIDA Galaxy Setup]: https://irida.corefacility.ca/gitlab/irida/irida-install-documentation/tree/master/galaxy
 [Automated Tool Tests]: https://wiki.galaxyproject.org/AutomatedToolTests
