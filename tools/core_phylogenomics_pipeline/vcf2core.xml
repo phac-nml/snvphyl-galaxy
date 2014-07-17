@@ -25,8 +25,21 @@
   <stdio>
   	<exit_code range="1:" level="fatal" description="Unknown error has occured"/>
   </stdio>
-  <!--tests>
-    </tests-->
+  <tests>
+    <test>
+      <param name="fasta" value="vcf2core/reference.fasta"/>
+      <param name="coverage" value="4"/>
+      <param name="positions" value="vcf2core/expected.positions.tsv"/>
+      <param name="mpileup_collection">
+        <collection type="list">
+          <element name="v1" value="vcf2core/mpileup/v1.vcf.gz"/>
+          <element name="v2" value="vcf2core/mpileup/v2.vcf.gz"/>
+        </collection>
+      </param>
+
+      <output name="out" file="vcf2core/expected_core.csv"/>
+    </test>
+  </tests>
 
   <help>
   </help>
