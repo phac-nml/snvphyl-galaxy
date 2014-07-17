@@ -141,6 +141,11 @@ To upload the workflow directly to a running Galaxy instance the following steps
 3. Find and browse for the workflow file `Galaxy-Workflow-Core_SNP_Pipeline.ga`.
 4. Upload this workflow into Galaxy.
 
+Testing the Workflow
+--------------------
+
+Some example test data for the workflow is provided in `workflows/core_phylogenomics_pipeline_workflow/test-data/1`.  To test the workflow please upload the data under `input` and run the workflow.  An example file of the expected results is found in `output`.
+
 Updating Workflow
 -----------------
 
