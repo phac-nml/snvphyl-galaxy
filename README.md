@@ -88,6 +88,7 @@ Once you've finished installing both your local and external tools, you should b
 $ export GALAXY_TEST_DB_TEMPLATE=https://github.com/jmchilton/galaxy-downloads/raw/master/db_gx_rev_0117.sqlite # speeds up database construction
 $ export GALAXY_TOOL_DEPENDENCY_DIR=/path/to/tool-dependencies
 $ export GALAXY_TEST_DEFAULT_INTERACTOR=api
+$ export GALAXY_TEST_NO_CLEANUP=true # tests only work if this variable is set
 $ for i in `find $GALAXY_TOOL_DEPENDENCY_DIR -iname 'env.sh'`; do echo $i; source $i; done # must source all environments for tool dependencies
 $ sh run_functional_tests.sh -installed
 ```
