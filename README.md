@@ -30,7 +30,7 @@ These can be installed to a Galaxy Tool Shed and then to Galaxy using the follow
 In order to build packages that can be uploaded to a Galaxy Tool Shed please run the following command.
 
 ```bash
-$ ./build_for_toolshed.sh
+./build_for_toolshed.sh
 ```
 
 This will build a number of `.tar.gz` files within the `build/` directory that can then be uploaded into a Galaxy Tool Shed.
@@ -85,12 +85,12 @@ Testing Tools in Galaxy
 Once you've finished installing both your local and external tools, you should be able to test it out within Galaxy.  This can be automated by running the functional tests using the commands.  This method of running functional tests will start up a new instance of Galaxy and execute the tools via the API and compare the results to expected output files.  This is adapted from the [Testing Installed Tools][] document and also from [Tool Testing Enhancements][] post.
 
 ```bash
-$ export GALAXY_TEST_DB_TEMPLATE=https://github.com/jmchilton/galaxy-downloads/raw/master/db_gx_rev_0117.sqlite # speeds up database construction
-$ export GALAXY_TOOL_DEPENDENCY_DIR=/path/to/tool-dependencies
-$ export GALAXY_TEST_DEFAULT_INTERACTOR=api
-$ export GALAXY_TEST_NO_CLEANUP=true # tests only work if this variable is set
-$ for i in `find $GALAXY_TOOL_DEPENDENCY_DIR -iname 'env.sh'`; do echo $i; source $i; done # must source all environments for tool dependencies
-$ sh run_functional_tests.sh -installed
+export GALAXY_TEST_DB_TEMPLATE=https://github.com/jmchilton/galaxy-downloads/raw/master/db_gx_rev_0117.sqlite # speeds up database construction
+export GALAXY_TOOL_DEPENDENCY_DIR=/path/to/tool-dependencies
+export GALAXY_TEST_DEFAULT_INTERACTOR=api
+export GALAXY_TEST_NO_CLEANUP=true # tests only work if this variable is set
+for i in `find $GALAXY_TOOL_DEPENDENCY_DIR -iname 'env.sh'`; do echo $i; source $i; done # must source all environments for tool dependencies
+sh run_functional_tests.sh -installed
 ```
 
 This should generate a report in the file `run_functional_tests.html`.
@@ -106,7 +106,7 @@ Generating a Galaxy workflow file
 The core snp pipeline workflow is stored as a Galaxy workflow, which contains references to all tools used + tool sheds used to install these tools.  For example freebayes is refered to as `galaxy-shed.corefacility.ca/repos/phil/freebayes/freebayes/0.0.4`.  If you have installed any of the local tools in a differently named tool shed, than this full path will not work.  To work around this issue, a template file is included for the workflow `workflows/core_phylogenomics_pipeline_workflow/Galaxy-Workflow-Core_SNP_Pipeline.ga.tt`.  We can generate the Galaxy-usable workflow file from this template file by using a command similar to:
 
 ```bash
-$ perl generate_galaxy_workflow.pl --local-toolshed localhost:9009/repos/aaron workflows/core_phylogenomics_pipeline_workflow/Galaxy-Workflow-Core_SNP_Pipeline.ga.tt > workflows/core_phylogenomics_pipeline_workflow/Galaxy-Workflow-Core_SNP_Pipeline.ga
+perl generate_galaxy_workflow.pl --local-toolshed localhost:9009/repos/aaron workflows/core_phylogenomics_pipeline_workflow/Galaxy-Workflow-Core_SNP_Pipeline.ga.tt > workflows/core_phylogenomics_pipeline_workflow/Galaxy-Workflow-Core_SNP_Pipeline.ga
 ```
 
 Please replace `localhost:9009/repos/aaron` with the location and user of the tools under your local toolshed.  Once this Galaxy workflow file has been generated we can either directly upload the workflow to Galaxy instance or upload to a Galaxy tool shed using the below steps.
@@ -152,7 +152,7 @@ Updating Workflow
 If you wish to update the workflow, the template file can be generated with a command like:
 
 ```bash
-$ perl -pe 's/"[^"]+?core_pipeline\//"[% LOCAL_REPOSITORY %]\/core_pipeline\//; s/"[^"]+?smalt_collection\//"[% LOCAL_REPOSITORY %]\/smalt_collection\//; s/"[^"]+?phyml\//"[% LOCAL_REPOSITORY %]\/phyml\//; s/"[^"]+?freebayes\//"[% LOCAL_REPOSITORY %]\/freebayes\//' path/to/Galaxy-Workflow-Core_SNP_Pipeline.ga > workflows/core_phylogenomics_pipeline_workflow/Galaxy-Workflow-Core_SNP_Pipeline.ga.tt
+perl -pe 's/"[^"]+?core_pipeline\//"[% LOCAL_REPOSITORY %]\/core_pipeline\//; s/"[^"]+?smalt_collection\//"[% LOCAL_REPOSITORY %]\/smalt_collection\//; s/"[^"]+?phyml\//"[% LOCAL_REPOSITORY %]\/phyml\//; s/"[^"]+?freebayes\//"[% LOCAL_REPOSITORY %]\/freebayes\//' path/to/Galaxy-Workflow-Core_SNP_Pipeline.ga > workflows/core_phylogenomics_pipeline_workflow/Galaxy-Workflow-Core_SNP_Pipeline.ga.tt
 ```
 
 [Core Phylogenomis Pipeline]: https://github.com/apetkau/core-phylogenomics
