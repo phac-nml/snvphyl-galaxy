@@ -124,7 +124,7 @@ To upload the workflow directly to a running Galaxy instance the following steps
 Testing the Workflow
 --------------------
 
-Some example test data for the workflow is provided in `workflows/core_phylogenomics_pipeline_workflow/test-data/1`.  To test the workflow please upload the data under `input` and run the workflow.  An example file of the expected results is found in `output`.
+Some example test data for the workflow is provided in `workflows/core_phylogenomics_pipeline_workflow/test-data/1`.  To test the workflow please upload the data under `input` and run the workflow.  Please make sure to set all fastq files to type `fastqsanger` and construct a list of paired datasets for each of the input files.  An example file of the expected results is found in `output`.
 
 Updating Workflow
 -----------------
