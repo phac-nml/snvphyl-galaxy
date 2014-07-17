@@ -80,8 +80,6 @@
           <has_text text="ANA"/>
         </assert_contents>
       </output>
-      <!--<output name="fasta" file="vcf2pseudoalignment.output.1.expected.fasta"/>-->
-      <!--<output name="phylip" file="vcf2pseudoalignment.output.1.expected.phy"/>-->
       <output name="phylip">
         <assert_contents>
           <has_line_matching expression="vcf2pseudoalignment.input.1\S+\s+TGA"/>
