@@ -162,4 +162,4 @@ perl -pe 's/"[^"]+?core_pipeline\//"[% LOCAL_REPOSITORY %]\/core_pipeline\//; s/
 [Automated Tool Tests]: https://wiki.galaxyproject.org/AutomatedToolTests
 [Hosting a Local Tool Shed]: https://wiki.galaxyproject.org/HostingALocalToolShed
 [Install and Test Certification]: https://wiki.galaxyproject.org/InstallAndTestCertification
-[Tool Testing Enhancements][]: http://dev.list.galaxyproject.org/Tool-Testing-Enhancements-td4663799.html
+[Tool Testing Enhancements]: http://dev.list.galaxyproject.org/Tool-Testing-Enhancements-td4663799.html
