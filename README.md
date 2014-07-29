@@ -3,6 +3,8 @@ Galaxy Core Phylogenomics Pipeline
 
 This contains the Galaxy tool definitions and workflow definitions needed to install the [Core Phylogenomis Pipeline][] into Galaxy.  This repository contains two main sections.  A set of tools under `tools/` and a workflow implementing the core phylogenomics pipeline under `workflows/`.  These can be packaged up and uploaded into a [Galaxy Tool Shed][] and then later installed to an instance of Galaxy.  Instructions on how to install your own local Galaxy Tool Shed and Galaxy can be found at [IRIDA Galaxy Setup][].
 
+One small point when setting up Galaxy is that for the pipeline to work properly the default **SQLite** database cannot be used.  Instructions on setting up a better database for Galaxy can be found at the [Production Server Setup][] documentation.
+
 Authors
 =======
 
@@ -109,27 +111,7 @@ The core snp pipeline workflow is stored as a Galaxy workflow, which contains re
 perl generate_galaxy_workflow.pl --local-toolshed localhost:9009/repos/aaron workflows/core_phylogenomics_pipeline_workflow/Galaxy-Workflow-Core_SNP_Pipeline.ga.tt > workflows/core_phylogenomics_pipeline_workflow/Galaxy-Workflow-Core_SNP_Pipeline.ga
 ```
 
-Please replace `localhost:9009/repos/aaron` with the location and user of the tools under your local toolshed.  Once this Galaxy workflow file has been generated we can either directly upload the workflow to Galaxy instance or upload to a Galaxy tool shed using the below steps.
-
-Upload Workflow to a Tool Shed
-------------------------------
-
-The workflow can be uploaded to a local Tool Shed and then installed to Galaxy using the following steps.
-
-### Step 1: Upload Workflow to Tool Shed
-
-1. Run the script `build_for_toolshed.sh`.  This will generate a file `build/core_phylogenomics_pipeline_workflow.tar.gz` containing the workflow.
-2. In the Galaxy Tool Shed, create a new repository to contain your workflow.
-3. From the button at the top right that says **Upload files to repository** please upload the file containing the workflow `build/core_phylogenomics_pipeline_workflow.tar.gz`.
-
-### Step 2: Install Workflow from Tool Shed to Galaxy
-
-1. From the Galaxy instance go to **Admin** and then to **Search and browse tool sheds**.
-2. Find the particular tool shed containing your workflow and then find the workflow repository you just uploaded.
-3. Install this workflow into Galaxy.
-4. Once the workflow is installed, you should be able to view the workflow from **Admin > Maange installed tool shed repositories**.
-5. From here you should be able to view the workflow repository details.  You should then be able to click on the workflow **Core SNP Pipeline** to view an image of this workflow.
-6. Then, click on **Repository Actions** in the top right corner and there should be an option **Import workflow to Galaxy**.
+Please replace `localhost:9009/repos/aaron` with the location and user of the tools under your local toolshed.  Once this Galaxy workflow file has been generated we can directly upload the workflow to Galaxy instance using the below steps.
 
 Upload Workflow Directly to a Galaxy Instance
 ---------------------------------------------
@@ -144,7 +126,7 @@ To upload the workflow directly to a running Galaxy instance the following steps
 Testing the Workflow
 --------------------
 
-Some example test data for the workflow is provided in `workflows/core_phylogenomics_pipeline_workflow/test-data/1`.  To test the workflow please upload the data under `input` and run the workflow.  An example file of the expected results is found in `output`.
+Some example test data for the workflow is provided in `workflows/core_phylogenomics_pipeline_workflow/test-data/1`.  To test the workflow please upload the data under `input` and run the workflow.  Please make sure to set all fastq files to type `fastqsanger` and construct a list of paired datasets for each of the input files.  An example file of the expected results is found in `output`.
 
 Updating Workflow
 -----------------
@@ -157,6 +139,7 @@ perl -pe 's/"[^"]+?core_pipeline\//"[% LOCAL_REPOSITORY %]\/core_pipeline\//; s/
 
 [Core Phylogenomis Pipeline]: https://github.com/apetkau/core-phylogenomics
 [Galaxy Tool Shed]: https://wiki.galaxyproject.org/ToolShed
+[Production Server Setup]: https://wiki.galaxyproject.org/Admin/Config/Performance/ProductionServer
 [Testing Installed Tools]: https://wiki.galaxyproject.org/TestingInstalledTools
 [IRIDA Galaxy Setup]: https://irida.corefacility.ca/gitlab/irida/irida-install-documentation/tree/master/galaxy
 [Automated Tool Tests]: https://wiki.galaxyproject.org/AutomatedToolTests
