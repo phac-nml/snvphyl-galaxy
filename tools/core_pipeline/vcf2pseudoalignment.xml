@@ -1,4 +1,4 @@
-<tool id="vcf2pseudoalignment" name="VCF 2 pseudoalignment" version ="0.0.9">
+<tool id="vcf2pseudoalignment" name="VCF 2 pseudoalignment" version ="0.0.10">
   <description>create a pseudo alignment from multiple VCFs files</description>
         <requirements>
                 <requirement type="package" version="1.1">core-phylogenomics</requirement>
@@ -32,7 +32,7 @@
     <param name="ambiguous" truevalue="--keep-ambiguous" falsevalue="" type="boolean" checked="false" label="Keep ambiguous base pair"/>
 
     <param name="freebayes_collection" type="data_collection" label="FreeBayes filtered VCF" help="" optional="false" format="vcf" collection_type="list" />
-    <param name="mpileup_collection" type="data_collection" label="Mpileup VCF" help="" optional="false" format="vcf" collection_type="list" />
+    <param name="mpileup_collection" type="data_collection" label="Mpileup VCF" help="" optional="false" format="tabular" collection_type="list" />
     <param name="numcpus" type="select" label="Number of CPUS" multiple="false" optional="false">
 	<option value="4">4</option>
 	<option value="8">8</option>
