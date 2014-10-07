@@ -18,8 +18,7 @@
 	      </actions>
         </install>
         <readme>
-FreeBayes requires g++ and the standard C and C++ development libraries.
-Additionally, cmake is required for building the BamTools API.
+	Installation info for PhyML.
         </readme>
     </package>
 </tool_dependency>
