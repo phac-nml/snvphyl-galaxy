@@ -5,7 +5,6 @@ This is the main repository for the **SNVPhyl** pipeilne used for constructing w
 
 1. Install the Galaxy Dependency Tools
 2. Upload the Workflow to an Instance of Galaxy
-3. Test the pipeline
 
 Some of these tools are maintained by the [IRIDA][] group and are included in this repository under the `tools/` directory.  For instructions on how to upload these tools to a custom [Galaxy Toolshed][] please see the [Install to Local Toolshed][] documentation.  Please note that if you install the tools to a local toolshed you will need to modify the workflow to reflect the new location and version number of these tools.
 
@@ -28,9 +27,9 @@ The dependency tools for this pipeline are listed below.  These may be installed
 Upload the Galaxy Workflow
 --------------------------
 
-Test the Pipeline
------------------
+The workflow file is located within `workflows/SNVPhyl/0.1/irida_workflow_structure.ga`.  Please upload this file as a workflow within Galaxy once all the tools are installed.
 
+[IRIDA]: http://irida.ca
 [Galaxy]: http://galaxyproject.org/
 [Install to Local Toolshed]: InstallLocalToolshed.md
 [Galaxy Toolshed]: https://wiki.galaxyproject.org/ToolShed
