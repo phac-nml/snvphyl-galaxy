@@ -58,4 +58,4 @@ Insert examples here.
 [FreeBayes]: https://github.com/ekg/freebayes
 [SAMtools/BCFtools]: http://samtools.sourceforge.net/mpileup.shtml
 [PhyML]: http://www.atgc-montpellier.fr/phyml/
-[snvphyl-workflow]: workflows/SNVPhyl/0.1/snvphyl_workflow.svg
+[snvphyl-workflow]: workflows/SNVPhyl/0.1/snvphyl_workflow.png
