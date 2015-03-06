@@ -32,6 +32,10 @@ The stages this pipeline goes through are, briefly:
 4. Aligning SNVs into an alignment SNP table.
 5. Building a Maximum Likelihood tree with [PhyML][].
 
+The Galaxy workflow implementing all of these stages looks as follows:
+
+![snvphyl-workflow][]
+
 Install
 -------
 
@@ -54,3 +58,4 @@ Insert examples here.
 [FreeBayes]: https://github.com/ekg/freebayes
 [SAMtools/BCFtools]: http://samtools.sourceforge.net/mpileup.shtml
 [PhyML]: http://www.atgc-montpellier.fr/phyml/
+[snvphyl-workflow]: workflows/SNVPhyl/0.1/snvphyl_workflow.svg
