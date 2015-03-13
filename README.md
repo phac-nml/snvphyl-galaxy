@@ -1,7 +1,7 @@
 SNVPhyl Whole Genome Phylogenomics Pipeline
 ===========================================
 
-This is the main repository for the **SNVPhyl** pipeilne used for constructing whole genome phylogenies.  This pipeline is implemented as a [Galaxy][] workflow which may be installed in any Galaxy instance.  This pipeline takes as input a set of whole genome sequence reads and a reference genome.  The reads are mapped to the reference genome, variants are called, and an alignment of phylogenetically informative sites is created.  This alignment is used to construct a whole genome phylogeny as well as a pair-wise SNV distance matrix.
+This is the main repository for the **SNVPhyl** pipeline used for constructing whole genome phylogenies.  This pipeline is implemented as a [Galaxy][] workflow which may be installed in any Galaxy instance.  This pipeline takes as input a set of whole genome sequence reads and a reference genome.  The reads are mapped to the reference genome, variants are called, and an alignment of phylogenetically informative sites is created.  This alignment is used to construct a whole genome phylogeny as well as a pair-wise SNV distance matrix.
 
 Usage
 -----
