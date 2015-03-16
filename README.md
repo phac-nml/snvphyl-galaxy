@@ -19,8 +19,28 @@ This can be used to pair-up each of the **.fastq** files and construct a new ent
 The main output from this pipeline consists of the following files.
 
 1. A phylogenetic tree constructed from the reference genome and all the sequence reads.  This tree is provided in [newick][] format and can be displayed in Galaxy's [Phyloviz][] software or external viewers such as [FigTree][].
+
+    ![snphyl-out][]
+
 2. A pairwise distance SNV matrix.  This shows the pairwise distance between each sample in SNVs that were kept by the pipeline.
+
+    ```
+    strain       2010EL-1749  C6706  2010EL-1786  2012V-1001 
+    2010EL-1749  0            21     4            2         
+    C6706        21           0      21           21        
+    2010EL-1786  4            21     0            4         
+    2012V-1001   2            21     4            0         
+    VC-14        3            20     3            3    
+    ```
+
 3. A table of all variants found.
+
+    ```
+    #Chromosome   Position  Status             Reference  2010EL-1749  2010EL-1796  
+    2010EL-1786   13149     filtered-mpileup   A          N            A            
+    2010EL-1786   17132     valid              A          A            A            
+    2010EL-1786   17872     filtered-coverage  T          T            T            
+    ```
 
 ### Stages
 
@@ -41,11 +61,6 @@ Install
 
 Please refer to the [Install Guide][] for more information on how to install this workflow.
 
-Examples
---------
-
-Insert examples here.
-
 [Galaxy]: http://galaxyproject.org/
 [Install Guide]: Install.md
 [test/]: test/
@@ -59,3 +74,4 @@ Insert examples here.
 [SAMtools/BCFtools]: http://samtools.sourceforge.net/mpileup.shtml
 [PhyML]: http://www.atgc-montpellier.fr/phyml/
 [snvphyl-workflow]: workflows/SNVPhyl/0.1/snvphyl_workflow.png
+[snphyl-out]: images/snvphyl-out.jpg
