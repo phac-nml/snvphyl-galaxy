@@ -1,11 +1,12 @@
-<tool id="findrepeat" name="Find Repeats" version ="0.0.2">
+<tool id="findrepeat" name="Find Repeats" version ="0.0.2-dev">
   <description>Identify repeat elements using Mummer</description>
   <requirements>
     <requirement type="package" version="1.1">core-phylogenomics</requirement>
+    <requirement type="package" version="3.23">mummer</requirement>
   </requirements>
 
   <command interpreter="perl">
-	/\$VCF2PSEUDO/find-repeats.pl -l $length -p $pid $fasta > $out 
+      /\$VCF2PSEUDO/find-repeats.pl -l $length -p $pid $fasta > $out 
   </command>
   <inputs>
     <param name="fasta" type="data"  label="Fasta file" format="fasta"/>
@@ -16,7 +17,7 @@
     <data format="tabular" name="out" />
   </outputs>
   <stdio>
-  	<exit_code range="1:" level="fatal" description="Unknown error has occured"/>
+    <exit_code range="1:" level="fatal" description="Unknown error has occured"/>
   </stdio>
   <tests>
     <test>
@@ -28,13 +29,22 @@
   </tests>
 
   <help>
-  Usage: ./find-repeats.pl [reference.fasta] --min-length [length] --min-pid [pid]
-  Parameters:
-  	[reference.fasta]:  A fasta reference file to search for repeats.
-  	Options:
-		-l|--min-length: Minimum length of repeat region (150).
-		-p|--min-pid: Minimum PID of repeat region (90).
-		-k|--keep-temp: Keep around temporary nucmer/coords files (no).
+What it does
+============
+
+Searches a fasta reference file for repeats.
+
+
+Usage
+=====
+
+**Parameters**
+  - Fasta file:  A fasta reference file to search for repeats.
+  
+**Options**
+  - Minimum length of repeat region (150).
+  - Minimum PID of repeat region (90).
   </help>
 
 </tool>
+

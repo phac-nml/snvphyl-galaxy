@@ -27,4 +27,8 @@
         <readme>
         </readme>
     </package>
+    <package name="mummer" version="3.23">
+      	<repository changeset_revision="93daed514528" name="package_mummer_3_23" owner="jen-cabral" toolshed="http://127.0.0.1:9009/" />
+    </package>
 </tool_dependency>
+
