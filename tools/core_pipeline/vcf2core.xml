@@ -42,6 +42,21 @@
   </tests>-->
 
   <help>
+What it does
+============
+
+Determine genomics core from Mpileup vcf files
+
+
+Usage
+=====
+
+**Parameters**
+  - Fasta reference file
+  - Coverage cutoff (integer): minimum coverage for base pair to be considered
+  - Masking positions file (tab separated file): positions to mask in the analysis
+  - VCF file from mpileup
+  
   </help>
 
 </tool>

@@ -24,7 +24,18 @@
   </tests>
 
   <help>
-  Create SNP matrix from Phylip file format
+What it does
+============
+
+Create SNP matrix from Phylip file format
+
+
+Usage
+=====
+
+**Parameters**
+  - Phylip file: Phylogenetic file (.ph, .phy)
+
   </help>
 
 </tool>
