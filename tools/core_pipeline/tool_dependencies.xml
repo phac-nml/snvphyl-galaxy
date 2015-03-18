@@ -27,4 +27,9 @@
         <readme>
         </readme>
     </package>
+    <package name="mummer" version="3.23">
+        <repository changeset_revision="8be3c8826f17" name="package_mummer_3_23" owner="aaron" toolshed="https://irida.corefacility.ca/galaxy-shed/" />
+    </package>
+
 </tool_dependency>
+

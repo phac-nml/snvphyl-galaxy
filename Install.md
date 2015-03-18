@@ -20,9 +20,8 @@ To install these tools, please proceed through the following steps.
 
 Some of these tools require additional dependencies to be installed on the Galaxy server.  For a cluster environment please make sure these are available on all cluster nodes by installing to a shared directory.
 
-1. [MUMMer][]:  Please download and install MUMMer (in particular, the command `nucmer`) and add your `PATH` in the `$GALAXY_ENV` file.
-2. [SAMTools][]: Please download and install [SAMTools 0.1.18][] and add to your `PATH` in the `$GALAXY_ENV` file.
-3. **Perl Modules**:  The following lists the dependency Perl modules required by this pipeline.  These can be installed using the [cpanm][] command.
+1. [SAMTools][]: Please download and install [SAMTools 0.1.18][] and add to your `PATH` in the `$GALAXY_ENV` file.
+2. **Perl Modules**:  The following lists the dependency Perl modules required by this pipeline.  These can be installed using the [cpanm][] command.
 
     ```bash
     cpanm Clone Parallel::ForkManager
