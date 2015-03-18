@@ -23,7 +23,18 @@
   </tests>
 
   <help>
-  Filter out indels and complex variants from VCF file
+What it does
+============
+
+Filter out indels and complex variants from VCF file
+
+
+Usage
+=====
+
+**Parameters**
+  - VCF file: A VCF file from Freebayes
+  
   </help>
 
 </tool>

@@ -91,7 +91,27 @@
   </tests>
 
   <help>
-Best metaalignment program ever!
+What it does
+============
+
+Create a pseudo alignment from multiple VCFs files
+
+
+Usage
+=====
+
+**Parameters**
+  - Reference Name: Sequence name from reference file
+  - Minimum coverage: minimum coverage for base pair to be considered
+  - Keep ambiguous file: yes/no
+  - FreeBayes filtered VCF: VCF file from FreeBayes
+  - Mpileup VCF: VCF file from Mpileup
+  - Number of CPUs
+
+  
+**Options**
+  - Masking positions file: positions to mask in the analysis
+
   </help>
 
 </tool>
