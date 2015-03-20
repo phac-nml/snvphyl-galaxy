@@ -1,0 +1,97 @@
+<tool id="vcf2pseudoalignment" name="VCF 2 pseudoalignment" version ="0.0.10">
+  <description>create a pseudo alignment from multiple VCFs files</description>
+        <requirements>
+                <requirement type="package" version="1.1">core-phylogenomics</requirement>
+		<!--requirement type="package" version="1.0">smalt</requirement>
+		<requirement type="package" version="1.0">samtools</requirement>
+		<requirement type="package" version="1.0">freebayes</requirement>
+		<requirement type="package" version="1.0">bcftools_view</requirement>
+		<requirement type="package" version="1.0">msa_datatypes</requirement-->
+        </requirements>
+
+  <command interpreter="bash">
+	vcf2pseudoalignment.sh $positions $phylip $fasta
+	-r "$reference"
+	#if str($invalid) != 'None':
+		--invalid-pos "$invalid"
+	#end if
+  	-c "$coverage"
+	-f fasta
+	-f phylip
+	-v	
+	--numcpus $numcpus
+	$ambiguous
+
+        #for $f in $freebayes_collection.keys# --vcfsplit "$f=$freebayes_collection[$f]" #end for#
+        #for $f in $mpileup_collection.keys# --mpileup "$f=$mpileup_collection[$f]" #end for#
+  </command>
+  <inputs>
+    <param name="reference" type="text"  label="Reference Name" value='reference' format="fasta"/>
+    <param name="invalid" type="data"  label="Invalid position file" format="tabular" optional="true"/>
+    <param name="coverage" type="integer" value="15" label="minimum coverage"/>
+    <param name="ambiguous" truevalue="--keep-ambiguous" falsevalue="" type="boolean" checked="false" label="Keep ambiguous base pair"/>
+
+    <param name="freebayes_collection" type="data_collection" label="FreeBayes filtered VCF" help="" optional="false" format="vcf" collection_type="list" />
+    <param name="mpileup_collection" type="data_collection" label="Mpileup VCF" help="" optional="false" format="tabular" collection_type="list" />
+    <param name="numcpus" type="select" label="Number of CPUS" multiple="false" optional="false">
+	<option value="4">4</option>
+	<option value="8">8</option>
+	<option value="16">16</option>
+	<option value="32">32</option>
+    </param>
+
+  </inputs>
+  <outputs>
+    <data format="tabular" name="positions" />
+    <data format="fasta" name="fasta" />
+    <data format="phylip" name="phylip" />
+  </outputs>
+  <stdio>
+    	<exit_code range="1:" level="fatal" description="Unknown error has occured"/>
+  </stdio>
+  <tests>
+    <test>
+      <param name="reference" value="vcf2pseudoalignment.input.1.reference.fasta"/>
+      <param name="coverage" value="4"/>
+      <param name="invalid" value="vcf2pseudoalignment.input.1.invalid_positions.tsv"/>
+      <param name="ambiguous" value="true"/>
+      <param name="freebayes_collection">
+        <collection type="list">
+          <element name="v1" value="vcfsplit/vcf2pseudoalignment.input.1.v1.vcf.gz"/>
+          <element name="v2" value="vcfsplit/vcf2pseudoalignment.input.1.v2.vcf.gz"/>
+        </collection>
+      </param>
+      <param name="mpileup_collection">
+        <collection type="list">
+          <element name="v1" value="mpileup/vcf2pseudoalignment.input.1.v1.vcf.gz"/>
+          <element name="v2" value="mpileup/vcf2pseudoalignment.input.1.v2.vcf.gz"/>
+        </collection>
+      </param>
+      <param name="numcpus" value="4"/>
+      
+      <output name="tabular" file="vcf2pseudoalignment.output.1.positions.tsv"/>
+      <output name="fasta">
+        <assert_contents>
+          <has_text text=">vcf2pseudoalignment.input.1.reference.fasta"/>
+          <has_text text="TGA"/>
+          <has_text text=">v1"/>
+          <has_text text="ATT"/>
+          <has_text text=">v2"/>
+          <has_text text="ANA"/>
+        </assert_contents>
+      </output>
+      <output name="phylip">
+        <assert_contents>
+          <has_line_matching expression="vcf2pseudoalignment.input.1\S+\s+TGA"/>
+          <has_line_matching expression="v1\s+ATT"/>
+          <has_line_matching expression="v2\s+ANA"/>
+        </assert_contents>
+      </output>
+    </test>
+  </tests>
+
+  <help>
+Best metaalignment program ever!
+  </help>
+
+</tool>
