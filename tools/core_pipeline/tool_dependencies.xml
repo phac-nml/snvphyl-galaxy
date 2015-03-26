@@ -1,35 +1,46 @@
 <?xml version="1.0"?>
 <tool_dependency>
+    <package name="mummer" version="3.23">
+        <repository changeset_revision="93daed514528" name="package_mummer_3_23" owner="jen-cabral" toolshed="http://127.0.0.1:9009/" />
+    </package>
+    <package name="perl" version="5.18.1">
+        <repository changeset_revision="da16cddb78f2" name="package_perl_5_18" owner="jen-cabral" prior_installation_required="True" toolshed="http://127.0.0.1:9009/"  />
+    </package>
     <package name="core-phylogenomics" version="1.1">
         <install version="1.0">
             <actions>
-               <action type="shell_command">git clone --recursive https://github.com/apetkau/core-phylogenomics.git</action>
-		<action type="change_directory">lib/vcf2pseudoalignment</action>
-                <action type="shell_command">git checkout 4bf2cddaa8d79d1e05523da6afb535651335668c</action>
-		<action type="change_directory">../..</action>
-		<action type="move_directory_files">
-			<source_directory>.</source_directory>
-			<destination_directory>$INSTALL_DIR</destination_directory>
-		</action>
-                <action type="set_environment">
-                    <environment_variable name="VCF2PSEUDO" action="set_to">$INSTALL_DIR/lib/vcf2pseudoalignment</environment_variable>
-                    <environment_variable name="PERL5LIB" action="prepend_to">$INSTALL_DIR/lib/vcf2pseudoalignment</environment_variable>
-                    <environment_variable name="VCF_LIB" action="set_to">$INSTALL_DIR/lib</environment_variable>
-                    <environment_variable name="SCRIPTS" action="set_to">$INSTALL_DIR/scripts</environment_variable>
+                <action type="setup_perl_environment">
+                    <repository changeset_revision="da16cddb78f2" name="package_perl_5_18" owner="jen-cabral" toolshed="http://127.0.0.1:9009/" >
+                        <package name="perl" version="5.18.1" />
+                    </repository>
+                    <package>Parallel::ForkManager</package>
+                    <package>http://search.cpan.org/CPAN/authors/id/C/CJ/CJFIELDS/BioPerl-1.6.901.tar.gz</package>
+                    <package>https://cpan.metacpan.org/authors/id/A/AJ/AJPAGE/Bio-Pipeline-Comparison-1.123050.tar.gz</package>
                 </action>
-                <action type="shell_command">svn checkout http://svn.code.sf.net/p/vcftools/code/trunk/ vcftools</action>
-		<action type="move_file">
-			<source>vcftools/perl/Vcf.pm</source>
-			<destination>$INSTALL_DIR/lib/vcf2pseudoalignment</destination>
-		</action>
+
+                <action type="change_directory">..</action>
+                <action type="shell_command">git clone --recursive https://github.com/apetkau/core-phylogenomics.git</action>
+                <action type="change_directory">core-phylogenomics/lib/vcf2pseudoalignment</action>
+                <action type="shell_command">git checkout 4bf2cddaa8d79d1e05523da6afb535651335668c</action>
+                <action type="change_directory">../..</action>
+                <action type="move_directory_files">
+                    <source_directory>.</source_directory>
+                    <destination_directory>$INSTALL_DIR/core-phylogenomics</destination_directory>
+                </action>
+
+                <action type="set_environment">
+                    <environment_variable name="VCF2PSEUDO" action="set_to">$INSTALL_DIR/core-phylogenomics/lib/vcf2pseudoalignment</environment_variable>
+                    <environment_variable name="PERL5LIB" action="prepend_to">$INSTALL_DIR/lib/perl5</environment_variable>
+                    <environment_variable name="VCF_LIB" action="set_to">$INSTALL_DIR/core-phylogenomics/lib</environment_variable>
+                    <environment_variable name="SCRIPTS" action="set_to">$INSTALL_DIR/core-phylogenomics/scripts</environment_variable>
+                </action>
+
             </actions>
         </install>
         <readme>
         </readme>
     </package>
-    <package name="mummer" version="3.23">
-        <repository changeset_revision="8be3c8826f17" name="package_mummer_3_23" owner="aaron" toolshed="https://irida.corefacility.ca/galaxy-shed/" />
-    </package>
+
 
 </tool_dependency>
 
