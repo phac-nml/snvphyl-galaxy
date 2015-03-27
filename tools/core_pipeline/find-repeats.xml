@@ -3,6 +3,7 @@
   <requirements>
     <requirement type="package" version="1.1">core-phylogenomics</requirement>
     <requirement type="package" version="3.23">mummer</requirement>
+    <requirement type="package" version="5.18.1">perl</requirement>
   </requirements>
 
   <command interpreter="perl">
