@@ -3,11 +3,6 @@
   <requirements>
     <requirement type="package" version="1.1">core-phylogenomics</requirement>
     <requirement type="package" version="5.18.1">perl</requirement>
-<!--requirement type="package" version="1.0">smalt</requirement>
-<requirement type="package" version="1.0">samtools</requirement>
-<requirement type="package" version="1.0">freebayes</requirement>
-<requirement type="package" version="1.0">bcftools_view</requirement>
-<requirement type="package" version="1.0">msa_datatypes</requirement-->
   </requirements>
 
   <command interpreter="bash">

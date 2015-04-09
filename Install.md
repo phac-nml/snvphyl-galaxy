@@ -21,17 +21,6 @@ To install these tools, please proceed through the following steps.
 Some of these tools require additional dependencies to be installed on the Galaxy server.  For a cluster environment please make sure these are available on all cluster nodes by installing to a shared directory.
 
 1. [SAMTools][]: Please download and install [SAMTools 0.1.18][] and add to your `PATH` in the `$GALAXY_ENV` file.
-2. **Perl Modules**:  The following lists the dependency Perl modules required by this pipeline.  These can be installed using the [cpanm][] command.
-
-    ```bash
-    cpanm Clone Parallel::ForkManager
-    ```
-
-    In addition, [BioPerl][] version 1.6.901 must be installed.  Please run the following command to install.
-
-    ```bash
-    cpanm http://search.cpan.org/CPAN/authors/id/C/CJ/CJFIELDS/BioPerl-1.6.901.tar.gz
-    ```
 
 ## Step 2: Install Galaxy Tools
 

@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
 <tool_dependency>
     <package name="mummer" version="3.23">
-        <repository changeset_revision="93daed514528" name="package_mummer_3_23" owner="jen-cabral" toolshed="http://127.0.0.1:9009/" />
+        <repository name="package_mummer_3_23" owner="iuc" />
     </package>
     <package name="perl" version="5.18.1">
-        <repository changeset_revision="da16cddb78f2" name="package_perl_5_18" owner="jen-cabral" prior_installation_required="True" toolshed="http://127.0.0.1:9009/"  />
+        <repository name="package_perl_5_18" owner="iuc" prior_installation_required="True"  />
     </package>
     <package name="core-phylogenomics" version="1.1">
         <install version="1.0">
             <actions>
                 <action type="setup_perl_environment">
-                    <repository changeset_revision="da16cddb78f2" name="package_perl_5_18" owner="jen-cabral" toolshed="http://127.0.0.1:9009/" >
+                    <repository name="package_perl_5_18" owner="iuc" >
                         <package name="perl" version="5.18.1" />
                     </repository>
                     <package>Parallel::ForkManager</package>
-                    <package>http://search.cpan.org/CPAN/authors/id/C/CJ/CJFIELDS/BioPerl-1.6.901.tar.gz</package>
+                    <package>https://cpan.metacpan.org/authors/id/C/CJ/CJFIELDS/BioPerl-1.6.901.tar.gz</package>
                     <package>https://cpan.metacpan.org/authors/id/A/AJ/AJPAGE/Bio-Pipeline-Comparison-1.123050.tar.gz</package>
                 </action>
 
