@@ -20,7 +20,9 @@
 
                 <action type="change_directory">..</action>
                 <action type="shell_command">git clone --recursive https://github.com/apetkau/core-phylogenomics.git</action>
-                <action type="change_directory">core-phylogenomics/lib/vcf2pseudoalignment</action>
+                <action type="change_directory">core-phylogenomics</action>
+                <action type="shell_command">git checkout ec125272170beb2baa7821d948079102a37ac173</action>
+                <action type="change_directory">lib/vcf2pseudoalignment</action>
                 <action type="shell_command">git checkout 4bf2cddaa8d79d1e05523da6afb535651335668c</action>
                 <action type="change_directory">../..</action>
                 <action type="move_directory_files">
