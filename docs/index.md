@@ -20,7 +20,7 @@ More information on the operation and installation of the pipeline can be found 
 
 [Galaxy]: http://galaxyproject.org/
 [Installation]: install/index.md
-[Overview]: overview/index.md
+[Overview]: user-guide/index.md
 [SMALT]: http://www.sanger.ac.uk/resources/software/smalt/
 [FreeBayes]: https://github.com/ekg/freebayes
 [SAMtools/BCFtools]: http://samtools.sourceforge.net/mpileup.shtml
