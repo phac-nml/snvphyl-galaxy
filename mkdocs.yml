@@ -1,1 +1,10 @@
 site_name: SNVPhyl
+pages:
+- [overview/index.md, Overview]
+- [quick/index.md, Quick Usage]
+- [install/index.md, Installation]
+- [usage/index.md, Usage]
+- [examples/index.md, Examples]
+- [comparisons/index.md, Comparisons]
+
+theme: readthedocs
