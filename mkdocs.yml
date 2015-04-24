@@ -1,5 +1,6 @@
 site_name: SNVPhyl
 pages:
+- [index.md, Introduction]
 - [overview/index.md, Overview]
 - [quick/index.md, Quick Usage]
 - [install/index.md, Installation]
