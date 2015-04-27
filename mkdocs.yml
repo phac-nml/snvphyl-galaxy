@@ -6,7 +6,7 @@ pages:
 - [index.md, Home]
 - [user-guide/index.md, User, Overview]
 - [user-guide/usage.md, User, Usage]
-- [user-guide/usage.md, User, Validation]
+- [user-guide/interpretation.md, User, Interpretation]
 - [install/quick.md, Installation, Quick]
 - [install/manual.md, Installation, Manual]
 - [examples/index.md, Examples, Home]
