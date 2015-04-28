@@ -2,6 +2,6 @@
 <tool_dependency>
     <package name="snvphyl" version="1.1">
         <repository  name="package_snvphyl" owner="phil"  />
-        <repository  name="package_bcftools_1_2" owner="phil"  />
+        <repository  name="package_bcftools_1_2" owner="iuc"  />
     </package>
 </tool_dependency>
