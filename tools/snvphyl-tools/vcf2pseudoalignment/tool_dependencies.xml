@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tool_dependency>
+    <package name="snvphyl" version="1.1">
+        <repository  name="package_snvphyl" owner="phil"  />
+        <repository  name="package_bcftools_1_2" owner="phil"  />
+    </package>
+</tool_dependency>
