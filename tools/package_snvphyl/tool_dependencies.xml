@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<tool_dependency>
+    <package name="perl" version="5.18.1">
+        <repository  name="package_perl_5_18" owner="iuc" prior_installation_required="True" />
+    </package>
+    <package name="snvphyl" version="1.1">
+        <install version="1.0">
+            <actions>
+                <action type="setup_perl_environment">
+                    <repository name="package_perl_5_18" owner="iuc">
+                        <package name="perl" version="5.18.1" />
+                    </repository>
+                    <package>Parallel::ForkManager</package>
+                    <package>https://cpan.metacpan.org/authors/id/C/CJ/CJFIELDS/BioPerl-1.6.901.tar.gz</package>
+                    <package>https://cpan.metacpan.org/authors/id/A/AJ/AJPAGE/Bio-Pipeline-Comparison-1.123050.tar.gz</package>
+		    <package>https://cpan.metacpan.org/authors/id/R/RE/REHSACK/List-MoreUtils-0.410.tar.gz</package>
+		    <package>https://cpan.metacpan.org/authors/id/T/TO/TOBYINK/Exporter-Tiny-0.042.tar.gz</package>
+                </action>
+
+                <action type="change_directory">../</action>
+                <action type="shell_command">git clone https://github.com/apetkau/vcf2pseudoalignment.git</action>
+                <action type="change_directory">vcf2pseudoalignment</action>
+                <action type="shell_command">git checkout remotes/origin/parallelization</action>
+                <action type="change_directory">bcfplugins/bcftools-1.2</action>
+                <action type="shell_command">make</action>
+                <action type="change_directory">../..</action>
+                <action type="move_directory_files">
+                    <source_directory>.</source_directory>
+                    <destination_directory>$INSTALL_DIR/snvphyl</destination_directory>
+                </action>
+
+                <action type="set_environment">
+                    <environment_variable action="set_to" name="VCF2PSEUDO">$INSTALL_DIR/snvphyl</environment_variable>
+                    <environment_variable action="append_to" name="LD_LIBRARY_PATH">$INSTALL_DIR/snvphyl/bcfplugins/bcftools-1.2/htslib-1.2.1</environment_variable>
+                    <environment_variable action="prepend_to" name="PATH">$INSTALL_DIR/snvphyl/bcfplugins/bcftools-1.2</environment_variable>
+                    <environment_variable action="prepend_to" name="PERL5LIB">$INSTALL_DIR/lib/perl5</environment_variable>
+                    <environment_variable action="set_to" name="BCFTOOLS_PLUGINS">$INSTALL_DIR/snvphyl/bcfplugins/bcftools-1.2/plugins</environment_variable>
+                </action>
+
+            </actions>
+        </install>
+        <readme>
+        </readme>
+    </package>
+
+
+</tool_dependency>
