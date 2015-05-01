@@ -1,77 +1,34 @@
-SNVPhyl Whole Genome Phylogenomics Pipeline
-===========================================
+# SNVPhyl: Whole Genome SNV Phylogenomics Pipeline
 
-This is the main repository for the **SNVPhyl** pipeline used for constructing whole genome phylogenies.  This pipeline is implemented as a [Galaxy][] workflow which may be installed in any Galaxy instance.  This pipeline takes as input a set of whole genome sequence reads and a reference genome.  The reads are mapped to the reference genome, variants are called, and an alignment of phylogenetically informative sites is created.  This alignment is used to construct a whole genome phylogeny as well as a pair-wise SNV distance matrix.
+The SNVPhyl (SNV PHYLogenomics) pipeline is a pipeline for identifying Single Nucleotide Variants (SNV) within a collection of microbial genomes and constructing a phylogenetic tree.  Detailed documentation can be found at http://snvphyl.readthedocs.org/.  This repository contains the customized [Galaxy][] tools for this pipeline as well as the source for the documentation.
 
-Usage
------
+## Documentation
 
-### Input
+Documentation is written using [Markdown][] and can be compiled using [mkdocs][].  To install [mkdocs][] please run:
 
-The input for this pipeline consists of a set of paired-end sequence reads in **fastq** format as well as a reference genome in **fasta** format.  Some example data can be found in the [test/][] directory.  The paired-end sequence reads must be grouped together in Galaxy using a dataset collection.  This can be accomplished by clicking on the **Operations on multiple datasets** icon ![datasets-icon][], selecting all of the sequence read **.fastq** files, and selecting **For all selected... > Build List of dataset pairs**.  This should bring up a screen that looks like the following.
+```bash
+pip install mkdocs
+```
 
-![dataset-pair-screen][]
+To quickly generate a site for the documentation please run:
 
-This can be used to pair-up each of the **.fastq** files and construct a new entry in the Galaxy **History** for this list of paired-end files.  This **dataset_pair** history item, along with the reference file can be used as input to the pipeline.
+```bash
+mkdocs serve
+```
 
-### Output
+This will build a site under http://localhost:8000.
 
-The main output from this pipeline consists of the following files.
+## Tools
 
-1. A phylogenetic tree constructed from the reference genome and all the sequence reads.  This tree is provided in [newick][] format and can be displayed in Galaxy's [Phyloviz][] software or external viewers such as [FigTree][].
+The tools for this pipeline are maintained in a Galaxy toolshed at http://irida.corefacility.ca/galaxy-shed.  To build these tools for export to a local Galaxy toolshed please run:
 
-    ![snphyl-out][]
+```bash
+./scripts/build_for_toolshed.sh
+```
 
-2. A pairwise distance SNV matrix.  This shows the pairwise distance between each sample in SNVs that were kept by the pipeline.
-
-    ```
-    strain       2010EL-1749  C6706  2010EL-1786  2012V-1001 
-    2010EL-1749  0            21     4            2         
-    C6706        21           0      21           21        
-    2010EL-1786  4            21     0            4         
-    2012V-1001   2            21     4            0         
-    VC-14        3            20     3            3    
-    ```
-
-3. A table of all variants found.
-
-    ```
-    #Chromosome   Position  Status             Reference  2010EL-1749  2010EL-1796  
-    2010EL-1786   13149     filtered-mpileup   A          N            A            
-    2010EL-1786   17132     valid              A          A            A            
-    2010EL-1786   17872     filtered-coverage  T          T            T            
-    ```
-
-### Stages
-
-The stages this pipeline goes through are, briefly:
-
-1. Identification of repeat regions on reference genome.
-2. Reference mapping and variant calling using [SMALT][], [FreeBayes][] and [SAMtools/BCFtools][].
-3. Merging and filtering variant calls.
-4. Aligning SNVs into an alignment SNP table.
-5. Building a Maximum Likelihood tree with [PhyML][].
-
-The Galaxy workflow implementing all of these stages looks as follows:
-
-![snvphyl-workflow][]
-
-Install
--------
-
-Please refer to the [Install Guide][] for more information on how to install this workflow.
+This will generate **.tar.gz** files in the directory `build/` which can be uploaded to a toolshed.  More details of this process can be found in the [Install Tools in Local Toolshed][]
 
 [Galaxy]: http://galaxyproject.org/
-[Install Guide]: Install.md
-[test/]: test/
-[datasets-icon]: test/images/datasets-icon.jpg
-[dataset-pair-screen]: test/images/dataset-pair-screen.jpg
-[newick]: http://en.wikipedia.org/wiki/Newick_format
-[FigTree]: http://tree.bio.ed.ac.uk/software/figtree/
-[Phyloviz]: https://wiki.galaxyproject.org/Learn/Visualization/PhylogeneticTree
-[SMALT]: http://www.sanger.ac.uk/resources/software/smalt/
-[FreeBayes]: https://github.com/ekg/freebayes
-[SAMtools/BCFtools]: http://samtools.sourceforge.net/mpileup.shtml
-[PhyML]: http://www.atgc-montpellier.fr/phyml/
-[snvphyl-workflow]: workflows/SNVPhyl/0.1/snvphyl_workflow.png
-[snphyl-out]: images/snvphyl-out.jpg
+[Markdown]: http://daringfireball.net/projects/markdown/syntax
+[mkdocs]: http://www.mkdocs.org
+[Install Tools in Local Toolshed]: InstallLocalToolshed.md

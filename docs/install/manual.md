@@ -1,7 +1,6 @@
-Install SNVPhyl in Galaxy
-=========================
+# Installing SNVPhyl
 
-This guide describes the installation procedure for the SNVPhyl whole genome phylogeny pipeline within a local [Galaxy][] instance.  This requires installing a number of tools in this Galaxy instance and uploading the workflow.  Some of these tools are maintained in the [Galaxy Toolshed][] while other tools are included in this repository under [tools/][] and maintained in the [IRIDA Toolshed][], part of the [IRIDA][] project.  The following table lists the dependency tools required by the software.  For information on how to install these tools to a local toolshed please refer to the [Install in Local Toolshed][] documentation.
+SNVPhyl is implemented as a [Galaxy Workflow][] and so these instructions assume you have an instance of [Galaxy][] available along with the ability to install tools in this instance of Galaxy.  The install process involves installing custome tools within Galaxy and uploading the SNVPhyl workflow.  Some of these tools are maintained in the [Galaxy Toolshed][] while other tools are included in the [snvphyl-galaxy][] project and maintained in the [IRIDA Toolshed][], part of the [IRIDA][] project.  The following table lists the dependency tools required by the software.  For information on how to install these tools to a local toolshed please refer to the [Install in Local Toolshed][] documentation.
 
 | Tool Name            | Tool Revision | Toolshed Installable Revision | Toolshed             |
 |:--------------------:|:-------------:|:-----------------------------:|:--------------------:|
@@ -18,9 +17,7 @@ To install these tools, please proceed through the following steps.
 
 ## Step 1: Install Dependencies
 
-Some of these tools require additional dependencies to be installed on the Galaxy server.  For a cluster environment please make sure these are available on all cluster nodes by installing to a shared directory.
-
-1. [SAMTools][]: Please download and install [SAMTools 0.1.18][] and add to your `PATH` in the `$GALAXY_ENV` file.
+Some of these tools require additional dependencies to be installed on the Galaxy server.  In particular, [SAMTools 0.1.18][] must be installed on the system and added to the `$PATH` in the `$GALAXY_ENV` file.  For a cluster environment please make sure these are available on all cluster nodes by installing to a shared directory.
 
 ## Step 2: Install Galaxy Tools
 
@@ -30,9 +27,9 @@ The install progress can be monitored in the Galaxy log file `galaxy-dist/paster
 
 ## Step 3: Upload the workflow
 
-The pipeline is implemented as a workflow in Galaxy which depends on the above tools.  Please upload the [SNVPhyl Galaxy Workflow][] now by going to **Workflow > Upload or import workflow**.
+The pipeline is implemented as a workflow in Galaxy which depends on the above tools.  Please download the [SNVPhyl Galaxy Workflow][] file and upload to Galaxy by going to **Workflow > Upload or import workflow**.
 
-## Step 3: Testing the Workflow
+## Step 4: Testing the Workflow
 
 Some test data has been included with this documentation to verify that all tools are installed correctly.  To test this workflow, please proceed through the following steps.
 
@@ -55,26 +52,22 @@ Some test data has been included with this documentation to verify that all tool
 
 If everything was successfull then all dependencies for this pipeline have been properly installed.
 
-[cpanm]: http://search.cpan.org/~miyagawa/App-cpanminus-1.7027/lib/App/cpanminus.pm
 [Galaxy]: http://galaxyproject.org/
+[Galaxy Workflow]: https://wiki.galaxyproject.org/Learn/AdvancedWorkflow
+[snvphyl-galaxy]: https://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy
 [IRIDA]: http://irida.ca
 [SNVPhyl]: https://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy/tree/development
-[Install in Local Toolshed]: InstallLocalToolshed.md
 [Galaxy Main Shed]: http://toolshed.g2.bx.psu.edu/
 [IRIDA Main Shed]: https://irida.corefacility.ca/galaxy-shed
 [Galaxy Toolshed]: http://toolshed.g2.bx.psu.edu/
 [IRIDA Toolshed]: https://irida.corefacility.ca/galaxy-shed
-[MUMMer]: http://mummer.sourceforge.net/
-[SAMTools]: http://www.htslib.org/
 [SAMTools 0.1.18]: http://downloads.sourceforge.net/project/samtools/samtools/0.1.18/samtools-0.1.18.tar.bz2
-[BioPerl]: http://www.bioperl.org/wiki/Main_Page
 [SNVPhyl Galaxy Workflow]: workflows/SNVPhyl/0.1/snvphyl_workflow.ga
-[upload-icon]: test/images/upload-icon.jpg
-[tools/]: tools/
-[test/reference.fasta]: test/reference.fasta
-[test/reads]: test/reads
-[upload-history]: test/images/upload-history.jpg
-[datasets-icon]: test/images/datasets-icon.jpg
-[dataset-pair-screen]: test/images/dataset-pair-screen.jpg
-[workflow-success]: test/images/workflow-success.jpg
-[view-details-icon]: test/images/view-details-icon.jpg
+[upload-icon]: install/test/images/upload-icon.jpg
+[test/reference.fasta]: install/test/reference.fasta
+[test/reads]: install/test/reads
+[upload-history]: install/test/images/upload-history.jpg
+[datasets-icon]: install/test/images/datasets-icon.jpg
+[dataset-pair-screen]: install/test/images/dataset-pair-screen.jpg
+[workflow-success]: install/test/images/workflow-success.jpg
+[view-details-icon]: install/test/images/view-details-icon.jpg
