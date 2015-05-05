@@ -18,9 +18,9 @@
                 </action>
 
                 <action type="change_directory">../</action>
-                <action type="shell_command">git clone https://github.com/apetkau/vcf2pseudoalignment.git</action>
-                <action type="change_directory">vcf2pseudoalignment</action>
-                <action type="shell_command">git checkout remotes/origin/parallelization</action>
+                <action type="shell_command">git clone http://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-tools.git</action>
+                <action type="change_directory">snvphyl-tools</action>
+                <action type="shell_command">git checkout 71a865f8b8dc4ddcf3a604565fe436ae011decba</action>
                 <action type="change_directory">bcfplugins/bcftools-1.2</action>
                 <action type="shell_command">make</action>
                 <action type="change_directory">../..</action>
