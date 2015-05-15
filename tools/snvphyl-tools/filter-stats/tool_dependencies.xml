@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tool_dependency>
+    <package name="snvphyl" version="1.1">
+        <repository  name="package_snvphyl" owner="jen-cabral"  />
+    </package>
+</tool_dependency>
