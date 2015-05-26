@@ -6,7 +6,7 @@
   </requirements>
 
   <command interpreter="perl">
-	/\$SCRIPTS/snp_matrix.pl   $phylip
+	/\$VCF2PSEUDO/snp_matrix.pl   $phylip
 	-o $csv
   </command>
   <inputs>
@@ -19,8 +19,8 @@
   </stdio>
   <tests>
     <test>
-      <param name="phylip" value="pseudoalign-3.phy"/>
-      <output name="csv" file="pseudoalign-3.phy.out"/>
+      <param name="phylip" value="pseudoalign-13.phy"/>
+      <output name="csv" file="pseudoalign-13.phy.out"/>
     </test>
   </tests>
 

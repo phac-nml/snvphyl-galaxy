@@ -25,6 +25,8 @@
   </stdio>
   <tests>
     <test>
+      <param name="tabfile" value="filter-stats-in.tsv" />
+      <output name="out" file="filter-stats-out.tabular" />
     </test>
   </tests>
 
