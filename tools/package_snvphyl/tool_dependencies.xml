@@ -11,6 +11,7 @@
                         <package name="perl" version="5.18.1" />
                     </repository>
                     <package>Parallel::ForkManager</package>
+                    <package>https://cpan.metacpan.org/authors/id/S/SA/SANKO/Readonly-2.00.tar.gz</package>
                     <package>https://cpan.metacpan.org/authors/id/C/CJ/CJFIELDS/BioPerl-1.6.901.tar.gz</package>
                     <package>https://cpan.metacpan.org/authors/id/A/AJ/AJPAGE/Bio-Pipeline-Comparison-1.123050.tar.gz</package>
 		    <package>https://cpan.metacpan.org/authors/id/R/RE/REHSACK/List-MoreUtils-0.410.tar.gz</package>

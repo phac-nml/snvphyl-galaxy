@@ -8,7 +8,7 @@ This guide describes the installation procedure for the SNVPhyl whole genome phy
 | **msa_datatypes**    | 70227007b991  | 0 (2014-04-22)                | [Galaxy Main Shed][] |
 | **bcftools_view**    | 6572c40a8505  | 8 (2012-10-08)                | [Galaxy Main Shed][] |
 | **samtools_mpileup** | 973fea5b4bdf  | 3 (2014-03-27)                | [Galaxy Main Shed][] |
-| **sam_to_bam**       | 8176b2575aa1  | 4 (2014-03-27)                | [Galaxy Main Shed][] |
+| **sam_to_bam**       | c73bf16b45df  | 5 (2015-03-05)                | [Galaxy Main Shed][] |
 | **core_pipeline**    | 0737c0310cab  | 0 (2014-10-07)                | [IRIDA Main Shed][]  |
 | **freebayes**        | 386bc6e45b68  | 0 (2014-10-07)                | [IRIDA Main Shed][]  |
 | **phyml**            | b5867c5c7674  | 0 (2014-10-07)                | [IRIDA Main Shed][]  |
@@ -21,17 +21,6 @@ To install these tools, please proceed through the following steps.
 Some of these tools require additional dependencies to be installed on the Galaxy server.  For a cluster environment please make sure these are available on all cluster nodes by installing to a shared directory.
 
 1. [SAMTools][]: Please download and install [SAMTools 0.1.18][] and add to your `PATH` in the `$GALAXY_ENV` file.
-2. **Perl Modules**:  The following lists the dependency Perl modules required by this pipeline.  These can be installed using the [cpanm][] command.
-
-    ```bash
-    cpanm Clone Parallel::ForkManager
-    ```
-
-    In addition, [BioPerl][] version 1.6.901 must be installed.  Please run the following command to install.
-
-    ```bash
-    cpanm http://search.cpan.org/CPAN/authors/id/C/CJ/CJFIELDS/BioPerl-1.6.901.tar.gz
-    ```
 
 ## Step 2: Install Galaxy Tools
 

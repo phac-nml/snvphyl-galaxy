@@ -1,13 +1,9 @@
 <tool id="vcf2pseudoalignment" name="VCF 2 pseudoalignment" version ="0.0.10">
   <description>create a pseudo alignment from multiple VCFs files</description>
-        <requirements>
-                <requirement type="package" version="1.1">core-phylogenomics</requirement>
-		<!--requirement type="package" version="1.0">smalt</requirement>
-		<requirement type="package" version="1.0">samtools</requirement>
-		<requirement type="package" version="1.0">freebayes</requirement>
-		<requirement type="package" version="1.0">bcftools_view</requirement>
-		<requirement type="package" version="1.0">msa_datatypes</requirement-->
-        </requirements>
+  <requirements>
+    <requirement type="package" version="1.1">core-phylogenomics</requirement>
+    <requirement type="package" version="5.18.1">perl</requirement>
+  </requirements>
 
   <command interpreter="bash">
 	vcf2pseudoalignment.sh $positions $phylip $fasta
@@ -34,10 +30,10 @@
     <param name="freebayes_collection" type="data_collection" label="FreeBayes filtered VCF" help="" optional="false" format="vcf" collection_type="list" />
     <param name="mpileup_collection" type="data_collection" label="Mpileup VCF" help="" optional="false" format="tabular" collection_type="list" />
     <param name="numcpus" type="select" label="Number of CPUS" multiple="false" optional="false">
-	<option value="4">4</option>
-	<option value="8">8</option>
-	<option value="16">16</option>
-	<option value="32">32</option>
+    	<option value="4">4</option>
+    	<option value="8">8</option>
+    	<option value="16">16</option>
+    	<option value="32">32</option>
     </param>
 
   </inputs>
