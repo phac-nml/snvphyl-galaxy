@@ -62,6 +62,7 @@
     <data format="tabular" name="positions" from_work_dir="pseudoalign-positions.tsv" />
     <data format="fasta" name="fasta" from_work_dir="pseudoalign.fasta"/>
     <data format="phylip" name="phylip" from_work_dir="pseudoalign.phy" />
+    <data format="csv" name="vcf2core" from_work_dir="pseudoalign-stats.csv" />
   </outputs>
   <tests>
     <test>
