@@ -28,7 +28,7 @@
 	</outputs>
 
 	<stdio>
-		<exit_code range="" level="" description="" />
+		<exit_code range="1:" level="fatal" description="Unknown error has occured"/>
 	</stdio>
 
 	<tests>
