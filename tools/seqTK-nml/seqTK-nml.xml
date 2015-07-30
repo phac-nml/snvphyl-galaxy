@@ -1,0 +1,83 @@
+<tool id="seqtk_nml_sample" name="seqTK Sample NML" version="0.0.1">
+	<description>Runs seqTK sample if raw coverage is above user defined threshold </description>
+	<requirements>
+		<requirement type="package" version="1.0-r75-dirty">seqtk</requirement>
+		<requirement type="package" version="5.18.1">perl</requirement>
+		<requirement type="package" version="1.6.922">bioperl</requirement>
+	</requirements>
+	<command interpreter="perl">
+		seqTK-nml.pl $fastar 
+
+		#if $single_or_paired.type == "single"
+			single
+ 			$input_se
+		#elif $single_or_paired.type == "paired"
+            paired
+          	$single_or_paired.forward_pe $single_or_paired.reverse_pe
+        #else
+            collection
+            $single_or_paired.fastq_collection.forward $single_or_paired.fastq_collection.reverse
+        #end if
+
+		$coverage $output
+
+		#if $single_or_paired.type != "single"
+			$output_rev
+		#end if
+	</command>
+	<stdio>
+		<exit_code range="1:" level="fatal" description="Unknown error has occured"/>
+	</stdio>
+	<inputs>
+		<conditional name="single_or_paired">
+			<param name="type" type="select" label="Read type">
+				<option value="single">Single-end</option>
+                <option value="paired">Paired-end</option>
+                <option value="collection">Collection Paired-end</option>
+			</param>
+			<when value="single">
+				<param name="input_se" type="data" format="fastqsanger" label="Single end read file(s)"/>
+			</when>
+			<when value="paired">
+				<param name="forward_pe" type="data" format="fastqsanger" label="Forward paired-end read file"/>
+                <param name="reverse_pe" type="data" format="fastqsanger" label="Reverse paired-end read file"/>
+            </when>
+            <when value="collection">
+                <param name="fastq_collection" type="data_collection" label="Paired-end reads collection" optional="false" format="txt" collection_type="paired" />
+            </when>
+        </conditional>
+        
+		<param name="fastar" type="data" label="Fasta Reference File" format="fasta" />
+		<param name="coverage" type="integer" label="Desired Coverage" value="50" />
+	</inputs>
+
+	<outputs>
+		<data format="fastqsanger" name="output" label="SubSampled Fastq" />
+		<data format="fastqsanger" name="output_rev" label="SubSampled Fastq Reverse">
+			<filter>single_or_paired['type']!="single"</filter>
+		</data>
+	</outputs>
+
+	<tests>
+		<test>
+		</test>
+	</tests>
+	<help>
+What it does
+============
+
+Calculates raw coverage. If the raw coverage is greater than desired coverage, runs seqTK sample to generate downsampled reads. 
+
+
+Usage
+=====
+
+**Parameters**
+	- Fastq reads (single end, paired end, or paired end collection)
+	- Fasta reference file
+
+**Options**
+	- Desired coverage (50)
+	</help>
+</tool>
+
