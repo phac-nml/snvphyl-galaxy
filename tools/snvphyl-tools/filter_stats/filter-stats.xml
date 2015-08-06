@@ -1,4 +1,4 @@
-<tool id="filterstat" name="Filter Stats" version ="0.0.1">
+<tool id="filterstat" name="Filter Stats" version ="0.0.2">
   <description>Identify number of positions excluded based on filtered status</description>
   <requirements>
     <requirement type="package" version="1.3">snvphyl</requirement>
@@ -6,10 +6,11 @@
   </requirements>
 
   <command interpreter="perl">
-      /\$VCF2PSEUDO/filter-stats.pl -i $tabfile -o $out
+      /\$VCF2PSEUDO/filter-stats.pl -i $tabfile
       #if $summary == "invalids":
         -a
       #end if
+	> $out
   </command>
   <inputs>
     <param name="tabfile" type="data"  label="Pseudo-alignment positions tab delimited file" format="tabular"/>

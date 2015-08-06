@@ -1,4 +1,4 @@
-<tool id="verify_map" name="Verify Mapping Quality" version="0.0.1">
+<tool id="verify_map" name="Verify Mapping Quality" version="0.0.2">
 	<description>Checks the mapping quality of all BAM files generated in the core SNP pipeline.</description>
 	<requirements>
 		<requirement type="package" version="1.3">snvphyl</requirement>
@@ -11,10 +11,12 @@
  		#for $f in $bams.keys# --bam "$f=$bams[$f]" #end for#
  		#if $mindepth :
         	--min-depth $mindepth
-      	#end if
-      	#if $minmap :
+	      	#end if
+
+      		#if $minmap :
         	--min-map $minmap 	
-      	#end ifs
+	      	#end if
+		> $output_log
 	</command>
 
 	<inputs>
