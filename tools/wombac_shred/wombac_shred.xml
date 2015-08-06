@@ -1,4 +1,4 @@
-<tool id="wombac_shred" name="Wombac Shred" version ="0.0.1">
+<tool id="wombac_shred" name="Wombac Shred" version ="0.0.3">
   <description>Shred a Fasta file </description>
   <requirements>
     <requirement type="package" version="5.18.1">perl</requirement>
@@ -6,10 +6,10 @@
   </requirements>
 
   <command interpreter="perl">
-     /\$WOMBACLIB/wombac-shred_fasta  $fastq --fastq --coverage=$coverage --readlen=$readlen > $output
+     /\$WOMBACLIB/wombac-shred_fasta  $fasta --fastq --coverage=$coverage --readlen=$readlen > $output
   </command>
   <inputs>
-    <param name="fastq" type="data" label="File to shred" format="fastqsanger" />
+    <param name="fasta" type="data" label="File to shred" format="fasta" />
     <param name="readlen" type="integer" label="Read Length" value="100" />
     <param name="coverage" type="integer" label="Depth of Coverage" value="50" />
   </inputs>

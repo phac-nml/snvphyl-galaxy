@@ -10,7 +10,7 @@
                     <repository name="package_perl_5_18" owner="iuc">
                         <package name="perl" version="5.18.1" />
                     </repository>
-                    <package>Time::Piece</package>
+                    <package>https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Time-Piece-1.30.tar.gz</package>
                     <package>https://cpan.metacpan.org/authors/id/D/DL/DLAND/File-Path-2.09.tar.gz</package>
                     <package>https://cpan.metacpan.org/authors/id/S/SM/SMUELLER/PathTools-3.47.tar.gz</package>
                     <package>https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Scalar-List-Utils-1.42.tar.gz</package>
