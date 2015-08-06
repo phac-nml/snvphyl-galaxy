@@ -15,4 +15,5 @@
 	<repository name="msa_datatypes" owner="iuc"/>
 	<repository name="verify_map" owner="phil"/>
 	<repository name="filter_stats" owner="phil"/>
+	<repository name="wombac_shred" owner="jen-cabral"/>
 </repositories>
