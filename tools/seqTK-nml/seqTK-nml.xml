@@ -11,19 +11,17 @@
 		#if $single_or_paired.type == "single"
 			single
  			$input_se
+ 			$coverage $output
 		#elif $single_or_paired.type == "paired"
             paired
           	$single_or_paired.forward_pe $single_or_paired.reverse_pe
+          	$coverage $output $output_rev
         #else
             collection
             $single_or_paired.fastq_collection.forward $single_or_paired.fastq_collection.reverse
+            $coverage $output_collection.forward $output_collection.reverse
         #end if
 
-		$coverage $output
-
-		#if $single_or_paired.type != "single"
-			$output_rev
-		#end if
 	</command>
 	<stdio>
 		<exit_code range="1:" level="fatal" description="Unknown error has occured"/>
@@ -52,10 +50,18 @@
 	</inputs>
 
 	<outputs>
-		<data format="fastqsanger" name="output" label="SubSampled Fastq" />
-		<data format="fastqsanger" name="output_rev" label="SubSampled Fastq Reverse">
-			<filter>single_or_paired['type']!="single"</filter>
+		
+		<data format="fastqsanger" name="output" label="SubSampled Fastq" >
+			<filter>single_or_paired['type']!="collection"</filter>
 		</data>
+		<data format="fastqsanger" name="output_rev" label="SubSampled Fastq Reverse">
+			<filter>single_or_paired['type']=="paired"</filter>
+		</data>
+		<collection name="output_collection" type="paired" label="SubSampled Fastqs">
+			<data name="forward" format="fastqsanger"/>
+      		<data name="reverse" format="fastqsanger"/>
+			<filter>single_or_paired['type']=="collection"</filter>
+		</collection>
 	</outputs>
 
 	<tests>
