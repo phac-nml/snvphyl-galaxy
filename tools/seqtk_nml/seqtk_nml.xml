@@ -6,7 +6,7 @@
 		<requirement type="package" version="1.6.922">bioperl</requirement>
 	</requirements>
 	<command interpreter="perl">
-		seqTK-nml.pl $fastar 
+		seqtk_nml.pl $fastar 
 
 		#if $single_or_paired.type == "single"
 			single
