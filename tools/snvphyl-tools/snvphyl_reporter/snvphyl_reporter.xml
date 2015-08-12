@@ -1,0 +1,39 @@
+<tool id="snvphyl_reporter" name="Snvphyl Reporter" version="1.0">
+	<description>Runs Snvphyl reporter</description>
+	<requirements>
+		<requirement type="package" version="1.3.5">snvphyl</requirement>
+	</requirements>
+	<command interpreter="perl">
+		/\$VCF2PSEUDO/reporter.pl --step bam_quality_data --output $output
+		#for $f in $input.keys#
+			--bam "$f=$input[$f]"
+		#end for
+	</command>
+
+	<inputs>
+		<param name="input" type="data_collection" lable="Bam files Collection" help="Please enter a list collection of bam files" optional="false" collection_type="list" />
+	</inputs>
+
+	<outputs>
+		<data name="output" format="txt" label="Reporter Output" />
+	</outputs>
+
+	<tests>
+		<test>
+			<param name="input">
+				<collection type="list">
+					<element name="sample1" value="sample1.bam" />
+					<element name="sample2" value="sample2.bam" />
+					<element name="sample3" value="sample3.bam" />
+				</collection>
+			</param>
+			<output name="output" file="bam_reporter_out.txt" />
+		</test>
+	</tests>
+
+	<help>
+
+This tool runs the SNVPhyl Reporter pipeline.
+	</help>
+
+</tool>
