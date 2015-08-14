@@ -3,7 +3,7 @@
     <package name="perl" version="5.18.1">
         <repository  name="package_perl_5_18" owner="iuc" prior_installation_required="True" />
     </package>
-    <package name="snvphyl" version="1.3.5">
+    <package name="snvphyl" version="1.3.6">
         <install version="1.0">
             <actions>
                 <action type="setup_perl_environment">
@@ -26,13 +26,12 @@
 		    <package>https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.001014.tar.gz</package>
 		    <package>https://cpan.metacpan.org/authors/id/O/OV/OVID/Text-Diff-1.41.tar.gz</package>
 		    <package>https://cpan.metacpan.org/authors/id/T/TY/TYEMQ/Algorithm-Diff-1.1903.tar.gz</package>
-		    <package>https://cpan.metacpan.org/authors/id/S/SA/SANKO/Readonly-2.00.tar.gz</package>
                 </action>
 
                 <action type="change_directory">../</action>
                 <action type="shell_command">git clone http://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-tools.git</action>
                 <action type="change_directory">snvphyl-tools</action>
-                <action type="shell_command">git checkout f49a1e9f098c83e1e50d705b153b15579ddf91a7</action>
+                <action type="shell_command">git checkout 5df23f0e4edec4c44cc9e7b3b78fd9fbf61d3378</action>
                 <action type="change_directory">bcfplugins/bcftools-1.2</action>
                 <action type="shell_command">make</action>
                 <action type="change_directory">../..</action>

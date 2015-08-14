@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <tool_dependency>
-    <package name="snvphyl" version="1.3.1">
+    <package name="snvphyl" version="1.3.6">
         <repository  name="package_snvphyl" owner="phil"  />
     </package>
     <package name="samtools" version="0.1.19">
