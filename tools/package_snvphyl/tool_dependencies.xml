@@ -3,7 +3,7 @@
     <package name="perl" version="5.18.1">
         <repository  name="package_perl_5_18" owner="iuc" prior_installation_required="True" />
     </package>
-    <package name="snvphyl" version="1.3.6">
+    <package name="snvphyl" version="1.3.7">
         <install version="1.0">
             <actions>
                 <action type="setup_perl_environment">
@@ -31,7 +31,7 @@
                 <action type="change_directory">../</action>
                 <action type="shell_command">git clone http://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-tools.git</action>
                 <action type="change_directory">snvphyl-tools</action>
-                <action type="shell_command">git checkout 5df23f0e4edec4c44cc9e7b3b78fd9fbf61d3378</action>
+                <action type="shell_command">git checkout 6fb98ccaf4a01cb23bbbe1e65a16e63dd7e1a907</action>
                 <action type="change_directory">bcfplugins/bcftools-1.2</action>
                 <action type="shell_command">make</action>
                 <action type="change_directory">../..</action>

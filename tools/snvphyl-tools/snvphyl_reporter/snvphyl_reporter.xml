@@ -1,7 +1,7 @@
 <tool id="snvphyl_reporter" name="Snvphyl Reporter" version="1.1">
 	<description>Runs Snvphyl reporter</description>
 	<requirements>
-		<requirement type="package" version="1.3.6">snvphyl</requirement>
+		<requirement type="package" version="1.3.7">snvphyl</requirement>
 	</requirements>
 	<command interpreter="perl">
 		/\$VCF2PSEUDO/reporter.pl --step bam_quality_data --output $output
