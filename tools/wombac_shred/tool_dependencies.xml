@@ -3,7 +3,7 @@
 	<package name="perl" version="5.18.1">
 		<repository name="package_perl_5_18" owner="iuc" />
 	</package>
-    <package name="wombac" version="2.1">
-        <repository  name="package_wombac_2_1" owner="jen-cabral"  />
+    <package name="wombac" version="2.2">
+        <repository  name="package_wombac_2_2" owner="jen-cabral"  />
     </package>
 </tool_dependency>

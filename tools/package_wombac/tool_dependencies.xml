@@ -3,7 +3,7 @@
     <package name="perl" version="5.18.1">
         <repository  name="package_perl_5_18" owner="iuc" prior_installation_required="True" />
     </package>
-    <package name="wombac" version="2.1">
+    <package name="wombac" version="2.2">
         <install version="1.0">
             <actions>
                 <action type="setup_perl_environment">
@@ -20,6 +20,7 @@
 
                 <action type="change_directory">../</action>
                 <action type="shell_command">git clone https://github.com/tseemann/wombac.git</action>
+                <action type="shell_command">git checkout 5ee9d740e5671291b7c0ff2d02df6dad528bd58f</action>
                 <action type="change_directory">wombac/bin/</action>
                 <action type="move_directory_files">
                     <source_directory>.</source_directory>
