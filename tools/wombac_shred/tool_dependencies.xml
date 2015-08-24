@@ -4,6 +4,6 @@
 		<repository name="package_perl_5_18" owner="iuc" />
 	</package>
     <package name="wombac" version="2.2">
-        <repository  name="package_wombac_2_2" owner="jen-cabral"  />
+        <repository  name="package_wombac" owner="jen-cabral"  />
     </package>
 </tool_dependency>
