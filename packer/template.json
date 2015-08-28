@@ -19,6 +19,7 @@
             "scripts/base.sh",
             "scripts/vagrant.sh",
             "scripts/virtualbox.sh",
+            "scripts/galaxy.sh",
             "scripts/cleanup.sh"
           ]
         },
@@ -26,6 +27,7 @@
           "scripts": [
             "scripts/base.sh",
             "scripts/vagrant.sh",
+            "scripts/galaxy.sh",
             "scripts/cleanup.sh"
           ]
         }
