@@ -1,12 +1,12 @@
 SNVPhyl Galaxy Docker
 =====================
 
-This is an extension of the [Galaxy Docker Image](https://github.com/bgruening/docker-galaxy-stable/) for running a Galaxy instance with the [SNVPhyl Pipeline](http://snvphyl.readthedocs.org) installed.
+This is an extension of the [Galaxy Docker Image][] for running a Galaxy instance with the [SNVPhyl Pipeline](http://snvphyl.readthedocs.org) installed.
 
 Usage
 =====
 
-Before running this image, please make sure [Docker](https://www.docker.com/) is installed.  Once Docker is installed, please run:
+Before running this image, please make sure [Docker][] is installed.  Once Docker is installed, please run:
 
 ```bash
 docker run -d -p 8080:80 apetkau/snvphyl-galaxy
@@ -31,3 +31,16 @@ To see other docker processes, please run:
 ```bash
 docker ps
 ```
+
+To build a new Docker container with SNVPhyl and Galaxy, please run:
+
+
+```bash
+docker build .
+```
+
+Please see the [Docker Galaxy][Galaxy Docker Image] and [Docker][] documentation for more information. 
+
+[Galaxy Docker Image]: https://github.com/bgruening/docker-galaxy-stable/
+[Docker]: https://www.docker.com/
+[Docker Hub]: https://hub.docker.com/
