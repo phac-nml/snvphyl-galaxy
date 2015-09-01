@@ -17,6 +17,8 @@ export GALAXY_USER=galaxy
 export GALAXY_DATABASE=galaxy
 
 # install tools that we need to build and run galaxy:
+yum -y update
+yum -y upgrade
 yum -y install epel-release
 yum -y install mercurial pwgen python zlib-devel ncurses-devel tcsh db4-devel expat-devel java-1.8.0-openjdk-headless python-pip perl-App-cpanminus gnuplot libyaml-devel python-devel cmake mariadb-server mariadb-client
 yum -y groupinstall "Development Tools"
@@ -102,6 +104,7 @@ After=mariadb.service
 ExecStart=$GALAXY_HOME/galaxy/run.sh --daemon
 ExecStop=$GALAXY_HOME/galaxy/run.sh --stop-daemon
 Type=forking
+Restart=always
 User=$GALAXY_USER
 EnvironmentFile=$GALAXY_ENV
 
