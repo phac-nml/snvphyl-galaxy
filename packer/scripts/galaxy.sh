@@ -55,7 +55,7 @@ EOF
 
 	git clone https://github.com/galaxyproject/galaxy/ galaxy
 	cd galaxy
-	git checkout 4fcdf9fda1d21ec5669daa8e9a4e3e84171bb617 # release_15.07 as of August 28, 2015
+	git checkout f01300d7da5625ac264552258b29818598d4d535 # tag 'v15.05.1' as of September 1, 2015
 
 	sh scripts/common_startup.sh 2>&1 | tee common_startup.log
 

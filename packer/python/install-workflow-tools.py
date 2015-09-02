@@ -15,7 +15,7 @@ def main(master_api_key, api_url, galaxy_admin_user, galaxy_admin_pass, workflow
     gi = galaxy.GalaxyInstance(url=api_url, key=admin_key)
 
     for (dir_name, sub_dir, file_names) in os.walk(workflows_dir):
-        for xml_file in filter(lambda f: f == 'workflow_dependencies.xml', file_names):
+        for xml_file in filter(lambda f: f == 'repository_dependencies.xml', file_names):
             xml_path = os.path.join(dir_name, xml_file)
             print "Going to parse " + xml_path
             xml_doc = ET.parse(xml_path)
@@ -23,8 +23,8 @@ def main(master_api_key, api_url, galaxy_admin_user, galaxy_admin_pass, workflow
             for repository in xml_root.findall('.//repository'):
                 name = repository.find('name').text
                 owner = repository.find('owner').text
-                url = repository.find('url').text
-                revision = repository.find('revision').text
+                url = repository.find('toolshed').text
+                revision = repository.find('changeset_revision').text
                 tool_info = ", ".join([name, owner, url, revision])
 
                 print "Going to install %s" % tool_info
