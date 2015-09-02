@@ -95,6 +95,7 @@
 
   ],
   "post-processors": [{ "output": "snvphyl-galaxy.box",
+                        "keep_input_artifact": true,
                         "type": "vagrant",
                         "only": ["virtualbox-iso"]
                       }]
