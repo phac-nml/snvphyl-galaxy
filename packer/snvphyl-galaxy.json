@@ -20,8 +20,7 @@
             "scripts/vagrant.sh",
             "scripts/virtualbox.sh",
             "scripts/galaxy.sh",
-            "scripts/cleanup.sh",
-            "scripts/zerodisk.sh"
+            "scripts/cleanup.sh"
           ]
         },
         "qemu": {
@@ -29,8 +28,7 @@
             "scripts/base.sh",
             "scripts/vagrant.sh",
             "scripts/galaxy.sh",
-            "scripts/cleanup.sh",
-            "scripts/zerodisk.sh"
+            "scripts/cleanup.sh"
           ]
         }
 
@@ -44,6 +42,8 @@
       "boot_command": [
         "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
       ],
+      "headless" : true,
+      "vm_name": "snvphyl-galaxy",
       "boot_wait": "10s",
       "disk_size": 1000000,
       "guest_os_type": "RedHat_64",
@@ -59,8 +59,8 @@
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
       "virtualbox_version_file": ".vbox_version",
       "vboxmanage": [
-        [ "modifyvm", "{{.Name}}", "--memory", "8192" ],
-        [ "modifyvm", "{{.Name}}", "--cpus", "8" ],
+        [ "modifyvm", "{{.Name}}", "--memory", "4096" ],
+        [ "modifyvm", "{{.Name}}", "--cpus", "4" ],
 	[ "modifyvm", "{{.Name}}", "--natpf1", "guest_ssh,tcp,,42222,,22" ],
 	[ "modifyvm", "{{.Name}}", "--natpf1", "guest_galaxy,tcp,,48888,,8080" ]
       ]
@@ -70,6 +70,8 @@
       "boot_command": [
         "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
       ],
+      "headless" : true,
+      "vm_name": "snvphyl-galaxy",
       "boot_wait": "10s",
       "disk_size": 160000,
       "format": "qcow2",
@@ -84,12 +86,16 @@
       "ssh_wait_timeout": "10000s",
       "shutdown_command": "echo '/sbin/halt -h -p' > /tmp/shutdown.sh; echo 'vagrant'|sudo -S sh '/tmp/shutdown.sh'",
       "qemuargs": [
-        [ "-smp", "8" ],
-        [ "-m", "8G" ],
+        [ "-smp", "4" ],
+        [ "-m", "4G" ],
         [ "-redir", "tcp:42222::22" ],
         [ "-redir", "tcp:48888::8080" ]
       ]
     }
 
-  ]
+  ],
+  "post-processors": [{ "output": "snvphyl-galaxy.box",
+                        "type": "vagrant",
+                        "only": ["virtualbox-iso"]
+                      }]
 }

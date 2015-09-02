@@ -27,15 +27,15 @@ You can build the VM once you've got the prerequisites installed.
 
 You **cannot** build qemu and VirtualBox images in parallel, both qemu and VirtualBox want to use the same virtualization features of the processor and qemu clobbers VirtualBox. So you must run, from the `packer/` directory:
 
-    packer build -parallel=false template.json
+    packer build -parallel=false snvphyl-galaxy.json
 
 If you want to run *only* one or the other, you can run something like:
 
-    packer build -only=qemu template.json
+    packer build -only=qemu snvphyl-galaxy.json
 
 Or, for VirtualBox:
 
-    packer build -only=virtualbox-iso template.json
+    packer build -only=virtualbox-iso snvphyl-galaxy.json
 
 This will (for both VirtualBox and qemu):
 

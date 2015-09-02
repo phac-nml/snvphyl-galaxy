@@ -21,10 +21,10 @@ def main(master_api_key, api_url, galaxy_admin_user, galaxy_admin_pass, workflow
             xml_doc = ET.parse(xml_path)
             xml_root = xml_doc.getroot()
             for repository in xml_root.findall('.//repository'):
-                name = repository.find('name').text
-                owner = repository.find('owner').text
-                url = repository.find('toolshed').text
-                revision = repository.find('changeset_revision').text
+                name = repository.get('name')
+                owner = repository.get('owner')
+                url = repository.get('toolshed')
+                revision = repository.get('changeset_revision')
                 tool_info = ", ".join([name, owner, url, revision])
 
                 print "Going to install %s" % tool_info
