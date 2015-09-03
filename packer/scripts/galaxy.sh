@@ -90,7 +90,7 @@ su $GALAXY_USER -c 'config_galaxy'
 
 systemctl start mariadb
 echo "grant all privileges on $GALAXY_DATABASE.* to '$GALAXY_USER'@'localhost' identified by '$GALAXY_USER';" | mysql -u root
-echo "create database $GALAXY_DATABASE;" | mysql -u root
+echo "create database $GALAXY_DATABASE character set 'utf8';" | mysql -u root
 
 # Write out a systemd startup script for galaxy
 cat > /etc/systemd/system/galaxy.service <<EOF
