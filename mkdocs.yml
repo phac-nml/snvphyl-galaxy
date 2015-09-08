@@ -7,8 +7,10 @@ pages:
 - [user-guide/index.md, User, Overview]
 - [user-guide/usage.md, User, Usage]
 - [user-guide/interpretation.md, User, Interpretation]
-- [install/quick.md, Installation, Quick]
-- [install/manual.md, Installation, Manual]
+- [install/index.md, Installation]
+- [install/docker.md, Installation, Docker]
+- [install/virtualmachine.md, Installation, Virtual Machines]
+- [install/galaxy.md, Installation, Galaxy]
 - [examples/index.md, Examples, Home]
 - [comparisons/index.md, Comparisons, Home]
 
