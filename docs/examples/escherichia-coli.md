@@ -1,6 +1,6 @@
 # Escherichia coli 1405WAEXK
 
-This example goes through the analysis of an *Escherichia coli* dataset through SNVPhyl.  The source of this data can be found in the [WGS Standards and Analysis][] project.  The necessary reference and sequence reads can be downloaded from <http://irida.corefacility.ca/downloads/snvphyl-galaxy/examples/snvphyl-example-ec.tar.gz>.
+This example goes through the analysis of an *Escherichia coli* dataset through SNVPhyl.  The source of this data can be found in the [WGS Standards and Analysis][] project.  The necessary reference and sequence reads can be downloaded from <http://irida.corefacility.ca/downloads/snvphyl-galaxy/examples/snvphyl-example-ec.tar.gz> (2.2 GB).
 
 This example assumes you have a working version of SNVPhyl up and running within Galaxy.  For instructions on how to get to this stage, please refer to the [Install] documentation.
 
@@ -80,7 +80,7 @@ This dataset also includes additional metadata for each isolate in the file `Esc
 [Install]: ../install
 [ec-upload-fastqsanger]: examples/images/ec-upload-fastqsanger.png
 [ec-galaxy-history]: examples/images/ec-galaxy-history.png
-[multiple-datasets]: examples/images/ec-multiple-datasets.png
+[multiple-datasets]: examples/images/multiple-datasets.png
 [select-fastq-collection]: examples/images/ec-select-fastq-collection.png
 [ec-paired-list]: examples/images/ec-paired-list.png
 [run-pipeline]: examples/images/ec-run-pipeline.png
