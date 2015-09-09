@@ -1,7 +1,7 @@
-<tool id="vcf2pseudoalignment" name="VCF 2 pseudoalignment" version ="0.0.13">
+<tool id="vcf2pseudoalignment" name="VCF 2 pseudoalignment" version ="0.0.16">
   <description>create a pseudo alignment from multiple VCFs files</description>
         <requirements>
-                <requirement type="package" version="1.3.7">snvphyl</requirement>
+                <requirement type="package" version="1.4.0">snvphyl</requirement>
                 <requirement type="package" version="1.2">bcftools</requirement>
         </requirements>
   <stdio>
@@ -31,7 +31,6 @@
 	-f phylip
 	--min-mean-mapping "$mean_mapping"
 	--ao "$ao"
-	-v	
 	--numcpus \${GALAXY_SLOTS:-2}
 	--fasta "$ref_fasta"
 
@@ -57,7 +56,7 @@
     <param name="invalid" type="data"  label="Invalid position file" format="gff,bed" optional="true"/>
     <param name="coverage" type="integer" value="15" label="minimum coverage"/>
     <param name="mean_mapping" type="integer" value="30" label="minimum mean mapping quality"/>
-    <param name="ao" type="text" value="" label="Alternative allele ratio"/>
+    <param name="ao" type="text" value="0.75" optional="false" label="Alternative allele ratio"/>
     <param name="freebayes_collection" type="data_collection" label="FreeBayes filtered BCF" help="" optional="false" format="bcf_bgzip" collection_type="list" />
     <param name="mpileup_collection" type="data_collection" label="Mpileup BCF" help="" optional="false" format="bcf_bgzip" collection_type="list" />
   </inputs>
