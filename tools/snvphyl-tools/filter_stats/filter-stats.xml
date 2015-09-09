@@ -1,0 +1,53 @@
+<tool id="filterstat" name="Filter Stats" version ="0.0.4">
+  <description>Identify number of positions excluded based on filtered status</description>
+  <requirements>
+    <requirement type="package" version="1.4.0">snvphyl</requirement>
+    <requirement type="package" version="5.18.1">perl</requirement>
+  </requirements>
+
+  <command interpreter="perl">
+      /\$VCF2PSEUDO/filter-stats.pl -i $tabfile
+      #if $summary == "invalids":
+        -a
+      #end if
+	> $out
+  </command>
+  <inputs>
+    <param name="tabfile" type="data"  label="Pseudo-alignment positions tab delimited file" format="tabular"/>
+    <param name="summary" type="select" display="checkboxes" label="Summary Options" multiple="true">
+        <option value="invalids">Include all entries marked as 'filtered-invalid'</option>
+    </param>
+  </inputs>
+  <outputs>
+    <data format="tabular" name="out" />
+  </outputs>
+  <stdio>
+    <exit_code range="1:" level="fatal" description="Unknown error has occured"/>
+  </stdio>
+  <tests>
+    <test>
+      <param name="tabfile" value="filter-stats-in.tsv" />
+      <output name="out" file="filter-stats-out.tabular" />
+    </test>
+  </tests>
+
+  <help>
+What it does
+============
+
+This script prints a stat summary of the number of N's and -'s found in the pseudo-alignment positions tab delimited file.
+
+
+Usage
+=====
+
+**Parameters**
+  - input - The psudo-alignment positions tab delimited file
+
+  
+**Options**
+  - -all When this option is set, the summary will include all the entries marked as 'filtered-invalid'
+  </help>
+
+</tool>
+

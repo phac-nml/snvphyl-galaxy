@@ -1,0 +1,70 @@
+<tool id="verify_map" name="Verify Mapping Quality" version="0.0.4">
+	<description>Checks the mapping quality of all BAM files generated in the core SNP pipeline.</description>
+	<requirements>
+		<requirement type="package" version="1.4.0">snvphyl</requirement>
+		<requirement type="package" version="5.18.1">perl</requirement>
+		<requirement type="package" version="0.1.19">samtools</requirement>
+	</requirements>
+
+	<command interpreter="perl">
+		/\$VCF2PSEUDO/verify_mapping_quality.pl 
+ 		#for $f in $bams.keys# --bam "$f=$bams[$f]" #end for#
+ 		#if $mindepth :
+        	--min-depth $mindepth
+	      	#end if
+
+      		#if $minmap :
+        	--min-map $minmap 	
+	      	#end if
+		> $output_log
+	</command>
+
+	<inputs>
+		<param name="bams" type="data_collection" label="Collect of BAM files" format="bam" />
+		<param name="mindepth" type="integer" label="The minimum depth of coverage required in each BAM file." format="" optional="true" />
+		<param name="minmap" type="integer" label="The minimum percent coverage required in each BAM file." format="" optional="true" />
+	</inputs>
+
+	<outputs>
+		<data format="txt" name="output_log" from_work_dir="mapping_percentage.log" label="Mapping Percentage Log"/>
+	</outputs>
+
+	<stdio>
+		<exit_code range="1:" level="fatal" description="Unknown error has occured"/>
+	</stdio>
+
+	<tests>
+		<test>
+			<param name="bams">
+				<collection type="list">
+					<element name="s1" value="sample1.bam"/>
+					<element name="s2" value="sample2.bam"/>
+					<element name="s3" value="sample3.bam"/>
+					<element name="s4" value="sample4.bam"/>
+				</collection>
+			</param>
+			<output name="output_log" file="test_percent_log.txt" ftype="txt"/>
+		</test>
+	</tests>
+
+	<help>
+What it does
+============
+
+This script checks the mapping quality of all BAM files generated in the core SNP pipeline. 
+
+
+Usage
+=====
+
+**Parameters**
+  - input - The collection of BAM files in the dataset.
+
+  
+**Options**
+  - min-depth - The minimum depth of coverage required in each BAM file.
+  - min-map - The minimum perecent coverage required in each BAM file. 
+
+	</help>
+
+</tool>
