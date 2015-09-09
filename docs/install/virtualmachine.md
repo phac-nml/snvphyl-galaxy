@@ -31,7 +31,7 @@ Or, alternatively, by running:
 ssh -p 2222 vagrant@localhost
 ```
 
-The **vagrant** user is configured for passwordless `sudo` access.  The Galaxy installation directory is **/opt/galaxy** and log files can be monitored by running `tail -f /opt/galaxy/galaxy/paster.log`.
+The **vagrant** user has a password of **vagrant** and is configured for `sudo` access.  The Galaxy installation directory is **/opt/galaxy** and log files can be monitored by running `tail -f /opt/galaxy/galaxy/paster.log`.
 
 Managing the Virtual Machine
 ----------------------------

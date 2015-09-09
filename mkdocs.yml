@@ -9,9 +9,12 @@ pages:
 - [user-guide/interpretation.md, User, Interpretation]
 - [install/index.md, Installation]
 - [install/docker.md, Installation, Docker]
-- [install/virtualmachine.md, Installation, Virtual Machines]
+- [install/virtualmachine.md, Installation, Virtual Machine]
 - [install/galaxy.md, Installation, Galaxy]
 - [examples/index.md, Examples, Home]
+- [examples/escherichia-coli.md, Examples, Escherichia coli]
+- [examples/listeria-monocytogenes.md, Examples, Listeria monocytogenes]
+- [examples/salmonella-enterica.md, Examples, Salmonella enterica]
 - [comparisons/index.md, Comparisons, Home]
 
 theme: readthedocs
