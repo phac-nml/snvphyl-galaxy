@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<tool_dependency>
+    <package name="perl" version="5.18.1">
+        <repository  name="package_perl_5_18" owner="iuc" prior_installation_required="True" />
+    </package>
+    <package name="wombac" version="2.2">
+        <install version="1.0">
+            <actions>
+                <action type="setup_perl_environment">
+                    <repository name="package_perl_5_18" owner="iuc">
+                        <package name="perl" version="5.18.1" />
+                    </repository>
+                    <package>https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Time-Piece-1.30.tar.gz</package>
+                    <package>https://cpan.metacpan.org/authors/id/D/DL/DLAND/File-Path-2.09.tar.gz</package>
+                    <package>https://cpan.metacpan.org/authors/id/S/SM/SMUELLER/PathTools-3.47.tar.gz</package>
+                    <package>https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Scalar-List-Utils-1.42.tar.gz</package>
+                    <package>https://cpan.metacpan.org/authors/id/S/SM/SMUELLER/Data-Dumper-2.154.tar.gz</package>
+                    <package>https://cpan.metacpan.org/authors/id/R/RE/REHSACK/List-MoreUtils-0.410.tar.gz</package>
+                </action>
+
+                <action type="change_directory">../</action>
+                <action type="shell_command">git clone https://github.com/tseemann/wombac.git</action>
+		<action type="change_directory">wombac</action>
+                <action type="shell_command">git checkout 5ee9d740e5671291b7c0ff2d02df6dad528bd58f</action>
+                <action type="change_directory">bin/</action>
+                <action type="move_directory_files">
+                    <source_directory>.</source_directory>
+                    <destination_directory>$INSTALL_DIR/wombac</destination_directory>
+                </action>
+
+
+                <action type="set_environment">
+                    <environment_variable action="set_to" name="WOMBACLIB">$INSTALL_DIR/wombac</environment_variable>
+                    <environment_variable action="prepend_to" name="PERL5LIB">$INSTALL_DIR/lib/perl5</environment_variable>
+                </action>
+
+            </actions>
+        </install>
+        <readme>
+        </readme>
+    </package>
+
+
+</tool_dependency>
+

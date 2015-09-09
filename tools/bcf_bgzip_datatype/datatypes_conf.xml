@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<datatypes>
+    <registration>
+        <datatype extension="bcf_bgzip" type="galaxy.datatypes.binary:Binary"  mimetype="application/octet-stream" subclass="True"/>
+    </registration>
+</datatypes>

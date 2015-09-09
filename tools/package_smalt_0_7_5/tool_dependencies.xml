@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<tool_dependency>
+    <package name="bambamc" version="0.0.50">
+        <repository  name="package_bambamc_0_0_50" owner="jen-cabral" prior_installation_required="True" />
+    </package>
+    <package name="smalt" version="0.7.5">
+        <install version="1.0">
+            <actions>
+                <action type="download_by_url" target_filename="smalt-0.7.5.tar.gz">http://downloads.sourceforge.net/project/smalt/smalt-0.7.5.tar.gz</action>
+                 <action type="set_environment_for_install">
+                    <repository  name="package_bambamc_0_0_50" owner="jen-cabral" >
+                        <package name="bambamc" version="0.0.50"/>
+                    </repository>
+                </action>
+        		<action type="shell_command">./configure --prefix=$INSTALL_DIR --with-bambamc=yes BAMBAMC_CFLAGS="-I$BAMBAMC_INSTALL_DIR/include" BAMBAMC_LIBS="-L$BAMBAMC_INSTALL_DIR/lib -lbambamc"</action>
+        		<action type="make_install"></action>
+                <action type="set_environment">
+                    <environment_variable name="PATH" action="prepend_to">$INSTALL_DIR/bin</environment_variable>
+                    <environment_variable name="LD_LIBRARY_PATH" action="prepend_to" >$ENV[BAMBAMC_INSTALL_DIR]/lib</environment_variable>
+                </action>
+
+            </actions>
+        </install>
+                <readme>
+About SMALT
+The software employs a hash index of short words (&#60; 21 nucleotides long), sampled at equidistant steps along the genomic reference sequences.
+
+For each read, potentially matching segments in the reference are identified from seed matches in the index and subsequently aligned with the read using a banded Smith-Waterman algorithm.
+
+The best gapped alignments of each read is reported including a score for the reliability of the best mapping. The user can adjust the trade-off between sensitivity and speed by tuning the length and spacing of the hashed words.
+
+A mode for the detection of split (chimeric) reads is provided. Multi-threaded program execution is supported.
+        </readme>
+    </package>
+</tool_dependency>
