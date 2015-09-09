@@ -1,0 +1,19 @@
+<?xml version="1.1"?>
+<repositories description="A suite of tools associated with SNVphyl pipeline">
+	<repository name="smalt_map" owner="jen-cabral" />
+	<repository name="smalt_index" owner="jen-cabral"/>
+	<repository name="freebayes" owner="phil"/>
+	<repository name="samtools_mpileup" owner="devteam"/>
+	<repository name="bcftools_view" owner="takadonet"/>
+	<repository name="bcftools_call" owner="phil"/>
+	<repository name="filter_vcf" owner="phil"/>
+	<repository name="snp_matrix" owner="phil"/>
+	<repository name="find_repeats" owner="phil"/>
+	<repository name="vcf2pseudoalignment" owner="phil"/>
+	<repository name="phyml" owner="phil"/>
+	<repository name="bcf_bgzip_datatype" owner="takadonet"/>
+	<repository name="msa_datatypes" owner="iuc"/>
+	<repository name="verify_map" owner="phil"/>
+	<repository name="filter_stats" owner="phil"/>
+	<repository name="wombac_shred" owner="jen-cabral"/>
+</repositories>
