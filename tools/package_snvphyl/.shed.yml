@@ -1,0 +1,5 @@
+categories: [Tool Dependency Packages]
+description: SNVPhyl Dependencies
+name: package_snvphyl
+owner: nml
+remote_repository_url: http://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy.git

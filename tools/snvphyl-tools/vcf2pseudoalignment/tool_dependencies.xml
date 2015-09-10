@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <tool_dependency>
     <package name="snvphyl" version="1.4.0">
-        <repository  name="package_snvphyl" owner="phil"  />
+        <repository  name="package_snvphyl" owner="nml"  />
     </package>
     <package name="bcftools" version="1.2">
-        <repository name="package_bcftools_1_2" owner="iuc"/>
+        <repository name="package_bcftools_1_2" owner="nml"/>
     </package>
 </tool_dependency>
