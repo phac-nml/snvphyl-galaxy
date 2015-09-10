@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositories description="SNVPhyl dependencies">
+	<repository toolshed="http://galaxy-toolshed.corefacility.ca" name="suite_snvphyl" owner="phil" changeset_revision="d30ca5deff13" />
+</repositories>
