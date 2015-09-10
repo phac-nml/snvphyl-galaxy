@@ -1,0 +1,5 @@
+categories: [Tool Dependency Packages]
+description: libtool
+name: package_libtool_2_4
+owner: nml
+remote_repository_url: http://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy.git

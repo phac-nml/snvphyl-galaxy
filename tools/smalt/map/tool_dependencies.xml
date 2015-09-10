@@ -3,7 +3,7 @@
   <package name="smalt" version="0.7.5">
       <repository  name="package_smalt_0_7_5" owner="nml"  />
     </package>
-    <package name="samtools" version="0.1.18">
-      <repository name="package_samtools_0_18" owner="nml"/>
+    <package name="samtools" version="0.1.19">
+      <repository name="package_samtools_0_1_19" owner="iuc"/>
     </package>
 </tool_dependency>
