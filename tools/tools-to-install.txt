@@ -4,13 +4,10 @@ package_bambamc_0_0_50
 package_freebayes_0_9_9
 package_smalt_0_7_5
 package_snvphyl
-package_wombac
-wombac_shred
 bcftools_call
 bcftools_view
 freebayes
 phyml
-regex_find_replace
 smalt/index
 smalt/map
 snvphyl-tools/filter_stats

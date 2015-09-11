@@ -14,6 +14,8 @@ This directory contains the necessary dependency tools for SNVPhyl.  These must 
     categories: [Variant Analysis]    
     ```
 
+    In addition to these, please add the cateogry `SAM`.
+
 2.  Upload all tool capsules in [capsules][].  These were exported from the [Main Galaxy Toolshed][].
 
 3.  Upload all custom tools for SNVPhyl.  This can be accomplished using [Planemo][] by running:

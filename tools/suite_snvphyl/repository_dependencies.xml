@@ -15,6 +15,5 @@
 	<repository name="msa_datatypes" owner="iuc"/>
 	<repository name="verify_map" owner="nml"/>
 	<repository name="filter_stats" owner="nml"/>
-	<repository name="wombac_shred" owner="nml"/>
-	<repository name="regex_find_replace" owner="nml"/>
+	<repository name="regex_find_replace" owner="jjohnson"/>
 </repositories>
