@@ -30,7 +30,7 @@ pip install bioblend
 # prepare the directories and check out galaxy
 mkdir $GALAXY_HOME $SHED_TOOLS $TOOL_DEPENDENCIES $DEPENDENCIES_INSTALL
 
-useradd --no-create-home --system $GALAXY_USER --home-dir $GALAXY_HOME
+useradd --create-home --system $GALAXY_USER --home-dir $GALAXY_HOME
 chown -R $GALAXY_USER $GALAXY_HOME
 
 function config_galaxy () {
