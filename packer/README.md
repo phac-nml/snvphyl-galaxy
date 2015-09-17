@@ -69,8 +69,8 @@ The default password is `vagrant`.
 
 ### Galaxy Install Directory
 
-Galaxy will be configured to run as the user `galaxy`, and is installed under `/opt/galaxy/galaxy`.  You may view the Galaxy log file by running:
+Galaxy will be configured to run as the user `galaxy`, and is installed under `/home/galaxy/galaxy`.  You may view the Galaxy log file by running:
 
 ```bash
-sudo tailf /opt/galaxy/galaxy/paster.log
+sudo tailf /home/galaxy/galaxy/paster.log
 ```
