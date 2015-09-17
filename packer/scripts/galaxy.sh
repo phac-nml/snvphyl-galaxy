@@ -80,6 +80,7 @@ EOF
 	MASTER_API_KEY=$(pwgen --secure -N 1 40)
 	sed -i "s/#master_api_key.*/master_api_key = $MASTER_API_KEY/" $GALAXY_HOME/galaxy/config/galaxy.ini
 	sed -i "s/^#force_beta_workflow_scheduled_min_steps.*/force_beta_workflow_scheduled_min_steps=75/" $GALAXY_HOME/galaxy/config/galaxy.ini
+	sed -i "s/^#force_beta_workflow_scheduled_for_collections.*/force_beta_workflow_scheduled_for_collections=True/" $GALAXY_HOME/galaxy/config/galaxy.ini
 	sed -i "s@#environment_setup_file = None@environment_setup_file = $GALAXY_ENV@" $GALAXY_HOME/galaxy/config/galaxy.ini
 
 	## tool_sheds_conf.xml
