@@ -2,7 +2,7 @@
     "a_galaxy_workflow": "true", 
     "annotation": "Snvphyl", 
     "format-version": "0.1", 
-    "name": "SNVPhyl v0.2 Paired-End", 
+    "name": "SNVPhyl v0.2 Paired-End (invalid positions)", 
     "steps": {
         "0": {
             "annotation": "", 
@@ -57,6 +57,31 @@
         "2": {
             "annotation": "", 
             "id": 2, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "invalid_positions"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 200, 
+                "top": 370
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"invalid_positions\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "f9e85472-244a-4098-8ba9-27afab34371d"
+        }, 
+        "3": {
+            "annotation": "", 
+            "id": 3, 
             "input_connections": {
                 "reference": {
                     "id": 1, 
@@ -77,7 +102,7 @@
                 }
             ], 
             "position": {
-                "left": 462, 
+                "left": 447, 
                 "top": 200
             }, 
             "post_job_actions": {
@@ -100,9 +125,9 @@
             "user_outputs": [], 
             "uuid": "713fb2c8-84dd-4762-8281-e071c61fe979"
         }, 
-        "3": {
+        "4": {
             "annotation": "", 
-            "id": 3, 
+            "id": 4, 
             "input_connections": {
                 "fasta": {
                     "id": 1, 
@@ -119,7 +144,7 @@
                 }
             ], 
             "position": {
-                "left": 462, 
+                "left": 447, 
                 "top": 341
             }, 
             "post_job_actions": {
@@ -130,11 +155,9 @@
                     "action_type": "ChangeDatatypeAction", 
                     "output_name": "out"
                 }, 
-                "RenameDatasetActionout": {
-                    "action_arguments": {
-                        "newname": "invalid_positions.bed"
-                    }, 
-                    "action_type": "RenameDatasetAction", 
+                "HideDatasetActionout": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
                     "output_name": "out"
                 }
             }, 
@@ -146,20 +169,20 @@
             "user_outputs": [], 
             "uuid": "b46f9d65-9d1d-458b-8780-20d248d4ab84"
         }, 
-        "4": {
+        "5": {
             "annotation": "", 
-            "id": 4, 
+            "id": 5, 
             "input_connections": {
                 "singlePaired|fastq_collection": {
                     "id": 0, 
                     "output_name": "output"
                 }, 
                 "sma": {
-                    "id": 2, 
+                    "id": 3, 
                     "output_name": "output2"
                 }, 
                 "smi": {
-                    "id": 2, 
+                    "id": 3, 
                     "output_name": "output"
                 }
             }, 
@@ -173,7 +196,7 @@
                 }
             ], 
             "position": {
-                "left": 690, 
+                "left": 675, 
                 "top": 200
             }, 
             "post_job_actions": {
@@ -191,12 +214,62 @@
             "user_outputs": [], 
             "uuid": "2c4b8d73-23bc-48ec-a378-8b84f8d75081"
         }, 
-        "5": {
+        "6": {
             "annotation": "", 
-            "id": 5, 
+            "id": 6, 
+            "input_connections": {
+                "input1": {
+                    "id": 2, 
+                    "output_name": "output"
+                }, 
+                "queries_0|input2": {
+                    "id": 4, 
+                    "output_name": "out"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Concatenate datasets", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 675, 
+                "top": 418
+            }, 
+            "post_job_actions": {
+                "ChangeDatatypeActionout_file1": {
+                    "action_arguments": {
+                        "newtype": "bed"
+                    }, 
+                    "action_type": "ChangeDatatypeAction", 
+                    "output_name": "out_file1"
+                }, 
+                "RenameDatasetActionout_file1": {
+                    "action_arguments": {
+                        "newname": "invalid_positions.bed"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "cat1", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"queries\": \"[{\\\"input2\\\": null, \\\"__index__\\\": 0}]\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "81e2c33f-afdd-481c-9af8-1b6c9fe4570b"
+        }, 
+        "7": {
+            "annotation": "", 
+            "id": 7, 
             "input_connections": {
                 "bams": {
-                    "id": 4, 
+                    "id": 5, 
                     "output_name": "output"
                 }
             }, 
@@ -210,7 +283,7 @@
                 }
             ], 
             "position": {
-                "left": 994, 
+                "left": 959, 
                 "top": 200
             }, 
             "post_job_actions": {
@@ -224,18 +297,18 @@
             }, 
             "tool_errors": null, 
             "tool_id": "irida.corefacility.ca/galaxy-shed/repos/nml/verify_map/verify_map/0.0.4", 
-            "tool_state": "{\"minmap\": \"\\\"80\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"mindepth\": \"\\\"${min_coverage}\\\"\", \"bams\": \"null\"}", 
+            "tool_state": "{\"minmap\": \"\\\"95\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"mindepth\": \"\\\"${min_coverage}\\\"\", \"bams\": \"null\"}", 
             "tool_version": "0.0.4", 
             "type": "tool", 
             "user_outputs": [], 
             "uuid": "9d6b2ea0-a56a-4065-97e2-045dcdf2ea8e"
         }, 
-        "6": {
+        "8": {
             "annotation": "", 
-            "id": 6, 
+            "id": 8, 
             "input_connections": {
                 "reference_source|input_bams_0|input_bam": {
-                    "id": 4, 
+                    "id": 5, 
                     "output_name": "output"
                 }, 
                 "reference_source|ref_file": {
@@ -261,7 +334,7 @@
                 }
             ], 
             "position": {
-                "left": 994, 
+                "left": 959, 
                 "top": 313
             }, 
             "post_job_actions": {
@@ -289,12 +362,12 @@
             "user_outputs": [], 
             "uuid": "bdd2f629-be7b-4e97-9f7e-e8c55d979708"
         }, 
-        "7": {
+        "9": {
             "annotation": "", 
-            "id": 7, 
+            "id": 9, 
             "input_connections": {
                 "reference_source|input_bams_0|input_bam": {
-                    "id": 4, 
+                    "id": 5, 
                     "output_name": "output"
                 }, 
                 "reference_source|ref_file": {
@@ -316,8 +389,8 @@
                 }
             ], 
             "position": {
-                "left": 994, 
-                "top": 701
+                "left": 959, 
+                "top": 697
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput_log": {
@@ -339,12 +412,12 @@
             "user_outputs": [], 
             "uuid": "55cf9f84-3f62-47fc-8828-916a3ca8779d"
         }, 
-        "8": {
+        "10": {
             "annotation": "", 
-            "id": 8, 
+            "id": 10, 
             "input_connections": {
                 "vcf": {
-                    "id": 6, 
+                    "id": 8, 
                     "output_name": "output_vcf"
                 }
             }, 
@@ -358,7 +431,7 @@
                 }
             ], 
             "position": {
-                "left": 1322, 
+                "left": 1287, 
                 "top": 200
             }, 
             "post_job_actions": {
@@ -376,12 +449,12 @@
             "user_outputs": [], 
             "uuid": "928a97c7-01de-4fd2-82c6-33d6e73819fe"
         }, 
-        "9": {
+        "11": {
             "annotation": "", 
-            "id": 9, 
+            "id": 11, 
             "input_connections": {
                 "input": {
-                    "id": 7, 
+                    "id": 9, 
                     "output_name": "output_mpileup"
                 }
             }, 
@@ -395,8 +468,8 @@
                 }
             ], 
             "position": {
-                "left": 1322, 
-                "top": 321
+                "left": 1287, 
+                "top": 319
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput": {
@@ -420,12 +493,12 @@
             "user_outputs": [], 
             "uuid": "59cba723-cc03-4bc7-a38f-ef5df3c848b2"
         }, 
-        "10": {
+        "12": {
             "annotation": "", 
-            "id": 10, 
+            "id": 12, 
             "input_connections": {
                 "input": {
-                    "id": 8, 
+                    "id": 10, 
                     "output_name": "vcfout"
                 }
             }, 
@@ -439,7 +512,7 @@
                 }
             ], 
             "position": {
-                "left": 1650, 
+                "left": 1601, 
                 "top": 200
             }, 
             "post_job_actions": {
@@ -464,20 +537,20 @@
             "user_outputs": [], 
             "uuid": "59aede98-a211-4fcc-aad3-bfb6e99cf25e"
         }, 
-        "11": {
+        "13": {
             "annotation": "", 
-            "id": 11, 
+            "id": 13, 
             "input_connections": {
                 "freebayes_collection": {
-                    "id": 10, 
+                    "id": 12, 
                     "output_name": "output"
                 }, 
                 "invalid": {
-                    "id": 3, 
-                    "output_name": "out"
+                    "id": 6, 
+                    "output_name": "out_file1"
                 }, 
                 "mpileup_collection": {
-                    "id": 9, 
+                    "id": 11, 
                     "output_name": "output"
                 }, 
                 "ref_fasta": {
@@ -507,7 +580,7 @@
                 }
             ], 
             "position": {
-                "left": 1978, 
+                "left": 1915, 
                 "top": 200
             }, 
             "post_job_actions": {
@@ -544,12 +617,12 @@
             "user_outputs": [], 
             "uuid": "3f29ec48-5b58-4048-8ef4-4760b36e9e2d"
         }, 
-        "12": {
+        "14": {
             "annotation": "", 
-            "id": 12, 
+            "id": 14, 
             "input_connections": {
                 "input": {
-                    "id": 11, 
+                    "id": 13, 
                     "output_name": "phylip"
                 }
             }, 
@@ -563,7 +636,7 @@
                 }
             ], 
             "position": {
-                "left": 2241, 
+                "left": 2169, 
                 "top": 200
             }, 
             "post_job_actions": {
@@ -583,12 +656,12 @@
             "user_outputs": [], 
             "uuid": "1134975e-7d95-4ca8-ae69-14732e8ced29"
         }, 
-        "13": {
+        "15": {
             "annotation": "", 
-            "id": 13, 
+            "id": 15, 
             "input_connections": {
                 "tabfile": {
-                    "id": 11, 
+                    "id": 13, 
                     "output_name": "positions"
                 }
             }, 
@@ -602,7 +675,7 @@
                 }
             ], 
             "position": {
-                "left": 2241, 
+                "left": 2169, 
                 "top": 313
             }, 
             "post_job_actions": {
@@ -622,12 +695,12 @@
             "user_outputs": [], 
             "uuid": "d39f69c4-1a16-4464-bdf0-be05d9c8dbda"
         }, 
-        "14": {
+        "16": {
             "annotation": "", 
-            "id": 14, 
+            "id": 16, 
             "input_connections": {
                 "input": {
-                    "id": 12, 
+                    "id": 14, 
                     "output_name": "out_file1"
                 }
             }, 
@@ -645,7 +718,7 @@
                 }
             ], 
             "position": {
-                "left": 2565, 
+                "left": 2497, 
                 "top": 200
             }, 
             "post_job_actions": {
@@ -679,12 +752,12 @@
             "user_outputs": [], 
             "uuid": "c525fb6c-19a0-416b-a5c2-2a2cd0e9f19f"
         }, 
-        "15": {
+        "17": {
             "annotation": "", 
-            "id": 15, 
+            "id": 17, 
             "input_connections": {
                 "phylip": {
-                    "id": 12, 
+                    "id": 14, 
                     "output_name": "out_file1"
                 }
             }, 
@@ -698,7 +771,7 @@
                 }
             ], 
             "position": {
-                "left": 2565, 
+                "left": 2497, 
                 "top": 358
             }, 
             "post_job_actions": {
@@ -719,5 +792,5 @@
             "uuid": "e474528e-acd0-4e26-819e-dd1514567d26"
         }
     }, 
-    "uuid": "d33b86c5-61c2-4929-ba95-c30e429e4675"
+    "uuid": "40c147c5-a886-4947-abb0-c22d78acb484"
 }
