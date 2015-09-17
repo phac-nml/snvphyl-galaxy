@@ -28,7 +28,7 @@ RUN sed -i -e 's/^#force_beta_workflow_scheduled_for_collections=False/force_bet
 RUN install-repository \
     "-r 99463e5aef1b --url https://irida.corefacility.ca/galaxy-shed/ -o nml --name suite_snvphyl --panel-section-id SNVPhyl" && \
     install-workflow \
-    "/tmp/snvphyl-workflow-0.2.ga" && \
+    "/tmp/snvphyl-workflow-0.2.ga" "/tmp/snvphyl-workflow-0.2-invalid-positions.ga" && \
     rm /tmp/snvphyl-workflow*.ga
 
 # Mark folders as imported from the host.
