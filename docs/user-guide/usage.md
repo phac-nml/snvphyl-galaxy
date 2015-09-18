@@ -4,13 +4,16 @@ SNVPhyl is implemented as a set of tools and a workflow within the [Galaxy][] pl
 
 ## Install
 
-The easiest way to get started is to use [Docker][].  Please [install docker][] and then run:
+The easiest way to get started is to use [Docker][].  To both install Docker and get SNVPhyl, please run:
 
-```
-docker run -t -p 48888:80 apetkau/snvphyl-galaxy:0.2-beta-1
+```bash
+curl -sSL https://get.docker.com/ | sh # Installs Docker
+sudo docker run -t -p 48888:80 apetkau/snvphyl-galaxy:0.2-beta-1 # Downloads and runs SNVPhyl and Galaxy 
 ```
 
-This will download and run a docker image with SNVPhyl and Galaxy.  Once running, you may log into the SNVPhyl Galaxy instance by going to <http://localhost:48888> on your machine.  This should present you with a screen like the following:
+This will install Docker, download the SNVPhyl Galaxy docker image, and run this image in a Docker container.  See the [Docker Install][] guide for more details.
+
+Once running, you may log into the SNVPhyl Galaxy instance by going to <http://localhost:48888> on your machine.  This should present you with a screen like the following:
 
 ![snvphyl-galaxy-docker][]
 
@@ -34,10 +37,11 @@ The reference genome should be in **fasta** format.  Galaxy will auto-detected t
 
 ## Invalid Positions Masking File
 
-An optional input for SNVPhyl is a list of positions on the reference genome to exclude when constructing a phylogeny.  This can be useful for excluding problematic regions such as phage regions.  The list of regions should be defined in a tab-deliminated file which looks as follows:
+An optional input for SNVPhyl is a list of positions on the reference genome to exclude when constructing a phylogeny.  This can be useful for excluding problematic regions such as phage regions.  The list of regions should be defined in a tab-deliminated ([BED][]-like) file which looks as follows:
 
 ```
-reference       1       10
+#Chromosome    Start    End
+reference      1        10
 ```
 
 For the provided dataset, this file is named `invalid-positions.bed`.  Select and upload this file similar to uploading the reference genome.  When complete, the file should show up in your Galaxy history.
@@ -63,7 +67,7 @@ To construct a paired dataset collection of reads in Galaxy, please do the follo
 
 [Galaxy]: http://galaxyproject.org/
 [Docker]: https://www.docker.com/
-[install docker]: https://docs.docker.com/installation/
+[Docker Install]: https://docs.docker.com/installation/
 [Install]: install/
 [snvphyl-galaxy-docker]: images/snvphyl-galaxy-docker.png
 [test-data.tar.gz]: workflows/SNVPhyl/0.2/test-data.tar.gz
@@ -72,3 +76,4 @@ To construct a paired dataset collection of reads in Galaxy, please do the follo
 [upload-reference]: images/upload-reference.png
 [upload-invalid-positions]: images/upload-invalid-positions.png
 [upload-sequence-reads-history]: images/upload-sequence-reads-history.png
+[BED]: http://genome.ucsc.edu/FAQ/FAQformat#format1
