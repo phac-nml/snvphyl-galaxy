@@ -6,7 +6,6 @@ pages:
 - [index.md, Home]
 - [user-guide/index.md, User, Overview]
 - [user-guide/usage.md, User, Usage]
-- [user-guide/interpretation.md, User, Interpretation]
 - [install/index.md, Installation]
 - [install/docker.md, Installation, Docker]
 - [install/virtualmachine.md, Installation, Virtual Machine]
@@ -15,6 +14,5 @@ pages:
 - [examples/escherichia-coli.md, Examples, Escherichia coli]
 - [examples/listeria-monocytogenes.md, Examples, Listeria monocytogenes]
 - [examples/salmonella-enterica.md, Examples, Salmonella enterica]
-- [comparisons/index.md, Comparisons, Home]
 
 theme: readthedocs
