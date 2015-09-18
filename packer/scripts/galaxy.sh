@@ -8,7 +8,7 @@ wait_for_galaxy() {
 	echo "Galaxy has (hopefully) started by now..."
 }
 
-export GALAXY_HOME=/opt/galaxy
+export GALAXY_HOME=/home/galaxy
 export SHED_TOOLS=$GALAXY_HOME/shed_tools
 export TOOL_DEPENDENCIES=$GALAXY_HOME/tool_dependencies
 export DEPENDENCIES_INSTALL=$GALAXY_HOME/install
@@ -30,7 +30,7 @@ pip install bioblend
 # prepare the directories and check out galaxy
 mkdir $GALAXY_HOME $SHED_TOOLS $TOOL_DEPENDENCIES $DEPENDENCIES_INSTALL
 
-useradd --no-create-home --system $GALAXY_USER --home-dir $GALAXY_HOME
+useradd --create-home --system $GALAXY_USER --home-dir $GALAXY_HOME
 chown -R $GALAXY_USER $GALAXY_HOME
 
 function config_galaxy () {
@@ -79,10 +79,12 @@ EOF
 	sed -i "s/#id_secret.*/id_secret = $SECRET/" $GALAXY_HOME/galaxy/config/galaxy.ini
 	MASTER_API_KEY=$(pwgen --secure -N 1 40)
 	sed -i "s/#master_api_key.*/master_api_key = $MASTER_API_KEY/" $GALAXY_HOME/galaxy/config/galaxy.ini
+	sed -i "s/^#force_beta_workflow_scheduled_min_steps.*/force_beta_workflow_scheduled_min_steps=75/" $GALAXY_HOME/galaxy/config/galaxy.ini
+	sed -i "s/^#force_beta_workflow_scheduled_for_collections.*/force_beta_workflow_scheduled_for_collections=True/" $GALAXY_HOME/galaxy/config/galaxy.ini
 	sed -i "s@#environment_setup_file = None@environment_setup_file = $GALAXY_ENV@" $GALAXY_HOME/galaxy/config/galaxy.ini
 
 	## tool_sheds_conf.xml
-	sed -i 's@</tool_sheds>@    <tool_shed name="IRIDA tool shed" url="https://irida.corefacility.ca/galaxy-shed/"/>\n	<tool_shed name="NML tool shed" url="http://galaxy-toolshed.corefacility.ca/"/>\n</tool_sheds>@' $GALAXY_HOME/galaxy/config/tool_sheds_conf.xml
+	sed -i 's@</tool_sheds>@    <tool_shed name="IRIDA tool shed" url="https://irida.corefacility.ca/galaxy-shed/"/>\n</tool_sheds>@' $GALAXY_HOME/galaxy/config/tool_sheds_conf.xml
 }
 
 export -f config_galaxy

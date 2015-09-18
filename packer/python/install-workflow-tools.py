@@ -38,7 +38,7 @@ def main(master_api_key, api_url, galaxy_admin_user, galaxy_admin_pass, workflow
                         print "%s failed to install, check the galaxy logs." % tool_info
                         raise
 
-        for workflow_file in filter(lambda f: f == 'snvphyl-workflow.ga', file_names):
+        for workflow_file in filter(lambda f: f.endswith('.ga'), file_names):
             workflow_path = os.path.join(dir_name, workflow_file)
             print "Going to load " + workflow_path
             gi.workflows.import_workflow_from_local_path(workflow_path)
