@@ -9,7 +9,7 @@ Usage
 Before running this image, please make sure [Docker][] is installed.  Once Docker is installed, please run:
 
 ```bash
-docker run -d -p 8080:80 apetkau/snvphyl-test
+docker run -d -p 8080:80 apetkau/snvphyl-galaxy:0.2-beta-1
 ```
 
 This will download an instance of the SNVPhyl Galaxy image from [Docker Hub](https://hub.docker.com/) and run this image.  Galaxy will be accessible on your local machine at http://localhost:8080.  This may take a while to load, especially if it is the first time running.
