@@ -7,7 +7,7 @@ SNVPhyl is implemented as a set of tools and a workflow within the [Galaxy][] pl
 The easiest way to get started is to use [Docker][].  Please [install docker][] and then run:
 
 ```
-docker run -p 48888:80 apetkau/snvphyl-galaxy:0.2-beta-1
+docker run -t -p 48888:80 apetkau/snvphyl-galaxy:0.2-beta-1
 ```
 
 This will download and run a docker image with SNVPhyl and Galaxy.  Once running, you may log into the SNVPhyl Galaxy instance by going to <http://localhost:48888> on your machine.  This should present you with a screen like the following:

@@ -31,7 +31,7 @@ Or, alternatively, by running:
 ssh -p 2222 vagrant@localhost
 ```
 
-The **vagrant** user has a password of **vagrant** and is configured for `sudo` access.  The Galaxy installation directory is **/opt/galaxy** and log files can be monitored by running `tail -f /opt/galaxy/galaxy/paster.log`.
+The **vagrant** user has a password of **vagrant** and is configured for `sudo` access.  The Galaxy installation directory is **/home/galaxy** and log files can be monitored by running `tail -f /home/galaxy/galaxy/paster.log`.
 
 Managing the Virtual Machine
 ----------------------------
@@ -51,12 +51,12 @@ vagrant destroy
 VirtualBox Import
 -----------------
 
-As an alternative to [Vagrant][], a [VirtualBox][] image can be downloaded and imported from <https://irida.corefacility.ca/downloads/snvphyl-galaxy/snvphyl-galaxy.zip>.
+As an alternative to [Vagrant][], a [VirtualBox][] image can be downloaded and imported from <https://irida.corefacility.ca/downloads/snvphyl-galaxy/snvphyl-galaxy-current.zip>.
 
 Building Custom Virtual Machines
 --------------------------------
 
-The SNVPhyl Galaxy VM is built using [Packer][].  This can be customized or re-built by following the instructions at <https://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy/tree/feature/packer-vm/packer>.
+The SNVPhyl Galaxy VM is built using [Packer][].  This can be customized or re-built by following the instructions at <https://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy/tree/development/packer>.
 
 [VirtualBox]: https://www.virtualbox.org/
 [Vagrant]:  https://www.vagrantup.com/
