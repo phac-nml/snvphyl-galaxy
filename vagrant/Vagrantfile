@@ -10,14 +10,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "snvphyl-galaxy"
+  config.vm.box = "snvphyl-galaxy-0.2-beta-1"
 
   config.vm.network :forwarded_port, guest: 8080, host: 48888
   config.vm.network :forwarded_port, guest: 22, host: 42222
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  config.vm.box_url = "https://irida.corefacility.ca/downloads/snvphyl-galaxy/vagrant/snvphyl-galaxy.box"
-  config.vm.box_download_checksum = "489d3cdd0bf798d517353f1ea88f1d1d4391edfe5ba06c0bb2f1f8f0ef150a13"
+  config.vm.box_url = "https://irida.corefacility.ca/downloads/snvphyl-galaxy/vagrant/snvphyl-galaxy-0.2-beta-1.box"
+  config.vm.box_download_checksum = "4e3481bab46be43a21aac8167362ad1639ac36f6c9de33a31f82e6a68c463142"
   config.vm.box_download_checksum_type = "sha256"
 end
