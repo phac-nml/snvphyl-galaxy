@@ -4,7 +4,7 @@ site_description: SNVPhyl Whole Genome SNV Phylogenomics Pipeline.
 repo_url: https://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy
 pages:
 - [index.md, Home]
-- [user-guide/index.md, User, Overview]
+- [index.md, User, Overview]
 - [user-guide/usage.md, User, Usage]
 - [install/index.md, Installation]
 - [install/docker.md, Installation, Docker]

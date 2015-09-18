@@ -1,69 +1,42 @@
 # SNVPhyl: Whole Genome SNV Phylogenomics Pipeline
 
-The SNVPhyl (SNV PHYLogenomics) pipeline is a pipeline for identifying Single Nucleotide Variants (SNV) within a collection of microbial genomes and constructing a phylogenetic tree.  Input is provided in the form of a collection of whole genome sequence reads as well as an assembled reference genome.  The output for the pipeline consists of:
+The SNVPhyl (Single Nucleotide Variant PHYLogenomics) pipeline is a pipeline for identifying Single Nucleotide Variants (SNV) within a collection of microbial genomes and constructing a phylogenetic tree.  Input is provided in the form of a collection of whole genome sequence reads as well as an assembled reference genome.  The output for the pipeline consists of:
 
-| 1. A ML Phylogenetic Tree | 2. A core SNV distance matrix      |
-|:-------------------------:|:----------------------------------:|
-|                           |                                    |
-|                           |                                    |
-| 3. A variant table        | 4. Quality information on variants |
-|                           |                                    |
+1. A Phylogenetic Tree
 
-# Overview
+    ![snv-tree][]
+
+2. A core SNV distance matrix
+
+    ![snv-matrix][]
+
+3. A table of detected variants
+
+    ![snv-table][]
+
+4. Quality and other information
+
+# Operation
 
 SNVPhyl identifies variants and generates a phylogenetic tree by mapping the input sequence reads to a reference genome followed by filtering out any invalid variant calls.  The stages are as follows:
 
-1. Identification of repeat regions on reference genome using [MUMMer][].
-2. Reference mapping and variant calling using [SMALT][], [FreeBayes][] and [SAMtools/BCFtools][].
-3. Merging and filtering variant calls.
-4. Aligning SNVs into an alignment SNV table.
-5. Building a Maximum Likelihood tree with [PhyML][].
+![snvphyl-overview][]
 
-SNVPhyl is implemented as a [Galaxy][] workflow, with each of these stages implemented using a specific Galaxy tool.  The Galaxy workflow looks as follows.
+1. Preparing input files including:
+    1. A set of sequence reads.
+    2. A reference genome.
+    3. An optional file of regions to mask on the reference genome.
+2. Identification of repeat regions on the reference genome using [MUMMer][].
+3. Reference mapping and variant calling using [SMALT][], [FreeBayes][] and [SAMtools/BCFtools][].
+4. Merging and filtering variant calls to produce a set of high quality SNVs.
+5. Generating an alignment of SNVs.
+6. Building a maximum likelihood tree with [PhyML][] and generating other output files.
 
-![snvphyl-workflow][]
+SNVPhyl is implemented as a [Galaxy][] workflow, with each of these stages implemented using a specific Galaxy tool.
 
-More information on the operation and installation of the pipeline can be found in the [Overview][] and [Installation][] sections.
+![snvphyl-overview-galaxy][]
 
-# Input
-
-```
-input
-├── fastq
-│   ├── 2010EL-1749.fastq 
-│   ├── 2010EL-1796.fastq 
-│   ├── 2010EL-1798.fastq 
-│   ├── 2011EL-2317.fastq 
-│   ├── 2012V-1001.fastq 
-│   ├── 3554-08.fastq 
-│   ├── C6706.fastq 
-│   ├── VC-10.fastq 
-│   ├── VC-14.fastq 
-│   ├── VC-15.fastq 
-│   ├── VC-18.fastq 
-│   ├── VC-19.fastq 
-│   ├── VC-1.fastq 
-│   ├── VC-25.fastq 
-│   ├── VC-26.fastq 
-│   └── VC-6.fastq 
-└── reference
-    └── 2010EL-1786.fasta
-```
-
-# Output
-
-| 1. Phylogeny                   |
-|:-------------------------------|
-| ![snvphyl-out][]               |
-
-| 2. SNV Matrix                  |
-|:-------------------------------|
-| ![snvphyl-screenshot-matrix][] |
-
-| 3. Variant Table               |
-|:-------------------------------|
-| ![snvphyl-variant-table][]     |
-
+More information on the operation and installation of the pipeline can be found in the [Usage][] and [Installation][] sections.
 
 [Galaxy]: http://galaxyproject.org/
 [Installation]: install/index.md
@@ -73,7 +46,9 @@ input
 [FreeBayes]: https://github.com/ekg/freebayes
 [SAMtools/BCFtools]: http://samtools.sourceforge.net/mpileup.shtml
 [PhyML]: http://www.atgc-montpellier.fr/phyml/
-[snvphyl-workflow]: workflows/SNVPhyl/0.1/snvphyl_workflow.png
-[snvphyl-out]: images/snvphyl-out.png
-[snvphyl-screenshot-matrix]: images/snvphyl-screenshot-matrix.png
-[snvphyl-variant-table]: images/snvphyl-variant-table.png
+[Usage]: user-guide/usage.md
+[snvphyl-overview]: images/snvphyl-overview.png
+[snvphyl-overview-galaxy]: images/snvphyl-overview-galaxy.png
+[snv-matrix]: images/snv-matrix.png
+[snv-table]: images/snv-table.png
+[snv-tree]: images/snv-tree.png
