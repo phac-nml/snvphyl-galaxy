@@ -36,5 +36,5 @@ Installation should now be complete.  Please navigate to the [User Guide][] for 
 [irida-toolshed]: images/irida-toolshed.png
 [suite-snvphyl-repository]: images/suite-snvphyl-repository.png
 [snvphyl-tool-dependencies]: images/snvphyl-tool-dependencies.png
-[User Guide]: ../user-guide/usage.md
+[User Guide]: ../user/usage.md
 [snvphyl-import-workflows]: images/snvphyl-import-workflows.png

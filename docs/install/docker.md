@@ -49,6 +49,6 @@ The SNVPhyl/Galaxy Docker image is based on the [Galaxy Docker][] image.  Please
 [Docker]: https://www.docker.com/
 [Docker installation]: https://docs.docker.com/installation/
 [snvphyl-galaxy-docker]: images/snvphyl-galaxy-docker.png
-[User Guide]: ../user-guide/usage.md
+[User Guide]: ../user/usage.md
 [Galaxy Docker]: https://github.com/bgruening/docker-galaxy-stable
 [Galaxy Docker Usage]: https://github.com/bgruening/docker-galaxy-stable#usage
