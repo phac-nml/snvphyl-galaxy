@@ -26,11 +26,11 @@ A summary of the number of SNVs filtered within in the SNV Table.
 
 # SNV/SNP Matrix
 
-The file `snpMatrix.tsv` represents a pair-wise distance matrix of SNVs that passed all filtering criteria (had status **valid** in the `snpTable.txt`).
+The file `snpMatrix.tsv` represents a pair-wise distance matrix of SNVs that passed all filtering criteria (has status **valid** in the `snpTable.txt`).
 
 ![snv-matrix-galaxy][]
 
-# Core Positions Evaluated
+# Core Positions
 
 The file `vcf2core.tsv` is a table of the evaluated core positions in each reference fasta sequence.
 

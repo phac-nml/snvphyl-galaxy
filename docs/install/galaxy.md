@@ -30,11 +30,11 @@ The current SNVPhyl Galaxy workflows can be found at [workflows/SNVPhyl/0.2](wor
 
 ![snvphyl-import-workflows][]
 
-Installation should now be complete.  Please navigate to the [User Guide][] for more information on how to use SNVPhyl.
+Installation should now be complete.  Please see the [Usage][] documentation for more information on how to use SNVPhyl.
 
 [IRIDA]: http://irida.ca
 [irida-toolshed]: images/irida-toolshed.png
 [suite-snvphyl-repository]: images/suite-snvphyl-repository.png
 [snvphyl-tool-dependencies]: images/snvphyl-tool-dependencies.png
-[User Guide]: ../user/usage.md
+[Usage]: ../user/usage.md
 [snvphyl-import-workflows]: images/snvphyl-import-workflows.png
