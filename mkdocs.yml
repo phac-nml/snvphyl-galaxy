@@ -6,6 +6,7 @@ pages:
 - [index.md, Home]
 - [index.md, User, Overview]
 - [user/usage.md, User, Usage]
+- [user/input.md, User, Input]
 - [user/output.md, User, Output]
 - [install/index.md, Installation]
 - [install/docker.md, Installation, Docker]
