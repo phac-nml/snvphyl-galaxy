@@ -8,7 +8,7 @@ The SNVPhyl (__S__ingle __N__ucleotide __V__ariant __PHYL__ogenomics) pipeline i
 
 SNVPhyl identifies variants and generates a phylogenetic tree by mapping the input sequence reads to a reference genome followed by filtering out any invalid variant calls.  The stages are as follows:
 
-![snvphyl-overview][]
+[![snvphyl-overview][]][snvphyl-overview]
 
 1. Preparing input files including:
     1. A set of sequence reads.
@@ -22,7 +22,7 @@ SNVPhyl identifies variants and generates a phylogenetic tree by mapping the inp
 
 SNVPhyl is implemented as a [Galaxy][] workflow, with each of these stages implemented using a specific Galaxy tool.
 
-![snvphyl-overview-galaxy][]
+[![snvphyl-overview-galaxy][]][snvphyl-overview-galaxy]
 
 More information on the operation and installation of the pipeline can be found in the [Usage][] and [Installation][] sections.
 

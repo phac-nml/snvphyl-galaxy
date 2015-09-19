@@ -19,6 +19,8 @@ Once running, you may log into the SNVPhyl Galaxy instance by going to <http://l
 
 Once Galaxy is started, please login (**User > Login**) with the credentials `admin@galaxy.org` and `admin`.
 
+**Note: By default, Docker will not persist any data after it is shutdown.  To permanently save information run through SNVPhyl/Galaxy with Docker, please see the [SNVPhyl Docker] guide.**
+
 # Input Data
 
 SNVPhyl takes as input a set of sequence reads, a reference genome, as well as an optional masking/invalid positions file to exclude particular regions on the reference genome.  A very basic dataset can be found at [test-data.tar.gz][].
@@ -197,3 +199,4 @@ For more information about interacting with data from Galaxy, please see the [Le
 [Learn Galaxy]: https://wiki.galaxyproject.org/Learn
 [Examples]: examples/
 [tools-panel]: images/tools-panel.png
+[SNVPhyl Docker]: ../install/docker.md
