@@ -1,20 +1,8 @@
 # SNVPhyl: Whole Genome SNV Phylogenomics Pipeline
 
-The SNVPhyl (Single Nucleotide Variant PHYLogenomics) pipeline is a pipeline for identifying Single Nucleotide Variants (SNV) within a collection of microbial genomes and constructing a phylogenetic tree.  Input is provided in the form of a collection of whole genome sequence reads as well as an assembled reference genome.  The output for the pipeline consists of:
+The SNVPhyl (__S__ingle __N__ucleotide __V__ariant __PHYL__ogenomics) pipeline is a pipeline for identifying Single Nucleotide Variants (SNV) within a collection of microbial genomes and constructing a phylogenetic tree.  [Input][] is provided in the form of a collection of whole genome sequence reads as well as an assembled reference genome.  The [output][] for the pipeline consists of a whole genome phylogenetic tree constructed from the detected SNVs, as well as a list of all detected SNVs and other information.
 
-1. A Phylogenetic Tree
-
-    ![snv-tree][]
-
-2. A core SNV distance matrix
-
-    ![snv-matrix][]
-
-3. A table of detected variants
-
-    ![snv-table][]
-
-4. Quality and other information
+![snv-tree][]
 
 # Operation
 
@@ -52,3 +40,5 @@ More information on the operation and installation of the pipeline can be found 
 [snv-matrix]: images/snv-matrix.png
 [snv-table]: images/snv-table.png
 [snv-tree]: images/snv-tree.png
+[output]: user/output.md
+[Input]: user/input.md

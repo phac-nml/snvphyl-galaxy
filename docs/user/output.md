@@ -43,7 +43,7 @@ The columns are as follows:
    * **total invalid pos**:  The total number of invalid positions removed from analysis.
    * **total valid pos**:  The total number of valid positions to be evaluated.
    * **total core**:  The total number of positions within the core genome on this fasta sequence.  That is, the total positions with enough coverage to be evaluated.
-   * **Percentage in core**:  The percent of core positions evaluated out of the valid positions.  That is `100*(total core)/(total valid pos)`.
+   * **Percentage in core**:  The percent of core positions evaluated out of the valid positions.  That is _100*(total core)/(total valid pos)_.
 
 # SNV/SNP Alignment
 
