@@ -15,7 +15,7 @@ You will have to enable this toolshed within Galaxy before SNVPhyl can be used. 
 <tool_shed name="IRIDA" url="https://irida.corefacility.ca/galaxy-shed"/>
 ```
 
-Once this line is added, please restart Galaxy.  If you navigate to **Admin**, and then from here nagivate to **Tool Sheds > Search and browse tool sheds**, you should see the IRIDA toolshed show up.
+Once this line is added, please restart Galaxy.  If you navigate to **Admin**, and then from here nagivate to **Tools and Tool Shed > Search Tool Shed**, you should see the IRIDA toolshed show up.
 
 ![irida-toolshed][]
 
