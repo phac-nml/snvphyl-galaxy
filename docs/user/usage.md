@@ -167,7 +167,7 @@ Then selecting **Unhide hidden datasets**.
 
 ![unhide-hidden-datasets][]
 
-For more information about interacting with data from Galaxy, please see the [Learn Galaxy][] page.  For real-world example datasets analyzed using SNVPhyl, please see the [Examples][] page.
+For more information about interacting with data from Galaxy, please see the [Learn Galaxy][] page.
 
 [Galaxy]: http://galaxyproject.org/
 [Docker]: https://www.docker.com/
