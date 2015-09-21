@@ -169,10 +169,26 @@ Then selecting **Unhide hidden datasets**.
 
 For more information about interacting with data from Galaxy, please see the [Learn Galaxy][] page.
 
+# Managing Errors
+
+When an error occurs for a tool in Galaxy, the dataset boxes in the history will show up in red.  Clicking on the **bug** icon will bring up more details about an error.
+
+![galaxy-dataset-error][]
+
+![galaxy-dataset-error-details][]
+
+In this case, the message reports no valid phylip alignment.  Checking the [SNV/SNP Alignment][] file shows it is empty.
+
+![snp-alignment-error][]
+
+This indicates no valid SNVs were detected, which could be caused by very little data in one more more samples.  Confirming this can be done by examining some of the additional output files decribed in the [Output][] section.
+
+If examining the datasets does not help diagnose the issue, then examining the Galaxy log files can be helpful.  With Docker, these should be printed to the screen.  With other installation methods the location may vary.  Please refer to the [Install][] section for more details.
+
 [Galaxy]: http://galaxyproject.org/
 [Docker]: https://www.docker.com/
 [Docker Install]: https://docs.docker.com/installation/
-[Install]: install/
+[Install]: ../install/
 [snvphyl-galaxy-docker]: images/snvphyl-galaxy-docker.png
 [test-data.tar.gz]: ../workflows/SNVPhyl/0.2/test-data.tar.gz
 [get-data-galaxy]: images/get-data-galaxy.png
@@ -203,3 +219,8 @@ For more information about interacting with data from Galaxy, please see the [Le
 [tools-panel]: images/tools-panel.png
 [SNVPhyl Docker]: ../install/docker.md
 [Dataset Collections]: https://wiki.galaxyproject.org/Documents/Presentations/GCC2014?action=AttachFile&do=get&target=Chilton.pdf
+[galaxy-dataset-error]: images/galaxy-dataset-error.png
+[galaxy-dataset-error-details]: images/galaxy-dataset-error-details.png
+[snp-alignment-error]: images/snp-alignment-error.png
+[SNV/SNP Alignment]: output.md#snv-snp-alignment
+[Output]: output.md
