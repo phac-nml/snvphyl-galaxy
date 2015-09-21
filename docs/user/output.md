@@ -10,8 +10,9 @@ The file `phylogeneticTree.newick` is the maximum likelihood phylogeny generated
 
 # SNV/SNP Table
 
-The file `snpTable.tsv` represents a table of all detected variant sites.  The position of each site is given by a combination of **Chromsome** (contig/sequence name) and **Position** on the reference genome.  The **Status** column represents whether this position was kept for constructing a phylogeny/distance matrix, **valid**, or filtered out.  The posible status values are:
+The file `snpTable.tsv` represents a table of all detected variant sites.  The position of each site is given by a combination of **Chromsome** (contig/sequence name) and **Position** on the reference genome.  The **Status** column represents whether this position was kept for constructing a phylogeny/distance matrix (**valid**) or filtered out.  The posible status values are:
 
+   * **valid**: Represents a position that passed all filtering criteria for every genome.  These positions are used in the SNV alignment used to construct a phylogenetic tree and a distance matrix.
    * **filtered-invalid**: Represents a position that was removed due to either being present on a repeat region, or within a region passed in the `invalid_positions` file.
    * **filtered-coverage**: Represents a position where at least one genome did not meet the minimum coverage critera.  The value inserted in the table in this case is a `-`.
    * **filtered-mpileup**: Represents a position where there was a mismatch in variant calls between **FreeBayes** and **SAMtools/mpileup/BCFtools**.  This often occurs in positions which met the **min_coverage** criteria, but did not meet the other criteria for calling a variant with FreeBayes, such as the minimum alternative allele ratio, or mapping quality scores. The value inserted in the table in this case is an `N`.
