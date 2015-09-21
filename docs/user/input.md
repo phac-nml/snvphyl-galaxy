@@ -32,3 +32,4 @@ Please see the [Preparing Sequence Reads][] documentation for details on how to 
 [FASTQ]: https://en.wikipedia.org/wiki/FASTQ_format
 [galaxy-paired-sequence-reads]: images/galaxy-paired-sequence-reads.png
 [Preparing Sequence Reads]: usage.md#preparing-sequence-reads
+[BED]: http://genome.ucsc.edu/FAQ/FAQformat#format1
