@@ -7,6 +7,8 @@ SNVPhyl and Galaxy can both be installed and run very quickly using the provided
 curl -sSL https://get.docker.com/ | sh
 ```
 
+You may have to start the `docker` service after installation for Docker to work.  Depending on your system, this may involve running `sudo service docker start`, or `sudo systemctl start docker`.
+
 Running SNVPhyl
 ===============
 

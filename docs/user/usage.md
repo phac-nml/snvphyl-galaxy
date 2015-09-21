@@ -11,7 +11,7 @@ curl -sSL https://get.docker.com/ | sh # Installs Docker
 sudo docker run -t -p 48888:80 apetkau/snvphyl-galaxy:0.2-beta-1 # Downloads and runs SNVPhyl and Galaxy 
 ```
 
-This will install Docker, download the SNVPhyl Galaxy docker image, and run this image in a Docker container.  This may take a while to fullly download and start up.  See the [Docker Install][] guide for more details.
+This will install Docker, download the SNVPhyl Galaxy docker image, and run this image in a Docker container.  This will take a while to fullly download and start up.  You may have to start the `docker` service after installation for Docker to work.  See the [Docker Install][] guide for more details.
 
 Once running, you may log into the SNVPhyl Galaxy instance by going to <http://localhost:48888> on your machine.  This should present you with a screen like the following:
 
