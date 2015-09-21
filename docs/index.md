@@ -37,8 +37,6 @@ More information on the operation and installation of the pipeline can be found 
 [Usage]: user/usage.md
 [snvphyl-overview]: images/snvphyl-overview.png
 [snvphyl-overview-galaxy]: images/snvphyl-overview-galaxy.png
-[snv-matrix]: images/snv-matrix.png
-[snv-table]: images/snv-table.png
-[snv-tree]: images/snv-tree.png
+[snv-tree]: images/snvphyl-out.png
 [output]: user/output.md
 [Input]: user/input.md
