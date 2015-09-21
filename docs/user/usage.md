@@ -33,6 +33,8 @@ This should bring up a window for uploading files to Galaxy.
 
 ![get-data-window-galaxy][]
 
+*Note: when selecting the **fastq** files, please make sure the data type is set to **fastqsanger**.  See [Preparing Sequence Reads](#preparing-sequence-reads).*
+
 ## Reference Genome
 
 The reference genome should be in **fasta** format.  Galaxy will auto-detected the correct file format on upload.  For the test data, this file is called `reference.fasta`.  When the correct file is chosen, click **Start** to begin uploading.  This will schedule an upload task in Galaxy and place the reference file in your Galaxy **History**.
@@ -200,3 +202,4 @@ For more information about interacting with data from Galaxy, please see the [Le
 [Examples]: examples/
 [tools-panel]: images/tools-panel.png
 [SNVPhyl Docker]: ../install/docker.md
+[Dataset Collections]: https://wiki.galaxyproject.org/Documents/Presentations/GCC2014?action=AttachFile&do=get&target=Chilton.pdf
