@@ -18,7 +18,7 @@ Once Docker is installed, the latest version of SNVPhyl can be downloaded and ru
 docker run -t -p 48888:80 apetkau/snvphyl-galaxy:0.2-beta-1
 ```
 
-This will download and run a docker image with SNVPhyl and Galaxy.  By default this will not persist data run through SNVPhyl after Docker has been shutdown.  To permanently store this data, please run:
+This will download and run a docker image with SNVPhyl and Galaxy.  By default this will **not persist** data run through SNVPhyl after Docker has been shutdown.  To permanently store this data, please run:
 
 ```bash
 docker run -t -p 48888:80 -v /home/user/galaxy_storage/:/export/ apetkau/snvphyl-galaxy:0.2-beta-1

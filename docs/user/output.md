@@ -14,7 +14,7 @@ The file `snpTable.tsv` represents a table of all detected variant sites.  The p
 
    * **valid**: Represents a position that passed all filtering criteria for every genome.  These positions are used in the SNV alignment used to construct a phylogenetic tree and a distance matrix.
    * **filtered-invalid**: Represents a position that was removed due to either being present on a repeat region, or within a region passed in the `invalid_positions` file.
-   * **filtered-coverage**: Represents a position where at least one genome did not meet the minimum coverage critera.  The value inserted in the table in this case is a `-`.
+   * **filtered-coverage**: Represents a position where at least one genome did not meet the minimum coverage criteria.  The value inserted in the table in this case is a `-`.
    * **filtered-mpileup**: Represents a position where there was a mismatch in variant calls between **FreeBayes** and **SAMtools/mpileup/BCFtools**.  This often occurs in positions which met the **min_coverage** criteria, but did not meet the other criteria for calling a variant with FreeBayes, such as the minimum alternative allele ratio, or mapping quality scores. The value inserted in the table in this case is an `N`.
 
 ![snv-table-galaxy][]
@@ -58,7 +58,7 @@ The file `mappingQuality.txt` describes how well the given reads mapped to the r
 
 ![mapping-quality][]
 
-The tool to generate this file takes two parameters, **min coverage** and **min percent covered** which represents the minimum percentage of the reference genome with reads over the minimum coverage mapped.  The output is a list of all input genomes which did not meet the critera as well as the percent of coverage over the reference genome.
+The tool to generate this file takes two parameters, **min coverage** and **min percent covered** which represents the minimum percentage of the reference genome with reads over the minimum coverage mapped.  The output is a list of all input genomes which did not meet the criteria as well as the percent of coverage over the reference genome.
 
 [Newick]: https://en.wikipedia.org/wiki/Newick_format
 [snv-tree]: images/snv-tree.png
