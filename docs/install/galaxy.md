@@ -26,7 +26,7 @@ Please follow through the steps to install this suite of tools, making sure to l
 
 ## Import SNVPhyl Galaxy workflows
 
-The current SNVPhyl Galaxy workflows can be found at [workflows/SNVPhyl/0.2](workflows/SNVPhyl/0.2).  Please import the `*.ga` workflows into Galaxy by navigating to **Workflow > Upload or import workflow**.  On completion you should have a set of workflows available.
+The current SNVPhyl Galaxy workflows can be found at [SNVPhyl 0.2 Paired-end][] and [SNVPhyl 0.2 Paired-end invalid positions][].  Please import these workflow files into Galaxy by navigating to **Workflow > Upload or import workflow**.  On completion you should have a set of workflows available.
 
 ![snvphyl-import-workflows][]
 
@@ -38,3 +38,5 @@ Installation should now be complete.  Please see the [Usage][] documentation for
 [snvphyl-tool-dependencies]: images/snvphyl-tool-dependencies.png
 [Usage]: ../user/usage.md
 [snvphyl-import-workflows]: images/snvphyl-import-workflows.png
+[SNVPhyl 0.2 Paired-end]: ../workflows/SNVPhyl/0.2/snvphyl-workflow-0.2.ga
+[SNVPhyl 0.2 Paired-end invalid positions]: ../workflows/SNVPhyl/0.2/snvphyl-workflow-0.2-invalid-positions.ga
