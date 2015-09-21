@@ -4,7 +4,7 @@ This describes the main output files of SNVPhyl.  This includes the phylogenetic
 
 # Phylogeny
 
-The file `phylogeneticTree.newick` is the maximum liklihood phylogeny generated from an alignment of SNVs extracted from the whole genomes of each input file in [Newick][] format.
+The file `phylogeneticTree.newick` is the maximum likelihood phylogeny generated from an alignment of SNVs extracted from the whole genomes of each input file in [Newick][] format.
 
 ![snv-tree][]
 
