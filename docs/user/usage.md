@@ -174,7 +174,7 @@ For more information about interacting with data from Galaxy, please see the [Le
 [Docker Install]: https://docs.docker.com/installation/
 [Install]: install/
 [snvphyl-galaxy-docker]: images/snvphyl-galaxy-docker.png
-[test-data.tar.gz]: workflows/SNVPhyl/0.2/test-data.tar.gz
+[test-data.tar.gz]: ../workflows/SNVPhyl/0.2/test-data.tar.gz
 [get-data-galaxy]: images/get-data-galaxy.png
 [get-data-window-galaxy]: images/get-data-window-galaxy.png
 [upload-sequence-reads]: images/upload-sequence-reads.png
