@@ -123,7 +123,7 @@ All parameters for each tool can be overridden in Galaxy, but a few key paramete
 
 These parameters represent:
 
-1. **min_coverage**:  The minimum coverage for any given position on the reference genome to be included in the analysis.  A reasonable value here is **10** or **15**, however, for the test data a value of **5** should be chosen due to the number of reads included.
+1. **min_coverage**:  The minimum coverage for any given position on the reference genome to be included in the analysis.  A reasonable value here is **10** or **15**.
 2. **min_mean_mapping**: The minimum mean mapping quality score for all reads in a pileup to be included for analysis.  A reasonable value here is **30**.
 3. **alternative_allele_proportion**:  The proportion of reads required to support a variant to be included in the analysis.  A reasonable value here is **0.75**.
 
