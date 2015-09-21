@@ -1,6 +1,9 @@
 # Overview
 
-SNVPhyl can be directly installed within an existing Galaxy instance.  There are two necessary steps that must take place for installing to a local Galaxy: (1) installing the SNVPhyl dependency tools, and (2) importing the SNVPhyl Galaxy workflows.
+SNVPhyl can be directly installed within an existing Galaxy instance.  There are two necessary steps that must take place for installing to a local Galaxy:
+
+1. Installing the SNVPhyl dependency tools.
+2. Importing the SNVPhyl Galaxy workflows.
 
 ## Installing the SNVPhyl Tools
 
