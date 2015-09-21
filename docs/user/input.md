@@ -12,7 +12,7 @@ An example reference genome looks like.
 
 # Invalid Positions masking file
 
-The invalid positions file is used to mask out regions on the reference genome with variants from being included in the phylogeny.  The format of the invalid positions file is a [BED][]-like tab-deliminated file defining the chromosome/contig/fasta sequence name and the start and end coordinates to exclude.
+The invalid positions file is used to mask out regions on the reference genome with variants.  Masked regions will not be included in the phylogeny.  The format of the invalid positions file is a [BED][]-like tab-deliminated file defining the chromosome/contig/fasta sequence name and the start and end coordinates to exclude.
 
 ```
 #Chromosome    Start    End
