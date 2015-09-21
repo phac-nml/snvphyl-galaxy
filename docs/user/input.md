@@ -21,7 +21,7 @@ reference      1        10
 
 # Sequence Reads
 
-The sequence reads are the set of reads to use for mapping and variant calling.  The provided workflow currently only supports paired-end sequence reads.  These should be in [FASTQ][] format.  Within Galaxy these should be structured within a paired-end dataset collection.
+The sequence reads are the set of reads to use for mapping and variant calling.  The provided workflow currently only supports paired-end sequence reads.  These should be in [FASTQ][] format.  Within Galaxy these should be imported with the **fastqsanger** data type and structured within a paired-end dataset collection.
 
 ![galaxy-paired-sequence-reads][]
 
