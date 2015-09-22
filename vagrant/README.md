@@ -53,7 +53,7 @@ vagrant ssh
 Galaxy log files can be monitored with:
 
 ```bash
-tail -f /opt/galaxy/galaxy/paster.log
+tail -f /home/galaxy/galaxy/paster.log
 ```
 
 Building a new Virtual Machine
