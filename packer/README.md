@@ -4,12 +4,8 @@ layout: default
 
 Building VMs with packer
 ========================
-{:.no_toc}
 
 This guide describes how to set up your workstation to build VM images of Galaxy and SNVPhyl with [packer](https://packer.io).
-
-* This comment becomes the table of contents
-{:toc}
 
 General Requirements
 --------------------

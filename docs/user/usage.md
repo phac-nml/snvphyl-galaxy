@@ -113,6 +113,10 @@ Near the bottom.
 
 ![installed-workflows][] 
 
+Or, alternatively, by clicking on the **Workflows** menu at the top ![workflow-top-menu][].
+
+![workflows-list][]
+
 There are two installed workflows, **SNVPhyl v0.2 Paired-End** and **SNVPhyl v0.2 Paired-End (invalid positions)** which differ only in that one workflow includes the addition of an invalid positions masking file.  Selecting the appropriate workflow brings up the **Parameters** screen.
 
 ## Parameters
@@ -222,5 +226,7 @@ If examining the datasets does not help diagnose the issue, then examining the G
 [galaxy-dataset-error]: images/galaxy-dataset-error.png
 [galaxy-dataset-error-details]: images/galaxy-dataset-error-details.png
 [snp-alignment-error]: images/snp-alignment-error.png
-[SNV/SNP Alignment]: output.md#snv-snp-alignment
+[SNV/SNP Alignment]: output.md#snvsnp-alignment
 [Output]: output.md
+[workflows-list]: images/workflows-list.png
+[workflow-top-menu]: images/workflow-top-menu.png
