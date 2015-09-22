@@ -8,7 +8,7 @@ SNVPhyl can be directly installed within an existing Galaxy instance.  There are
 
 ## Installing Build Dependencies
 
-Installing Galaxy tools involves building many packages from source.  Please make sure you have the standard build tools installed on the Galaxy system before proceeding.  In particular, please make sure that Perl, Python, Java, Git, GCC/G++, CMake, and CPANminus are all installed.  The virtual machine build script located [here](http://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy/blob/289184005dc50f60762d1af867e2fec497b57166/packer/scripts/galaxy.sh#L22) can be used as a rough guide for any necessary dependencies for CentOS.
+Installing Galaxy tools involves building many packages from source.  Please make sure you have the standard build tools and development packages installed on the Galaxy system before proceeding.  In particular, please make sure that Perl, Python, Java, Git, Mercurial, GCC/G++, CMake, zlib-devel, ncurses-devel, expat-devel, python-pip, python-devel, libyaml-devel, and CPANminus are all installed.  The virtual machine build script located [here](http://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy/blob/289184005dc50f60762d1af867e2fec497b57166/packer/scripts/galaxy.sh#L22) can be used as a rough guide for any necessary dependencies for CentOS.
 
 ## Installing the SNVPhyl Tools
 
