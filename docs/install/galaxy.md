@@ -1,9 +1,14 @@
 # Overview
 
-SNVPhyl can be directly installed within an existing Galaxy instance.  There are two necessary steps that must take place for installing to a local Galaxy:
+SNVPhyl can be directly installed within an existing Galaxy instance.  There are a few necessary steps that must take place for installing to a local Galaxy:
 
-1. Installing the SNVPhyl dependency tools.
-2. Importing the SNVPhyl Galaxy workflows.
+1. Installing Build Dependencies
+2. Installing the SNVPhyl dependency tools.
+3. Importing the SNVPhyl Galaxy workflows.
+
+## Installing Build Dependencies
+
+Installing Galaxy tools involves building many packages from source.  Please make sure you have the standard build tools installed on the Galaxy system before proceeding.  In particular, please make sure that Perl, Python, Java, Git, GCC/G++, CMake, and CPANminus are all installed.  The virtual machine build script located [here](http://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy/blob/289184005dc50f60762d1af867e2fec497b57166/packer/scripts/galaxy.sh#L22) can be used as a rough guide for any necessary dependencies for CentOS.
 
 ## Installing the SNVPhyl Tools
 
