@@ -11,7 +11,7 @@ curl -sSL https://get.docker.com/ | sh # Installs Docker
 sudo docker run -t -p 48888:80 apetkau/snvphyl-galaxy:0.2-beta-1 # Downloads and runs SNVPhyl and Galaxy 
 ```
 
-This will install Docker, download the SNVPhyl Galaxy docker image, and run this image in a Docker container.  This may take a while to fullly download and start up.  See the [Docker Install][] guide for more details.
+This will install Docker, download the SNVPhyl Galaxy docker image, and run this image in a Docker container.  This will take a while to fully download and start up.  You may have to start the `docker` service after installation for Docker to work.  This should be a command like `sudo service docker start`, or `sudo systemctl start docker` depending on your system.  See the [Docker Install][] guide for more details.
 
 Once running, you may log into the SNVPhyl Galaxy instance by going to <http://localhost:48888> on your machine.  This should present you with a screen like the following:
 
@@ -32,6 +32,8 @@ The data must first be uploaded to the SNVPhyl Galaxy instance before it can be 
 This should bring up a window for uploading files to Galaxy.
 
 ![get-data-window-galaxy][]
+
+*Note: when selecting the **fastq** files, please make sure the data type is set to **fastqsanger**.  See [Preparing Sequence Reads](#preparing-sequence-reads).*
 
 ## Reference Genome
 
@@ -111,6 +113,10 @@ Near the bottom.
 
 ![installed-workflows][] 
 
+Or, alternatively, by clicking on the **Workflows** menu at the top ![workflow-top-menu][].
+
+![workflows-list][]
+
 There are two installed workflows, **SNVPhyl v0.2 Paired-End** and **SNVPhyl v0.2 Paired-End (invalid positions)** which differ only in that one workflow includes the addition of an invalid positions masking file.  Selecting the appropriate workflow brings up the **Parameters** screen.
 
 ## Parameters
@@ -121,7 +127,7 @@ All parameters for each tool can be overridden in Galaxy, but a few key paramete
 
 These parameters represent:
 
-1. **min_coverage**:  The minimum coverage for any given position on the reference genome to be included in the analysis.  A reasonable value here is **10** or **15**, however, for the test data a value of **5** should be chosen due to the number of reads included.
+1. **min_coverage**:  The minimum coverage for any given position on the reference genome to be included in the analysis.  A reasonable value here is **10** or **15**.
 2. **min_mean_mapping**: The minimum mean mapping quality score for all reads in a pileup to be included for analysis.  A reasonable value here is **30**.
 3. **alternative_allele_proportion**:  The proportion of reads required to support a variant to be included in the analysis.  A reasonable value here is **0.75**.
 
@@ -165,14 +171,30 @@ Then selecting **Unhide hidden datasets**.
 
 ![unhide-hidden-datasets][]
 
-For more information about interacting with data from Galaxy, please see the [Learn Galaxy][] page.  For real-world example datasets analyzed using SNVPhyl, please see the [Examples][] page.
+For more information about interacting with data from Galaxy, please see the [Learn Galaxy][] page.
+
+# Managing Errors
+
+When an error occurs for a tool in Galaxy, the dataset boxes in the history will show up in red.  Clicking on the **bug** icon will bring up more details about an error.
+
+![galaxy-dataset-error][]
+
+![galaxy-dataset-error-details][]
+
+In this case, the message reports no valid phylip alignment.  Checking the [SNV/SNP Alignment][] file shows it is empty.
+
+![snp-alignment-error][]
+
+This indicates no valid SNVs were detected, which could be caused by very little data in one more more samples.  Confirming this can be done by examining some of the additional output files decribed in the [Output][] section.
+
+If examining the datasets does not help diagnose the issue, then examining the Galaxy log files can be helpful.  With Docker, these should be printed to the screen.  With other installation methods the location may vary.  Please refer to the [Install][] section for more details.
 
 [Galaxy]: http://galaxyproject.org/
 [Docker]: https://www.docker.com/
 [Docker Install]: https://docs.docker.com/installation/
-[Install]: install/
+[Install]: ../install/
 [snvphyl-galaxy-docker]: images/snvphyl-galaxy-docker.png
-[test-data.tar.gz]: workflows/SNVPhyl/0.2/test-data.tar.gz
+[test-data.tar.gz]: ../workflows/SNVPhyl/0.2/test-data.tar.gz
 [get-data-galaxy]: images/get-data-galaxy.png
 [get-data-window-galaxy]: images/get-data-window-galaxy.png
 [upload-sequence-reads]: images/upload-sequence-reads.png
@@ -200,3 +222,11 @@ For more information about interacting with data from Galaxy, please see the [Le
 [Examples]: examples/
 [tools-panel]: images/tools-panel.png
 [SNVPhyl Docker]: ../install/docker.md
+[Dataset Collections]: https://wiki.galaxyproject.org/Documents/Presentations/GCC2014?action=AttachFile&do=get&target=Chilton.pdf
+[galaxy-dataset-error]: images/galaxy-dataset-error.png
+[galaxy-dataset-error-details]: images/galaxy-dataset-error-details.png
+[snp-alignment-error]: images/snp-alignment-error.png
+[SNV/SNP Alignment]: output.md#snvsnp-alignment
+[Output]: output.md
+[workflows-list]: images/workflows-list.png
+[workflow-top-menu]: images/workflow-top-menu.png

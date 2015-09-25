@@ -18,6 +18,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
   config.vm.box_url = "https://irida.corefacility.ca/downloads/snvphyl-galaxy/vagrant/snvphyl-galaxy-0.2-beta-1.box"
-  config.vm.box_download_checksum = "4e3481bab46be43a21aac8167362ad1639ac36f6c9de33a31f82e6a68c463142"
+  config.vm.box_download_checksum = "c4c109fbd2a19a9681743196d55e635ade3e7dc07b005766cb59eb8dacb5e6bc"
   config.vm.box_download_checksum_type = "sha256"
 end

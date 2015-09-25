@@ -12,7 +12,7 @@ An example reference genome looks like.
 
 # Invalid Positions masking file
 
-The invalid positions file is used to mask out regions on the reference genome with variants from being included in the phylogeny.  The format of the invalid positions file is a [BED][]-like tab-deliminated file defining the chromosome/contig/fasta sequence name and the start and end coordinates to exclude.
+The invalid positions file is used to mask out regions on the reference genome with variants.  Masked regions will not be included in the phylogeny.  The format of the invalid positions file is a [BED][]-like tab-deliminated file defining the chromosome/contig/fasta sequence name and the start and end coordinates to exclude.
 
 ```
 #Chromosome    Start    End
@@ -21,7 +21,7 @@ reference      1        10
 
 # Sequence Reads
 
-The sequence reads are the set of reads to use for mapping and variant calling.  The provided workflow currently only supports paired-end sequence reads.  These should be in [FASTQ][] format.  Within Galaxy these should be structured within a paired-end dataset collection.
+The sequence reads are the set of reads to use for mapping and variant calling.  The provided workflow currently only supports paired-end sequence reads.  These should be in [FASTQ][] format.  Within Galaxy these should be imported with the **fastqsanger** data type and structured within a paired-end dataset collection.
 
 ![galaxy-paired-sequence-reads][]
 
@@ -32,3 +32,4 @@ Please see the [Preparing Sequence Reads][] documentation for details on how to 
 [FASTQ]: https://en.wikipedia.org/wiki/FASTQ_format
 [galaxy-paired-sequence-reads]: images/galaxy-paired-sequence-reads.png
 [Preparing Sequence Reads]: usage.md#preparing-sequence-reads
+[BED]: http://genome.ucsc.edu/FAQ/FAQformat#format1

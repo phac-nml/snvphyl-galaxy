@@ -13,4 +13,16 @@ pages:
 - [install/virtualmachine.md, Installation, Virtual Machine]
 - [install/galaxy.md, Installation, Galaxy]
 - [examples/listeria-monocytogenes.md, Examples, Listeria]
+
+- Home: 'index.md'
+- User:
+    - 'Usage': 'user/usage.md'
+    - 'Input': 'user/input.md'
+    - 'Output': 'user/output.md'
+- Installation:
+    - 'Home': 'install/index.md'
+    - 'Docker': 'install/docker.md'
+    - 'Virtual Machine': 'install/virtualmachine.md'
+    - 'Galaxy': 'install/galaxy.md'
+
 theme: readthedocs
