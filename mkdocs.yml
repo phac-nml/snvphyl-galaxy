@@ -12,5 +12,5 @@ pages:
 - [install/docker.md, Installation, Docker]
 - [install/virtualmachine.md, Installation, Virtual Machine]
 - [install/galaxy.md, Installation, Galaxy]
-
+- [examples/listeria-monocytogenes.md, Examples, Listeria]
 theme: readthedocs
