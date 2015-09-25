@@ -5,7 +5,7 @@ This example goes through the analysis of a *Listeria monocytogenes* dataset thr
 This example assumes you have a working version of SNVPhyl up and running within Galaxy.  For instructions on how to get to this stage, please refer to the [Install] documentation.
 ## Step 0: Generate Invalid Positions File
 
-In this example, we will run PHAST, a phage search tool hosted at ![PHAST-link], to find the locations of any phages that may be present in our reference genome.  We will then insert these locations into our invalid-positions.bed file which will be used in the SNVPhyl workflow.  Regions listed in the invalid-positions.txt file are excluded from the downstream analysis by SNVPhyl.
+In this example, we will run PHAST, a phage search tool hosted at ![PHAST-link], to find the locations of any phages that may be present in our reference genome.  We will then insert these locations into our invalid-positions.bed file which will be used in the SNVPhyl workflow.  Regions listed in the invalid-positions.bed file are excluded from the downstream analysis by SNVPhyl.
 
 1.  Navigate to the PHAST homepage at **http://phast.wishartlab.com**.
 
@@ -25,13 +25,13 @@ In this example, we will run PHAST, a phage search tool hosted at ![PHAST-link],
 
     ![PHAST-summary][]
 
-6.  The page above will list a summary of all of the phage sequences found by PHAST in our reference genome.  The positions we will be adding to our invalid-positions.txt file are under the column **REGION_POSITION**.
+6.  The page above will list a summary of all of the phage sequences found by PHAST in our reference genome.  The positions we will be adding to our invalid-positions.bed file are under the column **REGION_POSITION**.
 
     ![PHAST-position-column][]
 
-7.  Create a new text file named invalid-positions.txt using your preferred word processor.
+7.  Create a new text file named invalid-positions.bed using your preferred word processor.
 
-8.  Add the position of the detected phage to the invalid-positions.txt file.  The final file should like this:  
+8.  Add the position of the detected phage to the invalid-positions.bed file.  The final file should like this:  
  
     ![invalid-with-phage][]
 
@@ -166,9 +166,9 @@ The SNVPhyl pipeline outputs several files which are useful for evaluating the q
   
   For our run, in order to pass the mapping quality check, each strain would have to map to over 95% of the reference genome with a minimum depth of coverage of 15 at each  position.  We can see that only a single strain failed the mapping quality check, **CFSAN023466**, where it mapped to only 92.45% of the reference genome with a minimum depth of coverage of 15 at each position.  At 92.45%, it is unlikely that this strain would effect the pipeline results in a serious way.
   
-  In situations where there are strains with very poor mapping quality (<80%), the pipeline output can be affected drastically.  In these situations, large sections of the genome will be excluded from the **core genome** from which variants are called and many informative SNV's may be excluded from the final pipeline output.  In these cases, it can be useful to exclude poorly mapping isolates and re-run the pipeline.
+  In situations where there are strains with very poor mapping quality (<80%), the pipeline output can be effected drastically.  In these situations, large sections of the genome will be excluded from the **core genome** from which variants are called and many informative SNV's may be excluded from the final pipeline output.  In these cases, it can be useful to exclude poorly mapping isolates and re-run the pipeline.
   
-  Furthermore, if a large proportion of the strains in a given run are mapping poorly to the reference, it may be useful to change the reference strain used in the run.             
+  Furthermore, if a large proportion of the strains in a given run are mapping poorly to the reference, it may be useful to change the reference strain used.             
 
 [PHAST-link]: http://phast.wishartlab.com/
 [WGS Standards and Analysis]: https://github.com/WGS-standards-and-analysis/datasets/
