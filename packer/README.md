@@ -4,12 +4,8 @@ layout: default
 
 Building VMs with packer
 ========================
-{:.no_toc}
 
 This guide describes how to set up your workstation to build VM images of Galaxy and SNVPhyl with [packer](https://packer.io).
-
-* This comment becomes the table of contents
-{:toc}
 
 General Requirements
 --------------------
@@ -69,8 +65,8 @@ The default password is `vagrant`.
 
 ### Galaxy Install Directory
 
-Galaxy will be configured to run as the user `galaxy`, and is installed under `/opt/galaxy/galaxy`.  You may view the Galaxy log file by running:
+Galaxy will be configured to run as the user `galaxy`, and is installed under `/home/galaxy/galaxy`.  You may view the Galaxy log file by running:
 
 ```bash
-sudo tailf /opt/galaxy/galaxy/paster.log
+sudo tailf /home/galaxy/galaxy/paster.log
 ```
