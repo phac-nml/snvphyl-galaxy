@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<tool_dependency>
+	<package name="libtool" version="2.4">
+		<repository  name="package_libtool_2_4" owner="nml" prior_installation_required="True" />
+	</package>
+	<package name="bambamc" version="0.0.50">
+		<install version="1.0">
+			<actions>
+				<action type="download_by_url">https://github.com/gt1/bambamc/archive/0.0.50-release-20140430085950.tar.gz</action>
+				<action type="set_environment_for_install">
+					<repository  name="package_libtool_2_4" owner="nml" >
+						<package name="libtool"  version="2.4"  />
+					</repository>
+				</action>
+				<action type="autoconf">--prefix=$INSTALL_DIR</action>
+				<action type="set_environment">
+					<environment_variable name="BAMBAMC_INSTALL_DIR" action="set_to">$INSTALL_DIR</environment_variable>
+				</action>
+
+			</actions>
+		</install>
+	</package>
+</tool_dependency>
+

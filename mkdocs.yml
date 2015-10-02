@@ -1,0 +1,17 @@
+site_name: SNVPhyl
+site_url: http://snvphyl.readthedocs.org
+site_description: SNVPhyl Whole Genome SNV Phylogenomics Pipeline.
+repo_url: https://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy
+pages:
+- Home: 'index.md'
+- User:
+    - 'Usage': 'user/usage.md'
+    - 'Input': 'user/input.md'
+    - 'Output': 'user/output.md'
+- Installation:
+    - 'Home': 'install/index.md'
+    - 'Docker': 'install/docker.md'
+    - 'Virtual Machine': 'install/virtualmachine.md'
+    - 'Galaxy': 'install/galaxy.md'
+
+theme: readthedocs

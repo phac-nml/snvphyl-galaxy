@@ -1,0 +1,4 @@
+==========Reference Mapping Quality===========
+NUMBER OF BP's IN REFERENCE GENOME: 48502
+MINIMUM DEPTH: 10
+MINIMUM MAPPING: 80

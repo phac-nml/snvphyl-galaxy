@@ -1,0 +1,5 @@
+categories: [Sequence Analysis]
+description: SNVPhyl suite defining all dependencies for SNVPhyl
+name: suite_snvphyl
+owner: nml
+remote_repository_url: http://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy.git

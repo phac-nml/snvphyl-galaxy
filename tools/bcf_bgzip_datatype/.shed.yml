@@ -1,0 +1,5 @@
+categories: []
+description: BCF compress datatype
+name: bcf_bgzip_datatype
+owner: nml
+remote_repository_url: http://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy.git
