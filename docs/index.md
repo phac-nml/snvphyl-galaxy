@@ -26,6 +26,10 @@ SNVPhyl is implemented as a [Galaxy][] workflow, with each of these stages imple
 
 More information on the operation and installation of the pipeline can be found in the [Usage][] and [Installation][] sections.
 
+# Contact
+
+Comments, questions, or issues can be sent to Aaron Petkau - <aaron.petkau@phac-aspc.gc.ca>.
+
 [Galaxy]: http://galaxyproject.org/
 [Installation]: install/index.md
 [Overview]: user/index.md
