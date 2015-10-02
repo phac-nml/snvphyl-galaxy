@@ -1,0 +1,5 @@
+categories: [Tool Dependency Packages]
+description: Wombac dependency
+name: package_wombac
+owner: nml
+remote_repository_url: http://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy.git

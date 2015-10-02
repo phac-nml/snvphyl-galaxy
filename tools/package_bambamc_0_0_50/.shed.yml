@@ -1,0 +1,5 @@
+categories: [Tool Dependency Packages]
+description: bambamc
+name: package_bambamc_0_0_50
+owner: nml
+remote_repository_url: http://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy.git
