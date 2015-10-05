@@ -14,5 +14,5 @@ pages:
     - 'Virtual Machine': 'install/virtualmachine.md'
     - 'Galaxy': 'install/galaxy.md'
 - Examples:
-    - 'Listeria': 'examples/listeria-monocytogenes.md'
+    - 'Listeria monocytogenes': 'examples/listeria-monocytogenes.md'
 theme: readthedocs
