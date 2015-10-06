@@ -34,7 +34,14 @@ In this example, we will run PHAST, a phage search tool hosted at <http://phast.
 8.  Add the position of the detected phage to the **invalid-positions.bed** file.  Separate each column entry by a TAB.  The final file should like this:  
  
     ![invalid-with-phage][]
+    
+    **Note:** The chromosome name is derived from our original reference filename:
+    
+    ![lm-reference-file][]
+    
 
+	![lm-reference-opened][]
+	
     For more information on the formatting of the **invalid-positions.bed** file please refer to [Usage: Invalid Positions](../user/usage/#invalid-positions-masking-file)
 
 9.  Save the **invalid-positions.bed** file to your hard drive.
@@ -43,7 +50,7 @@ We have now generated a properly formatted **invalid-positions.bed** file, showi
 
 ## Step 2: Importing data into Galaxy
 
-There are three types of data that must be imported into Galaxy to run SNVPhyl, the reference genome `CFSAN023463.fasta`, the invalid positions file created in Step 0, and the sequence reads within the `fastq/` directory.
+There are three types of data that must be imported into Galaxy to run SNVPhyl, the reference genome `CFSAN023463.fasta`, the invalid positions file created in Step 1, and the sequence reads within the `fastq/` directory.
 
 1.  Import reference genome **CFSAN023463.fasta**
 
@@ -59,7 +66,7 @@ There are three types of data that must be imported into Galaxy to run SNVPhyl, 
 
     Once this is complete, click on **Start** to start the upload.
 
-3.  To import the invalid positions file, please go to **Get Data > Upload File**.  From here, select **Choose local file** and select the invalid positions file created in Step 0.  Once this is complete, click on **Start** to start the upload.
+3.  To import the invalid positions file, please go to **Get Data > Upload File**.  From here, select **Choose local file** and select the invalid positions file created in Step 1.  Once this is complete, click on **Start** to start the upload.
 
 On completion, you should see all files show up in your Galaxy **History** panel similar to below.
 
@@ -94,11 +101,10 @@ Once a proper paired-end dataset collection **lm-paired-reads** is constructed, 
     * **min_coverage**: 15
     * **min_mean_mapping**: 30
     * **alternative_allele_percentage**: 0.75
-    * **run_name**: lm-example
     
     ![lm-run-parameters][]    
 
-3.  Verify that **Step 1: Input dataset collection** is set to **lm-paired-reads** and **Step 2: Input dataset** is set to **CFSAN023463.fasta** **Step 3: Invalid positions file** is set to **invalid-positions.bed**.
+3.  Verify that **Input dataset collection** is set to **lm-paired-reads**, **Input dataset** is set to **CFSAN023463.fasta**, and **Invalid positions file** is set to **invalid-positions.bed**.
 
 4.  At the very bottom of this page, click the **Run workflow** button.  This should begin scheduling the workflow in your Galaxy history.  You should see each individual step running in Galaxy like below.
 
@@ -110,15 +116,18 @@ Once a proper paired-end dataset collection **lm-paired-reads** is constructed, 
 
 The pipeline is complete when all steps have finished executing (all steps are green) a new phylogenetic tree will be generated that will look like:
 
- ![lm-result-tree][]
-
 The main output files for the pipeline are:
 
-1. tree
-2. matrix
-3. core
-4. snp table
-5. **lm-example-percentage_reference_mapped**:  This file shows the percent of reads that have mapped to the reference genome.  This can be used to assess any potential issues.
+   * Phylogeny
+
+    ![lm-result-tree][]
+
+   * SNV Matrix
+   * Core Positions
+   * Core Positions
+   * Mapping Quality
+   
+ Please see the [Output](../user/output/#output) section for additional details.  
 
 ## Step 6: Interpretation
 
@@ -179,6 +188,8 @@ The SNVPhyl pipeline outputs several files which are useful for evaluating the q
 [PHAST-summary]: ../images/listeria-example/PHAST-summary.png
 [PHAST-position-column]: ../images/listeria-example/PHAST-position-column.png
 [invalid-with-phage]: ../images/listeria-example/invalid-with-phage.png
+[lm-reference-file]: ../images/listeria-example/lm-reference-file.png
+[lm-reference-opened]: ../images/listeria-example/lm-reference-opened.png
 [galaxy-get_data]: ../images/listeria-example/galaxy-get_data.png
 [lm-upload-fastqsanger]: ../images/listeria-example/lm-upload-fastqsanger.png
 [build-list-dataset-lm]: ../images/listeria-example/build-list-dataset-lm.png
