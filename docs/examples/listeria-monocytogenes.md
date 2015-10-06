@@ -82,7 +82,7 @@ This should bring up a window describing which files should be grouped together 
    ![lm-paired-list][]
 
    Click the **Create list** button.  This should create an **lm-paired-reads** entry in the Galaxy History.
-
+ 
 ## Step 4: Running the Workflow
 
 Once a proper paired-end dataset collection **lm-paired-reads** is constructed, the SNVPhyl workflow can be run on the uploaded data.  To run the workflow, please do the following.
@@ -108,9 +108,11 @@ Once a proper paired-end dataset collection **lm-paired-reads** is constructed, 
 
 ## Step 5: Examine Results
 
-The pipeline is complete when all steps have finished executing (all steps are green) which will appear like the following.
+The pipeline is complete when all steps have finished executing (all steps are green) a new phylogenetic tree will be generated that will look like:
 
-Once complete, please proceed to examining the results.  The main output files for the pipeline are:
+ ![lm-result-tree][]
+
+The main output files for the pipeline are:
 
 1. tree
 2. matrix
@@ -191,3 +193,4 @@ The SNVPhyl pipeline outputs several files which are useful for evaluating the q
 [view-data-icon]: ../images/view-data-icon.png
 [lm-filter-stats]: ../images/listeria-example/lm-filter-stats.png
 [lm-mapping-quality]: ../images/listeria-example/lm-mapping-quality.png
+[lm-result-tree]: ../images/listeria-example/lm-result-tree.png
