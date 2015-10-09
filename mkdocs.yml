@@ -13,5 +13,7 @@ pages:
     - 'Docker': 'install/docker.md'
     - 'Virtual Machine': 'install/virtualmachine.md'
     - 'Galaxy': 'install/galaxy.md'
+- Comparison:
+    - 'ASM NGS Challenge 2015': 'comparison/asm-ngs-2015.md'
 
 theme: readthedocs
