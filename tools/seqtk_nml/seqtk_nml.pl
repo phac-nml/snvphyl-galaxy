@@ -77,7 +77,7 @@ if($rawcoverage > $coverage){
 		if($i > 0){
 			$out = $outfile_rev;
 		}
-		my $copyCommand = "scp $fastq $out";
+		my $copyCommand = "cp $fastq $out";
 		$rv = system($copyCommand);
 		$i ++;
 	}
