@@ -114,7 +114,7 @@ Once a proper paired-end dataset collection **lm-paired-reads** is constructed, 
 
 ## Step 5: Examine Results
 
-The pipeline is complete when all steps have finished executing (all steps are green) a new phylogenetic tree will be generated that will look like:
+The pipeline is complete when all steps have finished executing (all steps are green) a new phylogenetic tree will be generated.
 
 The main output files for the pipeline are:
 
@@ -123,7 +123,6 @@ The main output files for the pipeline are:
     ![lm-result-tree][]
 
    * SNV Matrix
-   * Core Positions
    * Core Positions
    * Mapping Quality
    
@@ -151,7 +150,7 @@ The SNVPhyl pipeline outputs several files which are useful for evaluating the q
   
   In this output, we see a summary of the total number of single nucleotide variants called by the SNVPhyl pipeline for the run.  The first statistic, **Number of sites used to generate phylogeny**, will vary widely depending on the organism being investigated and the clonality (i.e - how genetically similar the strains are) of the isolates.  
   
-  A better QC indicator is the **Percentage of sites filtered** statistic.  If a high percentage of the SNV's are filtered, this can indicate that there are issues with the quality of the reads (i.e poor depth of coverage, poor mapping to reference, etc) used to generate the phylogeny.  For this analysis, we can see that 125 SNV's were used to generate the phylogeny from a total of 158 that were called by the pipeline.
+  A better QC indicator is the **Percentage of sites filtered** statistic.  If a high percentage of the SNV's are filtered, there are several possible interpretations.  On the one hand, this may indicate that there was large variation in the accessory genome of the isolates, which is excluded from the analysis, and would appear as a large number of filtered positions.  Another possibility is that this can indicate an issue with the quality of the reads (i.e poor depth of coverage, poor mapping to reference, etc) used to generate the phylogeny.  For this analysis, we can see that 125 SNV's were used to generate the phylogeny from a total of 158 that were called by the pipeline.
   
   
   The remaining statistics describe the types of filters that were responsible for eliminating low quality SNV's from the pipeline.  These are:
