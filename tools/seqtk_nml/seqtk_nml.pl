@@ -142,6 +142,7 @@ sub run {
             my $out = shift @out_fastqs;
             my $copyCommand = "cp $fastq $out";
             $rv = system($copyCommand);
+            die "Not able to copy '$fastq' to '$out'" if $rv !=0;
 	}
     }
 
