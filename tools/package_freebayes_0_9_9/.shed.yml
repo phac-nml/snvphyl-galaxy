@@ -1,5 +1,0 @@
-categories: [Tool Dependency Packages]
-description: FreeBayes version 0.9.9
-name: package_freebayes_0_9_9
-owner: nml
-remote_repository_url: http://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy.git
