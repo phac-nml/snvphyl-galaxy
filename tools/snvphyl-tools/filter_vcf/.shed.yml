@@ -1,0 +1,5 @@
+categories: [Sequence Analysis]
+description: SNVPhyl filter_vcf
+name:  filter_vcf
+owner: nml
+remote_repository_url: http://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy.git

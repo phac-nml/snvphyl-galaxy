@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <tool_dependency>
     <package name="bambamc" version="0.0.50">
-        <repository  name="package_bambamc_0_0_50" owner="jen-cabral" prior_installation_required="True" />
+        <repository  name="package_bambamc_0_0_50" owner="nml" prior_installation_required="True" />
     </package>
     <package name="smalt" version="0.7.5">
         <install version="1.0">
             <actions>
                 <action type="download_by_url" target_filename="smalt-0.7.5.tar.gz">http://downloads.sourceforge.net/project/smalt/smalt-0.7.5.tar.gz</action>
                  <action type="set_environment_for_install">
-                    <repository  name="package_bambamc_0_0_50" owner="jen-cabral" >
+                    <repository  name="package_bambamc_0_0_50" owner="nml" >
                         <package name="bambamc" version="0.0.50"/>
                     </repository>
                 </action>

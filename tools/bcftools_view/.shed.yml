@@ -1,0 +1,5 @@
+categories: [Sequence Analysis]
+description: BCF Tools view
+name: bcftools_view
+owner: nml
+remote_repository_url: http://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy.git

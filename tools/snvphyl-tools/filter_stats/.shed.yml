@@ -1,0 +1,5 @@
+categories: [Sequence Analysis]
+description: SNVPhyl filter_stats
+name: filter_stats
+owner: nml
+remote_repository_url: http://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy.git

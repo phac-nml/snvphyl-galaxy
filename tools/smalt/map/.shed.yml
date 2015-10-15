@@ -1,0 +1,5 @@
+categories: [Sequence Analysis]
+description: SMALT map
+name:  smalt_map
+owner: nml
+remote_repository_url: http://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy.git
