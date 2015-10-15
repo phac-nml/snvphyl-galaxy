@@ -57,7 +57,7 @@ sub get_parameters {
     }
 
     if ( $coverage <=0  ) {
-        print "ERROR: Was given a coverage less then 0\n";
+        print "ERROR: Was given a coverage less than 0\n";
         pod2usage( -verbose => 1 );
     }
 
@@ -135,6 +135,8 @@ sub run {
             #seed always set to 42 for reproducibility 
             my $seqCommand = "seqtk sample -s42 $fastq $subsample_size > $out";
             $rv = system($seqCommand);
+            #need to bit shift 8 bit because seqtk exit code for some reason are greater then standard 0-255 values that most unix application expect
+            die "Error when running '$seqCommand' command" if $rv >>8; 
 	}	
     } else {
 	#no sampling needed, just copy the fastq's to the output
@@ -146,7 +148,7 @@ sub run {
     }
 
 
-    exit $rv >> 8 if $rv >>8;
+
 }
 
 
@@ -230,6 +232,10 @@ Downsampled reverse fastq read file. Can be optional
 =item B<--log>
 
 Log file that indicate what has happen. [Required]
+
+=item B<--type>
+
+Indicate to application if we are receiving one or two fastq files [Required] ['paired','single']
 
 
 
