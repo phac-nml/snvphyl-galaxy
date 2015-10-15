@@ -15,4 +15,5 @@ pages:
     - 'Galaxy': 'install/galaxy.md'
 - Examples:
     - 'Listeria monocytogenes': 'examples/listeria-monocytogenes.md'
+    - 'Escherichia coli': 'examples/escherichia-coli.md'
 theme: readthedocs

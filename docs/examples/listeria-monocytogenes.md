@@ -116,11 +116,11 @@ Once a proper paired-end dataset collection **lm-paired-reads** is constructed, 
 
 The pipeline is complete when all steps have finished executing (all steps are green) a new phylogenetic tree will be generated.
 
-The main output files for the pipeline are:
+The main output files for the pipeline can be found [here](data/Listeria_monocytogenes_results.tar.gz) and are:
 
    * Phylogeny
 
-    ![lm-result-tree][]
+    [![lm-result-tree][]][lm-result-tree]
 
    * SNV Matrix
    * Core Positions
@@ -155,13 +155,13 @@ The SNVPhyl pipeline outputs several files which are useful for evaluating the q
   
   The remaining statistics describe the types of filters that were responsible for eliminating low quality SNV's from the pipeline.  These are:
   
-  * Coverage filtered - SNV's located in low depth of coverage regions
+  * **Coverage filtered** - SNV's located in low depth of coverage regions
   
-  * mpileup filtered -  SNV's determined to be invalid by the mpileup variant caller
+  * **mpileup filtered** -  SNV's determined to be invalid by the mpileup variant caller
   
-  * Density filtered -  SNV's located in high density regions of the genome
+  * **Density filtered** -  SNV's located in high density regions of the genome
   
-  * Invalid filtered -  SNV's determined to be invalid 
+  * **Invalid filtered** -  SNV's determined to be invalid 
   
   *Note: The Density filtered statistic is a work in progress, and will display a value of 0 until it is fully implemented*   
   
@@ -183,14 +183,14 @@ The SNVPhyl pipeline outputs several files which are useful for evaluating the q
 
 [WGS Standards and Analysis]: https://github.com/WGS-standards-and-analysis/datasets/
 [Install]: ../install
-[PHAST-select-fasta]: ../images/listeria-example/PHAST-upload-ref.png
-[PHAST-results]: ../images/listeria-example/PHAST-results.png
-[PHAST-summary]: ../images/listeria-example/PHAST-summary.png
+[PHAST-select-fasta]: ../images/PHAST-upload-ref.png
+[PHAST-results]: ../images/PHAST-results.png
+[PHAST-summary]: ../images/PHAST-summary.png
 [PHAST-position-column]: ../images/listeria-example/PHAST-position-column.png
 [invalid-with-phage]: ../images/listeria-example/invalid-with-phage.png
 [lm-reference-file]: ../images/listeria-example/lm-reference-file.png
 [lm-reference-opened]: ../images/listeria-example/lm-reference-opened.png
-[galaxy-get_data]: ../images/listeria-example/galaxy-get_data.png
+[galaxy-get_data]: ../images/galaxy-get_data.png
 [lm-upload-fastqsanger]: ../images/listeria-example/lm-upload-fastqsanger.png
 [build-list-dataset-lm]: ../images/listeria-example/build-list-dataset-lm.png
 [lm-galaxy-history]: ../images/listeria-example/lm-galaxy-history.png
@@ -199,7 +199,7 @@ The SNVPhyl pipeline outputs several files which are useful for evaluating the q
 [lm-paired-list]: ../images/listeria-example/lm-paired-list.png
 [select-galaxy-workflow]: ../images/listeria-example/select-galaxy-workflow.png
 [lm-run-parameters]: ../images/listeria-example/lm-run-parameters.png
-[run-pipeline]: ../images/listeria-example/run-pipeline.png
+[run-pipeline]: ../images/run-pipeline.png
 [lm-vcf2core-data]: ../images/listeria-example/lm-vcf2core-data.png
 [view-data-icon]: ../images/view-data-icon.png
 [lm-filter-stats]: ../images/listeria-example/lm-filter-stats.png
