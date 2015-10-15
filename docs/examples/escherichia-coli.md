@@ -89,7 +89,7 @@ On completion, you should see all files show up in your Galaxy **History** panel
 
 ## Step 3: Constructing Galaxy Dataset Pairs
 
-SNVPhyl makes use of [Dataset Collections][] in Galaxy to properly structure paired-end sequence reads to run through SNVPhyl.  To construct the necessary data structure, please do the following.
+SNVPhyl makes use of in Galaxy to properly structure paired-end sequence reads to run through SNVPhyl.  To construct the necessary data structure, please do the following.
 
 1.  Click the **multiple datasets** icon ![multiple-datasets-icon][].  This should allow selection of files in the Galaxy History to combine together into a single dataset collection.  Select all but the reference file **2011C-3609.fasta**.  This should look similar to.
 
@@ -105,7 +105,7 @@ SNVPhyl makes use of [Dataset Collections][] in Galaxy to properly structure pai
 
 Once a proper paired-end dataset collection **ec-paired-reads** is constructed, the SNVPhyl workflow can be run on the uploaded data.  To run the workflow, please do the following.
 
-1.  At the very top of the Galaxy page, select **Workflow**.  This should bring you to a page where you can select from a number of installed workflows.  Please select **BETA: Snvphyl pipeline v 0.4 PE (imported from uploaded file) (imported from API)** and click **Run**.
+1.  At the very top of the Galaxy page, select **Workflow**.  This should bring you to a page where you can select from a number of installed workflows.  Please select **imported: SNVPhyl v0.2 Paired-End (invalid positions)** and click **Run**.
 
 2.  Adjust the main parameters.  Displayed in the **Workflow Parameters** at the top of the screen.  For this example, please set to:
 
@@ -168,7 +168,7 @@ The SNVPhyl pipeline outputs several files which are useful for evaluating the q
   
   * **Coverage filtered** - SNV's located in low depth of coverage regions
   
-  * **mpileup filtered** -  SNV's determined to be invalid by the mpileup variant caller
+  * **mpileup filtered** -  SNV's determined to be invalid by the mpileup/bcftools variant caller
   
   * **Density filtered** -  SNV's located in high density regions of the genome
   
