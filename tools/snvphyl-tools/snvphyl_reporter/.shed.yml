@@ -1,0 +1,5 @@
+categories: [Sequence Analysis]
+description: Reporter for SNVPhyl pipeline
+name: snvphyl_reporter
+owner: nml
+remote_repository_url: http://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy.git

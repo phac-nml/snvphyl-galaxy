@@ -1,0 +1,5 @@
+categories: [Sequence Analysis]
+description: Generates simulated illumina fastq reads from a fasta file
+name: wombac_shred
+owner: nml
+remote_repository_url: http://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy.git
