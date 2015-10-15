@@ -157,7 +157,7 @@ The SNVPhyl pipeline outputs several files which are useful for evaluating the q
   
   * **Coverage filtered** - SNV's located in low depth of coverage regions
   
-  * **mpileup filtered** -  SNV's determined to be invalid by the mpileup variant caller
+  * **mpileup filtered** -  SNV's determined to be invalid by the mpileup/bcftools variant caller
   
   * **Density filtered** -  SNV's located in high density regions of the genome
   
