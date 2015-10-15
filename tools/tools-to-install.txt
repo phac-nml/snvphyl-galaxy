@@ -1,12 +1,10 @@
 bcf_bgzip_datatype
 package_libtool_2_4
 package_bambamc_0_0_50
-package_freebayes_0_9_9
 package_smalt_0_7_5
 package_snvphyl
 bcftools_call
 bcftools_view
-freebayes
 phyml
 smalt/index
 smalt/map
