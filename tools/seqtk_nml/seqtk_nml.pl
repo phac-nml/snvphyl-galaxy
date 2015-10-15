@@ -5,6 +5,7 @@ use strict;
 use Bio::SeqIO;
 use Getopt::Long;
 use Pod::Usage;
+use File::Copy;
 __PACKAGE__->run unless caller;
 
 
@@ -56,7 +57,7 @@ sub get_parameters {
     }
 
     if ( $coverage <=0  ) {
-        print "ERROR: Was not given a coverage less then 0\n";
+        print "ERROR: Was given a coverage less then 0\n";
         pod2usage( -verbose => 1 );
     }
 
@@ -88,13 +89,20 @@ sub run {
     if ($type eq "single"){
 	$in_fastqs[0] = $for;
         $out_fastqs[0] = $out_for;
-    }else{
+    }elsif ($type eq 'paired' ) {
 	$in_fastqs[0] = $for;
 	$in_fastqs[1] = $rev;
         $out_fastqs[0] = $out_for;
         $out_fastqs[1] = $out_rev;
     }
-	
+    else {
+        die "Given unknown read type of '$type'";
+    }
+
+    #get total read lengths from all fastq files given
+    my $total= get_total_length(@in_fastqs);
+
+    
     if (!($coverage)){
 	$coverage = 50;
     }
@@ -108,20 +116,14 @@ sub run {
         $length += $seq->length();
     }
 
-    my $all_fastq = join (' ' , map { "\"$_\"" } @in_fastqs);
 
-    #one liner from : http://onetipperday.blogspot.ca/2012/05/simple-way-to-get-reads-length.html with some modification by Philip Mabon
-    my $total=`cat $all_fastq | perl -ne '\$s=<>;<>;<>;chomp(\$s);print length(\$s)."\n";' | sort | uniq -c | perl -e 'while(my \$line=<>){chomp \$line; \$line =~s/^\\s+//;(\$l,\$n)=split/\\s+/,\$line; \$t+= \$l*\$n;} print "\$t\n"'`;
-
-    print $log_fh "Downsamping to coverage of: $coverage\n";
-    print $log_fh "Total number of Basepairs: $total";
+    print $log_fh "Downsampling to coverage of: $coverage\n";
+    print $log_fh "Total number of Basepairs: $total\n";
     print $log_fh "Length of Reference: $length\n";
     
     my $rawcoverage = $total/$length;
     printf $log_fh "Raw Coverage: %.3f\n",$rawcoverage;
 
-
-    my $i = 0;
     if($rawcoverage > $coverage){
 	#need to downsample
 	#calculate $subsample_size
@@ -133,16 +135,13 @@ sub run {
             #seed always set to 42 for reproducibility 
             my $seqCommand = "seqtk sample -s42 $fastq $subsample_size > $out";
             $rv = system($seqCommand);
-            $i ++;
 	}	
     } else {
 	#no sampling needed, just copy the fastq's to the output
 	print "Subsampling not required\n";
 	foreach my $fastq (@in_fastqs){
             my $out = shift @out_fastqs;
-            my $copyCommand = "cp $fastq $out";
-            $rv = system($copyCommand);
-            die "Not able to copy '$fastq' to '$out'" if $rv !=0;
+            copy($fastq,$out) || die "Not able to copy '$fastq' to '$out' with error $!";
 	}
     }
 
@@ -150,6 +149,34 @@ sub run {
     exit $rv >> 8 if $rv >>8;
 }
 
+
+sub get_total_length {
+    my (@files) = @_;
+    my $total;
+    foreach my $fastq( @files) {
+
+        open my $in, "<",$fastq || die "Could not open file '$fastq'";
+        #skip first 3 lines
+        for ( 0..2) {
+            my $line = <$in>;
+        }
+
+        while ( <$in>) {
+            chomp;
+            $total+=length($_);
+            #skip first 3 lines
+            for ( 0..2) {
+                my $line = <$in>;
+            }            
+        }
+        close $in;
+        
+        
+    }
+    
+    return $total;
+    
+}
 
 1;
 
@@ -221,7 +248,7 @@ Downsample fastq(s) reads based on the raw coverage from reference fasta file. N
 
 
 =back
-use Getopt::Long;
+
 
 =head1 SYNOPSIS
 

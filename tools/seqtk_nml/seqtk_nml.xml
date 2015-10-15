@@ -80,6 +80,7 @@
 			<param name="coverage" value="50" />
 			<output name="output" file="outputforward.fastq" />
 			<output name="output_rev" file="outputreverse.fastq" />
+			<output name="log" file="lognosample.log" />
 		</test>
 		<test>
 			<param name="type" value="paired" />
