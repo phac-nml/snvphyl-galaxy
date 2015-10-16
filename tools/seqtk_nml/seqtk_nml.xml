@@ -6,16 +6,22 @@
 		<requirement type="package" version="1.6.922">bioperl</requirement>
 	</requirements>
 	<command interpreter="perl">
-		seqtk_nml.pl $fastar 
+		seqtk_nml.pl --ref $fastar 
 
 		#if $single_or_paired.type == "single"
-			single
- 			$input_se
- 			$coverage $output
+			--type single
+ 			--forward $input_se
+ 			--cov $coverage 
+			--out_forward $output
+			--log $log
 		#elif $single_or_paired.type == "paired"
-            paired
-          	$single_or_paired.forward_pe $single_or_paired.reverse_pe
-          	$coverage $output $output_rev
+	        --type paired
+          	--forward $single_or_paired.forward_pe 
+		--reverse $single_or_paired.reverse_pe
+          	--cov $coverage 
+		--out_forward $output 
+		--out_reverse $output_rev
+		--log $log
         #else
             collection
             $single_or_paired.fastq_collection.forward $single_or_paired.fastq_collection.reverse
@@ -62,6 +68,7 @@
       		<data name="reverse" format="fastqsanger"/>
 			<filter>single_or_paired['type']=="collection"</filter>
 		</collection>
+		<data format="txt" name="log" label="Log file"/>
 	</outputs>
 
 	<tests>
@@ -73,7 +80,19 @@
 			<param name="coverage" value="50" />
 			<output name="output" file="outputforward.fastq" />
 			<output name="output_rev" file="outputreverse.fastq" />
+			<output name="log" file="lognosample.log" />
 		</test>
+		<test>
+			<param name="type" value="paired" />
+			<param name="forward_pe" value="inputforward.fastq" />
+			<param name="reverse_pe" value="inputreverse.fastq" />
+			<param name="fastar" value="testref.fasta"/>
+			<param name="coverage" value="25" />
+			<output name="output" file="outputdownsamepleforward.fastq" />
+			<output name="output_rev" file="outputdownsameplereverse.fastq" />
+			<output name="log" file="logdownsample.log" />
+		</test>
+
 
 	</tests>
 	<help>
