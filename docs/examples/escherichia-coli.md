@@ -89,7 +89,7 @@ On completion, you should see all files show up in your Galaxy **History** panel
 
 ## Step 3: Constructing Galaxy Dataset Pairs
 
-SNVPhyl makes use of in Galaxy to properly structure paired-end sequence reads to run through SNVPhyl.  To construct the necessary data structure, please do the following.
+SNVPhyl makes use of dataset collections in Galaxy to properly structure paired-end sequence reads to run through SNVPhyl.  To construct the necessary data structure, please do the following.
 
 1.  Click the **multiple datasets** icon ![multiple-datasets-icon][].  This should allow selection of files in the Galaxy History to combine together into a single dataset collection.  Select all but the reference file **2011C-3609.fasta**.  This should look similar to.
 
