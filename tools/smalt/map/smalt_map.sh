@@ -42,7 +42,12 @@ smalt map $@ 'temp' $inputs
 
 
 if [ "$format" == "bam" ]; then
-	samtools sort -@ $GALAXY_SLOTS $smaltout 'temp2'
+	if [ $GALAXY_SLOTS ]
+	then
+	    samtools sort -@ $GALAXY_SLOTS $smaltout 'temp2'
+	else
+	    samtools sort $smaltout 'temp2'
+	fi
 	mv 'temp2.bam' $smaltout
 fi
 
