@@ -2,4 +2,4 @@ categories: [Sequence Analysis]
 description: seqtk toolkit
 name: seqtk_nml
 owner: nml
-remote_repository_url: http://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy.git
+remote_repository_url: https://irida.corefacility.ca/analysis-pipelines/snvphyl-galaxy

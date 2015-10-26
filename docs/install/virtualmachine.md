@@ -4,7 +4,7 @@ VirtualBox
 A [VirtualBox][] virtual machine is provided for running SNVPhyl along with Galaxy.  This machine requires at least **4 GB** of memory and **4 CPUs** to properly run.  The machine can be quickly launched using [Vagrant][] with the following commands.
 
 ```bash
-git clone https://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy
+git clone https://irida.corefacility.ca/analysis-pipelines/snvphyl-galaxy
 cd snvphyl-galaxy/vagrant
 vagrant up
 ```
@@ -56,7 +56,7 @@ As an alternative to [Vagrant][], a [VirtualBox][] image can be downloaded and i
 Building Custom Virtual Machines
 --------------------------------
 
-The SNVPhyl Galaxy VM is built using [Packer][].  This can be customized or re-built by following the instructions at <https://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy/tree/development/packer>.
+The SNVPhyl Galaxy VM is built using [Packer][].  This can be customized or re-built by following the instructions at <https://irida.corefacility.ca/analysis-pipelines/snvphyl-galaxy/tree/master/packer>.
 
 [VirtualBox]: https://www.virtualbox.org/
 [Vagrant]:  https://www.vagrantup.com/

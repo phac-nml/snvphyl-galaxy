@@ -49,7 +49,7 @@ Once you have uploaded the packages to a Galaxy Tool Shed, you can install to a 
 [Galaxy Tool Shed]: https://wiki.galaxyproject.org/ToolShed
 [Production Server Setup]: https://wiki.galaxyproject.org/Admin/Config/Performance/ProductionServer
 [Testing Installed Tools]: https://wiki.galaxyproject.org/TestingInstalledTools
-[IRIDA Galaxy Setup]: https://irida.corefacility.ca/gitlab/irida/irida-install-documentation/tree/master/galaxy
+[IRIDA Galaxy Setup]: https://irida.corefacility.ca/irida/irida-install-documentation/tree/master/galaxy
 [Automated Tool Tests]: https://wiki.galaxyproject.org/AutomatedToolTests
 [Hosting a Local Tool Shed]: https://wiki.galaxyproject.org/HostingALocalToolShed
 [Install and Test Certification]: https://wiki.galaxyproject.org/InstallAndTestCertification
