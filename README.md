@@ -26,7 +26,15 @@ The tools for this pipeline are maintained in a Galaxy toolshed at <https://irid
 ./scripts/run_planemo_for_tools.sh shed_create --shed_target http://toolshed --shed_key KEY --message 'message'
 ```
 
-This will create repositories for each tool defined in [tools/tools-to-install.txt][] within the Toolshed at http://toolshed.  Please see the [Planemo][] documentation for more details.
+This will create repositories for each tool defined in [tools/tools-to-install.txt][] within the Toolshed at http://toolshed.
+
+In order to check for any differences with the current tools from an existing toolshed install, please run:
+
+```
+./scripts/planemo_diff_recursive.sh --shed_target http://toolshed --shed_key KEY
+```
+
+Please see the [Planemo][] documentation for more details.
 
 [Galaxy]: http://galaxyproject.org/
 [Markdown]: http://daringfireball.net/projects/markdown/syntax
