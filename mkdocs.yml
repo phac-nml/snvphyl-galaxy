@@ -13,6 +13,7 @@ pages:
     - 'Docker': 'install/docker.md'
     - 'Virtual Machine': 'install/virtualmachine.md'
     - 'Galaxy': 'install/galaxy.md'
+    - 'Versions': 'install/versions.md'
 - Examples:
     - 'Listeria monocytogenes': 'examples/listeria-monocytogenes.md'
 - Comparison:
