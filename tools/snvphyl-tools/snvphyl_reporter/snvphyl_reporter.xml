@@ -1,4 +1,4 @@
-<tool id="snvphyl_reporter" name="Snvphyl Reporter" version="1.3">
+<tool id="snvphyl_reporter" name="Snvphyl Reporter" version="1.4">
 	<description>Runs Snvphyl reporter</description>
 	<requirements>
 		<requirement type="package" version="1.4.1">snvphyl</requirement>
