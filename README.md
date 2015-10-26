@@ -20,15 +20,17 @@ This will build a site under http://localhost:8000.
 
 ## Tools
 
-The tools for this pipeline are maintained in a Galaxy toolshed at https://irida.corefacility.ca/galaxy-shed.  To build these tools for export to a local Galaxy toolshed please run:
+The tools for this pipeline are maintained in a Galaxy toolshed at <https://irida.corefacility.ca/galaxy-shed>.  To update the Galaxy tools or transfer to a different toolshed, please use [Planemo][].  A quick way to upload all relevent tools in the correct order is the script `scripts/run_planemo_for_tools.sh`.  This can be run as:
 
 ```bash
-./scripts/build_for_toolshed.sh
+./scripts/run_planemo_for_tools.sh shed_create --shed_target http://toolshed --shed_key KEY --message 'message'
 ```
 
-This will generate **.tar.gz** files in the directory `build/` which can be uploaded to a toolshed.  More details of this process can be found in the [Install Tools in Local Toolshed][]
+This will create repositories for each tool defined in [tools/tools-to-install.txt][] within the Toolshed at http://toolshed.  Please see the [Planemo][] documentation for more details.
 
 [Galaxy]: http://galaxyproject.org/
 [Markdown]: http://daringfireball.net/projects/markdown/syntax
 [mkdocs]: http://www.mkdocs.org
 [Install Tools in Local Toolshed]: InstallLocalToolshed.md
+[Planemo]: http://planemo.readthedocs.org/
+[tools/tools-to-install.txt]: tools/tools-to-install.txt
