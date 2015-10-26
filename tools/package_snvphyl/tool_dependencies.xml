@@ -29,7 +29,7 @@
                 </action>
 
                 <action type="change_directory">../</action>
-                <action type="shell_command">git clone http://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-tools.git</action>
+                <action type="shell_command">git clone https://irida.corefacility.ca/analysis-pipelines/snvphyl-tools.git</action>
                 <action type="change_directory">snvphyl-tools</action>
                 <action type="shell_command">git checkout c7c07d6de5699b035a2d6ada253b853589afbd00</action>
                 <action type="change_directory">bcfplugins/bcftools-1.2</action>

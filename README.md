@@ -20,7 +20,7 @@ This will build a site under http://localhost:8000.
 
 ## Tools
 
-The tools for this pipeline are maintained in a Galaxy toolshed at http://irida.corefacility.ca/galaxy-shed.  To build these tools for export to a local Galaxy toolshed please run:
+The tools for this pipeline are maintained in a Galaxy toolshed at https://irida.corefacility.ca/galaxy-shed.  To build these tools for export to a local Galaxy toolshed please run:
 
 ```bash
 ./scripts/build_for_toolshed.sh
