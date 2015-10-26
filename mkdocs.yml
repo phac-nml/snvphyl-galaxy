@@ -1,7 +1,7 @@
 site_name: SNVPhyl
 site_url: http://snvphyl.readthedocs.org
 site_description: SNVPhyl Whole Genome SNV Phylogenomics Pipeline.
-repo_url: https://irida.corefacility.ca/gitlab/analysis-pipelines/snvphyl-galaxy
+repo_url: https://irida.corefacility.ca/analysis-pipelines/snvphyl-galaxy
 pages:
 - Home: 'index.md'
 - User:
