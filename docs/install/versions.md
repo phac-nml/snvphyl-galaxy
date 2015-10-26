@@ -1,12 +1,12 @@
 SNVPhyl Versions
 ================
 
-This lists the different versions and release dates of SNVPhyl.
+This describes the different release versions of SNVPhyl.
 
 Version 0.3
 ===========
 
-Released on **October 26, 2015**.
+Released on **October 27, 2015**.
 
 Install
 -------
