@@ -13,7 +13,7 @@ Install
 
 * Docker - `apetkau/snvphyl-galaxy:0.3`
 * Virtual Machine - [snvphyl-galaxy-0.3.zip](https://irida.corefacility.ca/downloads/snvphyl-galaxy/snvphyl-galaxy-0.3.zip)
-* Galaxy - revision **99463e5aef1b** - <https://irida.corefacility.ca/galaxy-shed/view/nml/suite_snvphyl/99463e5aef1b>
+* Galaxy - revision **d10f39a95aa8** - <https://irida.corefacility.ca/galaxy-shed/repository?repository_id=25565a2bc9617c8e&changeset_revision=d10f39a95aa8>
 * Git - <https://irida.corefacility.ca/analysis-pipelines/snvphyl-galaxy/tree/v0.3>
 
 Changelog
@@ -33,7 +33,7 @@ Install
 
 * Docker - `apetkau/snvphyl-galaxy:0.2-beta-1`
 * Virtual Machine - [snvphyl-galaxy-0.2-beta-1.zip](https://irida.corefacility.ca/downloads/snvphyl-galaxy/snvphyl-galaxy-0.2-beta-1.zip)
-* Galaxy - revision **99463e5aef1b** - <https://irida.corefacility.ca/galaxy-shed/view/nml/suite_snvphyl/99463e5aef1b>
+* Galaxy - revision **99463e5aef1b** - <https://irida.corefacility.ca/galaxy-shed/repository?repository_id=25565a2bc9617c8e&changeset_revision=99463e5aef1b>
 * Git - <https://irida.corefacility.ca/analysis-pipelines/snvphyl-galaxy/tree/v0.2-beta-1>
 
 Changelog
