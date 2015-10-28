@@ -15,6 +15,7 @@ else
 	for tool in `cat $TOOLS_TO_INSTALL`
 	do
 		cd "$TOOLS_DIR/$tool"
+		echo "Running planemo on tool '$tool'"
 		planemo $@
 		cd $CURR_DIR
 	done
