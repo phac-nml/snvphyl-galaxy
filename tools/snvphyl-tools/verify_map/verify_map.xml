@@ -1,4 +1,4 @@
-<tool id="verify_map" name="Verify Mapping Quality" version="0.0.5">
+<tool id="verify_map" name="Verify Mapping Quality" version="0.0.6">
 	<description>Checks the mapping quality of all BAM files generated in the core SNP pipeline.</description>
 	<requirements>
 		<requirement type="package" version="1.4.2">snvphyl</requirement>
@@ -12,7 +12,9 @@
  		#if $mindepth :
         	--min-depth $mindepth
 	      	#end if
-
+                
+                --cores \${GALAXY_SLOTS:-1}
+                
       		#if $minmap :
         	--min-map $minmap 	
 	      	#end if
