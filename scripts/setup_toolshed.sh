@@ -13,7 +13,7 @@ else
     cookie="$ROOT_DIR/cookie"
 
     echo "Attempting to create admin user and generate api key"
-    curl -s -c $cookie --data "create_user_button=Submit&email=admin%40localhost.com&password=dna2protein&confirm=dna2protein&username=nml&bear_field=" $api_host/user/create?cntrller=user&use_panels=True &> /dev/null
+    curl -s -c $cookie -o /dev/null --data "create_user_button=Submit&email=admin%40localhost.com&password=dna2protein&confirm=dna2protein&username=nml&bear_field=" $api_host/user/create?cntrller=user&use_panels=True 
     sleep 5
 
     if [ ! -f $cookie ]; then
@@ -25,7 +25,7 @@ else
         echo "Cookie Found, but file is empty. Cannot continue"
         exit 1;
     fi
-
+    echo "Finished creating admin user"
     
     api_key=`curl -s -b $cookie --data "new_api_key_button=Generate+a+new+key+now" $api_host/user/api_keys?cntrller=user | grep "Current API key" -A 1  | tail -n 1 | sed 's/ //g'`
 
