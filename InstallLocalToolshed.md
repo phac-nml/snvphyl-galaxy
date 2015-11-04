@@ -32,6 +32,8 @@ Additionality, tools available from toolshed.g2.bx.psu.edu will also be installe
 ### Initial requirements
 
 * Need to have user 'admin@localhost.com' listed for parameter 'admin_users' in config/tool_shed.ini.sample
+* 'admin@localhost.com' is not created yet.
+* ToolShed is currently running
 
 ### One script install 
 
