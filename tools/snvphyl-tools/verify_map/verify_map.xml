@@ -1,7 +1,7 @@
-<tool id="verify_map" name="Verify Mapping Quality" version="0.0.5">
+<tool id="verify_map" name="Verify Mapping Quality" version="0.0.6">
 	<description>Checks the mapping quality of all BAM files generated in the core SNP pipeline.</description>
 	<requirements>
-		<requirement type="package" version="1.4.1">snvphyl</requirement>
+		<requirement type="package" version="1.4.2">snvphyl</requirement>
 		<requirement type="package" version="5.18.1">perl</requirement>
 		<requirement type="package" version="0.1.19">samtools</requirement>
 	</requirements>
