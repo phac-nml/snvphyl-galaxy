@@ -4,37 +4,42 @@ SNVPhyl Pipeline Tools
 This document describes how to build and install the SNVPhyl tools within a custom toolshed.  The tools are located under `tools/`.  These can be packaged up and uploaded into a [Galaxy Tool Shed][] and then later installed to an instance of Galaxy.  The list of tools is given below:
 
 * **phyml**
-* **smalt_collection**
-* **freebayes**
+* **smalt**
+* **wombac**
+* **bcftools call**
+* **bcftools view**
+* **Seqtk nml**
 * **core-pipeline tools**
 
-These can be installed to a Galaxy Tool Shed and then to Galaxy using the following steps.
+Additionality, tools available from toolshed.g2.bx.psu.edu will also be installed in a custom toolshed. The list of tools is given below:
 
-### Step 1: Building Tool Shed Packages
+* **freebayes by devteam at 99684adf84de
+* **msa_datatypes by iuc at 70227007b991
+* **package_bcftools_1_2 by iuc at 70a313a2366f
+* **package_freebayes_0_9_20_b040236 by devteam at 059e6e3d99cc
+* **package_mummer_3_23 by iuc at 9ddc606546c3
+* **package_ncurses_5_9 by iuc at 5e1760c773ba
+* **package_perl_5_18 by iuc at fd34b72b501b
+* **package_samtools_0_1_18 by devteam at 171cd8bc208d
+* **package_samtools_0_1_19 by iuc at 96aab723499f
+* **package_samtools_1_2 by iuc at f6ae3ba3f3c1
+* **package_tabix_0_2_6 by iuc at 389d2376b60b
+* **package_zlib_1_2_8 by iuc at 63a4a902cda2
+* **regex_find_replace by jjohnson at 9ea374bb0350
+* **samtools_mpileup by devteam at aa0ef6f0ee89
 
-In order to build packages that can be uploaded to a Galaxy Tool Shed please run the following command.
+
+### Initial requirements
+
+* Need to have user 'admin@localhost.com' listed for parameter 'admin_users' in config/tool_shed.ini.sample
+
+### One script install 
+
 
 ```bash
-./scripts/build_for_toolshed.sh
+
+./scripts/full_install.sh http://localhost:9009
 ```
-
-This will build a number of `.tar.gz` files within the `build/` directory that can then be uploaded into a Galaxy Tool Shed.
-
-### Step 2: Creating Repositories for Tool Shed Packages
-
-In order to install tools into your own local instance of a Galaxy Tool Shed, you first need to create empty repositories.  This can be accomplished by:
-
-1. Log into your Galaxy Tool Shed.  On the left panel please find and click on the **Create new repository** link.
-2. Fill out the name of the repository, for example for `core_phylogenomics_pipeline.tar.gz` you can fill out **core_phylogenomics_pipeline** (please make sure to name the repository the same name as the tarball minus `.tar.gz`).  Fill out any other information.
-3. Click on **Save**.
-4. Repeat for any other files under `build/`.
-
-### Step 3: Upload Tool Shed Packages
-
-1. Find and click on one of your new empty repositories.
-2. In the upper right click on **Upload files to repostory**.
-3. From here **Browse** to one of the tool shed packages under `build/` and upload this package.
-4. In the upper right corner under **Repository Actions** click on **Reset all repository metadata**.  You should now see a screen listing the tools and dependencies of this repository.
 
 ### Step 4: Install Packages to Galaxy
 
