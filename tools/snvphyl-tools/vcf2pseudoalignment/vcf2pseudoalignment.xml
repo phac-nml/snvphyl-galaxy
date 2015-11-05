@@ -1,4 +1,4 @@
-<tool id="vcf2pseudoalignment" name="VCF 2 pseudoalignment" version ="0.0.17">
+<tool id="vcf2pseudoalignment" name="VCF 2 pseudoalignment" version ="0.0.18">
   <description>create a pseudo alignment from multiple VCFs files</description>
         <requirements>
                 <requirement type="package" version="1.4.2">snvphyl</requirement>
