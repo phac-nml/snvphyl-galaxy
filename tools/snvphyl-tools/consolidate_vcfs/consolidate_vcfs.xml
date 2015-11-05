@@ -1,0 +1,80 @@
+<tool id="consolidate_vcfs" name="Consolidate VCFs" version ="0.0.1">
+  <description>combine freebayes and mpileup files for use by vcf2pseudoalignment</description>
+        <requirements>
+                <requirement type="package" version="1.4.2">snvphyl</requirement>
+                <requirement type="package" version="1.2">bcftools</requirement>
+        </requirements>
+  <stdio>
+    	<exit_code range="1:" level="fatal" description="Unknown error has occurred"/>
+  </stdio>
+  <command>
+
+
+        #for $f in $freebayes_collection.keys#
+        #set $name = str($freebayes_collection[$f]).split('/')[-1]
+         ln -s $freebayes_collection[$f]  &amp;&amp; bcftools index $name  &amp;&amp;
+        #end for#
+
+        #for $f in $mpileup_collection.keys#
+        #set $name = str($mpileup_collection[$f]).split('/')[-1]
+         ln -s $mpileup_collection[$f] &amp;&amp; bcftools index $name  &amp;&amp;
+        #end for#
+
+        \$VCF2PSEUDO/consolidate_vcfs.pl
+
+
+  -c "$coverage"
+	--min-mean-mapping "$mean_mapping"
+	--ao "$ao"
+
+        #for $f in $freebayes_collection.keys#
+        #set $beer = $freebayes_collection[$f]
+        #set $path = str($beer).split('/')[-1]
+        --vcfsplit "$f=$path"
+        #end for#
+
+        #for $f in $mpileup_collection.keys#
+        #set $beer = $mpileup_collection[$f]
+        #set $path = str($beer).split('/')[-1]
+        --mpileup "$f=$path"
+        #end for#
+
+        ##mark where the output files will be sent to, simply have to match them up later in the xml output section
+        -o consolidate_vcfs
+
+  </command>
+  <inputs>
+    <param name="coverage" type="integer" value="15" label="Minimum coverage"/>
+    <param name="mean_mapping" type="integer" value="30" label="Minimum mean mapping quality"/>
+    <param name="ao" type="text" value="0.75" optional="false" label="Alternative allele ratio"/>
+    <param name="freebayes_collection" type="data_collection" label="FreeBayes filtered BCF" help="" optional="false" format="bcf_bgzip" collection_type="list" />
+    <param name="mpileup_collection" type="data_collection" label="Mpileup BCF" help="" optional="false" format="bcf_bgzip" collection_type="list" />
+  </inputs>
+  <outputs>
+    <data format="bcf" name="bcf_combined"/>
+  </outputs>
+  <tests>
+    <test>
+      <param name="coverage" value="4"/>
+      <param name="freebayes_collection">
+        <collection type="list">
+          <element name="v1" value="vcfsplit/vcf2pseudoalignment.input.1.v1.vcf.gz"/>
+          <element name="v2" value="vcfsplit/vcf2pseudoalignment.input.1.v2.vcf.gz"/>
+        </collection>
+      </param>
+      <param name="mpileup_collection">
+        <collection type="list">
+          <element name="v1" value="mpileup/vcf2pseudoalignment.input.1.v1.vcf.gz"/>
+          <element name="v2" value="mpileup/vcf2pseudoalignment.input.1.v2.vcf.gz"/>
+        </collection>
+      </param>
+      <output name="bcf_combined" file="vcf2pseudoalignment.input.1.v1.vcf.gz"/>
+      <output name="bcf_combined" file="vcf2pseudoalignment.input.1.v2.vcf.gz"/>
+    </test>
+  </tests>
+
+  <help>
+Best VCF consolidation program ever!
+  </help>
+
+</tool>
