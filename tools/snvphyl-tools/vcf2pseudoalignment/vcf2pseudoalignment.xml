@@ -5,45 +5,31 @@
                 <requirement type="package" version="1.2">bcftools</requirement>
         </requirements>
   <stdio>
-    	<exit_code range="1:" level="fatal" description="Unknown error has occured"/>
-  </stdio>  
+    	<exit_code range="1:" level="fatal" description="Unknown error has occurred"/>
+  </stdio>
   <command>
 
 
-        #for $f in $freebayes_collection.keys#
-        #set $name = str($freebayes_collection[$f]).split('/')[-1]
-         ln -s $freebayes_collection[$f]  &amp;&amp; bcftools index $name  &amp;&amp;
+        #for $f in $vcf_collection.keys#
+        #set $name = str($vcf_collection[$f]).split('/')[-1]
+         ln -s $vcf_collection[$f]  &amp;&amp; bcftools index $name  &amp;&amp;
         #end for#
-        
-        #for $f in $mpileup_collection.keys#
-        #set $name = str($mpileup_collection[$f]).split('/')[-1]
-         ln -s $mpileup_collection[$f] &amp;&amp; bcftools index $name  &amp;&amp;
-        #end for#
-    
+
         \$VCF2PSEUDO/vcf2pseudoalignment.pl
-        
+
 	-r "$reference"
 	#if str($invalid) != 'None':
 		--invalid-pos "$invalid"
 	#end if
-  	-c "$coverage"
 	-f fasta
 	-f phylip
-	--min-mean-mapping "$mean_mapping"
-	--ao "$ao"
 	--numcpus \${GALAXY_SLOTS:-2}
 	--fasta "$ref_fasta"
 
-        #for $f in $freebayes_collection.keys#
-        #set $beer = $freebayes_collection[$f]
+        #for $f in $vcf_collection.keys#
+        #set $beer = $vcf_collection[$f]
         #set $path = str($beer).split('/')[-1]
-        --vcfsplit "$f=$path"
-        #end for#
-        
-        #for $f in $mpileup_collection.keys#
-        #set $beer = $mpileup_collection[$f]
-        #set $path = str($beer).split('/')[-1]
-        --mpileup "$f=$path"
+        --consolidate_vcf "$f=$path"
         #end for#
 
         #if $strain_list.select_list == "include":
@@ -51,10 +37,10 @@
         #elif $strain_list.select_list == "exclude":
               --exclude $strain_list.exclude
         #end if
-        
+
         ##mark where the output files will be sent to, simply have to match them up later in the xml output section
         -o pseudoalign
-        
+
   </command>
   <inputs>
     <param name="reference" type="text"  label="Reference Name" value='reference' />
@@ -73,11 +59,7 @@
         <param name="exclude" type="data"  label="List of strains to be excluded" format="text" optional="false"/>
       </when>
     </conditional>
-    <param name="coverage" type="integer" value="15" label="minimum coverage"/>
-    <param name="mean_mapping" type="integer" value="30" label="minimum mean mapping quality"/>
-    <param name="ao" type="text" value="0.75" optional="false" label="Alternative allele ratio"/>
-    <param name="freebayes_collection" type="data_collection" label="FreeBayes filtered BCF" help="" optional="false" format="bcf_bgzip" collection_type="list" />
-    <param name="mpileup_collection" type="data_collection" label="Mpileup BCF" help="" optional="false" format="bcf_bgzip" collection_type="list" />
+    <param name="vcf_collection" type="data_collection" label="Combined VCF Files" help="" optional="false" format="bcf_bgzip" collection_type="list" />
   </inputs>
   <outputs>
     <data format="tabular" name="positions" from_work_dir="pseudoalign-positions.tsv" />
@@ -89,21 +71,14 @@
     <test>
       <param name="reference" value="vcf2pseudoalignment.input.1.reference.fasta"/>
       <param name="ref_fasta" value="vcf2pseudoalignment.input.1.reference.fasta"/>
-      <param name="coverage" value="4"/>
       <param name="invalid" value="vcf2pseudoalignment.input.1.invalid_positions.tsv"/>
-      <param name="freebayes_collection">
+      <param name="vcf_collection">
         <collection type="list">
-          <element name="v1" value="vcfsplit/vcf2pseudoalignment.input.1.v1.vcf.gz"/>
-          <element name="v2" value="vcfsplit/vcf2pseudoalignment.input.1.v2.vcf.gz"/>
+          <element name="v1" value="vcf2pseudoalignment.input.1.v1.vcf.gz"/>
+          <element name="v2" value="vcf2pseudoalignment.input.1.v2.vcf.gz"/>
         </collection>
       </param>
-      <param name="mpileup_collection">
-        <collection type="list">
-          <element name="v1" value="mpileup/vcf2pseudoalignment.input.1.v1.vcf.gz"/>
-          <element name="v2" value="mpileup/vcf2pseudoalignment.input.1.v2.vcf.gz"/>
-        </collection>
-      </param>
-     
+
       <output name="tabular" file="vcf2pseudoalignment.output.1.positions.tsv"/>
       <output name="fasta">
         <assert_contents>
