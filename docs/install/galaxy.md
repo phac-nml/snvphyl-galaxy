@@ -12,7 +12,7 @@ Installing Galaxy tools involves building many packages from source.  Please mak
 
 ## Installing the SNVPhyl Tools
 
-The SNVPhyl tools are managed within a Galaxy Toolshed.  In particular, within <https://irida.corefacility.ca/galaxy-shed/view/nml/suite_snvphyl> (the [IRIDA][] toolshed).
+The SNVPhyl tools are managed within a Galaxy Toolshed.  In particular, within the `suite_snvphyl_0_2_0` repository at <https://irida.corefacility.ca/galaxy-shed/view/nml/suite_snvphyl_0_2_0> (the [IRIDA][] toolshed).
 
 You will have to enable this toolshed within Galaxy before SNVPhyl can be used.  The toolshed can be enabled by adding it to the `config/tool_sheds_conf.xml` Galaxy configuration file.  Please find this file and add the line:
 
@@ -24,7 +24,7 @@ Once this line is added, please restart Galaxy.  If you navigate to **Admin**, a
 
 ![irida-toolshed][]
 
-Once the IRIDA toolshed is installed, you should be able to search for the `suite_snvphyl` repository.
+Once the IRIDA toolshed is installed, you should be able to search for the `suite_snvphyl_0_2_0` repository.
 
 ![suite-snvphyl-repository][]
 
