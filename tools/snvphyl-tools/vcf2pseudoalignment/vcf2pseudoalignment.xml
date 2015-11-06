@@ -75,10 +75,12 @@
           <element name="v1" value="v1.bcf.gz"/>
         </collection>
       </param>
-      <output name="positions" file="expected.positions.tsv"/>
+      <output name="positions" file="expected.positions.tsv">
         <assert_contents>
-          <has_text text="ref	2	valid	T	A	T" />
-          <has_text text="ref	4	filtered-invalid	C	T	C" />
+          <has_text text="ref	2	valid	T	A	T"/>
+          <has_text text="ref	4	filtered-invalid	C	T	C"/>
+        </assert_contents>
+      </output>
       <output name="core" file="expected_core.csv">
         <assert_contents>
           <has_text text="ref	4	1	3	3	100.00"/>

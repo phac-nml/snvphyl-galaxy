@@ -1,0 +1,3 @@
+#Chromosome	Position	Status	Reference	v1	v2
+ref	2	valid	T	A	T
+ref	4	filtered-invalid	C	T	C
