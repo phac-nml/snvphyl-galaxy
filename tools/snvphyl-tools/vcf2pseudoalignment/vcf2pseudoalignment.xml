@@ -19,16 +19,16 @@
 
 	-r "$reference"
 	#if str($invalid) != 'None':
-		--invalid-pos "$invalid"
+		--invalid-pos $invalid
 	#end if
-	-f fasta
+	-f "fasta"
 	--numcpus \${GALAXY_SLOTS:-2}
-	--fasta "$ref_fasta"
+	--fasta $ref_fasta
 
         #for $f in $vcf_collection.keys#
         #set $beer = $vcf_collection[$f]
         #set $path = str($beer).split('/')[-1]
-        --consolidate_vcf "$path"
+        --consolidate_vcf $f=$path
         #end for#
 
         #if $strain_list.select_list == "include":
@@ -67,7 +67,7 @@
   </outputs>
   <tests>
     <test>
-      <param name="reference" value="reference.fasta"/>
+      <param name="reference" value="ref"/>
       <param name="ref_fasta" value="reference.fasta"/>
       <param name="invalid" value="invalid-positions.tsv"/>
       <param name="vcf_collection">
