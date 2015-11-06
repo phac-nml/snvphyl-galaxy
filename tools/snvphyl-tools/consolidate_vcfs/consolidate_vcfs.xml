@@ -23,24 +23,24 @@
         \$VCF2PSEUDO/consolidate_vcfs.pl
 
 
-  -c "$coverage"
-	--min-mean-mapping "$mean_mapping"
-	--ao "$ao"
+        -c "$coverage"
+      	--min-mean-mapping "$mean_mapping"
+      	--ao "$ao"
 
         #for $f in $freebayes_collection.keys#
         #set $beer = $freebayes_collection[$f]
         #set $path = str($beer).split('/')[-1]
-        --vcfsplit "$f=$path"
+        --vcfsplit "$path"
         #end for#
 
         #for $f in $mpileup_collection.keys#
         #set $beer = $mpileup_collection[$f]
         #set $path = str($beer).split('/')[-1]
-        --mpileup "$f=$path"
+        --mpileup "$path"
         #end for#
 
         ##mark where the output files will be sent to, simply have to match them up later in the xml output section
-        -o consolidate_vcfs
+        -o $bcf_combined
 
   </command>
   <inputs>
@@ -51,25 +51,36 @@
     <param name="mpileup_collection" type="data_collection" label="Mpileup BCF" help="" optional="false" format="bcf_bgzip" collection_type="list" />
   </inputs>
   <outputs>
-    <data format="bcf" name="bcf_combined"/>
+    <data format="bcf_bgzip" name="bcf_combined"/>
   </outputs>
   <tests>
     <test>
       <param name="coverage" value="4"/>
       <param name="freebayes_collection">
         <collection type="list">
-          <element name="v1" value="vcfsplit/vcf2pseudoalignment.input.1.v1.vcf.gz"/>
-          <element name="v2" value="vcfsplit/vcf2pseudoalignment.input.1.v2.vcf.gz"/>
+          <element name="v1" value="freebayes/v1.bcf.gz"/>
         </collection>
       </param>
       <param name="mpileup_collection">
         <collection type="list">
-          <element name="v1" value="mpileup/vcf2pseudoalignment.input.1.v1.vcf.gz"/>
-          <element name="v2" value="mpileup/vcf2pseudoalignment.input.1.v2.vcf.gz"/>
+          <element name="v1" value="mpileup/v1.bcf.gz"/>
         </collection>
       </param>
-      <output name="bcf_combined" file="vcf2pseudoalignment.input.1.v1.vcf.gz"/>
-      <output name="bcf_combined" file="vcf2pseudoalignment.input.1.v2.vcf.gz"/>
+      <output name="bcf_combined" file="v1.bcf.gz"/>
+    </test>
+    <test>
+      <param name="coverage" value="4"/>
+      <param name="freebayes_collection">
+        <collection type="list">
+          <element name="v2" value="freebayes/v2.bcf.gz"/>
+        </collection>
+      </param>
+      <param name="mpileup_collection">
+        <collection type="list">
+          <element name="v2" value="mpileup/v2.bcf.gz"/>
+        </collection>
+      </param>
+      <output name="bcf_combined" file="v2.bcf.gz"/>
     </test>
   </tests>
 
