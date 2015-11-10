@@ -10,6 +10,7 @@
 	<repository name="snp_matrix" owner="nml"/>
 	<repository name="find_repeats" owner="nml"/>
 	<repository name="vcf2pseudoalignment" owner="nml"/>
+	<repository name="consolidate_vcfs" owner="nml"/>
 	<repository name="phyml" owner="nml"/>
 	<repository name="bcf_bgzip_datatype" owner="nml"/>
 	<repository name="msa_datatypes" owner="iuc"/>
