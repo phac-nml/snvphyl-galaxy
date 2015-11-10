@@ -162,9 +162,9 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "irida.corefacility.ca/galaxy-shed/repos/nml/find_repeats/findrepeat/0.0.5", 
+            "tool_id": "irida.corefacility.ca/galaxy-shed/repos/nml/find_repeats/findrepeat/1.5.0", 
             "tool_state": "{\"__page__\": 0, \"fasta\": \"null\", \"__rerun_remap_job_id__\": null, \"pid\": \"\\\"90\\\"\", \"length\": \"\\\"150\\\"\"}", 
-            "tool_version": "0.0.5", 
+            "tool_version": "1.5.0", 
             "type": "tool", 
             "user_outputs": [], 
             "uuid": "3c2257f4-d708-47c4-934e-7a027804f7db"
@@ -296,9 +296,9 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "irida.corefacility.ca/galaxy-shed/repos/nml/verify_map/verify_map/0.0.5", 
+            "tool_id": "irida.corefacility.ca/galaxy-shed/repos/nml/verify_map/verify_map/1.5.0", 
             "tool_state": "{\"minmap\": \"\\\"80\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"mindepth\": \"\\\"${min_coverage}\\\"\", \"bams\": \"null\"}", 
-            "tool_version": "0.0.5", 
+            "tool_version": "1.5.0", 
             "type": "tool", 
             "user_outputs": [], 
             "uuid": "82bed622-a144-43fd-869e-c4468e6131ff"
@@ -442,9 +442,9 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "irida.corefacility.ca/galaxy-shed/repos/nml/filter_vcf/filtervcf/0.0.4", 
+            "tool_id": "irida.corefacility.ca/galaxy-shed/repos/nml/filter_vcf/filtervcf/1.5.0", 
             "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"vcf\": \"null\"}", 
-            "tool_version": "0.0.4", 
+            "tool_version": "1.5.0", 
             "type": "tool", 
             "user_outputs": [], 
             "uuid": "92790084-218f-4ad5-bdbb-5925d0b63cdc"
@@ -610,9 +610,9 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "irida.corefacility.ca/galaxy-shed/repos/nml/vcf2pseudoalignment/vcf2pseudoalignment/0.0.17", 
+            "tool_id": "irida.corefacility.ca/galaxy-shed/repos/nml/vcf2pseudoalignment/vcf2pseudoalignment/1.5.0", 
             "tool_state": "{\"__page__\": 0, \"ref_fasta\": \"null\", \"reference\": \"\\\"reference\\\"\", \"__rerun_remap_job_id__\": null, \"ao\": \"\\\"${alternative_allele_proportion}\\\"\", \"invalid\": \"null\", \"coverage\": \"\\\"${min_coverage}\\\"\", \"mean_mapping\": \"\\\"${min_mean_mapping}\\\"\", \"freebayes_collection\": \"null\", \"mpileup_collection\": \"null\"}", 
-            "tool_version": "0.0.17", 
+            "tool_version": "1.5.0", 
             "type": "tool", 
             "user_outputs": [], 
             "uuid": "e5fe678b-e6ff-40d5-b86e-cf00a334cd92"
@@ -688,9 +688,9 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "irida.corefacility.ca/galaxy-shed/repos/nml/filter_stats/filterstat/0.0.5", 
+            "tool_id": "irida.corefacility.ca/galaxy-shed/repos/nml/filter_stats/filterstat/1.5.0", 
             "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"tabfile\": \"null\", \"summary\": \"null\"}", 
-            "tool_version": "0.0.5", 
+            "tool_version": "1.5.0", 
             "type": "tool", 
             "user_outputs": [], 
             "uuid": "157fd5be-539c-44f6-b534-d6c7aeef72de"
@@ -784,9 +784,9 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "irida.corefacility.ca/galaxy-shed/repos/nml/snp_matrix/snpmatrix/0.0.4", 
+            "tool_id": "irida.corefacility.ca/galaxy-shed/repos/nml/snp_matrix/snpmatrix/1.5.0", 
             "tool_state": "{\"__page__\": 0, \"phylip\": \"null\", \"__rerun_remap_job_id__\": null}", 
-            "tool_version": "0.0.4", 
+            "tool_version": "1.5.0", 
             "type": "tool", 
             "user_outputs": [], 
             "uuid": "732e9590-99d1-44c7-b612-293b92cb6cc4"
