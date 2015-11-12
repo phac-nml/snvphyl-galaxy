@@ -6,12 +6,20 @@ This document describes how to update and release new versions of the SNVPhyl pi
     1. Update version in `tool_dependencies.xml` and `.shed.yml`.
     2. Create new repository with Planemo: `planemo shed_create --shed_taret http://localhost:9009 --shed_key KEY -m 'update to 1.5'  tools/package_snvphyl`
 2. SNVPhyl Tools
+    1. Update version numbers for each tool, in particular the [snvphyl-tools][].
+    2. Run `./scripts/run_planemo_for_tools.sh shed_update --shed_target http://localhost:9009 --shed_key KEY --message 'update'`.
 3. SNVPhyl Tool Suite
+    1. Update tool suite version number.
+    2. Install with `planemo shed_create --shed_taret http://localhost:9009 --shed_key KEY -m 'update to 0.3'  tools/suite_snvphyl`.
 4. SNVPhyl Workflow
+    1. Create new directory for workflow and update version numbers for each tool.
+    2. Update repository information.
 5. Virtual Environments
+    1. Build **VirtualBox** and **Docker** virtual machines.
 6. Update Documentation
+    1. Update any documentation to reflect newer workflow.
 
-# Package SNVPhyl
+# 1. Package SNVPhyl
 
 The [tools/package_snvphyl][] defines a dependency package within Galaxy which wraps around the scripts and other software within the [snvphyl-tools][] project.  This is linked to a specific git commit within the **snvphyl-tools** project.  Each new release must go into a separate Galaxy repository named based on the version number.  For example, version **1.5** should go under the Galaxy repository **package_snvphyl_1_5**.  This can be accomplished in the following way:
 
@@ -27,7 +35,7 @@ The [tools/package_snvphyl][] defines a dependency package within Galaxy which w
 
         planemo shed_create --shed_taret http://localhost:9009 --shed_key KEY -m 'update to 1.5'  tools/package_snvphyl
 
-# SNVPhyl Tools
+# 2. SNVPhyl Tools
 
 The SNVPhyl Tools include any dependency tools within Galaxy needed to run SNVPhyl.  These are all located within the [tools/][] directory.  This includes **capsules**, exported tools from the main Galaxy toolshed, and other tools developed specifically for SNVPhyl.
 
@@ -63,7 +71,7 @@ Updated tools can all be installed using the `planemo shed_update` command.  A s
 ./scripts/run_planemo_for_tools.sh shed_update --shed_target http://localhost:9009 --shed_key KEY --message 'update'
 ```
 
-# SNVPhyl Tool Suite
+# 3. SNVPhyl Tool Suite
 
 The SNVPhyl Tool Suite is located in [tools/suite_snvphyl][] and links together all the dependency tools for SNVPhyl into one installable package in Galaxy.  Each new version must be installed to a separate repository in a Galaxy Toolshed with the version number in the name (e.g. `suite_snvphyl_0_3_0`).  This can be accomplished by:
 
@@ -78,7 +86,7 @@ The SNVPhyl Tool Suite is located in [tools/suite_snvphyl][] and links together 
 
 This will link up all the most recent versions of the tools into the `suite_snvphyl_0_3_0` repository.  If something goes wrong, newer updates can be uploaded manully and the most recent version will be used.
 
-# SNVPhyl Workflow
+# 4. SNVPhyl Workflow
 
 The SNVPhyl workflows for each version of the pipeline are located within [docs/workflows/SNVPhyl][].  A new directory should be created for the updated version and newer `*.ga` workflow files along with the `repository_dependencies.xml` should be copied over.  For example:
 
@@ -106,7 +114,7 @@ In addition, the `repository_dependencies.xml` file will need to be updated to p
 <repository toolshed="https://irida.corefacility.ca/galaxy-shed" name="suite_snvphyl_0_3_0" owner="nml" changeset_revision="99463e5aef1b" />
 ```
 
-# Virtual Environments
+# 5. Virtual Environments
 
 There are two virtual environments that are being distributed, **Virtual Box** and **Docker**.  These can be re-constructed as follows.
 
@@ -155,7 +163,7 @@ The Docker image is constructed using Docker within the directory [docker/][].  
 
 Once the Docker image is build it can be pushed to <https://hub.docker.com/>.
 
-# Update Documentation
+# 6. Update Documentation
 
 Once the workflow is updated, the documentation, under the `docs/` directory should be updated to reflect any changes.
 
