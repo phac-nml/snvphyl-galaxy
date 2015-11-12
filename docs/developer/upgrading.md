@@ -6,7 +6,7 @@ This document describes how to update and release new versions of the SNVPhyl pi
     1. Update version in `tool_dependencies.xml` and `.shed.yml`.
     2. Create new repository with Planemo: `planemo shed_create --shed_taret http://localhost:9009 --shed_key KEY -m 'update to 1.5'  tools/package_snvphyl`
 2. SNVPhyl Tools
-    1. Update version numbers for each tool, in particular the [snvphyl-tools][].
+    1. Update version numbers for each tool, in particular the [tools/snvphyl-tools][].
     2. Run `./scripts/run_planemo_for_tools.sh shed_update --shed_target http://localhost:9009 --shed_key KEY --message 'update'`.
 3. SNVPhyl Tool Suite
     1. Update tool suite version number.
