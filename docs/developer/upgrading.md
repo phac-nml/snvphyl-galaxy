@@ -4,13 +4,13 @@ This document describes how to update and release new versions of the SNVPhyl pi
 
 1. Package SNVPhyl
     1. Update version in `tool_dependencies.xml` and `.shed.yml`.
-    2. Create new repository with Planemo: `planemo shed_create --shed_taret http://localhost:9009 --shed_key KEY -m 'update to 1.5'  tools/package_snvphyl`
+    2. Create new repository with Planemo: `planemo shed_create --shed_target http://localhost:9009 --shed_key KEY -m 'update to 1.5'  tools/package_snvphyl`
 2. SNVPhyl Tools
     1. Update version numbers for each tool, in particular the [tools/snvphyl-tools][].
     2. Run `./scripts/run_planemo_for_tools.sh shed_update --shed_target http://localhost:9009 --shed_key KEY --message 'update'`.
 3. SNVPhyl Tool Suite
     1. Update tool suite version number.
-    2. Install with `planemo shed_create --shed_taret http://localhost:9009 --shed_key KEY -m 'update to 0.3'  tools/suite_snvphyl`.
+    2. Install with `planemo shed_create --shed_target http://localhost:9009 --shed_key KEY -m 'update to 0.3'  tools/suite_snvphyl`.
 4. SNVPhyl Workflow
     1. Create new directory for workflow and update version numbers for each tool.
     2. Update repository information.
@@ -33,7 +33,7 @@ The [tools/package_snvphyl][] defines a dependency package within Galaxy which w
 
 3. Install **package_snvphyl** to new repository in a Galaxy toolshed.
 
-        planemo shed_create --shed_taret http://localhost:9009 --shed_key KEY -m 'update to 1.5'  tools/package_snvphyl
+        planemo shed_create --shed_target http://localhost:9009 --shed_key KEY -m 'update to 1.5'  tools/package_snvphyl
 
 # 2. SNVPhyl Tools
 
@@ -82,7 +82,7 @@ The SNVPhyl Tool Suite is located in [tools/suite_snvphyl][] and links together 
 
 3. Use Planemo to create a new repository.
 
-        planemo shed_create --shed_taret http://localhost:9009 --shed_key KEY -m 'update to 0.3'  tools/suite_snvphyl
+        planemo shed_create --shed_target http://localhost:9009 --shed_key KEY -m 'update to 0.3'  tools/suite_snvphyl
 
 This will link up all the most recent versions of the tools into the `suite_snvphyl_0_3_0` repository.  If something goes wrong, newer updates can be uploaded manully and the most recent version will be used.
 
