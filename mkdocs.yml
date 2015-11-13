@@ -17,4 +17,6 @@ pages:
     - 'Listeria monocytogenes': 'examples/listeria-monocytogenes.md'
 - Comparison:
     - 'ASM NGS Challenge 2015': 'comparison/asm-ngs-2015.md'
+- Developer:
+    - 'Upgrading' : 'developer/upgrading.md'
 theme: readthedocs
