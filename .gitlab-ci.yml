@@ -1,5 +1,3 @@
-before_script: 
-  - "pip install git+git://github.com/galaxyproject/planemo.git@master"
 job1:
-  script: "planemo shed_lint --report_level warn --tools --fail_level error --recursive"
+  script: "/home/phil/.venv/bin/planemo shed_lint --report_level warn --tools --fail_level error --recursive"
 
