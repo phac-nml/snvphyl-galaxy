@@ -26,7 +26,7 @@ RUN sed -i -e 's/^#force_beta_workflow_scheduled_for_collections=False/force_bet
 
 # Install SNVPhyl
 RUN install-repository \
-    "-r d10f39a95aa8 --url https://irida.corefacility.ca/galaxy-shed/ -o nml --name suite_snvphyl --panel-section-id SNVPhyl" && \
+    "-r bb2e651149da --url https://irida.corefacility.ca/galaxy-shed/ -o nml --name suite_snvphyl_0_3_0 --panel-section-id SNVPhyl" && \
     install-workflow \
     "/tmp/snvphyl-workflow-0.3.ga" "/tmp/snvphyl-workflow-0.3-invalid-positions.ga" && \
     rm /tmp/snvphyl-workflow*.ga
