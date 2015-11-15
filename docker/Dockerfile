@@ -29,7 +29,8 @@ RUN install-repository \
     "-r bb2e651149da --url https://irida.corefacility.ca/galaxy-shed/ -o nml --name suite_snvphyl_0_3_0 --panel-section-id SNVPhyl" && \
     install-workflow \
     "/tmp/snvphyl-workflow-0.3.ga" "/tmp/snvphyl-workflow-0.3-invalid-positions.ga" && \
-    rm /tmp/snvphyl-workflow*.ga
+    rm /tmp/snvphyl-workflow*.ga && \
+    find /galaxy-central/tool_deps/ -iname '.git' | xargs -I {} rm -rf {}
 
 # Mark folders as imported from the host.
 VOLUME ["/export/", "/data/", "/var/lib/docker"]
