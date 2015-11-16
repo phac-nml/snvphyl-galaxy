@@ -135,7 +135,7 @@ Once parameters are selected, the input files can be selected.
 
 ## Input files
 
-Galaxy should automatically detect the appropriate input files from the current history.  However, please verify it has picked up the correct files.  If the workflow **SNVPhyl v0.3 Paired-End** has been selected then there will be no place to select an **invalid_positions** file.
+Galaxy should automatically detect the appropriate input files from the current history.  However, please verify that it has picked up the correct files.  If the workflow **SNVPhyl v0.3 Paired-End** has been selected then there will be no option for selecting an **invalid_positions** file.
 
 ![input-files-selection][]
 
