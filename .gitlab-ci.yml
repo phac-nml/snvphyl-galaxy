@@ -1,3 +1,3 @@
 job1:
-  script: "/home/phil/.venv/bin/planemo shed_lint --report_level warn --tools --fail_level error --recursive"
+  script: "planemo shed_lint --report_level warn --tools --fail_level error --recursive --fail_level warn"
 
