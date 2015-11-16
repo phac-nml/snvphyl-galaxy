@@ -15,13 +15,13 @@ Running SNVPhyl
 Once Docker is installed, the latest version of SNVPhyl can be downloaded and run with:
 
 ```bash
-docker run -t -p 48888:80 apetkau/snvphyl-galaxy:0.2-beta-1
+docker run -t -p 48888:80 apetkau/snvphyl-galaxy-0.3
 ```
 
 This will download and run a docker image with SNVPhyl and Galaxy.  By default this will **not persist** data run through SNVPhyl after Docker has been shutdown.  To permanently store this data, please run:
 
 ```bash
-docker run -t -p 48888:80 -v /home/user/galaxy_storage/:/export/ apetkau/snvphyl-galaxy:0.2-beta-1
+docker run -t -p 48888:80 -v /home/user/galaxy_storage/:/export/ apetkau/snvphyl-galaxy-0.3
 ```
 
 Where `/home/user/galaxy_storage` as a location where files will be persisted between Docker runs.  For more information on how this works, see the [Galaxy Docker][] page.
@@ -45,7 +45,7 @@ This will show a list of all running docker containers, similar to:
 
 ```
 CONTAINER ID        IMAGE ...
-0d56c773a972        apetkau/snvphyl-galaxy:0.2-beta-1 ...
+0d56c773a972        apetkau/snvphyl-galaxy-0.3 ...
 ```
 
 This shows all running docker containers and a unique container id.  To shutdown the docker container, please use this container id and run the below command.

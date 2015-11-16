@@ -1,7 +1,7 @@
-<tool id="smalt_map" name="smalt map" version="1.0.0" >
+<tool id="smalt_map" name="smalt map" version="1.0.1" >
     <requirements>
         <requirement type="package" version="0.7.5">smalt</requirement>
-        <requirement type="package" version="0.1.18">samtools</requirement>
+        <requirement type="package" version="0.1.19">samtools</requirement>
     </requirements>
 
     <command interpreter="bash">
