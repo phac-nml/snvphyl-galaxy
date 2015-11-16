@@ -125,7 +125,7 @@ mv /tmp/install-workflow-tools.py $DEPENDENCIES_INSTALL
 MASTER_API_KEY=$(grep master_api_key $GALAXY_HOME/galaxy/config/galaxy.ini | awk '{print $3}')
 
 cd $DEPENDENCIES_INSTALL
-python install-workflow-tools.py --workflows-dir workflows/SNVPhyl/0.2/ --master-api-key $MASTER_API_KEY --master-api-url http://localhost:8080/api --galaxy-admin-user admin@localhost.localdomain --galaxy-admin-pass adminpassword | tee install-workflow-tools.log
+python install-workflow-tools.py --workflows-dir workflows/SNVPhyl/0.3/ --master-api-key $MASTER_API_KEY --master-api-url http://localhost:8080/api --galaxy-admin-user admin@localhost.localdomain --galaxy-admin-pass adminpassword | tee install-workflow-tools.log
 
 systemctl stop galaxy
 systemctl stop mariadb
