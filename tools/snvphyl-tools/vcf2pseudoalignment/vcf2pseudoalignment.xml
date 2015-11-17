@@ -1,7 +1,7 @@
-<tool id="vcf2pseudoalignment" name="VCF 2 pseudoalignment" version ="1.5.0">
+<tool id="vcf2pseudoalignment" name="VCF 2 pseudoalignment" version ="1.6.0-dev">
   <description>create a pseudo alignment from multiple VCFs files</description>
         <requirements>
-                <requirement type="package" version="1.5">snvphyl</requirement>
+                <requirement type="package" version="1.6-dev">snvphyl</requirement>
                 <requirement type="package" version="1.2">bcftools</requirement>
         </requirements>
   <stdio>
@@ -46,6 +46,12 @@
         --mpileup "$f=$path"
         #end for#
 
+        #if $strain_list.select_list == "include":
+              --include $strain_list.include
+        #elif $strain_list.select_list == "exclude":
+              --exclude $strain_list.exclude
+        #end if
+        
         ##mark where the output files will be sent to, simply have to match them up later in the xml output section
         -o pseudoalign
         
@@ -54,6 +60,19 @@
     <param name="reference" type="text"  label="Reference Name" value='reference' />
     <param name="ref_fasta" type="data"  label="Reference Fasta File" format="fasta"/>
     <param name="invalid" type="data"  label="Invalid position file" format="gff,bed" optional="true"/>
+    <conditional name="strain_list">
+      <param name="select_list" type="select" label="Strain Selecting options">
+        <option value="all">Use all strains in collection</option>
+        <option value="include">Provide list of subset of strains to only include</option>
+        <option value="exclude">Provide list of subset of strains to exclude</option>
+      </param>
+      <when value="include">
+        <param name="include" type="data"  label="List of strains to be include" format="text" optional="false"/>
+      </when>
+      <when value="exclude">
+        <param name="exclude" type="data"  label="List of strains to be excluded" format="text" optional="false"/>
+      </when>
+    </conditional>
     <param name="coverage" type="integer" value="15" label="minimum coverage"/>
     <param name="mean_mapping" type="integer" value="30" label="minimum mean mapping quality"/>
     <param name="ao" type="text" value="0.75" optional="false" label="Alternative allele ratio"/>
@@ -64,7 +83,7 @@
     <data format="tabular" name="positions" from_work_dir="pseudoalign-positions.tsv" />
     <data format="fasta" name="fasta" from_work_dir="pseudoalign.fasta"/>
     <data format="phylip" name="phylip" from_work_dir="pseudoalign.phy" />
-    <data format="csv" name="vcf2core" from_work_dir="pseudoalign-stats.csv" />
+    <data format="tabular" name="vcf2core" from_work_dir="pseudoalign-stats.csv" />
   </outputs>
   <tests>
     <test>
