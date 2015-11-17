@@ -128,5 +128,7 @@
 
 This tool runs the SNVPhyl Reporter pipeline.
 	</help>
-
+<citations>
+<citation></citation>
+</citations>
 </tool>

@@ -4,7 +4,8 @@
     <requirement type="package" version="5.18.1">perl</requirement>
     <requirement type="package" version="2.2">wombac</requirement>
   </requirements>
-
+  <stdio>
+  </stdio>
   <command interpreter="perl">
      /\$WOMBACLIB/wombac-shred_fasta  $fasta --fastq --coverage=$coverage --readlen=$readlen > $output
   </command>
@@ -16,8 +17,6 @@
   <outputs>
     <data format="fastqsanger" name="output" label=""/>
   </outputs>
-  <stdio>
-  </stdio>
   <tests>
     <test>
     </test>
@@ -36,5 +35,7 @@ Usage
 
 
   </help>
-
+<citations>
+<citation>http://www.vicbioinformatics.com/software.wombac.shtml</citation>
+</citations>
 </tool>

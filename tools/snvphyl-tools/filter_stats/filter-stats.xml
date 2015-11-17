@@ -4,7 +4,9 @@
     <requirement type="package" version="1.6-dev">snvphyl</requirement>
     <requirement type="package" version="5.18.1">perl</requirement>
   </requirements>
-
+  <stdio>
+    <exit_code range="1:" level="fatal" description="Unknown error has occured"/>
+  </stdio>
   <command interpreter="perl">
       /\$VCF2PSEUDO/filter-stats.pl -i $tabfile
       #if $summary == "invalids":
@@ -21,9 +23,6 @@
   <outputs>
     <data format="tabular" name="out" />
   </outputs>
-  <stdio>
-    <exit_code range="1:" level="fatal" description="Unknown error has occured"/>
-  </stdio>
   <tests>
     <test>
       <param name="tabfile" value="filter-stats-in.tsv" />
@@ -48,6 +47,8 @@ Usage
 **Options**
   - -all When this option is set, the summary will include all the entries marked as 'filtered-invalid'
   </help>
-
+<citations>
+<citation></citation>
+</citations>
 </tool>
 

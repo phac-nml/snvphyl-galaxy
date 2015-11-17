@@ -5,6 +5,9 @@
 		<requirement type="package" version="5.18.1">perl</requirement>
 		<requirement type="package" version="1.6.922">bioperl</requirement>
 	</requirements>
+	<stdio>
+		<exit_code range="1:" level="fatal" description="Unknown error has occured"/>
+	</stdio>
 	<command interpreter="perl">
 		seqtk_nml.pl --ref $fastar 
 
@@ -29,9 +32,6 @@
         #end if
 
 	</command>
-	<stdio>
-		<exit_code range="1:" level="fatal" description="Unknown error has occured"/>
-	</stdio>
 	<inputs>
 		<conditional name="single_or_paired">
 			<param name="type" type="select" label="Read type">
@@ -112,5 +112,8 @@ Usage
 **Options**
 	- Desired coverage (50)
 	</help>
+<citations>
+<citation></citation>
+</citations>
 </tool>
 

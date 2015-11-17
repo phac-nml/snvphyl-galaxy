@@ -1,9 +1,20 @@
 <tool id="smalt_map" name="smalt map" version="1.0.1" >
+    <description>Map query reads (FASTA/FASTQ) format onto the reference sequences</description>
     <requirements>
         <requirement type="package" version="0.7.5">smalt</requirement>
         <requirement type="package" version="0.1.19">samtools</requirement>
     </requirements>
-
+    <stdio>
+        <exit_code range="1:"   level="fatal"   description="Unknown error" />
+        <regex match="Command line error"
+               source="stdout"
+               level="fatal"
+               description="You cannot do that!! What were you thinking!" />
+        <regex match="ERROR"
+               source="stderr"
+               level="fatal"
+               description="You cannot do that!! What were you thinking!" />
+    </stdio>
     <command interpreter="bash">
         smalt_map.sh $smi $sma $oformat.outformat
 
@@ -88,7 +99,6 @@
 
     </command>
 
-    <description>Map query reads (FASTA/FASTQ) format onto the reference sequences</description>
 
     <inputs>
         <conditional name="singlePaired">
@@ -143,7 +153,11 @@
                     <option value="clip">Hard Clip</option>
                 </param>
             </when>
-        </conditional>
+            <when value="cigar">
+            </when>
+             <when value="ssaha">
+            </when>
+       </conditional>
         <param name="insfil" type="data" optional="true" label="Distribution insert sizes " help="Use the distribution of insert sizes stored in the file [insfil. Thisfile is in ASCII format and can be generated using the 'sample'"/>
         <param name="insertmax" type="text" label="Maximum insert size (only in paired-end mode). " help="Maximum insert size (only in paired-end mode). The default is 500."/>
         <param name="insertmin" type="text" label="Minimum insert size (only in paired-end mode). " help="Minimum insert size (only in paired-end mode). The default is 0."/>
@@ -173,17 +187,6 @@
         </data>
     </outputs>
 
-    <stdio>
-        <exit_code range="1:"   level="fatal"   description="Unknown error" />
-        <regex match="Command line error"
-               source="stdout"
-               level="fatal"
-               description="You cannot do that!! What were you thinking!" />
-        <regex match="ERROR"
-               source="stderr"
-               level="fatal"
-               description="You cannot do that!! What were you thinking!" />
-    </stdio>
     <help>
 
 **What it does**
@@ -320,4 +323,7 @@ Please cite the website "http://www.sanger.ac.uk/resources/software/smalt/".
      &#060;minid&#062; specifies the number of exactly matching nucleotides either as
      a positive integer or as a fraction of the read length (&#060;= 1.0).
     </help>
+<citations>
+<citation></citation>
+</citations>
 </tool>
