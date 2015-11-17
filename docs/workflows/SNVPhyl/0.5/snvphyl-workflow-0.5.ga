@@ -503,7 +503,7 @@
                 }, 
                 {
                     "name": "vcf2core", 
-                    "type": "csv"
+                    "type": "tabular"
                 }
             ], 
             "position": {
@@ -538,7 +538,7 @@
             }, 
             "tool_errors": null, 
             "tool_id": "localhost:9009/repos/nml/vcf2pseudoalignment/vcf2pseudoalignment/1.6.0-dev", 
-            "tool_state": "{\"__page__\": 0, \"ref_fasta\": \"null\", \"reference\": \"\\\"reference\\\"\", \"__rerun_remap_job_id__\": null, \"ao\": \"\\\"${alternative_allele_proportion}\\\"\", \"invalid\": \"null\", \"coverage\": \"\\\"${min_coverage}\\\"\", \"mean_mapping\": \"\\\"${min_mean_mapping}\\\"\", \"freebayes_collection\": \"null\", \"mpileup_collection\": \"null\"}", 
+            "tool_state": "{\"__page__\": 0, \"ref_fasta\": \"null\", \"strain_list\": \"{\\\"select_list\\\": \\\"all\\\", \\\"__current_case__\\\": 2}\", \"reference\": \"\\\"reference\\\"\", \"__rerun_remap_job_id__\": null, \"ao\": \"\\\"${alternative_allele_proportion}\\\"\", \"invalid\": \"null\", \"coverage\": \"\\\"${min_coverage}\\\"\", \"mean_mapping\": \"\\\"${min_mean_mapping}\\\"\", \"freebayes_collection\": \"null\", \"mpileup_collection\": \"null\"}", 
             "tool_version": "1.6.0-dev", 
             "type": "tool", 
             "user_outputs": [], 
