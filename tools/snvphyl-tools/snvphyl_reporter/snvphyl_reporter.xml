@@ -1,7 +1,7 @@
-<tool id="snvphyl_reporter" name="Snvphyl Reporter" version="1.5.0">
+<tool id="snvphyl_reporter" name="Snvphyl Reporter" version="1.6.0-dev">
 	<description>Runs Snvphyl reporter</description>
 	<requirements>
-		<requirement type="package" version="1.5">snvphyl</requirement>
+		<requirement type="package" version="1.6-dev">snvphyl</requirement>
 	</requirements>
 	<command interpreter="perl">
 		/\$VCF2PSEUDO/reporter.pl --output $output
