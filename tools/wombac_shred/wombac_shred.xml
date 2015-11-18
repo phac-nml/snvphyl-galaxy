@@ -19,6 +19,10 @@
   </outputs>
   <tests>
     <test>
+      <param name="fasta" value="ref.fasta"/>
+      <param name="readlen" value="100"/>
+      <param name="coverage" value="10"/>
+      <output name="output" file="output.fastq"/>
     </test>
   </tests>
 
