@@ -27,6 +27,11 @@
     <data name="output2" label="SMA" from_work_dir="temp.sma" format="binary"/>
   </outputs>
   <tests>
+    <test>
+      <param name="reference" value="ref.fasta"/>
+      <output name="output" file="output.smi"/>
+      <output name="output2" file="output.sma"/> 
+    </test>    
   </tests>
   <help>
 
