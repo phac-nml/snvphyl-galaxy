@@ -130,8 +130,8 @@
 
         </conditional>
        
-        <param name="smi" type="data"  label="SMI index" help=""/>
-        <param name="sma" type="data"  label="SMA index" help=""/>
+        <param name="smi" type="data" format="binary"  label="SMI index" help=""/>
+        <param name="sma" type="data" format="binary"  label="SMA index" help=""/>
 
         <param name="mincover" type="text"  label="Mincover" help="Only consider mappings where the k-mer word seeds cover the query read to a minimum extent"/>
         <param name="scordiff" type="text"  label="Scordiff" help="Set a threshold of the Smith-Waterman alignment score relative to the maximum score"/>
@@ -158,7 +158,7 @@
              <when value="ssaha">
             </when>
        </conditional>
-        <param name="insfil" type="data" optional="true" label="Distribution insert sizes " help="Use the distribution of insert sizes stored in the file [insfil. Thisfile is in ASCII format and can be generated using the 'sample'"/>
+        <param name="insfil" type="data" optional="true" label="Distribution insert sizes " help="Use the distribution of insert sizes stored in the file [insfil. Thisfile is in ASCII format and can be generated using the 'sample'" format="sam"/>
         <param name="insertmax" type="text" label="Maximum insert size (only in paired-end mode). " help="Maximum insert size (only in paired-end mode). The default is 500."/>
         <param name="insertmin" type="text" label="Minimum insert size (only in paired-end mode). " help="Minimum insert size (only in paired-end mode). The default is 0."/>
         

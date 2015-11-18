@@ -23,8 +23,8 @@
     <param name="s" type="integer" optional="true" label="Step size" help="Specifies how many bases are skipped between indexed words."/>
   </inputs>
   <outputs>
-    <data name="output" label="SMI" from_work_dir="temp.smi"/>
-    <data name="output2" label="SMA" from_work_dir="temp.sma"/>
+    <data name="output" label="SMI" from_work_dir="temp.smi" format="binary"/>
+    <data name="output2" label="SMA" from_work_dir="temp.sma" format="binary"/>
   </outputs>
   <tests>
   </tests>
