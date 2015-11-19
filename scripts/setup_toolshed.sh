@@ -13,7 +13,7 @@ else
     cookie="$ROOT_DIR/cookie"
 
     echo "Attempting to create admin user and generate api key"
-    curl -s -c $cookie -o /dev/null --data "create_user_button=Submit&email=admin%40localhost.com&password=dna2protein&confirm=dna2protein&username=nml&bear_field=" $api_host/user/create?cntrller=user&use_panels=True 
+    curl -s -c $cookie -o /dev/null --data "create_user_button=Submit" -d "email=admin%40localhost.com" -d "password=dna2protein" -d "confirm=dna2protein" -d "username=nml" -d "redirect=$api_host" -d "bear_field=" $api_host/user/create?cntrller=user&use_panels=True 
     sleep 5
 
     if [ ! -f $cookie ]; then

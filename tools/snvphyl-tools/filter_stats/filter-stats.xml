@@ -1,7 +1,7 @@
-<tool id="filterstat" name="Filter Stats" version ="0.0.6">
+<tool id="filterstat" name="Filter Stats" version ="1.6.0-dev">
   <description>Identify number of positions excluded based on filtered status</description>
   <requirements>
-    <requirement type="package" version="1.4.4">snvphyl</requirement>
+    <requirement type="package" version="1.6-dev">snvphyl</requirement>
     <requirement type="package" version="5.18.1">perl</requirement>
   </requirements>
 
@@ -44,10 +44,9 @@ Usage
 **Parameters**
   - input - The psudo-alignment positions tab delimited file
 
-  
+
 **Options**
   - -all When this option is set, the summary will include all the entries marked as 'filtered-invalid'
   </help>
 
 </tool>
-

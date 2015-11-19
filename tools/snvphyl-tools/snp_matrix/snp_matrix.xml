@@ -1,8 +1,7 @@
-<tool id="snpmatrix" name="SNP Matrix" version ="0.0.5">
+<tool id="snpmatrix" name="SNP Matrix" version ="1.6.0-dev">
   <description>Create SNP matrix from Phylip file</description>
   <requirements>
-    <requirement type="package" version="1.4.4">snvphyl</requirement>
-    <requirement type="package" version="5.18.1">perl</requirement>
+    <requirement type="package" version="1.6-dev">snvphyl</requirement>
   </requirements>
 
   <command interpreter="perl">

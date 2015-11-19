@@ -2,7 +2,6 @@ bcf_bgzip_datatype
 package_libtool_2_4
 package_bambamc_0_0_50
 package_smalt_0_7_5
-package_snvphyl
 bcftools_call
 bcftools_view
 phyml
@@ -15,4 +14,3 @@ snvphyl-tools/snp_matrix
 snvphyl-tools/consolidate_vcfs
 snvphyl-tools/vcf2pseudoalignment
 snvphyl-tools/verify_map
-suite_snvphyl

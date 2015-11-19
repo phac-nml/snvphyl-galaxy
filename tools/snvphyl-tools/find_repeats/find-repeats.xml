@@ -1,13 +1,12 @@
-<tool id="findrepeat" name="Find Repeats" version ="0.0.6">
+<tool id="findrepeat" name="Find Repeats" version ="1.6.0-dev">
   <description>Identify repeat elements using Mummer</description>
   <requirements>
-    <requirement type="package" version="1.4.4">snvphyl</requirement>
+    <requirement type="package" version="1.6-dev">snvphyl</requirement>
     <requirement type="package" version="3.23">mummer</requirement>
-    <requirement type="package" version="5.18.1">perl</requirement>
   </requirements>
 
   <command interpreter="perl">
-      /\$VCF2PSEUDO/find-repeats.pl -l $length -p $pid $fasta > $out 
+      /\$VCF2PSEUDO/find-repeats.pl -l $length -p $pid $fasta > $out
   </command>
   <inputs>
     <param name="fasta" type="data"  label="Fasta file" format="fasta"/>
@@ -41,11 +40,10 @@ Usage
 
 **Parameters**
   - Fasta file:  A fasta reference file to search for repeats.
-  
+
 **Options**
   - Minimum length of repeat region (150).
   - Minimum PID of repeat region (90).
   </help>
 
 </tool>
-

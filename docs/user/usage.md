@@ -8,7 +8,7 @@ The easiest way to get started is to use [Docker][].  To both install Docker and
 
 ```bash
 curl -sSL https://get.docker.com/ | sh # Installs Docker
-sudo docker run -t -p 48888:80 apetkau/snvphyl-galaxy:0.2-beta-1 # Downloads and runs SNVPhyl and Galaxy 
+sudo docker run -t -p 48888:80 apetkau/snvphyl-galaxy-0.3 # Downloads and runs SNVPhyl and Galaxy 
 ```
 
 This will install Docker, download the SNVPhyl Galaxy docker image, and run this image in a Docker container.  This will take a while to fully download and start up.  You may have to start the `docker` service after installation for Docker to work.  This should be a command like `sudo service docker start`, or `sudo systemctl start docker` depending on your system.  See the [Docker Install][] guide for more details.
@@ -117,7 +117,7 @@ Or, alternatively, by clicking on the **Workflows** menu at the top ![workflow-t
 
 ![workflows-list][]
 
-There are two installed workflows, **SNVPhyl v0.2 Paired-End** and **SNVPhyl v0.2 Paired-End (invalid positions)** which differ only in that one workflow includes the addition of an invalid positions masking file.  Selecting the appropriate workflow brings up the **Parameters** screen.
+There are two installed workflows, **SNVPhyl v0.3 Paired-End** and **SNVPhyl v0.3 Paired-End (invalid positions)** which differ only in that one workflow includes the addition of an invalid positions masking file.  Selecting the appropriate workflow brings up the **Parameters** screen.
 
 ## Parameters
 
@@ -135,7 +135,7 @@ Once parameters are selected, the input files can be selected.
 
 ## Input files
 
-Galaxy should automatically detect the appropriate input files from the current history.  However, please verify it has picked up the correct files.  If the workflow **SNVPhyl v0.2 Paired-End** has been selected then there will be no place to select an **invalid_positions** file.
+Galaxy should automatically detect the appropriate input files from the current history.  However, please verify that it has picked up the correct files.  If the workflow **SNVPhyl v0.3 Paired-End** has been selected then there will be no option for selecting an **invalid_positions** file.
 
 ![input-files-selection][]
 
@@ -194,7 +194,7 @@ If examining the datasets does not help diagnose the issue, then examining the G
 [Docker Install]: https://docs.docker.com/installation/
 [Install]: ../install/
 [snvphyl-galaxy-docker]: images/snvphyl-galaxy-docker.png
-[test-data.tar.gz]: ../workflows/SNVPhyl/0.2/test-data.tar.gz
+[test-data.tar.gz]: ../workflows/SNVPhyl/test-data.tar.gz
 [get-data-galaxy]: images/get-data-galaxy.png
 [get-data-window-galaxy]: images/get-data-window-galaxy.png
 [upload-sequence-reads]: images/upload-sequence-reads.png
