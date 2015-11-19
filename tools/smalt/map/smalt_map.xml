@@ -186,7 +186,22 @@
             </change_format>
         </data>
     </outputs>
-
+    <tests>
+      <test>
+        <param name="sPaired" value="paired"/>
+        <param name="pInput1" value="ecoli_1K_1.fq"/>
+        <param name="pInput2" value="ecoli_1K_2.fq"/>
+        <param name="pairtype" value="pe"/>
+        <param name="smi" value="output.smi"/>
+        <param name="sma" value="output.sma"/>
+        <param name="outformat" value="sam"/>
+        <output name="output">
+          <assert_contents>
+            <has_text text="@HD	VN:1.3	SO:unknown" />
+          </assert_contents>
+        </output>        
+      </test>
+    </tests>
     <help>
 
 **What it does**
