@@ -112,6 +112,21 @@
 		<data format="txt" name="output_tree" label="Newick Tree"/>
 		<data format="txt" name="output_stats" label="Phyml statistics output"/>
 	</outputs>
+	<tests>
+          <test>
+            <param name="input" value="test.phylip"/>
+            <output name="output_stats">
+              <assert_contents>
+                <has_text text="Version" />
+              </assert_contents>
+            </output>            
+            <output name="output_tree">
+              <assert_contents>
+                <has_text text="ASM-51" />
+              </assert_contents>
+            </output>
+          </test>          
+	</tests>
 	<help>
 	
 
