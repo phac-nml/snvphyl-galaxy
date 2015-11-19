@@ -9,16 +9,12 @@
   </stdio>
   <command>
 
+        #set $name = str($freebayes).split('/')[-1]
+         ln -s $freebayes  &amp;&amp; bcftools index $name  &amp;&amp;
 
-        #for $f in $freebayes_collection.keys#
-        #set $name = str($freebayes_collection[$f]).split('/')[-1]
-         ln -s $freebayes_collection[$f]  &amp;&amp; bcftools index $name  &amp;&amp;
-        #end for#
+        #set $name = str($mpileup).split('/')[-1]
+         ln -s $mpileup &amp;&amp; bcftools index $name  &amp;&amp;
 
-        #for $f in $mpileup_collection.keys#
-        #set $name = str($mpileup_collection[$f]).split('/')[-1]
-         ln -s $mpileup_collection[$f] &amp;&amp; bcftools index $name  &amp;&amp;
-        #end for#
 
         \$VCF2PSEUDO/consolidate_vcfs.pl
 
@@ -27,17 +23,12 @@
       	--min-mean-mapping "$mean_mapping"
       	--ao "$ao"
 
-        #for $f in $freebayes_collection.keys#
-        #set $beer = $freebayes_collection[$f]
-        #set $path = str($beer).split('/')[-1]
+        #set $path = str($freebayes).split('/')[-1]
         --vcfsplit "$path"
-        #end for#
 
-        #for $f in $mpileup_collection.keys#
-        #set $beer = $mpileup_collection[$f]
-        #set $path = str($beer).split('/')[-1]
+        #set $path = str($mpileup).split('/')[-1]
         --mpileup "$path"
-        #end for#
+
 
         ##mark where the output files will be sent to, simply have to match them up later in the xml output section
         -o $bcf_combined
@@ -47,8 +38,8 @@
     <param name="coverage" type="integer" value="15" label="Minimum coverage"/>
     <param name="mean_mapping" type="integer" value="30" label="Minimum mean mapping quality"/>
     <param name="ao" type="text" value="0.75" optional="false" label="Alternative allele ratio"/>
-    <param name="freebayes_collection" type="data_collection" label="FreeBayes filtered BCF" help="" optional="false" format="bcf_bgzip" collection_type="list" />
-    <param name="mpileup_collection" type="data_collection" label="Mpileup BCF" help="" optional="false" format="bcf_bgzip" collection_type="list" />
+    <param name="freebayes" type="data" label="FreeBayes filtered BCF" help="" optional="false" format="bcf_bgzip" />
+    <param name="mpileup" type="data" label="Mpileup BCF" help="" optional="false" format="bcf_bgzip" />
   </inputs>
   <outputs>
     <data format="bcf_bgzip" name="bcf_combined"/>
@@ -56,30 +47,14 @@
   <tests>
     <test>
       <param name="coverage" value="4"/>
-      <param name="freebayes_collection">
-        <collection type="list">
-          <element name="v1" value="freebayes/v1.bcf.gz"/>
-        </collection>
-      </param>
-      <param name="mpileup_collection">
-        <collection type="list">
-          <element name="v1" value="mpileup/v1.bcf.gz"/>
-        </collection>
-      </param>
+      <param name="freebayes" value="freebayes/v1.bcf.gz" />
+      <param name="mpileup" value="mpileup/v1.bcf.gz" />
       <output name="bcf_combined" file="v1.bcf.gz"/>
     </test>
     <test>
       <param name="coverage" value="4"/>
-      <param name="freebayes_collection">
-        <collection type="list">
-          <element name="v2" value="freebayes/v2.bcf.gz"/>
-        </collection>
-      </param>
-      <param name="mpileup_collection">
-        <collection type="list">
-          <element name="v2" value="mpileup/v2.bcf.gz"/>
-        </collection>
-      </param>
+      <param name="freebayes" value="freebayes/v2.bcf.gz" />
+      <param name="mpileup" value="mpileup/v2.bcf.gz" />
       <output name="bcf_combined" file="v2.bcf.gz"/>
     </test>
   </tests>
