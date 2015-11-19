@@ -1,7 +1,7 @@
 <tool id="consolidate_vcfs" name="Consolidate VCFs" version ="0.0.1">
   <description>combine freebayes and mpileup files for use by vcf2pseudoalignment</description>
         <requirements>
-                <requirement type="package" version="1.4.4">snvphyl</requirement>
+                <requirement type="package" version="1.6-dev">snvphyl</requirement>
                 <requirement type="package" version="1.2">bcftools</requirement>
         </requirements>
   <stdio>
