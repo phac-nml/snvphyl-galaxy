@@ -5,7 +5,7 @@
     <requirement type="package" version="1.2">bcftools</requirement>
   </requirements>
   <stdio>
-    	<exit_code range="1:" level="fatal" description="Unknown error has occurred"/>
+  	<exit_code range="1:" level="fatal" description="Unknown error has occurred"/>
   </stdio>
   <command>
 
@@ -57,6 +57,7 @@
       <when value="exclude">
         <param name="exclude" type="data"  label="List of strains to be excluded" format="text" optional="false"/>
       </when>
+      <when value="all"/>
     </conditional>
     <param name="vcf_collection" type="data_collection" label="Combined VCF Files" help="" optional="false" format="bcf_bgzip" collection_type="list" />
   </inputs>
@@ -92,7 +93,10 @@
   </tests>
 
   <help>
-Best metaalignment program ever!
+    Best metaalignment program ever!
   </help>
+
+  <citations>
+  </citations>
 
 </tool>

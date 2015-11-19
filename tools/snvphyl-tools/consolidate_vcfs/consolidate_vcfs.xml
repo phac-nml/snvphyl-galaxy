@@ -1,11 +1,11 @@
 <tool id="consolidate_vcfs" name="Consolidate VCFs" version ="0.0.1">
   <description>combine freebayes and mpileup files for use by vcf2pseudoalignment</description>
-        <requirements>
-                <requirement type="package" version="1.6-dev">snvphyl</requirement>
-                <requirement type="package" version="1.2">bcftools</requirement>
-        </requirements>
+    <requirements>
+      <requirement type="package" version="1.6-dev">snvphyl</requirement>
+      <requirement type="package" version="1.2">bcftools</requirement>
+    </requirements>
   <stdio>
-    	<exit_code range="1:" level="fatal" description="Unknown error has occurred"/>
+  	<exit_code range="1:" level="fatal" description="Unknown error has occurred"/>
   </stdio>
   <command>
 
@@ -60,7 +60,10 @@
   </tests>
 
   <help>
-Best VCF consolidation program ever!
+    Best VCF consolidation program ever!
   </help>
+
+  <citations>
+  </citations>
 
 </tool>
