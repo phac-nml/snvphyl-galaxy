@@ -1,26 +1,21 @@
 <tool id="verify_map" name="Verify Mapping Quality" version="1.6.0-dev">
 	<description>Checks the mapping quality of all BAM files generated in the core SNP pipeline.</description>
 	<requirements>
-<<<<<<< HEAD
-		<requirement type="package" version="1.4.4">snvphyl</requirement>
-		<requirement type="package" version="5.18.1">perl</requirement>
-=======
 		<requirement type="package" version="1.6-dev">snvphyl</requirement>
->>>>>>> development
 		<requirement type="package" version="0.1.19">samtools</requirement>
 	</requirements>
 
 	<command interpreter="perl">
-		/\$VCF2PSEUDO/verify_mapping_quality.pl 
+		/\$VCF2PSEUDO/verify_mapping_quality.pl
  		#for $f in $bams.keys# --bam "$f=$bams[$f]" #end for#
  		#if $mindepth :
         	--min-depth $mindepth
 	      	#end if
-                
+
                 --cores \${GALAXY_SLOTS:-1}
-                
+
       		#if $minmap :
-        	--min-map $minmap 	
+        	--min-map $minmap
 	      	#end if
 		> $output_log
 	</command>
@@ -57,7 +52,7 @@
 What it does
 ============
 
-This script checks the mapping quality of all BAM files generated in the core SNP pipeline. 
+This script checks the mapping quality of all BAM files generated in the core SNP pipeline.
 
 
 Usage
@@ -66,10 +61,10 @@ Usage
 **Parameters**
   - input - The collection of BAM files in the dataset.
 
-  
+
 **Options**
   - min-depth - The minimum depth of coverage required in each BAM file.
-  - min-map - The minimum perecent coverage required in each BAM file. 
+  - min-map - The minimum perecent coverage required in each BAM file.
 
 	</help>
 
