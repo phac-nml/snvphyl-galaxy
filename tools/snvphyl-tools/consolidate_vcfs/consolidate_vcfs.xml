@@ -29,6 +29,20 @@
         #set $path = str($mpileup).split('/')[-1]
         --mpileup "$path"
 
+        --filtered-density-out "$filtered_density"
+
+        #if $window_size:
+          --window-size "$window_size"
+          #set $use_plugin = "true"
+        #end if
+        #if $threshold:
+          --density-threshold "$threshold"
+          #set $use_plugin = "true"
+        #end if
+
+        #if not $use_plugin
+          --skip-density-filter
+        #end if
 
         ##mark where the output files will be sent to, simply have to match them up later in the xml output section
         -o $bcf_combined
@@ -40,9 +54,12 @@
     <param name="ao" type="text" value="0.75" optional="false" label="Alternative allele ratio"/>
     <param name="freebayes" type="data" label="FreeBayes filtered BCF" help="" optional="false" format="bcf_bgzip" />
     <param name="mpileup" type="data" label="Mpileup BCF" help="" optional="false" format="bcf_bgzip" />
+    <param name="window_size" type="integer" label="Size of search window" format="" optional="true"/>
+    <param name="threshold"  type="integer" label="Density threshold cutoff" format="" optional="true"/>
   </inputs>
   <outputs>
     <data format="bcf_bgzip" name="bcf_combined"/>
+    <data format="txt" name="$filtered_density" label="High density regions"/>
   </outputs>
   <tests>
     <test>
