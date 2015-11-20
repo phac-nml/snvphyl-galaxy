@@ -1,9 +1,9 @@
-<tool id="phyml1" name="PhyML" version="3.1">
-        <requirements>
-                <requirement type="package" version="3.1">phyml</requirement>
-        </requirements>
-	<description>, a ML tree builder</description>
-	<command interpreter="bash">./phyml.sh $input $output_tree $output_stats -d $datatype_condition.type -m $datatype_condition.model -v $prop_invar -s $search
+<tool id="phyml1" name="PhyML" version="3.1.1">
+    <description>, a ML tree builder</description>
+    <requirements>
+            <requirement type="package" version="3.1">phyml</requirement>
+    </requirements>
+    <command interpreter="bash">./phyml.sh $input $output_tree $output_stats -d $datatype_condition.type -m $datatype_condition.model -v $prop_invar -s $search
 #if $datatype_condition.type == "nt": 
  -t $datatype_condition.tstv
 #end if
@@ -112,6 +112,21 @@
 		<data format="txt" name="output_tree" label="Newick Tree"/>
 		<data format="txt" name="output_stats" label="Phyml statistics output"/>
 	</outputs>
+	<tests>
+          <test>
+            <param name="input" value="test.phylip"/>
+            <output name="output_stats">
+              <assert_contents>
+                <has_text text="Version" />
+              </assert_contents>
+            </output>            
+            <output name="output_tree">
+              <assert_contents>
+                <has_text text="ASM-51" />
+              </assert_contents>
+            </output>
+          </test>          
+	</tests>
 	<help>
 	
 
@@ -152,5 +167,7 @@ For further informations, please visite the PhyML_ website.
 
 .. _PhyML: http://www.atgc-montpellier.fr/phyml/
 	</help>
-
+<citations>
+<citation type="doi">10.1093/sysbio/syq010</citation>
+</citations>
 </tool>

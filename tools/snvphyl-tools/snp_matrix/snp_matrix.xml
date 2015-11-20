@@ -1,9 +1,10 @@
-<tool id="snpmatrix" name="SNP Matrix" version ="1.6.0-dev">
+<tool id="snpmatrix" name="SNP Matrix" version ="1.6.1-dev">
   <description>Create SNP matrix from Phylip file</description>
   <requirements>
     <requirement type="package" version="1.6-dev">snvphyl</requirement>
   </requirements>
-
+  <stdio>
+  </stdio>
   <command interpreter="perl">
 	/\$VCF2PSEUDO/snp_matrix.pl   $phylip
 	-o $csv
@@ -14,8 +15,6 @@
   <outputs>
     <data format="csv" name="csv"/>
   </outputs>
-  <stdio>
-  </stdio>
   <tests>
     <test>
       <param name="phylip" value="pseudoalign-13.phy"/>
@@ -37,5 +36,7 @@ Usage
   - Phylip file: Phylogenetic file (.ph, .phy)
 
   </help>
-
+<citations>
+<citation></citation>
+</citations>
 </tool>

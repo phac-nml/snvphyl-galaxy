@@ -1,4 +1,4 @@
-<tool id="vcf2pseudoalignment" name="VCF 2 pseudoalignment" version ="1.6.0-dev">
+<tool id="vcf2pseudoalignment" name="VCF 2 pseudoalignment" version ="1.6.1-dev">
   <description>create a pseudo alignment from multiple VCFs files</description>
         <requirements>
                 <requirement type="package" version="1.6-dev">snvphyl</requirement>
@@ -72,7 +72,9 @@
       <when value="exclude">
         <param name="exclude" type="data"  label="List of strains to be excluded" format="text" optional="false"/>
       </when>
-    </conditional>
+       <when value="all">
+      </when>
+   </conditional>
     <param name="coverage" type="integer" value="15" label="minimum coverage"/>
     <param name="mean_mapping" type="integer" value="30" label="minimum mean mapping quality"/>
     <param name="ao" type="text" value="0.75" optional="false" label="Alternative allele ratio"/>
@@ -128,5 +130,7 @@
   <help>
 Best metaalignment program ever!
   </help>
-
+<citations>
+<citation></citation>
+</citations>
 </tool>
