@@ -1,4 +1,4 @@
-<tool id="seqtk_nml_sample" name="seqTK Sample NML" version="0.0.1">
+<tool id="seqtk_nml_sample" name="seqTK Sample NML" version="0.0.2">
 	<description>Runs seqTK sample if raw coverage is above user defined threshold </description>
 	<requirements>
 		<requirement type="package" version="1.0-r75-dirty">seqtk</requirement>

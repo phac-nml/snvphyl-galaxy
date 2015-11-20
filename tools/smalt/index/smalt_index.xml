@@ -1,4 +1,4 @@
-<tool id="smalt_index" name="smalt index" version="1.0.0">
+<tool id="smalt_index" name="smalt index" version="1.1.0">
   <description>Index a reference </description>
   <requirements>
     <requirement type="package" version="0.7.5">smalt</requirement>

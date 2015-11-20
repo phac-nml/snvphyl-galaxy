@@ -1,4 +1,4 @@
-<tool id="filtervcf" name="Filter vcf" version ="1.6.0-dev">
+<tool id="filtervcf" name="Filter vcf" version ="1.6.1-dev">
   <description>filter out indels and complex SNPS</description>
   <requirements>
     <requirement type="package" version="1.6-dev">snvphyl</requirement>
