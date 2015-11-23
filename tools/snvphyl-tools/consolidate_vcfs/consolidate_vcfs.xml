@@ -29,9 +29,12 @@
         #set $path = str($mpileup).split('/')[-1]
         --mpileup "$path"
 
+        #set $path = str($path).split('/')[-1]
         #if $filtered_density:
           --filtered-density-out "$filtered_density"
-        #else
+        #end if
+
+        #if $skip-density-filter:
           --skip-density-filter
         #end if
 
@@ -52,25 +55,28 @@
     <param name="ao" type="text" value="0.75" optional="false" label="Alternative allele ratio"/>
     <param name="freebayes" type="data" label="FreeBayes filtered BCF" help="" optional="false" format="bcf_bgzip" />
     <param name="mpileup" type="data" label="Mpileup BCF" help="" optional="false" format="bcf_bgzip" />
+    <param name="skip-density-filter" type="boolean" label="Skip density filtering" />
     <param name="window_size" type="integer" label="Size of search window" format="" optional="true"/>
     <param name="threshold"  type="integer" label="Density threshold cutoff" format="" optional="true"/>
   </inputs>
   <outputs>
     <data format="bcf_bgzip" name="bcf_combined"/>
-    <data format="txt" name="$filtered_density" label="High density regions"/>
+    <data format="txt" name="filtered_density" label="High density regions"/>
   </outputs>
   <tests>
     <test>
       <param name="coverage" value="4"/>
       <param name="freebayes" value="freebayes/v1.bcf.gz" />
       <param name="mpileup" value="mpileup/v1.bcf.gz" />
-      <output name="bcf_combined" file="v1.bcf.gz"/>
+      <!--<output name="bcf_combined" file="v1.bcf.gz"/>-->
+      <output name="filtered_density" file="expected_regions.txt"/>
     </test>
     <test>
       <param name="coverage" value="4"/>
       <param name="freebayes" value="freebayes/v2.bcf.gz" />
       <param name="mpileup" value="mpileup/v2.bcf.gz" />
-      <output name="bcf_combined" file="v2.bcf.gz"/>
+    <!--  <output name="bcf_combined" file="v2.bcf.gz"/>-->
+      <output name="filtered_density" file="expected_regions.txt"/>
     </test>
   </tests>
 
