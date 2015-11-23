@@ -27,8 +27,8 @@
   </stdio>
   <tests>
     <test>
-    <param name="threshold" value="10"/>
-    <param name="window_size" value="150"/>
+    <param name="threshold" value="2"/>
+    <param name="window_size" value="100"/>
     <param name="vcf" value="1.vcf"/>
     <output name="out" file="density_regions.txt"/>
     </test>
