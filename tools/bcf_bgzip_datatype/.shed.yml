@@ -1,4 +1,4 @@
-categories: []
+categories: [Variant Analysis]
 description: BCF compress datatype
 name: bcf_bgzip_datatype
 owner: nml

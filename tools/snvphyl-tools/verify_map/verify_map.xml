@@ -1,10 +1,12 @@
-<tool id="verify_map" name="Verify Mapping Quality" version="1.6.0-dev">
+<tool id="verify_map" name="Verify Mapping Quality" version="1.6.1-dev">
 	<description>Checks the mapping quality of all BAM files generated in the core SNP pipeline.</description>
 	<requirements>
 		<requirement type="package" version="1.6-dev">snvphyl</requirement>
 		<requirement type="package" version="0.1.19">samtools</requirement>
 	</requirements>
-
+	<stdio>
+		<exit_code range="1:" level="fatal" description="Unknown error has occured"/>
+	</stdio>
 	<command interpreter="perl">
 		/\$VCF2PSEUDO/verify_mapping_quality.pl
  		#for $f in $bams.keys# --bam "$f=$bams[$f]" #end for#
@@ -29,10 +31,6 @@
 	<outputs>
 		<data format="txt" name="output_log" from_work_dir="mapping_percentage.log" label="Mapping Percentage Log"/>
 	</outputs>
-
-	<stdio>
-		<exit_code range="1:" level="fatal" description="Unknown error has occured"/>
-	</stdio>
 
 	<tests>
 		<test>
@@ -67,5 +65,7 @@ Usage
   - min-map - The minimum perecent coverage required in each BAM file.
 
 	</help>
-
+<citations>
+<citation></citation>
+</citations>
 </tool>
