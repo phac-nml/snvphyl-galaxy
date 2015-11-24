@@ -43,7 +43,7 @@ Usage
 **Parameters**
   - input - The psudo-alignment positions tab delimited file
 
-  
+
 **Options**
   - -all When this option is set, the summary will include all the entries marked as 'filtered-invalid'
   </help>
@@ -51,4 +51,3 @@ Usage
 <citation></citation>
 </citations>
 </tool>
-

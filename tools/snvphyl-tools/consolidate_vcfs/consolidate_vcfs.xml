@@ -1,0 +1,90 @@
+<tool id="consolidate_vcfs" name="Consolidate VCFs" version ="1.6.1-dev">
+  <description>combine freebayes and mpileup files for use by vcf2pseudoalignment</description>
+    <requirements>
+      <requirement type="package" version="1.6-dev">snvphyl</requirement>
+      <requirement type="package" version="1.2">bcftools</requirement>
+    </requirements>
+  <stdio>
+  	<exit_code range="1:" level="fatal" description="Unknown error has occurred"/>
+  </stdio>
+  <command>
+
+        #set $name = str($freebayes).split('/')[-1]
+         ln -s $freebayes  &amp;&amp; bcftools index $name  &amp;&amp;
+
+        #set $name = str($mpileup).split('/')[-1]
+         ln -s $mpileup &amp;&amp; bcftools index $name  &amp;&amp;
+
+
+        \$VCF2PSEUDO/consolidate_vcfs.pl
+
+
+        -c "$coverage"
+      	--min-mean-mapping "$mean_mapping"
+      	--ao "$ao"
+
+        #set $path = str($freebayes).split('/')[-1]
+        --vcfsplit "$path"
+
+        #set $path = str($mpileup).split('/')[-1]
+        --mpileup "$path"
+
+        #set $path = str($path).split('/')[-1]
+        #if $filtered_density:
+          --filtered-density-out "$filtered_density"
+        #end if
+
+        #if $skip-density-filter:
+          --skip-density-filter
+        #end if
+
+        #if $window_size:
+          --window-size "$window_size"
+        #end if
+        #if $threshold:
+          --density-threshold "$threshold"
+        #end if
+
+        ##mark where the output files will be sent to, simply have to match them up later in the xml output section
+        -o $bcf_combined
+
+  </command>
+  <inputs>
+    <param name="coverage" type="integer" value="15" label="Minimum coverage"/>
+    <param name="mean_mapping" type="integer" value="30" label="Minimum mean mapping quality"/>
+    <param name="ao" type="text" value="0.75" optional="false" label="Alternative allele ratio"/>
+    <param name="freebayes" type="data" label="FreeBayes filtered BCF" help="" optional="false" format="bcf_bgzip" />
+    <param name="mpileup" type="data" label="Mpileup BCF" help="" optional="false" format="bcf_bgzip" />
+    <param name="skip-density-filter" type="boolean" label="Skip density filtering" />
+    <param name="window_size" type="integer" label="Size of search window" format="" optional="true"/>
+    <param name="threshold"  type="integer" label="Density threshold cutoff" format="" optional="true"/>
+  </inputs>
+  <outputs>
+    <data format="bcf_bgzip" name="bcf_combined"/>
+    <data format="txt" name="filtered_density" label="High density regions"/>
+  </outputs>
+  <tests>
+    <test>
+      <param name="coverage" value="4"/>
+      <param name="freebayes" value="freebayes/v1.bcf.gz" />
+      <param name="mpileup" value="mpileup/v1.bcf.gz" />
+      <!--<output name="bcf_combined" file="v1.bcf.gz"/>-->
+      <output name="filtered_density" file="expected_regions.txt"/>
+    </test>
+    <test>
+      <param name="coverage" value="4"/>
+      <param name="freebayes" value="freebayes/v2.bcf.gz" />
+      <param name="mpileup" value="mpileup/v2.bcf.gz" />
+    <!--  <output name="bcf_combined" file="v2.bcf.gz"/>-->
+      <output name="filtered_density" file="expected_regions.txt"/>
+    </test>
+  </tests>
+
+  <help>
+    Best VCF consolidation program ever!
+  </help>
+
+  <citations>
+  </citations>
+
+</tool>

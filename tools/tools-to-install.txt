@@ -11,5 +11,6 @@ snvphyl-tools/filter_stats
 snvphyl-tools/filter_vcf
 snvphyl-tools/find_repeats
 snvphyl-tools/snp_matrix
+snvphyl-tools/consolidate_vcfs
 snvphyl-tools/vcf2pseudoalignment
 snvphyl-tools/verify_map

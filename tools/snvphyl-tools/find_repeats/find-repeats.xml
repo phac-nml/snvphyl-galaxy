@@ -8,7 +8,7 @@
     <exit_code range="1:" level="fatal" description="Unknown error has occured"/>
   </stdio>
   <command interpreter="perl">
-      /\$VCF2PSEUDO/find-repeats.pl -l $length -p $pid $fasta > $out 
+      /\$VCF2PSEUDO/find-repeats.pl -l $length -p $pid $fasta > $out
   </command>
   <inputs>
     <param name="fasta" type="data"  label="Fasta file" format="fasta"/>
@@ -39,7 +39,7 @@ Usage
 
 **Parameters**
   - Fasta file:  A fasta reference file to search for repeats.
-  
+
 **Options**
   - Minimum length of repeat region (150).
   - Minimum PID of repeat region (90).
@@ -48,4 +48,3 @@ Usage
 <citation></citation>
 </citations>
 </tool>
-
