@@ -1,7 +1,7 @@
 <tool id="consolidate_vcfs" name="Consolidate VCFs" version ="1.6.1-dev">
   <description>combine freebayes and mpileup files for use by vcf2pseudoalignment</description>
     <requirements>
-      <requirement type="package" version="1.6-dev">snvphyl</requirement>
+      <requirement type="package" version="1.6.0-dev">snvphyl</requirement>
       <requirement type="package" version="1.2">bcftools</requirement>
     </requirements>
   <stdio>
@@ -34,7 +34,7 @@
           --filtered-density-out "$filtered_density"
         #end if
 
-        #if $skip-density-filter:
+        #if $skip_density_filter:
           --skip-density-filter
         #end if
 
@@ -55,7 +55,7 @@
     <param name="ao" type="text" value="0.75" optional="false" label="Alternative allele ratio"/>
     <param name="freebayes" type="data" label="FreeBayes filtered BCF" help="" optional="false" format="bcf_bgzip" />
     <param name="mpileup" type="data" label="Mpileup BCF" help="" optional="false" format="bcf_bgzip" />
-    <param name="skip-density-filter" type="boolean" label="Skip density filtering" />
+    <param name="skip_density_filter" type="boolean" label="Skip density filtering" />
     <param name="window_size" type="integer" label="Size of search window" format="" optional="true"/>
     <param name="threshold"  type="integer" label="Density threshold cutoff" format="" optional="true"/>
   </inputs>
