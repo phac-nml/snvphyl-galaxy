@@ -37,11 +37,11 @@
         #if $use_density_filter.select_list == "no":
           --skip-density-filter
         #else
-          #if $window_size:
-            --window-size "$window_size"
+          #if $use_density_filter.window_size:
+            --window-size "$use_density_filter.window_size"
           #end if
-          #if $threshold:
-            --density-threshold "$threshold"
+          #if $use_density_filter.threshold:
+            --density-threshold "$use_density_filter.threshold"
           #end if
         #end if
 
