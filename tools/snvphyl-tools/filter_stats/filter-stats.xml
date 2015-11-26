@@ -1,7 +1,7 @@
 <tool id="filterstat" name="Filter Stats" version ="1.6.1-dev">
   <description>Identify number of positions excluded based on filtered status</description>
   <requirements>
-    <requirement type="package" version="1.6-dev">snvphyl</requirement>
+    <requirement type="package" version="1.6.0-dev">snvphyl</requirement>
     <requirement type="package" version="5.18.1">perl</requirement>
   </requirements>
   <stdio>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <tool_dependency>
-    <package name="snvphyl" version="1.6-dev">
+    <package name="snvphyl" version="1.6.0-dev">
         <repository name="package_snvphyl_1_6_dev" owner="nml"/>
     </package>
 </tool_dependency>
