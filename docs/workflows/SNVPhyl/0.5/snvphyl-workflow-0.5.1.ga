@@ -19,7 +19,7 @@
             "outputs": [], 
             "position": {
                 "left": 200, 
-                "top": 321
+                "top": 298
             }, 
             "tool_errors": null, 
             "tool_id": null, 
@@ -44,7 +44,7 @@
             "outputs": [], 
             "position": {
                 "left": 200, 
-                "top": 406
+                "top": 383
             }, 
             "tool_errors": null, 
             "tool_id": null, 
@@ -77,8 +77,8 @@
                 }
             ], 
             "position": {
-                "left": 462, 
-                "top": 321
+                "left": 464, 
+                "top": 298
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput": {
@@ -119,8 +119,8 @@
                 }
             ], 
             "position": {
-                "left": 462, 
-                "top": 462
+                "left": 464, 
+                "top": 438
             }, 
             "post_job_actions": {
                 "ChangeDatatypeActionout": {
@@ -173,8 +173,8 @@
                 }
             ], 
             "position": {
-                "left": 690, 
-                "top": 321
+                "left": 696, 
+                "top": 298
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput": {
@@ -210,8 +210,8 @@
                 }
             ], 
             "position": {
-                "left": 994, 
-                "top": 321
+                "left": 1007, 
+                "top": 298
             }, 
             "post_job_actions": {
                 "RenameDatasetActionoutput_log": {
@@ -261,8 +261,8 @@
                 }
             ], 
             "position": {
-                "left": 994, 
-                "top": 434
+                "left": 1007, 
+                "top": 411
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput_failed_alleles_bed": {
@@ -316,8 +316,8 @@
                 }
             ], 
             "position": {
-                "left": 994, 
-                "top": 662
+                "left": 1007, 
+                "top": 638
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput_log": {
@@ -358,8 +358,8 @@
                 }
             ], 
             "position": {
-                "left": 1322, 
-                "top": 321
+                "left": 1335, 
+                "top": 298
             }, 
             "post_job_actions": {
                 "HideDatasetActionvcfout": {
@@ -395,8 +395,8 @@
                 }
             ], 
             "position": {
-                "left": 1322, 
-                "top": 442
+                "left": 1335, 
+                "top": 419
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput": {
@@ -439,8 +439,8 @@
                 }
             ], 
             "position": {
-                "left": 1650, 
-                "top": 321
+                "left": 1663, 
+                "top": 298
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput": {
@@ -491,8 +491,8 @@
                 }
             ], 
             "position": {
-                "left": 1719, 
-                "top": 559.5
+                "left": 1991, 
+                "top": 298
             }, 
             "post_job_actions": {
                 "HideDatasetActionbcf_combined": {
@@ -508,11 +508,11 @@
             }, 
             "tool_errors": null, 
             "tool_id": "localhost:9009/repos/nml/consolidate_vcfs/consolidate_vcfs/1.6.1-dev", 
-            "tool_state": "{\"__page__\": 0, \"window_size\": \"\\\"\\\"\", \"__rerun_remap_job_id__\": null,  \"ao\": \"\\\"${alternative_allele_proportion}\\\"\" , \"mpileup\": \"null\", \"mean_mapping\": \"\\\"${min_mean_mapping}\\\"\", \"coverage\": \"\\\"${min_coverage}\\\"\" , \"threshold\": \"\\\"\\\"\", \"skip_density_filter\": \"\\\"False\\\"\", \"freebayes\": \"null\"}", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"use_density_filter\": \"{\\\"select_list\\\": \\\"no\\\", \\\"__current_case__\\\": 1}\", \"ao\": \"\\\"${alternative_allele_proportion}\\\"\" , \"mpileup\": \"null\", \"coverage\": \"\\\"${min_coverage}\\\"\" , \"mean_mapping\": \"\\\"${min_mean_mapping}\\\"\" , \"freebayes\": \"null\"}", 
             "tool_version": "1.6.1-dev", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "59f2b939-b5ce-43f3-985b-15c35c737f73"
+            "uuid": "20d83b1e-ea37-48e3-b78d-56baf1021e6e"
         }, 
         "12": {
             "annotation": "", 
@@ -553,8 +553,8 @@
                 }
             ], 
             "position": {
-                "left": 1978, 
-                "top": 321
+                "left": 2259, 
+                "top": 298
             }, 
             "post_job_actions": {
                 "HideDatasetActionfasta": {
@@ -609,8 +609,8 @@
                 }
             ], 
             "position": {
-                "left": 2241, 
-                "top": 321
+                "left": 2524, 
+                "top": 298
             }, 
             "post_job_actions": {
                 "RenameDatasetActionout_file1": {
@@ -648,8 +648,8 @@
                 }
             ], 
             "position": {
-                "left": 2241, 
-                "top": 434
+                "left": 2524, 
+                "top": 411
             }, 
             "post_job_actions": {
                 "RenameDatasetActionout": {
@@ -691,8 +691,8 @@
                 }
             ], 
             "position": {
-                "left": 2569, 
-                "top": 321
+                "left": 2852, 
+                "top": 298
             }, 
             "post_job_actions": {
                 "ChangeDatatypeActionoutput_tree": {
@@ -744,8 +744,8 @@
                 }
             ], 
             "position": {
-                "left": 2569, 
-                "top": 479
+                "left": 2852, 
+                "top": 455
             }, 
             "post_job_actions": {
                 "RenameDatasetActioncsv": {
@@ -765,5 +765,5 @@
             "uuid": "732e9590-99d1-44c7-b612-293b92cb6cc4"
         }
     }, 
-    "uuid": "cc088b6f-d074-4919-aed1-2b930df41239"
+    "uuid": "4e48cb8f-fc78-4bc4-ac4c-2f29640aa5f7"
 }
