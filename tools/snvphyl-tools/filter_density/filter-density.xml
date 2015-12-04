@@ -1,7 +1,7 @@
 <tool id="filterdensity" name="Filter Density" version ="1.6.1-dev">
   <description>Identify high density positions within indvidual genomes</description>
   <requirements>
-    <requirement type="package" version="1.6.0-dev">snvphyl</requirement>
+    <requirement type="package" version="1.6.1-dev">snvphyl</requirement>
   </requirements>
 
   <command>
