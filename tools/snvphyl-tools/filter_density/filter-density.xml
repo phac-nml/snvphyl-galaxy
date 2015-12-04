@@ -3,9 +3,11 @@
   <requirements>
     <requirement type="package" version="1.6.1-dev">snvphyl</requirement>
   </requirements>
-
+  <stdio>
+    <exit_code range="1:" level="fatal" description="Unknown error has occured"/>
+  </stdio>
   <command>
-      bcftools plugin filter_snp_density $vcf -O b -o $filtered_bcf -- --filename $vcf --region_file $out 
+      bcftools plugin filter_snp_density $vcf -O b -o $filtered_bcf -- --filename $vcf --region_file $out
       #if $window_size:
       --window_size $window_size
       #end if
@@ -15,16 +17,13 @@
   </command>
   <inputs>
     <param name="vcf" type="data" label="Input vcf file" format="vcf" />
-    <param name="window_size" type="integer" label="Size of search window" format="" optional="true"/>  
-    <param name="threshold"  type="integer" label="Density threshold cutoff" format="" optional="true"/>  
+    <param name="window_size" type="integer" label="Size of search window" format="" optional="true"/>
+    <param name="threshold"  type="integer" label="Density threshold cutoff" format="" optional="true"/>
   </inputs>
   <outputs>
     <data format="txt" name="out" label="High density regions"/>
     <data format="bcf" name="filtered_bcf"/>
   </outputs>
-  <stdio>
-    <exit_code range="1:" level="fatal" description="Unknown error has occured"/>
-  </stdio>
   <tests>
     <test>
     <param name="threshold" value="2"/>
@@ -49,5 +48,8 @@ Usage
   - threshold - The threshold distance between SNV's in order for them to be considered 'high density'
   - window_size - The size of the window, in base pairs, that will be looked at at any given time to calculate density.
   </help>
+
+  <citations>
+  </citations>
 
 </tool>
