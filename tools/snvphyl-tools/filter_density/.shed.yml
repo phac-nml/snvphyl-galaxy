@@ -1,0 +1,5 @@
+categories: [Sequence Analysis]
+description: Filter out position based on distance between SNPs 
+name: filter_density
+owner: nml
+remote_repository_url: https://irida.corefacility.ca/analysis-pipelines/snvphyl-galaxy

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <tool_dependency>
-    <package name="snvphyl" version="1.6-dev">
-        <repository  name="package_snvphyl_1_6_dev" owner="nml"  />
+    <package name="snvphyl" version="1.6.1-dev">
+        <repository  name="package_snvphyl_1_6_1_dev" owner="nml"  />
     </package>
     <package name="bcftools" version="1.2">
         <repository name="package_bcftools_1_2" owner="iuc"/>

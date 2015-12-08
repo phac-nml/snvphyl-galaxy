@@ -1,7 +1,7 @@
 <tool id="consolidate_vcfs" name="Consolidate VCFs" version ="1.6.1-dev">
   <description>combine freebayes and mpileup files for use by vcf2pseudoalignment</description>
     <requirements>
-      <requirement type="package" version="1.6-dev">snvphyl</requirement>
+      <requirement type="package" version="1.6.1-dev">snvphyl</requirement>
       <requirement type="package" version="1.2">bcftools</requirement>
     </requirements>
   <stdio>
@@ -34,15 +34,15 @@
           --filtered-density-out "$filtered_density"
         #end if
 
-        #if $skip-density-filter:
+        #if $use_density_filter.select_list == "no":
           --skip-density-filter
-        #end if
-
-        #if $window_size:
-          --window-size "$window_size"
-        #end if
-        #if $threshold:
-          --density-threshold "$threshold"
+        #else
+          #if $use_density_filter.window_size:
+            --window-size "$use_density_filter.window_size"
+          #end if
+          #if $use_density_filter.threshold:
+            --density-threshold "$use_density_filter.threshold"
+          #end if
         #end if
 
         ##mark where the output files will be sent to, simply have to match them up later in the xml output section
@@ -55,9 +55,18 @@
     <param name="ao" type="text" value="0.75" optional="false" label="Alternative allele ratio"/>
     <param name="freebayes" type="data" label="FreeBayes filtered BCF" help="" optional="false" format="bcf_bgzip" />
     <param name="mpileup" type="data" label="Mpileup BCF" help="" optional="false" format="bcf_bgzip" />
-    <param name="skip-density-filter" type="boolean" label="Skip density filtering" />
-    <param name="window_size" type="integer" label="Size of search window" format="" optional="true"/>
-    <param name="threshold"  type="integer" label="Density threshold cutoff" format="" optional="true"/>
+    <conditional name="use_density_filter">
+      <param name="select_list" type="select" label= "SNP density filtering">
+        <option value="yes">Apply</option>
+        <option value="no">Don't apply</option>
+      </param>
+      <when value="yes">
+        <param name="window_size" type="integer" label="Size of search window" format="" optional="true"/>
+        <param name="threshold"  type="integer" label="Density threshold cutoff" format="" optional="true"/>
+      </when>
+      <when value="no">
+      </when>
+    </conditional>
   </inputs>
   <outputs>
     <data format="bcf_bgzip" name="bcf_combined"/>
@@ -68,14 +77,14 @@
       <param name="coverage" value="4"/>
       <param name="freebayes" value="freebayes/v1.bcf.gz" />
       <param name="mpileup" value="mpileup/v1.bcf.gz" />
-      <!--<output name="bcf_combined" file="v1.bcf.gz"/>-->
+      <output name="bcf_combined" file="v1.bcf.gz"/>
       <output name="filtered_density" file="expected_regions.txt"/>
     </test>
     <test>
       <param name="coverage" value="4"/>
       <param name="freebayes" value="freebayes/v2.bcf.gz" />
       <param name="mpileup" value="mpileup/v2.bcf.gz" />
-    <!--  <output name="bcf_combined" file="v2.bcf.gz"/>-->
+      <output name="bcf_combined" file="v2.bcf.gz"/>
       <output name="filtered_density" file="expected_regions.txt"/>
     </test>
   </tests>

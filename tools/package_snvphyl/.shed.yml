@@ -1,5 +1,5 @@
 categories: [Tool Dependency Packages]
 description: SNVPhyl Dependencies
-name: package_snvphyl_1_6_dev
+name: package_snvphyl_1_6_1_dev
 owner: nml
 remote_repository_url: https://irida.corefacility.ca/analysis-pipelines/snvphyl-galaxy

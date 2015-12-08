@@ -14,3 +14,4 @@ snvphyl-tools/snp_matrix
 snvphyl-tools/consolidate_vcfs
 snvphyl-tools/vcf2pseudoalignment
 snvphyl-tools/verify_map
+snvphyl-tools/filter_density

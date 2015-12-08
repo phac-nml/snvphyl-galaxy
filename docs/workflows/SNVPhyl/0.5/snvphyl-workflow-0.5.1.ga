@@ -2,7 +2,7 @@
     "a_galaxy_workflow": "true", 
     "annotation": "Snvphyl", 
     "format-version": "0.1", 
-    "name": "SNVPhyl v0.5 Paired-End", 
+    "name": "SNVPhyl v0.5.1 Paired-End", 
     "steps": {
         "0": {
             "annotation": "", 
@@ -19,7 +19,7 @@
             "outputs": [], 
             "position": {
                 "left": 200, 
-                "top": 200
+                "top": 298
             }, 
             "tool_errors": null, 
             "tool_id": null, 
@@ -44,7 +44,7 @@
             "outputs": [], 
             "position": {
                 "left": 200, 
-                "top": 285
+                "top": 383
             }, 
             "tool_errors": null, 
             "tool_id": null, 
@@ -69,16 +69,16 @@
             "outputs": [
                 {
                     "name": "output", 
-                    "type": "data"
+                    "type": "binary"
                 }, 
                 {
                     "name": "output2", 
-                    "type": "data"
+                    "type": "binary"
                 }
             ], 
             "position": {
-                "left": 462, 
-                "top": 200
+                "left": 464, 
+                "top": 298
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput": {
@@ -95,7 +95,7 @@
             "tool_errors": null, 
             "tool_id": "localhost:9009/repos/nml/smalt_index/smalt_index/1.1.0", 
             "tool_state": "{\"__page__\": 0, \"k\": \"\\\"13\\\"\", \"__rerun_remap_job_id__\": null, \"s\": \"\\\"6\\\"\", \"reference\": \"null\"}", 
-            "tool_version": "1.0.0", 
+            "tool_version": "1.1.0", 
             "type": "tool", 
             "user_outputs": [], 
             "uuid": "713fb2c8-84dd-4762-8281-e071c61fe979"
@@ -119,8 +119,8 @@
                 }
             ], 
             "position": {
-                "left": 462, 
-                "top": 341
+                "left": 464, 
+                "top": 438
             }, 
             "post_job_actions": {
                 "ChangeDatatypeActionout": {
@@ -141,7 +141,7 @@
             "tool_errors": null, 
             "tool_id": "localhost:9009/repos/nml/find_repeats/findrepeat/1.6.1-dev", 
             "tool_state": "{\"__page__\": 0, \"fasta\": \"null\", \"__rerun_remap_job_id__\": null, \"pid\": \"\\\"90\\\"\", \"length\": \"\\\"150\\\"\"}", 
-            "tool_version": "1.6.0-dev", 
+            "tool_version": "1.6.1-dev", 
             "type": "tool", 
             "user_outputs": [], 
             "uuid": "3c2257f4-d708-47c4-934e-7a027804f7db"
@@ -173,8 +173,8 @@
                 }
             ], 
             "position": {
-                "left": 690, 
-                "top": 200
+                "left": 696, 
+                "top": 298
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput": {
@@ -186,7 +186,7 @@
             "tool_errors": null, 
             "tool_id": "localhost:9009/repos/nml/smalt_map/smalt_map/1.1.0", 
             "tool_state": "{\"minbasq\": \"\\\"\\\"\", \"__page__\": 0, \"insertmin\": \"\\\"20\\\"\", \"mincover\": \"\\\"\\\"\", \"insfil\": \"null\", \"scordiff\": \"\\\"\\\"\", \"insertmax\": \"\\\"1000\\\"\", \"singlePaired\": \"{\\\"fastq_collection\\\": null, \\\"sPaired\\\": \\\"collections\\\", \\\"pairtype\\\": \\\"pe\\\", \\\"__current_case__\\\": 2}\", \"minid\": \"\\\"0.5\\\"\", \"__rerun_remap_job_id__\": null, \"search_harder\": \"\\\"False\\\"\", \"seed\": \"\\\"1\\\"\", \"sw_weighted\": \"\\\"False\\\"\", \"smi\": \"null\", \"oformat\": \"{\\\"bamOptions\\\": null, \\\"outformat\\\": \\\"bam\\\", \\\"__current_case__\\\": 1}\", \"minscor\": \"\\\"\\\"\", \"sma\": \"null\"}", 
-            "tool_version": "1.0.1", 
+            "tool_version": "1.1.0", 
             "type": "tool", 
             "user_outputs": [], 
             "uuid": "7a4b9431-20a8-429d-a26e-433f0827c463"
@@ -210,8 +210,8 @@
                 }
             ], 
             "position": {
-                "left": 994, 
-                "top": 200
+                "left": 1007, 
+                "top": 298
             }, 
             "post_job_actions": {
                 "RenameDatasetActionoutput_log": {
@@ -225,7 +225,7 @@
             "tool_errors": null, 
             "tool_id": "localhost:9009/repos/nml/verify_map/verify_map/1.6.1-dev", 
             "tool_state": "{\"minmap\": \"\\\"80\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"mindepth\": \"\\\"${min_coverage}\\\"\", \"bams\": \"null\"}", 
-            "tool_version": "1.6.0-dev", 
+            "tool_version": "1.6.1-dev", 
             "type": "tool", 
             "user_outputs": [], 
             "uuid": "82bed622-a144-43fd-869e-c4468e6131ff"
@@ -261,8 +261,8 @@
                 }
             ], 
             "position": {
-                "left": 994, 
-                "top": 313
+                "left": 1007, 
+                "top": 411
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput_failed_alleles_bed": {
@@ -316,8 +316,8 @@
                 }
             ], 
             "position": {
-                "left": 994, 
-                "top": 541
+                "left": 1007, 
+                "top": 638
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput_log": {
@@ -358,8 +358,8 @@
                 }
             ], 
             "position": {
-                "left": 1322, 
-                "top": 200
+                "left": 1335, 
+                "top": 298
             }, 
             "post_job_actions": {
                 "HideDatasetActionvcfout": {
@@ -371,7 +371,7 @@
             "tool_errors": null, 
             "tool_id": "localhost:9009/repos/nml/filter_vcf/filtervcf/1.6.1-dev", 
             "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"vcf\": \"null\"}", 
-            "tool_version": "1.6.0-dev", 
+            "tool_version": "1.6.1-dev", 
             "type": "tool", 
             "user_outputs": [], 
             "uuid": "92790084-218f-4ad5-bdbb-5925d0b63cdc"
@@ -395,8 +395,8 @@
                 }
             ], 
             "position": {
-                "left": 1322, 
-                "top": 321
+                "left": 1335, 
+                "top": 419
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput": {
@@ -439,8 +439,8 @@
                 }
             ], 
             "position": {
-                "left": 1650, 
-                "top": 200
+                "left": 1663, 
+                "top": 298
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput": {
@@ -468,21 +468,67 @@
             "annotation": "", 
             "id": 11, 
             "input_connections": {
-                "freebayes_collection": {
+                "freebayes": {
                     "id": 10, 
                     "output_name": "output"
                 }, 
+                "mpileup": {
+                    "id": 9, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Consolidate VCFs", 
+            "outputs": [
+                {
+                    "name": "bcf_combined", 
+                    "type": "bcf_bgzip"
+                }, 
+                {
+                    "name": "filtered_density", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 1991, 
+                "top": 298
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionbcf_combined": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "bcf_combined"
+                }, 
+                "HideDatasetActionfiltered_density": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "filtered_density"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "localhost:9009/repos/nml/consolidate_vcfs/consolidate_vcfs/1.6.1-dev", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"use_density_filter\": \"{\\\"select_list\\\": \\\"no\\\", \\\"__current_case__\\\": 1}\", \"ao\": \"\\\"${alternative_allele_proportion}\\\"\" , \"mpileup\": \"null\", \"coverage\": \"\\\"${min_coverage}\\\"\" , \"mean_mapping\": \"\\\"${min_mean_mapping}\\\"\" , \"freebayes\": \"null\"}", 
+            "tool_version": "1.6.1-dev", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "20d83b1e-ea37-48e3-b78d-56baf1021e6e"
+        }, 
+        "12": {
+            "annotation": "", 
+            "id": 12, 
+            "input_connections": {
                 "invalid": {
                     "id": 3, 
                     "output_name": "out"
                 }, 
-                "mpileup_collection": {
-                    "id": 9, 
-                    "output_name": "output"
-                }, 
                 "ref_fasta": {
                     "id": 1, 
                     "output_name": "output"
+                }, 
+                "vcf_collection": {
+                    "id": 11, 
+                    "output_name": "bcf_combined"
                 }
             }, 
             "inputs": [], 
@@ -507,8 +553,8 @@
                 }
             ], 
             "position": {
-                "left": 1978, 
-                "top": 200
+                "left": 2259, 
+                "top": 298
             }, 
             "post_job_actions": {
                 "HideDatasetActionfasta": {
@@ -538,18 +584,18 @@
             }, 
             "tool_errors": null, 
             "tool_id": "localhost:9009/repos/nml/vcf2pseudoalignment/vcf2pseudoalignment/1.6.1-dev", 
-            "tool_state": "{\"__page__\": 0, \"ref_fasta\": \"null\", \"strain_list\": \"{\\\"select_list\\\": \\\"all\\\", \\\"__current_case__\\\": 2}\", \"reference\": \"\\\"reference\\\"\", \"__rerun_remap_job_id__\": null, \"ao\": \"\\\"${alternative_allele_proportion}\\\"\", \"invalid\": \"null\", \"coverage\": \"\\\"${min_coverage}\\\"\", \"mean_mapping\": \"\\\"${min_mean_mapping}\\\"\", \"freebayes_collection\": \"null\", \"mpileup_collection\": \"null\"}", 
-            "tool_version": "1.6.0-dev", 
+            "tool_state": "{\"__page__\": 0, \"ref_fasta\": \"null\", \"strain_list\": \"{\\\"select_list\\\": \\\"all\\\", \\\"__current_case__\\\": 2}\", \"reference\": \"\\\"reference\\\"\", \"__rerun_remap_job_id__\": null, \"ao\": \"\\\"${alternative_allele_proportion}\\\"\", \"invalid\": \"null\", \"coverage\": \"\\\"${min_coverage}\\\"\", \"mean_mapping\": \"\\\"${min_mean_mapping}\\\"\", \"freebayes_collection\": \"null\", \"vcf_collection\": \"null\", \"mpileup_collection\": \"null\"}", 
+            "tool_version": "1.6.1-dev", 
             "type": "tool", 
             "user_outputs": [], 
             "uuid": "e5fe678b-e6ff-40d5-b86e-cf00a334cd92"
         }, 
-        "12": {
+        "13": {
             "annotation": "", 
-            "id": 12, 
+            "id": 13, 
             "input_connections": {
                 "input": {
-                    "id": 11, 
+                    "id": 12, 
                     "output_name": "phylip"
                 }
             }, 
@@ -563,8 +609,8 @@
                 }
             ], 
             "position": {
-                "left": 2241, 
-                "top": 200
+                "left": 2524, 
+                "top": 298
             }, 
             "post_job_actions": {
                 "RenameDatasetActionout_file1": {
@@ -583,12 +629,12 @@
             "user_outputs": [], 
             "uuid": "1134975e-7d95-4ca8-ae69-14732e8ced29"
         }, 
-        "13": {
+        "14": {
             "annotation": "", 
-            "id": 13, 
+            "id": 14, 
             "input_connections": {
                 "tabfile": {
-                    "id": 11, 
+                    "id": 12, 
                     "output_name": "positions"
                 }
             }, 
@@ -602,8 +648,8 @@
                 }
             ], 
             "position": {
-                "left": 2241, 
-                "top": 313
+                "left": 2524, 
+                "top": 411
             }, 
             "post_job_actions": {
                 "RenameDatasetActionout": {
@@ -617,17 +663,17 @@
             "tool_errors": null, 
             "tool_id": "localhost:9009/repos/nml/filter_stats/filterstat/1.6.1-dev", 
             "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"tabfile\": \"null\", \"summary\": \"null\"}", 
-            "tool_version": "1.6.0-dev", 
+            "tool_version": "1.6.1-dev", 
             "type": "tool", 
             "user_outputs": [], 
             "uuid": "157fd5be-539c-44f6-b534-d6c7aeef72de"
         }, 
-        "14": {
+        "15": {
             "annotation": "", 
-            "id": 14, 
+            "id": 15, 
             "input_connections": {
                 "input": {
-                    "id": 12, 
+                    "id": 13, 
                     "output_name": "out_file1"
                 }
             }, 
@@ -645,8 +691,8 @@
                 }
             ], 
             "position": {
-                "left": 2569, 
-                "top": 200
+                "left": 2852, 
+                "top": 298
             }, 
             "post_job_actions": {
                 "ChangeDatatypeActionoutput_tree": {
@@ -674,17 +720,17 @@
             "tool_errors": null, 
             "tool_id": "localhost:9009/repos/nml/phyml/phyml1/3.1.1", 
             "tool_state": "{\"datatype_condition\": \"{\\\"tstv\\\": \\\"e\\\", \\\"model\\\": \\\"GTR\\\", \\\"type\\\": \\\"nt\\\", \\\"__current_case__\\\": 0}\", \"search\": \"\\\"BEST\\\"\", \"__page__\": 0, \"gamma_condition\": \"{\\\"shape\\\": \\\"e\\\", \\\"categories\\\": \\\"4\\\", \\\"gamma\\\": \\\"yes\\\", \\\"__current_case__\\\": 0}\", \"support_condition\": \"{\\\"support\\\": \\\"sh\\\", \\\"__current_case__\\\": 0}\", \"random_condition\": \"{\\\"random\\\": \\\"no\\\", \\\"__current_case__\\\": 1}\", \"prop_invar\": \"\\\"0.0\\\"\", \"input\": \"null\", \"__rerun_remap_job_id__\": null}", 
-            "tool_version": "3.1", 
+            "tool_version": "3.1.1", 
             "type": "tool", 
             "user_outputs": [], 
             "uuid": "c525fb6c-19a0-416b-a5c2-2a2cd0e9f19f"
         }, 
-        "15": {
+        "16": {
             "annotation": "", 
-            "id": 15, 
+            "id": 16, 
             "input_connections": {
                 "phylip": {
-                    "id": 12, 
+                    "id": 13, 
                     "output_name": "out_file1"
                 }
             }, 
@@ -698,8 +744,8 @@
                 }
             ], 
             "position": {
-                "left": 2569, 
-                "top": 358
+                "left": 2852, 
+                "top": 455
             }, 
             "post_job_actions": {
                 "RenameDatasetActioncsv": {
@@ -713,11 +759,11 @@
             "tool_errors": null, 
             "tool_id": "localhost:9009/repos/nml/snp_matrix/snpmatrix/1.6.1-dev", 
             "tool_state": "{\"__page__\": 0, \"phylip\": \"null\", \"__rerun_remap_job_id__\": null}", 
-            "tool_version": "1.6.0-dev", 
+            "tool_version": "1.6.1-dev", 
             "type": "tool", 
             "user_outputs": [], 
             "uuid": "732e9590-99d1-44c7-b612-293b92cb6cc4"
         }
     }, 
-    "uuid": "242e582b-30b3-4f1a-8fba-576ca27cb618"
+    "uuid": "4e48cb8f-fc78-4bc4-ac4c-2f29640aa5f7"
 }
