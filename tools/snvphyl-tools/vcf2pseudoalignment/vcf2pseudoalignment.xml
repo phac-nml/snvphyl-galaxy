@@ -79,17 +79,10 @@
         </collection>
       </param>
 
-      <output name="tabular" file="expected_positions.tsv"/>
-      <output name="fasta">
-        <assert_contents>
-          <has_text text=">ref"/>
-          <has_text text="T"/>
-          <has_text text=">v1"/>
-          <has_text text="A"/>
-          <has_text text=">v2"/>
-          <has_text text="C"/>
-        </assert_contents>
-      </output>
+      <output name="positions" file="expected_positions.tsv"/>
+      <output name="fasta" file="expected_fasta.fasta"/>
+      <output name="phylip" file="expected_phylip.phy"/>
+      <output name="vcf2core" file="expected_stats.csv"/>
     </test>
   </tests>
 
