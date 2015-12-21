@@ -22,6 +22,7 @@
               --invalid-pos "$invalid"
         #end if
         -f fasta
+        -f phylip
         --numcpus \${GALAXY_SLOTS:-2}
         --fasta "$ref_fasta"
 
