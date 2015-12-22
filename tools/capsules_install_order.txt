@@ -12,3 +12,4 @@ capsule_toolshed.g2.bx.psu.edu_regex_find_replace_jjohnson_9ea374bb0350.tar.gz
 capsule_toolshed.g2.bx.psu.edu_samtools_mpileup_devteam_aa0ef6f0ee89.tar.gz
 capsule_toolshed.g2.bx.psu.edu_freebayes_devteam_99684adf84de.tar.gz
 capsule_toolshed.g2.bx.psu.edu_package_bcftools_1_2_iuc_70a313a2366f.tar.gz
+capsule_toolshed.g2.bx.psu.edu_collapse_collections_nml_49bd84e136c7.tar.gz
