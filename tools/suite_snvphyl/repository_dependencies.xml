@@ -18,4 +18,5 @@
 	<repository name="filter_stats" owner="nml"/>
 	<repository name="regex_find_replace" owner="jjohnson"/>
 	<repository name="filter_density" owner="nml"/>
+	<repository name="collapse_collections" owner="nml"/>
 </repositories>

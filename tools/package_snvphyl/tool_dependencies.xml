@@ -31,8 +31,8 @@
                 <action type="change_directory">../</action>
                 <action type="shell_command">git clone https://irida.corefacility.ca/analysis-pipelines/snvphyl-tools.git</action>
                 <action type="change_directory">snvphyl-tools</action>
-                <action type="shell_command">git checkout 7aa19843f6b0d350e0c8aa26b8d6407aab20cb45</action>
-                <action type="change_directory">bcfplugins/bcftools-1.2</action>
+                <action type="shell_command">git checkout 62198b96a7472dace0f88dff81f48c7934eb561f</action>
+                <action type="change_directory">bcfplugins/bcftools-1.3</action>
                 <action type="shell_command">make</action>
                 <action type="change_directory">../..</action>
                 <action type="move_directory_files">
@@ -42,10 +42,10 @@
 
                 <action type="set_environment">
                     <environment_variable action="set_to" name="VCF2PSEUDO">$INSTALL_DIR/snvphyl</environment_variable>
-                    <environment_variable action="append_to" name="LD_LIBRARY_PATH">$INSTALL_DIR/snvphyl/bcfplugins/bcftools-1.2/htslib-1.2.1</environment_variable>
-                    <environment_variable action="prepend_to" name="PATH">$INSTALL_DIR/snvphyl/bcfplugins/bcftools-1.2</environment_variable>
+                    <environment_variable action="append_to" name="LD_LIBRARY_PATH">$INSTALL_DIR/snvphyl/bcfplugins/bcftools-1.3/htslib-1.3</environment_variable>
+                    <environment_variable action="prepend_to" name="PATH">$INSTALL_DIR/snvphyl/bcfplugins/bcftools-1.3</environment_variable>
                     <environment_variable action="prepend_to" name="PERL5LIB">$INSTALL_DIR/lib/perl5</environment_variable>
-                    <environment_variable action="set_to" name="BCFTOOLS_PLUGINS">$INSTALL_DIR/snvphyl/bcfplugins/bcftools-1.2/plugins</environment_variable>
+                    <environment_variable action="set_to" name="BCFTOOLS_PLUGINS">$INSTALL_DIR/snvphyl/bcfplugins/bcftools-1.3/plugins</environment_variable>
                 </action>
 
             </actions>

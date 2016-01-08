@@ -51,7 +51,7 @@
 ##FORMAT=<ID=QR,Number=1,Type=Integer,Description="Sum of quality of the reference observations">
 ##FORMAT=<ID=AO,Number=A,Type=Integer,Description="Alternate allele observation count">
 ##FORMAT=<ID=QA,Number=A,Type=Integer,Description="Sum of quality of the alternate observations">
-##bcftools_viewVersion=1.2+htslib-1.2.1
+##bcftools_viewVersion=1.3+htslib-1.3
 ##bcftools_viewCommand=view -O b -o /home/phil/cholera-files-subsample/test/vcf-split/3554-08.bcf.gz
 ##bcftools_viewCommand=view input.bcf.gz
 #CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	unknown
