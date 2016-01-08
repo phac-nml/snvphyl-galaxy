@@ -19,7 +19,7 @@
             "outputs": [], 
             "position": {
                 "left": 200, 
-                "top": 298
+                "top": 200
             }, 
             "tool_errors": null, 
             "tool_id": null, 
@@ -44,7 +44,7 @@
             "outputs": [], 
             "position": {
                 "left": 200, 
-                "top": 383
+                "top": 285
             }, 
             "tool_errors": null, 
             "tool_id": null, 
@@ -78,7 +78,7 @@
             ], 
             "position": {
                 "left": 464, 
-                "top": 298
+                "top": 200
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput": {
@@ -120,7 +120,7 @@
             ], 
             "position": {
                 "left": 464, 
-                "top": 438
+                "top": 340
             }, 
             "post_job_actions": {
                 "ChangeDatatypeActionout": {
@@ -174,7 +174,7 @@
             ], 
             "position": {
                 "left": 696, 
-                "top": 298
+                "top": 200
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput": {
@@ -211,7 +211,7 @@
             ], 
             "position": {
                 "left": 1007, 
-                "top": 298
+                "top": 200
             }, 
             "post_job_actions": {
                 "RenameDatasetActionoutput_log": {
@@ -262,7 +262,7 @@
             ], 
             "position": {
                 "left": 1007, 
-                "top": 411
+                "top": 313
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput_failed_alleles_bed": {
@@ -317,7 +317,7 @@
             ], 
             "position": {
                 "left": 1007, 
-                "top": 638
+                "top": 540
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput_log": {
@@ -359,7 +359,7 @@
             ], 
             "position": {
                 "left": 1335, 
-                "top": 298
+                "top": 200
             }, 
             "post_job_actions": {
                 "HideDatasetActionvcfout": {
@@ -396,7 +396,7 @@
             ], 
             "position": {
                 "left": 1335, 
-                "top": 419
+                "top": 321
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput": {
@@ -440,7 +440,7 @@
             ], 
             "position": {
                 "left": 1663, 
-                "top": 298
+                "top": 200
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput": {
@@ -492,7 +492,7 @@
             ], 
             "position": {
                 "left": 1991, 
-                "top": 298
+                "top": 200
             }, 
             "post_job_actions": {
                 "HideDatasetActionbcf_combined": {
@@ -509,7 +509,6 @@
             "tool_errors": null, 
             "tool_id": "localhost:9009/repos/nml/consolidate_vcfs/consolidate_vcfs/1.6.1-dev", 
             "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"use_density_filter\": \"{\\\"select_list\\\": \\\"yes\\\", \\\"threshold\\\": \\\"10\\\", \\\"window_size\\\": \\\"100\\\", \\\"__current_case__\\\": 0}\", \"ao\": \"\\\"${alternative_allele_proportion}\\\"\", \"mpileup\": \"null\", \"coverage\": \"\\\"${min_coverage}\\\"\", \"mean_mapping\": \"\\\"${min_mean_mapping}\\\"\", \"freebayes\": \"null\"}", 
-
             "tool_version": "1.6.1-dev", 
             "type": "tool", 
             "user_outputs": [], 
@@ -534,8 +533,8 @@
                 }
             ], 
             "position": {
-                "left": 2089.5, 
-                "top": 591.5
+                "left": 2263, 
+                "top": 200
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput": {
@@ -575,8 +574,8 @@
                 }
             ], 
             "position": {
-                "left": 2405.5, 
-                "top": 739.5
+                "left": 2591, 
+                "top": 200
             }, 
             "post_job_actions": {
                 "RenameDatasetActionout_file1": {
@@ -634,8 +633,8 @@
                 }
             ], 
             "position": {
-                "left": 2259, 
-                "top": 298
+                "left": 2844, 
+                "top": 200
             }, 
             "post_job_actions": {
                 "HideDatasetActionfasta": {
@@ -665,11 +664,11 @@
             }, 
             "tool_errors": null, 
             "tool_id": "localhost:9009/repos/nml/vcf2pseudoalignment/vcf2pseudoalignment/1.6.1-dev", 
-            "tool_state": "{\"__page__\": 0, \"ref_fasta\": \"null\", \"strain_list\": \"{\\\"select_list\\\": \\\"all\\\", \\\"__current_case__\\\": 2}\", \"reference\": \"\\\"reference\\\"\", \"__rerun_remap_job_id__\": null, \"ao\": \"\\\"${alternative_allele_proportion}\\\"\", \"invalid\": \"null\", \"coverage\": \"\\\"${min_coverage}\\\"\", \"mean_mapping\": \"\\\"${min_mean_mapping}\\\"\", \"freebayes_collection\": \"null\", \"vcf_collection\": \"null\", \"mpileup_collection\": \"null\"}", 
+            "tool_state": "{\"__page__\": 0, \"ref_fasta\": \"null\", \"strain_list\": \"{\\\"select_list\\\": \\\"all\\\", \\\"__current_case__\\\": 2}\", \"reference\": \"\\\"reference\\\"\", \"__rerun_remap_job_id__\": null, \"invalid\": \"null\", \"vcf_collection\": \"null\"}", 
             "tool_version": "1.6.1-dev", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "e5fe678b-e6ff-40d5-b86e-cf00a334cd92"
+            "uuid": "3bcc5ef2-aa54-4a91-9b70-c57cf47b5bea"
         }, 
         "15": {
             "annotation": "", 
@@ -690,8 +689,8 @@
                 }
             ], 
             "position": {
-                "left": 2524, 
-                "top": 298
+                "left": 3109, 
+                "top": 200
             }, 
             "post_job_actions": {
                 "RenameDatasetActionout_file1": {
@@ -729,8 +728,8 @@
                 }
             ], 
             "position": {
-                "left": 2524, 
-                "top": 411
+                "left": 3109, 
+                "top": 313
             }, 
             "post_job_actions": {
                 "RenameDatasetActionout": {
@@ -772,8 +771,8 @@
                 }
             ], 
             "position": {
-                "left": 2852, 
-                "top": 298
+                "left": 3437, 
+                "top": 200
             }, 
             "post_job_actions": {
                 "ChangeDatatypeActionoutput_tree": {
@@ -820,31 +819,31 @@
             "name": "SNP Matrix", 
             "outputs": [
                 {
-                    "name": "csv", 
-                    "type": "csv"
+                    "name": "out", 
+                    "type": "tabular"
                 }
             ], 
             "position": {
-                "left": 2852, 
-                "top": 455
+                "left": 3437, 
+                "top": 357
             }, 
             "post_job_actions": {
-                "RenameDatasetActioncsv": {
+                "RenameDatasetActionout": {
                     "action_arguments": {
                         "newname": "snpMatrix.tsv"
                     }, 
                     "action_type": "RenameDatasetAction", 
-                    "output_name": "csv"
+                    "output_name": "out"
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "localhost:9009/repos/nml/snp_matrix/snpmatrix/1.6.1-dev", 
+            "tool_id": "localhost:9009/repos/nml/snp_matrix/snpmatrix/1.6.2-dev", 
             "tool_state": "{\"__page__\": 0, \"phylip\": \"null\", \"__rerun_remap_job_id__\": null}", 
-            "tool_version": "1.6.1-dev", 
+            "tool_version": "1.6.2-dev", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "732e9590-99d1-44c7-b612-293b92cb6cc4"
+            "uuid": "19028cf9-fd41-470b-8cc7-f987db36fcfe"
         }
     }, 
-    "uuid": "8b904438-1a93-45a9-a73e-db0bae62b7b5"
+    "uuid": "7d2b6a57-fdb3-4a65-8334-5e6e79bd72a4"
 }
