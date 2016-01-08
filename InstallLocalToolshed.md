@@ -15,7 +15,7 @@ Additionality, tools available from toolshed.g2.bx.psu.edu will also be installe
 
 * **freebayes by devteam at 99684adf84de
 * **msa_datatypes by iuc at 70227007b991
-* **package_bcftools_1_2 by iuc at 70a313a2366f
+* **package_bcftools_1_3 by iuc at 43a9aebf3adb
 * **package_freebayes_0_9_20_b040236 by devteam at 059e6e3d99cc
 * **package_mummer_3_23 by iuc at 9ddc606546c3
 * **package_ncurses_5_9 by iuc at 5e1760c773ba
@@ -35,7 +35,7 @@ Additionality, tools available from toolshed.g2.bx.psu.edu will also be installe
 * 'admin@localhost.com' is not created yet.
 * ToolShed is currently running
 
-### One script install 
+### One script install
 
 
 ```bash
