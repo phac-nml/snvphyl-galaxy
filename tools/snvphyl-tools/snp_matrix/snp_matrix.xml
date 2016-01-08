@@ -1,4 +1,4 @@
-<tool id="snpmatrix" name="SNP Matrix" version ="1.6.1-dev">
+<tool id="snpmatrix" name="SNP Matrix" version ="1.6.2-dev">
   <description>Create SNP matrix from Phylip file</description>
   <requirements>
     <requirement type="package" version="1.6.1-dev">snvphyl</requirement>
@@ -7,18 +7,18 @@
   </stdio>
   <command interpreter="perl">
 	/\$VCF2PSEUDO/snp_matrix.pl   $phylip
-	-o $csv
+	-o $out
   </command>
   <inputs>
     <param name="phylip" type="data" label="Phylip file" format="phylip"/>
   </inputs>
   <outputs>
-    <data format="csv" name="csv"/>
+    <data format="tabular" name="out"/>
   </outputs>
   <tests>
     <test>
       <param name="phylip" value="pseudoalign-13.phy"/>
-      <output name="csv" file="pseudoalign-13.phy.out"/>
+      <output name="out" file="pseudoalign-13.phy.out"/>
     </test>
   </tests>
 
