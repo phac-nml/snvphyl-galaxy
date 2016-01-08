@@ -31,7 +31,7 @@
                 <action type="change_directory">../</action>
                 <action type="shell_command">git clone https://irida.corefacility.ca/analysis-pipelines/snvphyl-tools.git</action>
                 <action type="change_directory">snvphyl-tools</action>
-                <action type="shell_command">git checkout 7aa19843f6b0d350e0c8aa26b8d6407aab20cb45</action>
+                <action type="shell_command">git checkout 62198b96a7472dace0f88dff81f48c7934eb561f</action>
                 <action type="change_directory">bcfplugins/bcftools-1.3</action>
                 <action type="shell_command">make</action>
                 <action type="change_directory">../..</action>
