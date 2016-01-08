@@ -61,8 +61,8 @@
         <option value="no">Don't apply</option>
       </param>
       <when value="yes">
-        <param name="window_size" type="integer" label="Size of search window" format="" optional="true"/>
-        <param name="threshold"  type="integer" label="Density threshold cutoff" format="" optional="true"/>
+        <param name="window_size" type="integer" label="Size of search window" format="" optional="false" value="100"/>
+        <param name="threshold"  type="integer" label="Density threshold cutoff" format="" optional="false" value="10"/>
       </when>
       <when value="no">
       </when>
