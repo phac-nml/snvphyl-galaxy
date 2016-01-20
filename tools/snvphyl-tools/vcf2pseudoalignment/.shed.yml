@@ -1,5 +1,0 @@
-categories: [Sequence Analysis]
-description: Generates multiple alignment of variant calls
-name: vcf2pseudoalignment
-owner: nml
-remote_repository_url: https://irida.corefacility.ca/analysis-pipelines/snvphyl-galaxy

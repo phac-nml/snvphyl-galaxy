@@ -17,8 +17,8 @@
   </outputs>
   <tests>
     <test>
-      <param name="phylip" value="pseudoalign-13.phy"/>
-      <output name="out" file="pseudoalign-13.phy.out"/>
+      <param name="phylip" value="snvalign-13.phy"/>
+      <output name="out" file="snvalign-13.phy.out"/>
     </test>
   </tests>
 
