@@ -12,6 +12,6 @@ snvphyl-tools/filter_vcf
 snvphyl-tools/find_repeats
 snvphyl-tools/snp_matrix
 snvphyl-tools/consolidate_vcfs
-snvphyl-tools/vcf2pseudoalignment
+snvphyl-tools/vcf2snvalignment
 snvphyl-tools/verify_map
 snvphyl-tools/filter_density
