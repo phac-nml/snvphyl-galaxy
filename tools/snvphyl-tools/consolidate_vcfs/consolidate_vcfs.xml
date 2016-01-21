@@ -56,7 +56,7 @@
     <param name="freebayes" type="data" label="FreeBayes filtered BCF" help="" optional="false" format="bcf_bgzip" />
     <param name="mpileup" type="data" label="Mpileup BCF" help="" optional="false" format="bcf_bgzip" />
     <conditional name="use_density_filter">
-      <param name="select_list" type="select" label= "SNP density filtering">
+      <param name="select_list" type="select" label= "SNV density filtering">
         <option value="yes">Apply</option>
         <option value="no">Don't apply</option>
       </param>
