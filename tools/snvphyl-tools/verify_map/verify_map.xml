@@ -1,5 +1,5 @@
 <tool id="verify_map" name="Verify Mapping Quality" version="1.6.1-dev">
-	<description>Checks the mapping quality of all BAM files generated in the core SNP pipeline.</description>
+	<description>Checks the mapping quality of all BAM files generated in the core SNV pipeline.</description>
 	<requirements>
 		<requirement type="package" version="1.6.1-dev">snvphyl</requirement>
 		<requirement type="package" version="0.1.19">samtools</requirement>
@@ -50,7 +50,7 @@
 What it does
 ============
 
-This script checks the mapping quality of all BAM files generated in the core SNP pipeline.
+This script checks the mapping quality of all BAM files generated in the core SNV pipeline.
 
 
 Usage
