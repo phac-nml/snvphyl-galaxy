@@ -15,7 +15,7 @@
          ln -s $vcf_collection[$f]  &amp;&amp; bcftools index $name  &amp;&amp;
         #end for#
 
-        \$VCF2PSEUDO/vcf2_snvalignment.pl
+        \$VCF2PSEUDO/vcf2snv_alignment.pl
 
         -r "$reference"
         #if str($invalid) != 'None':
