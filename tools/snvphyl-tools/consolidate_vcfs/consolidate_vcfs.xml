@@ -1,5 +1,5 @@
 <tool id="consolidate_vcfs" name="Consolidate VCFs" version ="1.6.1-dev">
-  <description>combine freebayes and mpileup files for use by vcf2pseudoalignment</description>
+  <description>combine freebayes and mpileup files for use by vcf2snvalignment</description>
     <requirements>
       <requirement type="package" version="1.6.1-dev">snvphyl</requirement>
       <requirement type="package" version="1.3">bcftools</requirement>
@@ -56,7 +56,7 @@
     <param name="freebayes" type="data" label="FreeBayes filtered BCF" help="" optional="false" format="bcf_bgzip" />
     <param name="mpileup" type="data" label="Mpileup BCF" help="" optional="false" format="bcf_bgzip" />
     <conditional name="use_density_filter">
-      <param name="select_list" type="select" label= "SNP density filtering">
+      <param name="select_list" type="select" label= "SNV density filtering">
         <option value="yes">Apply</option>
         <option value="no">Don't apply</option>
       </param>

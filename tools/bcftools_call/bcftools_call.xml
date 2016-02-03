@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <tool id="bcftools_call" name="BCFtools call" version="1.0.0">
-    <description>SNPs and indels</description>
+    <description>SNVs and indels</description>
     <macros>
         <import>macros.xml</import>
     </macros>
@@ -47,7 +47,7 @@
             ${caller}
             
             ${variants_only}
-            ${skip_indels_snps}
+            ${skip_indels_snvs}
             
             ${input}
 ]]>
@@ -65,10 +65,10 @@
             <option value="-C trio">Trio</option>
         </param>
         <param label="Output variants only (-v)" type="boolean" truevalue="-v" falsevalue="" name="variants_only" />
-        <param label="Skip (-V)" name="skip_indels_snps" type="select">
+        <param label="Skip (-V)" name="skip_indels_snvs" type="select">
             <option value="" selected="True">Do not skip</option>
             <option value="-V indels">Indels</option>
-            <option value="-V snps">SNPs</option>
+            <option value="-V snvs">SNVs</option>
         </param>
     </inputs>
     <outputs>
@@ -107,7 +107,7 @@ Input/output options:
    -g, --gvcf <minDP>              output gVCF blocks of homozygous REF calls
    -i, --insert-missed             output also sites missed by mpileup but present in -T
    -M, --keep-masked-ref           keep sites with masked reference allele (REF=N)
-   -V, --skip-variants <type>      skip indels/snps
+   -V, --skip-variants <type>      skip indels/snvs
    -v, --variants-only             output variant sites only
 
 Consensus/variant calling options:

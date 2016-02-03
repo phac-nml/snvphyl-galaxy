@@ -1,5 +1,5 @@
 categories: [Sequence Analysis]
-description: Generate matrix of SNP distances
-name: snp_matrix
+description: Generate matrix of SNV distances
+name: snv_matrix
 owner: nml
 remote_repository_url: https://irida.corefacility.ca/analysis-pipelines/snvphyl-galaxy
