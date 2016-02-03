@@ -9,7 +9,7 @@
   </stdio>
   <command interpreter="perl">
       /\$VCF2PSEUDO/filter-stats.pl -i $tabfile
-      #if $summary == "invalids":
+      #if $summary:
         -a
       #end if
 	> $out
