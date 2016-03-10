@@ -20,11 +20,20 @@ This option can be found under the **Step 12: Consolidate VCFs** section of the 
 
 The minimum percent coverage parameter in **Step 6: Verify Mapping Quality** defines the total percentage of positions within the genome that must have a depth of coverage greater than that specified by the minimum depth of coverage (see above), in order to pass the mapping quality check.    
 
-This option can be found under the **Step 6: Verify Mapping Quality** section of the workflow page.  To alter this value, click on the ![edit_param][] icon and set the value to an integer value between 0 and 100.
+To alter this value, click on the ![edit_param][] icon and set the value to an integer value between 0 and 100.
 
 ![min_percent_coverage][]
 
-[min_depth_cov]: images/min_depth_cov.png
+##Minimum Length
+
+##Minimum PID
+
+##Minimum Insert Size
+
+##Maximum Insert Size
+
+
+
 [min_percent_coverage]: images/min_percent_coverage.png
 [window_size]: images/window_size.png
 [density_threshold]: images/density_threshold.png
