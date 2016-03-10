@@ -4,7 +4,7 @@ The SNVPhyl workflow contains several parameters that can be changed from their 
 
 ##Density Threshold 
 
-The SNV density threshold parameter defines the absolute number of SNVs required, within the window size indicated by the window size parameter described below, for a region to be flagged as high density.  As a result, decreasing the density threshold will result in stricter filtering; increasing the proportion of the genome being flagged as high density. 
+The SNV density threshold parameter defines the absolute number of SNVs required, within the window size indicated by the window size parameter described below, for a region to be flagged as high density.  As a result, decreasing the density threshold will result in stricter filtering; increasing the proportion of the genome being flagged as high density. The density regions are calculated independently for each isolate genome in a given SNVPhyl run. 
 
 ![density_threshold][]
 
