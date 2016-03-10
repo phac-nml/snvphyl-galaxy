@@ -1,6 +1,6 @@
 # Parameters
 
-The SNVPhyl workflow contains several parameters that can be changed from their default values to customize a run. Below is a description of each of these values, where they can be found, and how they can be altered:
+The SNVPhyl workflow contains several parameters that can be changed from their default values to customize a run. Below is a description of some of the more commonly used values, where they can be found, and how they can be altered:
 
 ##Density Threshold 
 
