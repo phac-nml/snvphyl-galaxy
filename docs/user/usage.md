@@ -133,7 +133,7 @@ These parameters represent:
 
 Once parameters are selected, the input files can be selected.
 
-For information on more advanced user parameter, please refer to [this section][].
+For information on more advanced user parameter, please refer to [Parameters][].
 
 ## Input files
 
@@ -195,6 +195,7 @@ If examining the datasets does not help diagnose the issue, then examining the G
 [Docker]: https://www.docker.com/
 [Docker Install]: https://docs.docker.com/installation/
 [Install]: ../install/
+[Parameters]: parameters.md 
 [snvphyl-galaxy-docker]: images/snvphyl-galaxy-docker.png
 [test-data.tar.gz]: ../workflows/SNVPhyl/test-data.tar.gz
 [get-data-galaxy]: images/get-data-galaxy.png
