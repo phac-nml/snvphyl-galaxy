@@ -16,16 +16,6 @@ The minimum PID parameter defines the minimum percent identity within a repetiti
 
 ![min_pid][]
 
-#Step 6: Verify Mapping Quality
-
-## Minimum percent coverage
-
-The minimum percent coverage parameter in **Step 6: Verify Mapping Quality** defines the total percentage of positions within the genome that must have a depth of coverage greater than that specified by the min_coverage variable set in **Workflow Parameters**, in order to pass the mapping quality check.    
-
-To alter this value, click on the ![edit_param][] icon and set the value to an integer value between 0 and 100.
-
-![min_percent_coverage][]
-
 #Step 5: Smalt Map
 
 ##Minimum Insert Size
@@ -39,6 +29,16 @@ The insert size of a read pair refers to the distance between the 5-ends of the 
 The insert size of a read pair refers to the distance between the 5-prime ends of the mapped reads.  THe maximum inser size defines the largest allowable distance between the 5-prime ends of the mapped reads.
 
 ![max_insert_size][]
+
+#Step 6: Verify Mapping Quality
+
+## Minimum percent coverage
+
+The minimum percent coverage parameter in **Step 6: Verify Mapping Quality** defines the total percentage of positions within the genome that must have a depth of coverage greater than that specified by the min_coverage variable set in **Workflow Parameters**, in order to pass the mapping quality check.    
+
+To alter this value, click on the ![edit_param][] icon and set the value to an integer value between 0 and 100.
+
+![min_percent_coverage][]
 
 #Step 12: Consolidate VCFs
 
