@@ -212,7 +212,7 @@ If examining the datasets does not help diagnose the issue, then examining the G
 [paired-data-screen2]: images/paired-data-screen2.png
 [paired-data-list]: images/paired-data-list.png
 [installed-workflows]: images/installed-workflows.png
-[parameters-list]: images/parameters-list.png
+[parameters-list]: images/parameters_list.png
 [input-files-selection]: images/input-files-selection.png
 [run-workflow]: images/run-workflow.png
 [workflow-running]: images/workflow-running.png
