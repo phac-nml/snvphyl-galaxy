@@ -133,6 +133,8 @@ These parameters represent:
 
 Once parameters are selected, the input files can be selected.
 
+For information on more advanced user parameter, please refer to [this section][].
+
 ## Input files
 
 Galaxy should automatically detect the appropriate input files from the current history.  However, please verify that it has picked up the correct files.  If the workflow **SNVPhyl v0.3 Paired-End** has been selected then there will be no option for selecting an **invalid_positions** file.
@@ -229,4 +231,4 @@ If examining the datasets does not help diagnose the issue, then examining the G
 [SNV/SNP Alignment]: output.md#snvsnp-alignment
 [Output]: output.md
 [workflows-list]: images/workflows-list.png
-[workflow-top-menu]: images/workflow-top-menu.png
+[workflow-top-menu]: images/workflow-top-menu.png 

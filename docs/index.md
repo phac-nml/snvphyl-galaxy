@@ -44,3 +44,4 @@ Comments, questions, or issues can be sent to Aaron Petkau - <aaron.petkau@phac-
 [snv-tree]: images/snvphyl-out.png
 [output]: user/output.md
 [Input]: user/input.md
+[parameters]: user/parameters.md
