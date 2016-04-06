@@ -2,4 +2,4 @@ categories: [Sequence Analysis]
 description: Find repetitive regions on a reference genome using MUMMer
 name: find_repeats
 owner: nml
-remote_repository_url: https://irida.corefacility.ca/analysis-pipelines/snvphyl-galaxy
+remote_repository_url: https://github.com/phac-nml/snvphyl-galaxy

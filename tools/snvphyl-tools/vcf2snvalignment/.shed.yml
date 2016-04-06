@@ -2,4 +2,4 @@ categories: [Sequence Analysis]
 description: Generates multiple alignment of variant calls
 name: vcf2snvalignment
 owner: nml
-remote_repository_url: https://irida.corefacility.ca/analysis-pipelines/snvphyl-galaxy
+remote_repository_url: https://github.com/phac-nml/snvphyl-galaxy
