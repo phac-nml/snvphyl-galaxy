@@ -1,7 +1,7 @@
-<tool id="filterdensity" name="Filter Density" version ="1.6.1-dev">
+<tool id="filterdensity" name="Filter Density" version ="1.7.0">
   <description>Identify high density positions within indvidual genomes</description>
   <requirements>
-    <requirement type="package" version="1.6.1-dev">snvphyl</requirement>
+    <requirement type="package" version="1.7">snvphyl</requirement>
   </requirements>
   <stdio>
     <exit_code range="1:" level="fatal" description="Unknown error has occured"/>
