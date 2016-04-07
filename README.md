@@ -2,6 +2,21 @@
 
 The SNVPhyl (SNV PHYLogenomics) pipeline is a pipeline for identifying Single Nucleotide Variants (SNV) within a collection of microbial genomes and constructing a phylogenetic tree.  Detailed documentation can be found at http://snvphyl.readthedocs.org/.  This repository contains the customized [Galaxy][] tools for this pipeline as well as the source for the documentation.
 
+# Legal
+
+Copyright 2012-2016 Government of Canada
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this work except in compliance with the License. You may obtain a copy of the
+License at:
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+CONDITIONS OF ANY KIND, either express or implied. See the License for the
+specific language governing permissions and limitations under the License.
+
 ## Documentation
 
 Documentation is written using [Markdown][] and can be compiled using [mkdocs][].  To install [mkdocs][] please run:
