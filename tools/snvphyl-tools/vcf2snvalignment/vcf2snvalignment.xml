@@ -1,4 +1,4 @@
-<tool id="vcf2snvalignment" name="VCF 2 snvalignment" version ="1.6.1-dev">
+<tool id="vcf2snvalignment" name="VCF 2 snvalignment" version ="1.6.2-dev">
   <description>create a pseudo alignment from multiple VCFs files</description>
   <requirements>
     <requirement type="package" version="1.6.1-dev">snvphyl</requirement>
@@ -12,7 +12,7 @@
 
         #for $f in $vcf_collection.keys#
         #set $name = str($vcf_collection[$f]).split('/')[-1]
-         ln -s $vcf_collection[$f]  &amp;&amp; bcftools index $name  &amp;&amp;
+         ln -f -s $vcf_collection[$f]  &amp;&amp; bcftools index -f $name  &amp;&amp;
         #end for#
 
         \$VCF2PSEUDO/vcf2snv_alignment.pl
