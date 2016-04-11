@@ -1,4 +1,4 @@
-<tool id="snvmatrix" name="SNV Matrix" version ="1.6.2-dev">
+<tool id="snvmatrix" name="SNV Matrix" version ="1.7.0">
   <description>Create SNV matrix from Phylip file</description>
   <requirements>
     <requirement type="package" version="1.7">snvphyl</requirement>
