@@ -2,7 +2,7 @@
     "a_galaxy_workflow": "true", 
     "annotation": "snvphyl", 
     "format-version": "0.1", 
-    "name": "SNVPhyl v1.0 Paired-End", 
+    "name": "SNVPhyl v1.0 Single-End (invalid-positions)", 
     "steps": {
         "0": {
             "annotation": "", 
@@ -12,7 +12,7 @@
             "inputs": [
                 {
                     "description": "", 
-                    "name": "sequence_reads_paired"
+                    "name": "sequence_reads_single"
                 }
             ], 
             "label": null, 
@@ -24,7 +24,7 @@
             }, 
             "tool_errors": null, 
             "tool_id": null, 
-            "tool_state": "{\"collection_type\": \"list:paired\", \"name\": \"sequence_reads_paired\"}", 
+            "tool_state": "{\"collection_type\": \"list\", \"name\": \"sequence_reads_single\"}", 
             "tool_version": null, 
             "type": "data_collection_input", 
             "uuid": "ea11929e-ba45-4d3c-8b8e-fee1c589c836", 
@@ -32,7 +32,7 @@
                 {
                     "label": null, 
                     "output_name": "output", 
-                    "uuid": "72503012-6868-4e8e-b1d2-38845fb6bf10"
+                    "uuid": "685cd69b-0905-4a25-92ec-20680f1b7c94"
                 }
             ]
         }, 
@@ -64,14 +64,46 @@
                 {
                     "label": null, 
                     "output_name": "output", 
-                    "uuid": "a96bb183-ced0-4a51-9129-98f632caff32"
+                    "uuid": "975acbe4-1c64-42d4-be22-484a194b722d"
                 }
             ]
         }, 
         "2": {
             "annotation": "", 
-            "content_id": "jupiter:9009/repos/nml/smalt_index/smalt_index/1.1.0", 
+            "content_id": null, 
             "id": 2, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "invalid_positions"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 200, 
+                "top": 370
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"invalid_positions\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "a632f061-9d11-49fd-8d56-4103f8b4b7f3", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "8469eb19-6a2d-4220-9535-92d475fabba4"
+                }
+            ]
+        }, 
+        "3": {
+            "annotation": "", 
+            "content_id": "jupiter:9009/repos/nml/smalt_index/smalt_index/1.1.0", 
+            "id": 3, 
             "input_connections": {
                 "reference": {
                     "id": 1, 
@@ -115,10 +147,10 @@
             "uuid": "713fb2c8-84dd-4762-8281-e071c61fe979", 
             "workflow_outputs": []
         }, 
-        "3": {
+        "4": {
             "annotation": "", 
             "content_id": "jupiter:9009/repos/nml/find_repeats/findrepeat/1.7.0", 
-            "id": 3, 
+            "id": 4, 
             "input_connections": {
                 "fasta": {
                     "id": 1, 
@@ -148,7 +180,7 @@
                 }, 
                 "RenameDatasetActionout": {
                     "action_arguments": {
-                        "newname": "invalid_positions.bed"
+                        "newname": "repeats.bed"
                     }, 
                     "action_type": "RenameDatasetAction", 
                     "output_name": "out"
@@ -164,25 +196,25 @@
                 {
                     "label": null, 
                     "output_name": "out", 
-                    "uuid": "bb487981-c629-4c78-923a-556e35f96b2d"
+                    "uuid": "443572dd-02b1-45b8-a4dd-1fa9a52d860c"
                 }
             ]
         }, 
-        "4": {
+        "5": {
             "annotation": "", 
             "content_id": "jupiter:9009/repos/nml/smalt_map/smalt_map/1.1.0", 
-            "id": 4, 
+            "id": 5, 
             "input_connections": {
-                "singlePaired|fastq_collection": {
+                "singlePaired|sInput1": {
                     "id": 0, 
                     "output_name": "output"
                 }, 
                 "sma": {
-                    "id": 2, 
+                    "id": 3, 
                     "output_name": "output2"
                 }, 
                 "smi": {
-                    "id": 2, 
+                    "id": 3, 
                     "output_name": "output"
                 }
             }, 
@@ -208,19 +240,61 @@
             }, 
             "tool_errors": null, 
             "tool_id": "jupiter:9009/repos/nml/smalt_map/smalt_map/1.1.0", 
-            "tool_state": "{\"minbasq\": \"\\\"\\\"\", \"__page__\": 0, \"insertmin\": \"\\\"20\\\"\", \"mincover\": \"\\\"\\\"\", \"insfil\": \"null\", \"scordiff\": \"\\\"\\\"\", \"insertmax\": \"\\\"1000\\\"\", \"singlePaired\": \"{\\\"fastq_collection\\\": null, \\\"sPaired\\\": \\\"collections\\\", \\\"pairtype\\\": \\\"pe\\\", \\\"__current_case__\\\": 2}\", \"minid\": \"\\\"0.5\\\"\", \"__rerun_remap_job_id__\": null, \"search_harder\": \"\\\"False\\\"\", \"seed\": \"\\\"1\\\"\", \"sw_weighted\": \"\\\"False\\\"\", \"smi\": \"null\", \"oformat\": \"{\\\"bamOptions\\\": null, \\\"outformat\\\": \\\"bam\\\", \\\"__current_case__\\\": 1}\", \"minscor\": \"\\\"\\\"\", \"sma\": \"null\"}", 
+            "tool_state": "{\"minbasq\": \"\\\"\\\"\", \"__page__\": 0, \"insertmin\": \"\\\"\\\"\", \"mincover\": \"\\\"\\\"\", \"insfil\": \"null\", \"scordiff\": \"\\\"\\\"\", \"insertmax\": \"\\\"\\\"\", \"singlePaired\": \"{\\\"sInput1\\\": null, \\\"sPaired\\\": \\\"single\\\", \\\"__current_case__\\\": 0}\", \"minid\": \"\\\"0.5\\\"\", \"__rerun_remap_job_id__\": null, \"search_harder\": \"\\\"False\\\"\", \"seed\": \"\\\"1\\\"\", \"sw_weighted\": \"\\\"False\\\"\", \"smi\": \"null\", \"oformat\": \"{\\\"bamOptions\\\": null, \\\"outformat\\\": \\\"bam\\\", \\\"__current_case__\\\": 1}\", \"minscor\": \"\\\"\\\"\", \"sma\": \"null\"}", 
             "tool_version": "1.1.0", 
             "type": "tool", 
             "uuid": "7a4b9431-20a8-429d-a26e-433f0827c463", 
             "workflow_outputs": []
         }, 
-        "5": {
+        "6": {
+            "annotation": "", 
+            "content_id": "cat1", 
+            "id": 6, 
+            "input_connections": {
+                "input1": {
+                    "id": 4, 
+                    "output_name": "out"
+                }, 
+                "queries_0|input2": {
+                    "id": 2, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Concatenate datasets", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 692, 
+                "top": 418
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "cat1", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"queries\": \"[{\\\"input2\\\": null, \\\"__index__\\\": 0}]\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "e921b8b8-aa18-4d74-83ef-450c26d374af", 
+            "workflow_outputs": []
+        }, 
+        "7": {
             "annotation": "", 
             "content_id": "jupiter:9009/repos/nml/verify_map/verify_map/1.7.0", 
-            "id": 5, 
+            "id": 7, 
             "input_connections": {
                 "bams": {
-                    "id": 4, 
+                    "id": 5, 
                     "output_name": "output"
                 }
             }, 
@@ -256,17 +330,17 @@
                 {
                     "label": null, 
                     "output_name": "output_log", 
-                    "uuid": "06c3f8a6-091d-41d9-bd03-c6eea8504e52"
+                    "uuid": "7b05a48b-2e4a-4944-8081-880d3e76f799"
                 }
             ]
         }, 
-        "6": {
+        "8": {
             "annotation": "", 
             "content_id": "jupiter:9009/repos/devteam/freebayes/freebayes/0.4.1", 
-            "id": 6, 
+            "id": 8, 
             "input_connections": {
                 "reference_source|input_bams_0|input_bam": {
-                    "id": 4, 
+                    "id": 5, 
                     "output_name": "output"
                 }, 
                 "reference_source|ref_file": {
@@ -320,13 +394,13 @@
             "uuid": "880cb192-d299-4736-af89-2b0df9977514", 
             "workflow_outputs": []
         }, 
-        "7": {
+        "9": {
             "annotation": "", 
             "content_id": "jupiter:9009/repos/devteam/samtools_mpileup/samtools_mpileup/2.0", 
-            "id": 7, 
+            "id": 9, 
             "input_connections": {
                 "reference_source|input_bams_0|input_bam": {
-                    "id": 4, 
+                    "id": 5, 
                     "output_name": "output"
                 }, 
                 "reference_source|ref_file": {
@@ -371,13 +445,13 @@
             "uuid": "55cf9f84-3f62-47fc-8828-916a3ca8779d", 
             "workflow_outputs": []
         }, 
-        "8": {
+        "10": {
             "annotation": "", 
             "content_id": "jupiter:9009/repos/nml/filter_vcf/filtervcf/1.7.0", 
-            "id": 8, 
+            "id": 10, 
             "input_connections": {
                 "vcf": {
-                    "id": 6, 
+                    "id": 8, 
                     "output_name": "output_vcf"
                 }
             }, 
@@ -409,13 +483,13 @@
             "uuid": "92790084-218f-4ad5-bdbb-5925d0b63cdc", 
             "workflow_outputs": []
         }, 
-        "9": {
+        "11": {
             "annotation": "", 
             "content_id": "jupiter:9009/repos/nml/bcftools_call/bcftools_call/1.0.1", 
-            "id": 9, 
+            "id": 11, 
             "input_connections": {
                 "input": {
-                    "id": 7, 
+                    "id": 9, 
                     "output_name": "output_mpileup"
                 }
             }, 
@@ -454,13 +528,13 @@
             "uuid": "59cba723-cc03-4bc7-a38f-ef5df3c848b2", 
             "workflow_outputs": []
         }, 
-        "10": {
+        "12": {
             "annotation": "", 
             "content_id": "jupiter:9009/repos/nml/bcftools_view/bcftools_view/0.1.0", 
-            "id": 10, 
+            "id": 12, 
             "input_connections": {
                 "input": {
-                    "id": 8, 
+                    "id": 10, 
                     "output_name": "vcfout"
                 }
             }, 
@@ -499,17 +573,17 @@
             "uuid": "59aede98-a211-4fcc-aad3-bfb6e99cf25e", 
             "workflow_outputs": []
         }, 
-        "11": {
+        "13": {
             "annotation": "", 
             "content_id": "jupiter:9009/repos/nml/consolidate_vcfs/consolidate_vcfs/1.7.0", 
-            "id": 11, 
+            "id": 13, 
             "input_connections": {
                 "freebayes": {
-                    "id": 10, 
+                    "id": 12, 
                     "output_name": "output"
                 }, 
                 "mpileup": {
-                    "id": 9, 
+                    "id": 11, 
                     "output_name": "output"
                 }
             }, 
@@ -550,13 +624,13 @@
             "uuid": "20d83b1e-ea37-48e3-b78d-56baf1021e6e", 
             "workflow_outputs": []
         }, 
-        "12": {
+        "14": {
             "annotation": "", 
             "content_id": "jupiter:9009/repos/nml/collapse_collections/collapse_dataset/1.0", 
-            "id": 12, 
+            "id": 14, 
             "input_connections": {
                 "input_list": {
-                    "id": 11, 
+                    "id": 13, 
                     "output_name": "filtered_density"
                 }
             }, 
@@ -588,18 +662,18 @@
             "uuid": "7ebe1271-3c71-4cc9-94c9-9867061a736b", 
             "workflow_outputs": []
         }, 
-        "13": {
+        "15": {
             "annotation": "", 
             "content_id": "cat1", 
-            "id": 13, 
+            "id": 15, 
             "input_connections": {
                 "input1": {
-                    "id": 12, 
+                    "id": 14, 
                     "output_name": "output"
                 }, 
                 "queries_0|input2": {
-                    "id": 3, 
-                    "output_name": "out"
+                    "id": 6, 
+                    "output_name": "out_file1"
                 }
             }, 
             "inputs": [], 
@@ -634,17 +708,17 @@
                 {
                     "label": null, 
                     "output_name": "out_file1", 
-                    "uuid": "fb505b41-0885-4b03-9934-999a863c092d"
+                    "uuid": "3945a6dd-8ffa-414a-b176-c859800743bd"
                 }
             ]
         }, 
-        "14": {
+        "16": {
             "annotation": "", 
             "content_id": "jupiter:9009/repos/nml/vcf2snvalignment/vcf2snvalignment/1.7.0", 
-            "id": 14, 
+            "id": 16, 
             "input_connections": {
                 "invalid": {
-                    "id": 13, 
+                    "id": 15, 
                     "output_name": "out_file1"
                 }, 
                 "ref_fasta": {
@@ -652,7 +726,7 @@
                     "output_name": "output"
                 }, 
                 "vcf_collection": {
-                    "id": 11, 
+                    "id": 13, 
                     "output_name": "bcf_combined"
                 }
             }, 
@@ -717,22 +791,22 @@
                 {
                     "label": null, 
                     "output_name": "positions", 
-                    "uuid": "b8a7ac69-da4c-4435-82a4-3147195157e7"
+                    "uuid": "441cf154-f853-49f7-90fa-44a23c74c839"
                 }, 
                 {
                     "label": null, 
                     "output_name": "vcf2core", 
-                    "uuid": "bc7d52d5-4c8a-4e70-b469-932d7d7a189e"
+                    "uuid": "21136f01-77bf-429b-bb2e-1392214dbe43"
                 }
             ]
         }, 
-        "15": {
+        "17": {
             "annotation": "", 
             "content_id": "jupiter:9009/repos/jjohnson/regex_find_replace/regex1/0.1.0", 
-            "id": 15, 
+            "id": 17, 
             "input_connections": {
                 "input": {
-                    "id": 14, 
+                    "id": 16, 
                     "output_name": "phylip"
                 }
             }, 
@@ -768,17 +842,17 @@
                 {
                     "label": null, 
                     "output_name": "out_file1", 
-                    "uuid": "5d75c344-7a04-4614-add7-83a9de1d0618"
+                    "uuid": "4cadc80b-28ea-4c51-b1d7-ee12eeaec87b"
                 }
             ]
         }, 
-        "16": {
+        "18": {
             "annotation": "", 
             "content_id": "jupiter:9009/repos/nml/filter_stats/filterstat/1.7.0", 
-            "id": 16, 
+            "id": 18, 
             "input_connections": {
                 "tabfile": {
-                    "id": 14, 
+                    "id": 16, 
                     "output_name": "positions"
                 }
             }, 
@@ -814,17 +888,17 @@
                 {
                     "label": null, 
                     "output_name": "out", 
-                    "uuid": "6f3e4b71-9e4b-4148-af19-ccdf08ea6d65"
+                    "uuid": "ce0a988e-4277-43c9-97f8-888e3ac85839"
                 }
             ]
         }, 
-        "17": {
+        "19": {
             "annotation": "", 
             "content_id": "jupiter:9009/repos/nml/phyml/phyml1/3.1.1", 
-            "id": 17, 
+            "id": 19, 
             "input_connections": {
                 "input": {
-                    "id": 15, 
+                    "id": 17, 
                     "output_name": "out_file1"
                 }
             }, 
@@ -878,22 +952,22 @@
                 {
                     "label": null, 
                     "output_name": "output_stats", 
-                    "uuid": "bb4fd323-3dad-4ed0-bdff-8b316a1bdafe"
+                    "uuid": "525d7e4c-a4fe-4cdf-87e1-77084f5e3699"
                 }, 
                 {
                     "label": null, 
                     "output_name": "output_tree", 
-                    "uuid": "61bb537e-9cc8-4877-a664-1c6a1e0dc740"
+                    "uuid": "b90156e1-4493-4a85-9281-d0968d3ceef1"
                 }
             ]
         }, 
-        "18": {
+        "20": {
             "annotation": "", 
             "content_id": "jupiter:9009/repos/nml/snv_matrix/snvmatrix/1.7.0", 
-            "id": 18, 
+            "id": 20, 
             "input_connections": {
                 "phylip": {
-                    "id": 15, 
+                    "id": 17, 
                     "output_name": "out_file1"
                 }
             }, 
@@ -929,10 +1003,10 @@
                 {
                     "label": null, 
                     "output_name": "out", 
-                    "uuid": "09b50681-fdc4-4c17-95dc-4c2264e70f56"
+                    "uuid": "84186872-e3dd-4e14-ade3-dea722b97e87"
                 }
             ]
         }
     }, 
-    "uuid": "1122afdd-99c8-4177-82ee-519d2c6b59d7"
+    "uuid": "c0e4f8c5-8a47-4a22-a42c-5256fd30526b"
 }

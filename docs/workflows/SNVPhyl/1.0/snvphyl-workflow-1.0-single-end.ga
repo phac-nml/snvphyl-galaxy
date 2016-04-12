@@ -2,7 +2,7 @@
     "a_galaxy_workflow": "true", 
     "annotation": "snvphyl", 
     "format-version": "0.1", 
-    "name": "SNVPhyl v1.0 Paired-End", 
+    "name": "SNVPhyl v1.0 Single-End", 
     "steps": {
         "0": {
             "annotation": "", 
@@ -12,7 +12,7 @@
             "inputs": [
                 {
                     "description": "", 
-                    "name": "sequence_reads_paired"
+                    "name": "sequence_reads_single"
                 }
             ], 
             "label": null, 
@@ -24,7 +24,7 @@
             }, 
             "tool_errors": null, 
             "tool_id": null, 
-            "tool_state": "{\"collection_type\": \"list:paired\", \"name\": \"sequence_reads_paired\"}", 
+            "tool_state": "{\"collection_type\": \"list\", \"name\": \"sequence_reads_single\"}", 
             "tool_version": null, 
             "type": "data_collection_input", 
             "uuid": "ea11929e-ba45-4d3c-8b8e-fee1c589c836", 
@@ -32,7 +32,7 @@
                 {
                     "label": null, 
                     "output_name": "output", 
-                    "uuid": "72503012-6868-4e8e-b1d2-38845fb6bf10"
+                    "uuid": "1199c0af-2cef-4010-a426-011090452fee"
                 }
             ]
         }, 
@@ -64,7 +64,7 @@
                 {
                     "label": null, 
                     "output_name": "output", 
-                    "uuid": "a96bb183-ced0-4a51-9129-98f632caff32"
+                    "uuid": "ba887367-b419-428a-a820-b0a811c18aa9"
                 }
             ]
         }, 
@@ -164,7 +164,7 @@
                 {
                     "label": null, 
                     "output_name": "out", 
-                    "uuid": "bb487981-c629-4c78-923a-556e35f96b2d"
+                    "uuid": "5149a37c-ed06-4191-a4ee-fc535726c180"
                 }
             ]
         }, 
@@ -173,7 +173,7 @@
             "content_id": "jupiter:9009/repos/nml/smalt_map/smalt_map/1.1.0", 
             "id": 4, 
             "input_connections": {
-                "singlePaired|fastq_collection": {
+                "singlePaired|sInput1": {
                     "id": 0, 
                     "output_name": "output"
                 }, 
@@ -208,7 +208,7 @@
             }, 
             "tool_errors": null, 
             "tool_id": "jupiter:9009/repos/nml/smalt_map/smalt_map/1.1.0", 
-            "tool_state": "{\"minbasq\": \"\\\"\\\"\", \"__page__\": 0, \"insertmin\": \"\\\"20\\\"\", \"mincover\": \"\\\"\\\"\", \"insfil\": \"null\", \"scordiff\": \"\\\"\\\"\", \"insertmax\": \"\\\"1000\\\"\", \"singlePaired\": \"{\\\"fastq_collection\\\": null, \\\"sPaired\\\": \\\"collections\\\", \\\"pairtype\\\": \\\"pe\\\", \\\"__current_case__\\\": 2}\", \"minid\": \"\\\"0.5\\\"\", \"__rerun_remap_job_id__\": null, \"search_harder\": \"\\\"False\\\"\", \"seed\": \"\\\"1\\\"\", \"sw_weighted\": \"\\\"False\\\"\", \"smi\": \"null\", \"oformat\": \"{\\\"bamOptions\\\": null, \\\"outformat\\\": \\\"bam\\\", \\\"__current_case__\\\": 1}\", \"minscor\": \"\\\"\\\"\", \"sma\": \"null\"}", 
+            "tool_state": "{\"minbasq\": \"\\\"\\\"\", \"__page__\": 0, \"insertmin\": \"\\\"\\\"\", \"mincover\": \"\\\"\\\"\", \"insfil\": \"null\", \"scordiff\": \"\\\"\\\"\", \"insertmax\": \"\\\"\\\"\", \"singlePaired\": \"{\\\"sInput1\\\": null, \\\"sPaired\\\": \\\"single\\\", \\\"__current_case__\\\": 0}\", \"minid\": \"\\\"0.5\\\"\", \"__rerun_remap_job_id__\": null, \"search_harder\": \"\\\"False\\\"\", \"seed\": \"\\\"1\\\"\", \"sw_weighted\": \"\\\"False\\\"\", \"smi\": \"null\", \"oformat\": \"{\\\"bamOptions\\\": null, \\\"outformat\\\": \\\"bam\\\", \\\"__current_case__\\\": 1}\", \"minscor\": \"\\\"\\\"\", \"sma\": \"null\"}", 
             "tool_version": "1.1.0", 
             "type": "tool", 
             "uuid": "7a4b9431-20a8-429d-a26e-433f0827c463", 
@@ -256,7 +256,7 @@
                 {
                     "label": null, 
                     "output_name": "output_log", 
-                    "uuid": "06c3f8a6-091d-41d9-bd03-c6eea8504e52"
+                    "uuid": "71611b7f-6d79-4cbd-9b6c-d274bdee329c"
                 }
             ]
         }, 
@@ -634,7 +634,7 @@
                 {
                     "label": null, 
                     "output_name": "out_file1", 
-                    "uuid": "fb505b41-0885-4b03-9934-999a863c092d"
+                    "uuid": "522432fd-9373-41bc-80fc-bf67dd8ba24a"
                 }
             ]
         }, 
@@ -717,12 +717,12 @@
                 {
                     "label": null, 
                     "output_name": "positions", 
-                    "uuid": "b8a7ac69-da4c-4435-82a4-3147195157e7"
+                    "uuid": "ae74b950-156b-4c85-9dc1-1b79f6e04d7e"
                 }, 
                 {
                     "label": null, 
                     "output_name": "vcf2core", 
-                    "uuid": "bc7d52d5-4c8a-4e70-b469-932d7d7a189e"
+                    "uuid": "08ea0ce5-fa27-4a63-8963-48bc06e9a6c1"
                 }
             ]
         }, 
@@ -768,7 +768,7 @@
                 {
                     "label": null, 
                     "output_name": "out_file1", 
-                    "uuid": "5d75c344-7a04-4614-add7-83a9de1d0618"
+                    "uuid": "fcfdfdaa-95ce-4963-b6b2-a62e61c2c3b7"
                 }
             ]
         }, 
@@ -814,7 +814,7 @@
                 {
                     "label": null, 
                     "output_name": "out", 
-                    "uuid": "6f3e4b71-9e4b-4148-af19-ccdf08ea6d65"
+                    "uuid": "294cb347-e450-4b23-bb5d-d53a7abd82ae"
                 }
             ]
         }, 
@@ -878,12 +878,12 @@
                 {
                     "label": null, 
                     "output_name": "output_stats", 
-                    "uuid": "bb4fd323-3dad-4ed0-bdff-8b316a1bdafe"
+                    "uuid": "65dff8a2-c333-4f07-9989-5244e4ac3f4a"
                 }, 
                 {
                     "label": null, 
                     "output_name": "output_tree", 
-                    "uuid": "61bb537e-9cc8-4877-a664-1c6a1e0dc740"
+                    "uuid": "5df88b7e-bb8e-4f5d-a10f-bc518aa7d468"
                 }
             ]
         }, 
@@ -929,10 +929,10 @@
                 {
                     "label": null, 
                     "output_name": "out", 
-                    "uuid": "09b50681-fdc4-4c17-95dc-4c2264e70f56"
+                    "uuid": "a3600718-73ae-4496-9e96-fddbdfb48310"
                 }
             ]
         }
     }, 
-    "uuid": "1122afdd-99c8-4177-82ee-519d2c6b59d7"
+    "uuid": "fbfb9d9e-9ab4-418a-a518-5ff58e12e4e8"
 }
