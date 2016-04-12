@@ -10,10 +10,10 @@
   <command>
 
         #set $name = str($freebayes).split('/')[-1]
-         ln -s $freebayes  &amp;&amp; bcftools index $name  &amp;&amp;
+         ln -f -s $freebayes  &amp;&amp; bcftools index -f $name  &amp;&amp;
 
         #set $name = str($mpileup).split('/')[-1]
-         ln -s $mpileup &amp;&amp; bcftools index $name  &amp;&amp;
+         ln -f -s $mpileup &amp;&amp; bcftools index -f $name  &amp;&amp;
 
 
         \$VCF2PSEUDO/consolidate_vcfs.pl
