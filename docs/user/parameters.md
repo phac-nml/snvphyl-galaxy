@@ -118,7 +118,7 @@ As described in the PhyML documentation:
 
 ##Random starting points
 
-This option sets the number of initial random trees used in the search.  It can only be used with SPR searched. 
+This option sets the number of initial random trees used in the search.  It can only be used with SPR searches. 
 
 ![random_starting_points][]
 
