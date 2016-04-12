@@ -20,13 +20,13 @@ The minimum PID parameter defines the minimum percent identity within a repetiti
 
 ##Minimum Insert Size
 
-The insert size of a read pair refers to the distance between the 5\' ends of the mapped reads.  The minimum insert size defines the smallest allowable distance between the 5\' ends of the mapped reads.
+The insert size of a read pair refers to the distance between the 5' ends of the mapped reads.  The minimum insert size defines the smallest allowable distance between the 5' ends of the mapped reads.
 
 ![min_insert_size][]
 
 ##Maximum Insert Size
 
-The insert size of a read pair refers to the distance between the 5\' ends of the mapped reads.  The maximum insert size defines the largest allowable distance between the 5\' ends of the mapped reads.
+The insert size of a read pair refers to the distance between the 5' ends of the mapped reads.  The maximum insert size defines the largest allowable distance between the 5' ends of the mapped reads.
 
 ![max_insert_size][]
 
