@@ -102,7 +102,7 @@
         }, 
         "3": {
             "annotation": "", 
-            "content_id": "jupiter:9009/repos/nml/smalt_index/smalt_index/1.1.0", 
+            "content_id": "localhost:9009/repos/nml/smalt_index/smalt_index/1.1.0", 
             "id": 3, 
             "input_connections": {
                 "reference": {
@@ -140,7 +140,7 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "jupiter:9009/repos/nml/smalt_index/smalt_index/1.1.0", 
+            "tool_id": "localhost:9009/repos/nml/smalt_index/smalt_index/1.1.0", 
             "tool_state": "{\"__page__\": 0, \"k\": \"\\\"13\\\"\", \"__rerun_remap_job_id__\": null, \"s\": \"\\\"6\\\"\", \"reference\": \"null\"}", 
             "tool_version": "1.1.0", 
             "type": "tool", 
@@ -149,7 +149,7 @@
         }, 
         "4": {
             "annotation": "", 
-            "content_id": "jupiter:9009/repos/nml/find_repeats/findrepeat/1.7.0", 
+            "content_id": "localhost:9009/repos/nml/find_repeats/findrepeat/1.7.0", 
             "id": 4, 
             "input_connections": {
                 "fasta": {
@@ -187,7 +187,7 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "jupiter:9009/repos/nml/find_repeats/findrepeat/1.7.0", 
+            "tool_id": "localhost:9009/repos/nml/find_repeats/findrepeat/1.7.0", 
             "tool_state": "{\"__page__\": 0, \"fasta\": \"null\", \"__rerun_remap_job_id__\": null, \"pid\": \"\\\"90\\\"\", \"length\": \"\\\"150\\\"\"}", 
             "tool_version": "1.7.0", 
             "type": "tool", 
@@ -202,7 +202,7 @@
         }, 
         "5": {
             "annotation": "", 
-            "content_id": "jupiter:9009/repos/nml/smalt_map/smalt_map/1.1.0", 
+            "content_id": "localhost:9009/repos/nml/smalt_map/smalt_map/1.1.0", 
             "id": 5, 
             "input_connections": {
                 "singlePaired|sInput1": {
@@ -239,7 +239,7 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "jupiter:9009/repos/nml/smalt_map/smalt_map/1.1.0", 
+            "tool_id": "localhost:9009/repos/nml/smalt_map/smalt_map/1.1.0", 
             "tool_state": "{\"minbasq\": \"\\\"\\\"\", \"__page__\": 0, \"insertmin\": \"\\\"\\\"\", \"mincover\": \"\\\"\\\"\", \"insfil\": \"null\", \"scordiff\": \"\\\"\\\"\", \"insertmax\": \"\\\"\\\"\", \"singlePaired\": \"{\\\"sInput1\\\": null, \\\"sPaired\\\": \\\"single\\\", \\\"__current_case__\\\": 0}\", \"minid\": \"\\\"0.5\\\"\", \"__rerun_remap_job_id__\": null, \"search_harder\": \"\\\"False\\\"\", \"seed\": \"\\\"1\\\"\", \"sw_weighted\": \"\\\"False\\\"\", \"smi\": \"null\", \"oformat\": \"{\\\"bamOptions\\\": null, \\\"outformat\\\": \\\"bam\\\", \\\"__current_case__\\\": 1}\", \"minscor\": \"\\\"\\\"\", \"sma\": \"null\"}", 
             "tool_version": "1.1.0", 
             "type": "tool", 
@@ -290,7 +290,7 @@
         }, 
         "7": {
             "annotation": "", 
-            "content_id": "jupiter:9009/repos/nml/verify_map/verify_map/1.7.0", 
+            "content_id": "localhost:9009/repos/nml/verify_map/verify_map/1.7.0", 
             "id": 7, 
             "input_connections": {
                 "bams": {
@@ -321,7 +321,7 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "jupiter:9009/repos/nml/verify_map/verify_map/1.7.0", 
+            "tool_id": "localhost:9009/repos/nml/verify_map/verify_map/1.7.0", 
             "tool_state": "{\"minmap\": \"\\\"80\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"mindepth\": \"\\\"${min_coverage}\\\"\", \"bams\": \"null\"}", 
             "tool_version": "1.7.0", 
             "type": "tool", 
@@ -336,7 +336,7 @@
         }, 
         "8": {
             "annotation": "", 
-            "content_id": "jupiter:9009/repos/devteam/freebayes/freebayes/0.4.1", 
+            "content_id": "localhost:9009/repos/devteam/freebayes/freebayes/0.4.1", 
             "id": 8, 
             "input_connections": {
                 "reference_source|input_bams_0|input_bam": {
@@ -387,7 +387,7 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "jupiter:9009/repos/devteam/freebayes/freebayes/0.4.1", 
+            "tool_id": "localhost:9009/repos/devteam/freebayes/freebayes/0.4.1", 
             "tool_state": "{\"__page__\": 0, \"reference_source\": \"{\\\"ref_file\\\": null, \\\"reference_source_selector\\\": \\\"history\\\", \\\"input_bams\\\": [{\\\"__index__\\\": 0, \\\"input_bam\\\": null}], \\\"__current_case__\\\": 1}\", \"__rerun_remap_job_id__\": null, \"options_type\": \"{\\\"options_type_selector\\\": \\\"full\\\", \\\"allele_scope\\\": {\\\"__current_case__\\\": 1, \\\"allele_scope_selector\\\": \\\"False\\\"}, \\\"reporting\\\": {\\\"reporting_selector\\\": \\\"False\\\", \\\"__current_case__\\\": 1}, \\\"genotype_likelihoods\\\": {\\\"genotype_likelihoods_selector\\\": \\\"False\\\", \\\"__current_case__\\\": 1}, \\\"O\\\": \\\"False\\\", \\\"population_model\\\": {\\\"K\\\": \\\"False\\\", \\\"J\\\": \\\"False\\\", \\\"P\\\": \\\"1\\\", \\\"T\\\": \\\"0.001\\\", \\\"__current_case__\\\": 0, \\\"population_model_selector\\\": \\\"True\\\"}, \\\"reference_allele\\\": {\\\"reference_allele_selector\\\": \\\"False\\\", \\\"__current_case__\\\": 1}, \\\"optional_inputs\\\": {\\\"optional_inputs_selector\\\": \\\"False\\\", \\\"__current_case__\\\": 1}, \\\"__current_case__\\\": 0, \\\"population_mappability_priors\\\": {\\\"population_mappability_priors_selector\\\": \\\"False\\\", \\\"__current_case__\\\": 1}, \\\"input_filters\\\": {\\\"input_filters_selector\\\": \\\"False\\\", \\\"__current_case__\\\": 1}, \\\"algorithmic_features\\\": {\\\"algorithmic_features_selector\\\": \\\"False\\\", \\\"__current_case__\\\": 1}}\", \"target_limit_type\": \"{\\\"target_limit_type_selector\\\": \\\"do_not_limit\\\", \\\"__current_case__\\\": 0}\"}", 
             "tool_version": "0.4.1", 
             "type": "tool", 
@@ -396,7 +396,7 @@
         }, 
         "9": {
             "annotation": "", 
-            "content_id": "jupiter:9009/repos/devteam/samtools_mpileup/samtools_mpileup/2.0", 
+            "content_id": "localhost:9009/repos/devteam/samtools_mpileup/samtools_mpileup/2.0", 
             "id": 9, 
             "input_connections": {
                 "reference_source|input_bams_0|input_bam": {
@@ -438,7 +438,7 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "jupiter:9009/repos/devteam/samtools_mpileup/samtools_mpileup/2.0", 
+            "tool_id": "localhost:9009/repos/devteam/samtools_mpileup/samtools_mpileup/2.0", 
             "tool_state": "{\"__page__\": 0, \"advanced_options\": \"{\\\"max_reads_per_bam\\\": \\\"1024\\\", \\\"advanced_options_selector\\\": \\\"advanced\\\", \\\"extended_BAQ_computation\\\": \\\"False\\\", \\\"region_string\\\": \\\"\\\", \\\"limit_by_region\\\": {\\\"limit_by_regions\\\": \\\"no_limit\\\", \\\"__current_case__\\\": 2}, \\\"disable_probabilistic_realignment\\\": \\\"True\\\", \\\"skip_anomalous_read_pairs\\\": \\\"True\\\", \\\"minimum_mapping_quality\\\": \\\"0\\\", \\\"filter_by_flags\\\": {\\\"filter_flags\\\": \\\"nofilter\\\", \\\"__current_case__\\\": 1}, \\\"__current_case__\\\": 0, \\\"coefficient_for_downgrading\\\": \\\"0\\\", \\\"minimum_base_quality\\\": \\\"0\\\", \\\"ignore_overlaps\\\": \\\"False\\\", \\\"exclude_read_group\\\": {\\\"__current_case__\\\": 2, \\\"exclude_read_groups\\\": \\\"no_limit\\\"}}\", \"__rerun_remap_job_id__\": null, \"genotype_likelihood_computation_type\": \"{\\\"__current_case__\\\": 0, \\\"output_format\\\": \\\"--VCF\\\", \\\"perform_indel_calling\\\": {\\\"__current_case__\\\": 2, \\\"perform_indel_calling_selector\\\": \\\"do_not_perform_indel_calling\\\"}, \\\"compressed\\\": \\\"False\\\", \\\"genotype_likelihood_computation_type_selector\\\": \\\"perform_genotype_likelihood_computation\\\", \\\"output_tags\\\": null}\", \"reference_source\": \"{\\\"ref_file\\\": null, \\\"reference_source_selector\\\": \\\"history\\\", \\\"input_bams\\\": [{\\\"__index__\\\": 0, \\\"input_bam\\\": null}], \\\"__current_case__\\\": 1}\"}", 
             "tool_version": "2.0", 
             "type": "tool", 
@@ -447,7 +447,7 @@
         }, 
         "10": {
             "annotation": "", 
-            "content_id": "jupiter:9009/repos/nml/filter_vcf/filtervcf/1.7.0", 
+            "content_id": "localhost:9009/repos/nml/filter_vcf/filtervcf/1.7.0", 
             "id": 10, 
             "input_connections": {
                 "vcf": {
@@ -476,7 +476,7 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "jupiter:9009/repos/nml/filter_vcf/filtervcf/1.7.0", 
+            "tool_id": "localhost:9009/repos/nml/filter_vcf/filtervcf/1.7.0", 
             "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"vcf\": \"null\"}", 
             "tool_version": "1.7.0", 
             "type": "tool", 
@@ -485,7 +485,7 @@
         }, 
         "11": {
             "annotation": "", 
-            "content_id": "jupiter:9009/repos/nml/bcftools_call/bcftools_call/1.0.1", 
+            "content_id": "localhost:9009/repos/nml/bcftools_call/bcftools_call/1.0.1", 
             "id": 11, 
             "input_connections": {
                 "input": {
@@ -521,7 +521,7 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "jupiter:9009/repos/nml/bcftools_call/bcftools_call/1.0.1", 
+            "tool_id": "localhost:9009/repos/nml/bcftools_call/bcftools_call/1.0.1", 
             "tool_state": "{\"__page__\": 0, \"constraint\": \"\\\"-C alleles\\\"\", \"filter_calls\": \"{\\\"filter_calls_selector\\\": \\\"no_filter\\\", \\\"__current_case__\\\": 0}\", \"output_format\": \"\\\"b\\\"\", \"caller\": \"\\\"-c\\\"\", \"skip_indels_snvs\": \"\\\"\\\"\", \"input\": \"null\", \"variants_only\": \"\\\"False\\\"\", \"__rerun_remap_job_id__\": null}", 
             "tool_version": "1.0.1", 
             "type": "tool", 
@@ -530,7 +530,7 @@
         }, 
         "12": {
             "annotation": "", 
-            "content_id": "jupiter:9009/repos/nml/bcftools_view/bcftools_view/0.1.0", 
+            "content_id": "localhost:9009/repos/nml/bcftools_view/bcftools_view/0.1.0", 
             "id": 12, 
             "input_connections": {
                 "input": {
@@ -566,7 +566,7 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "jupiter:9009/repos/nml/bcftools_view/bcftools_view/0.1.0", 
+            "tool_id": "localhost:9009/repos/nml/bcftools_view/bcftools_view/0.1.0", 
             "tool_state": "{\"max_nref\": \"\\\"\\\"\", \"__page__\": 0, \"filters\": \"\\\"\\\"\", \"output_format\": \"\\\"b\\\"\", \"header_option\": \"\\\"all\\\"\", \"min_nref\": \"\\\"\\\"\", \"select_sites\": \"null\", \"__rerun_remap_job_id__\": null, \"private\": \"null\", \"samples\": \"\\\"\\\"\", \"include_types\": \"null\", \"region\": \"\\\"\\\"\", \"input\": \"null\", \"trim_alt_alleles\": \"\\\"False\\\"\", \"sites_no_genotype\": \"\\\"off\\\"\"}", 
             "tool_version": "0.1.0", 
             "type": "tool", 
@@ -575,7 +575,7 @@
         }, 
         "13": {
             "annotation": "", 
-            "content_id": "jupiter:9009/repos/nml/consolidate_vcfs/consolidate_vcfs/1.7.0", 
+            "content_id": "localhost:9009/repos/nml/consolidate_vcfs/consolidate_vcfs/1.7.0", 
             "id": 13, 
             "input_connections": {
                 "freebayes": {
@@ -617,7 +617,7 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "jupiter:9009/repos/nml/consolidate_vcfs/consolidate_vcfs/1.7.0", 
+            "tool_id": "localhost:9009/repos/nml/consolidate_vcfs/consolidate_vcfs/1.7.0", 
             "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"use_density_filter\": \"{\\\"select_list\\\": \\\"yes\\\", \\\"threshold\\\": \\\"10\\\", \\\"window_size\\\": \\\"100\\\", \\\"__current_case__\\\": 0}\", \"ao\": \"\\\"${alternative_allele_proportion}\\\"\", \"mpileup\": \"null\", \"coverage\": \"\\\"${min_coverage}\\\"\", \"mean_mapping\": \"\\\"${min_mean_mapping}\\\"\", \"freebayes\": \"null\"}", 
             "tool_version": "1.7.0", 
             "type": "tool", 
@@ -626,7 +626,7 @@
         }, 
         "14": {
             "annotation": "", 
-            "content_id": "jupiter:9009/repos/nml/collapse_collections/collapse_dataset/1.0", 
+            "content_id": "localhost:9009/repos/nml/collapse_collections/collapse_dataset/1.0", 
             "id": 14, 
             "input_connections": {
                 "input_list": {
@@ -655,7 +655,7 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "jupiter:9009/repos/nml/collapse_collections/collapse_dataset/1.0", 
+            "tool_id": "localhost:9009/repos/nml/collapse_collections/collapse_dataset/1.0", 
             "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input_list\": \"null\"}", 
             "tool_version": "1.0", 
             "type": "tool", 
@@ -714,7 +714,7 @@
         }, 
         "16": {
             "annotation": "", 
-            "content_id": "jupiter:9009/repos/nml/vcf2snvalignment/vcf2snvalignment/1.7.0", 
+            "content_id": "localhost:9009/repos/nml/vcf2snvalignment/vcf2snvalignment/1.7.0", 
             "id": 16, 
             "input_connections": {
                 "invalid": {
@@ -782,7 +782,7 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "jupiter:9009/repos/nml/vcf2snvalignment/vcf2snvalignment/1.7.0", 
+            "tool_id": "localhost:9009/repos/nml/vcf2snvalignment/vcf2snvalignment/1.7.0", 
             "tool_state": "{\"__page__\": 0, \"ref_fasta\": \"null\", \"strain_list\": \"{\\\"select_list\\\": \\\"all\\\", \\\"__current_case__\\\": 2}\", \"reference\": \"\\\"reference\\\"\", \"__rerun_remap_job_id__\": null, \"invalid\": \"null\", \"vcf_collection\": \"null\"}", 
             "tool_version": "1.7.0", 
             "type": "tool", 
@@ -802,7 +802,7 @@
         }, 
         "17": {
             "annotation": "", 
-            "content_id": "jupiter:9009/repos/jjohnson/regex_find_replace/regex1/0.1.0", 
+            "content_id": "localhost:9009/repos/jjohnson/regex_find_replace/regex1/0.1.0", 
             "id": 17, 
             "input_connections": {
                 "input": {
@@ -833,7 +833,7 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "jupiter:9009/repos/jjohnson/regex_find_replace/regex1/0.1.0", 
+            "tool_id": "localhost:9009/repos/jjohnson/regex_find_replace/regex1/0.1.0", 
             "tool_state": "{\"input\": \"null\", \"__rerun_remap_job_id__\": null, \"checks\": \"[{\\\"__index__\\\": 0, \\\"replacement\\\": \\\"\\\", \\\"pattern\\\": \\\"'\\\"}]\", \"__page__\": 0}", 
             "tool_version": "0.1.0", 
             "type": "tool", 
@@ -848,7 +848,7 @@
         }, 
         "18": {
             "annotation": "", 
-            "content_id": "jupiter:9009/repos/nml/filter_stats/filterstat/1.7.0", 
+            "content_id": "localhost:9009/repos/nml/filter_stats/filterstat/1.7.0", 
             "id": 18, 
             "input_connections": {
                 "tabfile": {
@@ -879,7 +879,7 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "jupiter:9009/repos/nml/filter_stats/filterstat/1.7.0", 
+            "tool_id": "localhost:9009/repos/nml/filter_stats/filterstat/1.7.0", 
             "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"tabfile\": \"null\", \"summary\": \"[\\\"invalids\\\"]\"}", 
             "tool_version": "1.7.0", 
             "type": "tool", 
@@ -894,7 +894,7 @@
         }, 
         "19": {
             "annotation": "", 
-            "content_id": "jupiter:9009/repos/nml/phyml/phyml1/3.1.1", 
+            "content_id": "localhost:9009/repos/nml/phyml/phyml1/3.1.1", 
             "id": 19, 
             "input_connections": {
                 "input": {
@@ -943,7 +943,7 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "jupiter:9009/repos/nml/phyml/phyml1/3.1.1", 
+            "tool_id": "localhost:9009/repos/nml/phyml/phyml1/3.1.1", 
             "tool_state": "{\"datatype_condition\": \"{\\\"tstv\\\": \\\"e\\\", \\\"model\\\": \\\"GTR\\\", \\\"type\\\": \\\"nt\\\", \\\"__current_case__\\\": 0}\", \"search\": \"\\\"BEST\\\"\", \"__page__\": 0, \"gamma_condition\": \"{\\\"shape\\\": \\\"e\\\", \\\"categories\\\": \\\"4\\\", \\\"gamma\\\": \\\"yes\\\", \\\"__current_case__\\\": 0}\", \"support_condition\": \"{\\\"support\\\": \\\"sh\\\", \\\"__current_case__\\\": 0}\", \"random_condition\": \"{\\\"random\\\": \\\"no\\\", \\\"__current_case__\\\": 1}\", \"prop_invar\": \"\\\"0.0\\\"\", \"input\": \"null\", \"__rerun_remap_job_id__\": null}", 
             "tool_version": "3.1.1", 
             "type": "tool", 
@@ -963,7 +963,7 @@
         }, 
         "20": {
             "annotation": "", 
-            "content_id": "jupiter:9009/repos/nml/snv_matrix/snvmatrix/1.7.0", 
+            "content_id": "localhost:9009/repos/nml/snv_matrix/snvmatrix/1.7.0", 
             "id": 20, 
             "input_connections": {
                 "phylip": {
@@ -994,7 +994,7 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "jupiter:9009/repos/nml/snv_matrix/snvmatrix/1.7.0", 
+            "tool_id": "localhost:9009/repos/nml/snv_matrix/snvmatrix/1.7.0", 
             "tool_state": "{\"__page__\": 0, \"phylip\": \"null\", \"__rerun_remap_job_id__\": null}", 
             "tool_version": "1.7.0", 
             "type": "tool", 
