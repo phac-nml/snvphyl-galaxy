@@ -134,7 +134,7 @@ These parameters represent:
 
 Once parameters are selected, the input files can be selected.
 
-For information on more advanced user parameter, please refer to [Parameters][].
+For information on more advanced user parameters, please refer to [Parameters][].
 
 ## Input files
 

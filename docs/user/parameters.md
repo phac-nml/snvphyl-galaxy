@@ -50,7 +50,7 @@ The SNV density threshold parameter defines the absolute number of SNVs required
 
 ##Density Window Size
 
-The window size is another parameter that can be altered to adjust the sensitivity of the SNV density filter used in SNVPhyl.  For a region to be flagged as high density, it must contain at least **density threshold** SNVs across a region equal to the length of the window size.  As a result, increasing the window size generally results in stricter filtering; increasing the proprotion of the genome being flagged as high density.  The density regions are calculated independently for each isolate genome in a given SNVPhyl run.
+The window size is another parameter that can be altered to adjust the sensitivity of the SNV density filter used in SNVPhyl.  For a region to be flagged as high density, it must contain at least **density threshold** SNVs across a region equal to the length of the window size.  As a result, increasing the window size generally results in stricter filtering; increasing the proportion of the genome being flagged as high density.  The density regions are calculated independently for each isolate genome in a given SNVPhyl run.
 
 This option can be found under the **Step 12: Consolidate VCFs** section of the workflow page. To alter this value, click on the ![edit_param][] icon and set the value to an integer greater than 0.  
 
@@ -78,7 +78,7 @@ The transition/transversion ratio parameter allows the user to specify a fixed t
 
 ##Number of categories for the discrete gamma model
 
-PhyML can account for a variable substitution rate among sites using the number of categories for the discrete gamma model.  As described in the PhyML documentation:
+PhyML can account for a variable substitution rate among sites using the number of categories for the discrete gamma model.  As described in the PhyML [documentation][]:
 
  "The default is to use four categories, in this case the likelihood of the phylogeny at one site is averaged over four conditional likelihoods corresponding to four rates and the computation of the likelihood is four times slower than with a unique rate. Number of categories less than four or higher than eight are not recommended. In the first case, the discrete distribution is a poor approximation of the continuous one. In the second case, the computational burden becomes high and an higher number of categories is not likely to enhance the accuracy of phylogeny estimation."   
 
@@ -86,7 +86,7 @@ PhyML can account for a variable substitution rate among sites using the number 
 
 ##Shape parameter of the gamma model
 
-The shape parameter of the gamma model is defined as a numerical parameter.  As described in the PhyML documentation:
+The shape parameter of the gamma model is defined as a numerical parameter.  As described in the PhyML [documentation][]:
 
 "The higher its value, the lower the variation of substitution rates among sites (this option is used when having more than 1 substitution rate category). The default value is 1.0. It corresponds to a moderate variation. Values less than say 0.7 correspond to high variations. Values between 0.7 and 1.5 corresponds to moderate variations. Higher values correspond to low variations. This value can be fixed by the user. It can also be estimated by maximising the likelihood of the phylogeny."
 
@@ -94,7 +94,7 @@ The shape parameter of the gamma model is defined as a numerical parameter.  As 
 
 ##Branch support
 
-As described in the PhyML documentation:
+As described in the PhyML [documentation][]:
 
 "aLRT is a statistical test to compute branch supports. It applies to every (internal) branch and is computed along PhyML run on the original data set. Thus, aLRT is much faster than standard bootstrap which requires running PhyML 100-1,000 times with re-sampled data sets. As with any test, the aLRT branch support is significant when it is larger than 0.90-0.99. With good quality data (enough signal and sites), the sets of branches with bootstrap proportion >0.75 and aLRT>0.9 (SH-like option) tend to be similar."
 
@@ -102,7 +102,7 @@ As described in the PhyML documentation:
 
 ##Proportion of invariant sites
 
-As described in the PhyML documentation:
+As described in the PhyML [documentation][]:
 
 "The default is to consider that the data set does not contain invariable sites (0.0). However, this proportion can be set to any value in the 0.0-1.0 range, but it should not be larger than the proportion of constant sites in the alignments. This parameter can also be estimated by maximising the likelihood of the phylogeny. The later makes the program slower."
 
@@ -110,7 +110,7 @@ As described in the PhyML documentation:
 
 ##Tree Topology Search Operation
 
-As described in the PhyML documentation:
+As described in the PhyML [documentation][]:
 
 "PhyML is able to perform two kinds of tree topology improvement: NNI (Nearest Neighbor Interchange) and SPR (Subtree Pruning and Regrafting). You can ask PhyML to compute only NNI (faster) or only SPR (a bit slower) or the both SPR & NNI and keep the best."
 
@@ -122,6 +122,7 @@ This option sets the number of initial random trees used in the search.  It can 
 
 ![random_starting_points][]
 
+[documentation]: http://www.atgc-montpellier.fr/download/papers/phyml_manual_2012.pdf
 [branch_support]: images/branch_support.png
 [random_starting_points]: images/random_starting_points.png
 [data_type]: images/data_type.png
