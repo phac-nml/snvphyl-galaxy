@@ -8,6 +8,7 @@ pages:
     - 'Usage': 'user/usage.md'
     - 'Input': 'user/input.md'
     - 'Output': 'user/output.md'
+    - 'Parameters': 'user/parameters.md'
 - Installation:
     - 'Home': 'install/index.md'
     - 'Docker': 'install/docker.md'

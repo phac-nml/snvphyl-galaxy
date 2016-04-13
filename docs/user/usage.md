@@ -1,6 +1,6 @@
 # Usage
 
-SNVPhyl is implemented as a set of tools and a workflow within the [Galaxy][] platform.  SNVPhyl can be installed within an existing Galaxy infrastructure, or provided virtual machines and [Docker][] images can be downloaded with both Galaxy and SNVPhyl.  Please see the [Install][] guide  for more details.
+SNVPhyl is implemented as a set of tools and a workflow within the [Galaxy][] platform.  SNVPhyl can be installed within an existing Galaxy infrastructure, or provided virtual machines and [Docker][] images can be downloaded with both Galaxy and SNVPhyl.  Please see the [Install][] guide for more details.
 
 ## Install
 
@@ -130,8 +130,11 @@ These parameters represent:
 1. **min_coverage**:  The minimum coverage for any given position on the reference genome to be included in the analysis.  A reasonable value here is **10** or **15**.
 2. **min_mean_mapping**: The minimum mean mapping quality score for all reads in a pileup to be included for analysis.  A reasonable value here is **30**.
 3. **alternative_allele_proportion**:  The proportion of reads required to support a variant to be included in the analysis.  A reasonable value here is **0.75**.
+4. **run_name**: A unique descriptor for the particular Galaxy run.
 
 Once parameters are selected, the input files can be selected.
+
+For information on more advanced user parameters, please refer to [Parameters][].
 
 ## Input files
 
@@ -193,6 +196,7 @@ If examining the datasets does not help diagnose the issue, then examining the G
 [Docker]: https://www.docker.com/
 [Docker Install]: https://docs.docker.com/installation/
 [Install]: ../install/
+[Parameters]: parameters.md 
 [snvphyl-galaxy-docker]: images/snvphyl-galaxy-docker.png
 [test-data.tar.gz]: ../workflows/SNVPhyl/test-data.tar.gz
 [get-data-galaxy]: images/get-data-galaxy.png
@@ -209,7 +213,7 @@ If examining the datasets does not help diagnose the issue, then examining the G
 [paired-data-screen2]: images/paired-data-screen2.png
 [paired-data-list]: images/paired-data-list.png
 [installed-workflows]: images/installed-workflows.png
-[parameters-list]: images/parameters-list.png
+[parameters-list]: images/parameters_list.png
 [input-files-selection]: images/input-files-selection.png
 [run-workflow]: images/run-workflow.png
 [workflow-running]: images/workflow-running.png
@@ -229,4 +233,4 @@ If examining the datasets does not help diagnose the issue, then examining the G
 [SNV/SNP Alignment]: output.md#snvsnp-alignment
 [Output]: output.md
 [workflows-list]: images/workflows-list.png
-[workflow-top-menu]: images/workflow-top-menu.png
+[workflow-top-menu]: images/workflow-top-menu.png 
