@@ -530,7 +530,7 @@
         }, 
         "12": {
             "annotation": "", 
-            "content_id": "localhost:9009/repos/nml/bcftools_view/bcftools_view/0.1.0", 
+            "content_id": "localhost:9009/repos/nml/bcftools_view/bcftools_view/0.1.1", 
             "id": 12, 
             "input_connections": {
                 "input": {
@@ -566,9 +566,9 @@
                 }
             }, 
             "tool_errors": null, 
-            "tool_id": "localhost:9009/repos/nml/bcftools_view/bcftools_view/0.1.0", 
+            "tool_id": "localhost:9009/repos/nml/bcftools_view/bcftools_view/0.1.1", 
             "tool_state": "{\"max_nref\": \"\\\"\\\"\", \"__page__\": 0, \"filters\": \"\\\"\\\"\", \"output_format\": \"\\\"b\\\"\", \"header_option\": \"\\\"all\\\"\", \"min_nref\": \"\\\"\\\"\", \"select_sites\": \"null\", \"__rerun_remap_job_id__\": null, \"private\": \"null\", \"samples\": \"\\\"\\\"\", \"include_types\": \"null\", \"region\": \"\\\"\\\"\", \"input\": \"null\", \"trim_alt_alleles\": \"\\\"False\\\"\", \"sites_no_genotype\": \"\\\"off\\\"\"}", 
-            "tool_version": "0.1.0", 
+            "tool_version": "0.1.1", 
             "type": "tool", 
             "uuid": "59aede98-a211-4fcc-aad3-bfb6e99cf25e", 
             "workflow_outputs": []
