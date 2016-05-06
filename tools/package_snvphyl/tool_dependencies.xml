@@ -31,7 +31,7 @@
                 <action type="change_directory">../</action>
                 <action type="shell_command">git clone https://github.com/phac-nml/snvphyl-tools.git</action>
                 <action type="change_directory">snvphyl-tools</action>
-                <action type="shell_command">git checkout 81fedc5e2067bd494596e2cb422562c8e023f0a6</action>
+                <action type="shell_command">git checkout dbce3d37f8b00d84e59b3271d6f447601bd853ca</action>
                 <action type="change_directory">bcfplugins/bcftools-1.3</action>
                 <action type="shell_command">make</action>
                 <action type="change_directory">../..</action>
