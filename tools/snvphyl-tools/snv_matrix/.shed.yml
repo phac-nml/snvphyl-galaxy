@@ -1,0 +1,5 @@
+categories: [Sequence Analysis]
+description: Generate matrix of SNV distances
+name: snv_matrix
+owner: nml
+remote_repository_url: https://github.com/phac-nml/snvphyl-galaxy

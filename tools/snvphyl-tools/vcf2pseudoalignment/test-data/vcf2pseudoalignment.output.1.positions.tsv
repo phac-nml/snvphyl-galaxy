@@ -1,5 +1,0 @@
-#Chromosome	Position	Status	Reference	v1	v2
-ref1	2	valid	T	A	A
-ref1	5	filtered-invalid	C	A	N
-ref1	7	filtered-coverage	G	T	-
-ref2	3	valid	A	T	A

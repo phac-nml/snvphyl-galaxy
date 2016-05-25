@@ -1,0 +1,42 @@
+<tool id="snvmatrix" name="SNV Matrix" version ="1.7.0">
+  <description>Create SNV matrix from Phylip file</description>
+  <requirements>
+    <requirement type="package" version="1.7">snvphyl</requirement>
+  </requirements>
+  <stdio>
+  </stdio>
+  <command interpreter="perl">
+	/\$VCF2PSEUDO/snv_matrix.pl   $phylip
+	-o $out
+  </command>
+  <inputs>
+    <param name="phylip" type="data" label="Phylip file" format="phylip"/>
+  </inputs>
+  <outputs>
+    <data format="tabular" name="out"/>
+  </outputs>
+  <tests>
+    <test>
+      <param name="phylip" value="snvalign-13.phy"/>
+      <output name="out" file="snvalign-13.phy.out"/>
+    </test>
+  </tests>
+
+  <help>
+What it does
+============
+
+Create SNV matrix from Phylip file format
+
+
+Usage
+=====
+
+**Parameters**
+  - Phylip file: Phylogenetic file (.ph, .phy)
+
+  </help>
+<citations>
+<citation></citation>
+</citations>
+</tool>

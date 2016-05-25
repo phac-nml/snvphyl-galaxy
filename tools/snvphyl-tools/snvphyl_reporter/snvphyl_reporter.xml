@@ -1,7 +1,7 @@
-<tool id="snvphyl_reporter" name="Snvphyl Reporter" version="1.5.0">
+<tool id="snvphyl_reporter" name="Snvphyl Reporter" version="1.7.0">
 	<description>Runs Snvphyl reporter</description>
 	<requirements>
-		<requirement type="package" version="1.5">snvphyl</requirement>
+		<requirement type="package" version="1.7">snvphyl</requirement>
 	</requirements>
 	<command interpreter="perl">
 		/\$VCF2PSEUDO/reporter.pl --output $output
@@ -68,15 +68,15 @@
 				<option value="run_parameters">Record Run Parameters</option>
 			</param>
 				<when value="bam_quality">
-					<param name="json" type="data" label="JSON File (optional)" help="The JSON file containing reporter data for the run." optional="true" />
+					<param name="json"  type="data" format="json" label="JSON File (optional)" help="The JSON file containing reporter data for the run." optional="true" />
 					<param name="input" type="data_collection" label="Bam files Collection" help="Please enter a list collection of bam files" optional="false" collection_type="list" />
 				</when>
 				<when value="filter_stats">
-					<param name="json" type="data" label="JSON File (optional)" help="The JSON file containing reporter data for the run." optional="true" />
+					<param name="json" type="data" format="json" label="JSON File (optional)" help="The JSON file containing reporter data for the run." optional="true" />
 					<param name="pseudo" type="data" format="txt" label="Pseudoalign positions file" help="Please enter the psuedoalign-positions.tsv file" optional="false" />
 				</when>
 				<when value="reference_info">
-					<param name="json" type="data" label="JSON File (optional)" help="The JSON file containing reporter data for the run." optional="true" />
+					<param name="json" type="data" format="json" label="JSON File (optional)" help="The JSON file containing reporter data for the run." optional="true" />
 					<param name="ref_file" type="data" format="fasta" label="Reference fasta file" optional="false" />
 					<param name="sequencer" type="text" label="Sequencer type" help="The type of sequencer used to generate the reference reads." optional="true" />
 					<param name="source" type="text" label="Source" help="The lab/site/team that the reference sequence was retrieved from." optional="true" />
@@ -86,12 +86,12 @@
 					<param name="serotype" type="text" label="Serotype" help="The serotype of the reference orgamism." optional="true" />
 				</when>
 				<when value="file_sizes">
-					<param name="json" type="data" label="JSON File (optional)" help="The JSON file containing reporter data for the run." optional="true" />
+					<param name="json" type="data" format="json" label="JSON File (optional)" help="The JSON file containing reporter data for the run." optional="true" />
 					<param name="format" type="text" label="File Format" help="The file format of the input files." optional="false" />
 					<param name="sizes" type="data_collection" label="Files Collection" help="The list of files to be analyzed." optional="false" collection_type="list" />
 				</when>
 				<when value="run_parameters">
-					<param name="json" type="data" label="JSON File (optional)" help="The JSON file containing reporter data for the run." optional="true" />
+					<param name="json" type="data" format="json" label="JSON File (optional)" help="The JSON file containing reporter data for the run." optional="true" />
 					<param name="fastqs" type="data_collection" label="Fastq Files Collection" help="The list of fastq files to be analyzed." optional="false" collection_type="list" />
 					<param name="masked" type="data" format="txt" label="Masked Positions File" optional="true"/>
 					<param name="run_id" type="text" label="Run ID" optional="true" />
@@ -128,5 +128,7 @@
 
 This tool runs the SNVPhyl Reporter pipeline.
 	</help>
-
+<citations>
+<citation></citation>
+</citations>
 </tool>

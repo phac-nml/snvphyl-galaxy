@@ -8,6 +8,7 @@ pages:
     - 'Usage': 'user/usage.md'
     - 'Input': 'user/input.md'
     - 'Output': 'user/output.md'
+    - 'Parameters': 'user/parameters.md'
 - Installation:
     - 'Home': 'install/index.md'
     - 'Docker': 'install/docker.md'
@@ -16,6 +17,7 @@ pages:
     - 'Versions': 'install/versions.md'
 - Examples:
     - 'Listeria monocytogenes': 'examples/listeria-monocytogenes.md'
+    - 'Escherichia coli': 'examples/escherichia-coli.md'
 - Comparison:
     - 'ASM NGS Challenge 2015': 'comparison/asm-ngs-2015.md'
 - Developer:

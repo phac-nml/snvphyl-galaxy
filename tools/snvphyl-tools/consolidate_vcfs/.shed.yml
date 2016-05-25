@@ -1,0 +1,5 @@
+categories: [Sequence Analysis]
+description: Combines freebayes and mpileup files for use by vcf2snvalignment
+name: consolidate_vcfs
+owner: nml
+remote_repository_url: https://github.com/phac-nml/snvphyl-galaxy

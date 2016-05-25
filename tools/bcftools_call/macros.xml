@@ -34,7 +34,7 @@
             <change_format>
                 <when format="bcf" input="output_format" value="u" />
                 <when format="vcf_bgzip" input="output_format" value="z" />
-                <when format="bcf_bgzip" input="output_format" value="b" />                
+                <when format="bcf_bgzip" input="output_format" value="b" />
             </change_format>
         </data>
     </xml>
@@ -48,7 +48,7 @@
     </xml>
     <xml name="requirements">
         <requirements>
-            <requirement type="package" version="1.2">bcftools</requirement>
+            <requirement type="package" version="1.3">bcftools</requirement>
             <requirement type="package" version="0.2.6">tabix</requirement>
         </requirements>
     </xml>

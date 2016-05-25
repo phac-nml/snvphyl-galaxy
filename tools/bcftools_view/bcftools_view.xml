@@ -1,4 +1,4 @@
-<tool id="bcftools_view" name="bcftools_view" version="0.1.0">
+<tool id="bcftools_view" name="bcftools_view" version="0.1.1">
   <description>Convert VCF/BCF file formats</description>
   <macros>
     <import>macros.xml</import>
@@ -126,8 +126,8 @@
         <param help="minimum count for non-reference (nref), 1st alternate (alt1), least frequent (minor), most frequent (major) or sum of all but most frequent (nonmajor) alleles [nref]" label="Minimum count for non reference" name="min_nref" optional="true" type="integer" value="" />
         <param help="Maximum count for non-reference (nref), 1st alternate (alt1), least frequent (minor), most frequent (major) or sum of all but most frequent (nonmajor) alleles [nref]" label="Maximum count for non reference" name="max_nref" optional="true" type="integer" value="" />
         <param help="file of samples to include (or exclude with &quot;^&quot; prefix)" label="Samples to include or exclude" name="samples" optional="true" type="text" value="" />
-        <param help="select comma-separated list of variant types: snps,indels,mnps,other" label="Select variant types" multiple="true" name="include_types" optional="true" type="select">
-            <option value="snps">snps</option>
+        <param help="select comma-separated list of variant types: snvs,indels,mnps,other" label="Select variant types" multiple="true" name="include_types" optional="true" type="select">
+            <option value="snvs">snvs</option>
             <option value="indels">indels</option>
             <option value="mnps">mnps</option>
             <option value="other">other</option>
@@ -218,7 +218,7 @@
             <param name="samples" value="NA00002" />
             <param name="min_nref" value="1" />
             <param name="max_nref" value="1" />
-            <param name="include_types" value="snps" />
+            <param name="include_types" value="snvs" />
             <param name="output_format" value="v" />
             <output file="view.1.out" ftype="vcf" lines_diff="2" name="output" />
         </test>
@@ -302,7 +302,7 @@ Usage:   bcftools view [options] &lt;in.vcf.gz&gt;; [region1 [...]]
 
     -u/U, --uncalled/--exclude-uncalled         select/exclude sites without a called genotype
 
-    -v/V, --types/--exclude-types &lt;list&gt;;        select/exclude comma-separated list of variant types: snps,indels,mnps,other [null]
+    -v/V, --types/--exclude-types &lt;list&gt;;        select/exclude comma-separated list of variant types: snvs,indels,mnps,other [null]
 
     -x/X, --private/--exclude-private           select/exclude sites where the non-reference alleles are exclusive (private) to the subset samples
         

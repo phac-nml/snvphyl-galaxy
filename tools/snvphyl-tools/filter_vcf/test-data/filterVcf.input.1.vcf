@@ -1,9 +1,9 @@
 ##fileformat=VCFv4.1
 ##fileDate=20140423
 ##source=freeBayes version 0.9.8
-##reference=/home/aaron/microbialinformatics2014/core-snp-tutorial/output-10-subsample/reference/2010EL-1749.2010EL-1786-c1_2000_2400kb.fasta
+##reference=/home/aaron/microbialinformatics2014/core-snv-tutorial/output-10-subsample/reference/2010EL-1749.2010EL-1786-c1_2000_2400kb.fasta
 ##phasing=none
-##commandline="/opt/freebayes/freebayes --bam /home/aaron/microbialinformatics2014/core-snp-tutorial/output-10-subsample/bam/2010EL-1749.bam --vcf /home/aaron/microbialinformatics2014/core-snp-tutorial/output-10-subsample/vcf/2010EL-1749.vcf --fasta-reference /home/aaron/microbialinformatics2014/core-snp-tutorial/output-10-subsample/reference/2010EL-1749.2010EL-1786-c1_2000_2400kb.fasta --min-coverage 2 --pvar 0 --ploidy 1 --left-align-indels --min-mapping-quality 30 --min-base-quality 30 --min-alternate-fraction 0.75"
+##commandline="/opt/freebayes/freebayes --bam /home/aaron/microbialinformatics2014/core-snv-tutorial/output-10-subsample/bam/2010EL-1749.bam --vcf /home/aaron/microbialinformatics2014/core-snv-tutorial/output-10-subsample/vcf/2010EL-1749.vcf --fasta-reference /home/aaron/microbialinformatics2014/core-snv-tutorial/output-10-subsample/reference/2010EL-1749.2010EL-1786-c1_2000_2400kb.fasta --min-coverage 2 --pvar 0 --ploidy 1 --left-align-indels --min-mapping-quality 30 --min-base-quality 30 --min-alternate-fraction 0.75"
 ##INFO=<ID=NS,Number=1,Type=Integer,Description="Number of samples with data">
 ##INFO=<ID=DP,Number=1,Type=Integer,Description="Total read depth at the locus">
 ##INFO=<ID=AC,Number=A,Type=Integer,Description="Total number of alternate alleles in called genotypes">
@@ -21,16 +21,16 @@
 ##INFO=<ID=EPP,Number=A,Type=Float,Description="End Placement Probability: Phred-scaled upper-bounds estimate of the probability of observing the deviation between EL and ER given E(EL/ER) ~ 0.5, derived using Hoeffding's inequality">
 ##INFO=<ID=EPPR,Number=1,Type=Float,Description="End Placement Probability for reference observations: Phred-scaled upper-bounds estimate of the probability of observing the deviation between EL and ER given E(EL/ER) ~ 0.5, derived using Hoeffding's inequality">
 ##INFO=<ID=DPRA,Number=A,Type=Float,Description="Alternate allele depth ratio.  Ratio between depth in samples with each called alternate allele and those without.">
-##INFO=<ID=XRM,Number=1,Type=Float,Description="Reference allele read mismatch rate: The rate of SNPs + MNPs + INDELs in reads supporting the reference allele.">
-##INFO=<ID=XRS,Number=1,Type=Float,Description="Reference allele read SNP rate: The rate of per-base mismatches (SNPs + MNPs) in reads supporting the reference allele.">
+##INFO=<ID=XRM,Number=1,Type=Float,Description="Reference allele read mismatch rate: The rate of SNVs + MNPs + INDELs in reads supporting the reference allele.">
+##INFO=<ID=XRS,Number=1,Type=Float,Description="Reference allele read SNV rate: The rate of per-base mismatches (SNVs + MNPs) in reads supporting the reference allele.">
 ##INFO=<ID=XRI,Number=1,Type=Float,Description="Reference allele read INDEL rate: The rate of INDELs (gaps) in reads supporting the reference allele.">
-##INFO=<ID=XAM,Number=A,Type=Float,Description="Alternate allele read mismatch rate: The rate of SNPs + MNPs + INDELs in reads supporting the alternate allele, excluding the called variant.">
-##INFO=<ID=XAS,Number=A,Type=Float,Description="Alternate allele read SNP rate: The rate of per-base mismatches (SNPs + MNPs) in reads supporting the alternate allele, excluding the called variant.">
+##INFO=<ID=XAM,Number=A,Type=Float,Description="Alternate allele read mismatch rate: The rate of SNVs + MNPs + INDELs in reads supporting the alternate allele, excluding the called variant.">
+##INFO=<ID=XAS,Number=A,Type=Float,Description="Alternate allele read SNV rate: The rate of per-base mismatches (SNVs + MNPs) in reads supporting the alternate allele, excluding the called variant.">
 ##INFO=<ID=XAI,Number=A,Type=Float,Description="Alternate allele read INDEL rate: The rate of INDELs (gaps) in reads supporting the alternate allele, excluding the called variant.">
 ##INFO=<ID=ODDS,Number=1,Type=Float,Description="The log odds ratio of the best genotype combination to the second-best.">
 ##INFO=<ID=BVAR,Number=0,Type=Flag,Description="The best genotype combination in the posterior is variant (non homozygous).">
 ##INFO=<ID=CpG,Number=0,Type=Flag,Description="CpG site (either CpG, TpG or CpA)">
-##INFO=<ID=TYPE,Number=A,Type=String,Description="The type of allele, either snp, mnp, ins, del, or complex.">
+##INFO=<ID=TYPE,Number=A,Type=String,Description="The type of allele, either snv, mnp, ins, del, or complex.">
 ##INFO=<ID=CIGAR,Number=A,Type=String,Description="The extended CIGAR representation of each alternate allele, with the exception that '=' is replaced by 'M' to ease VCF parsing.  Note that INDEL alleles do not have the first matched base (which is provided by default, per the spec) referred to by the CIGAR.">
 ##INFO=<ID=NUMALT,Number=1,Type=Integer,Description="Number of unique non-reference alleles in called genotypes at this position.">
 ##INFO=<ID=MEANALT,Number=A,Type=Float,Description="Mean number of unique non-reference allele observations per sample with the corresponding alternate alleles.">
@@ -50,6 +50,6 @@
 ##FORMAT=<ID=AO,Number=A,Type=Integer,Description="Alternate allele observation count">
 ##FORMAT=<ID=QA,Number=A,Type=Integer,Description="Sum of quality of the alternate observations">
 #CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	unknown
-gi|360034408|ref|NC_016445.1|_2000000_2400000	128	.	GA	AT	197.867	.	AB=0;ABP=0;AC=1;AF=1;AN=1;AO=3;CIGAR=1X;DP=3;DPRA=0;EPP=3.73412;EPPR=0;HWE=-0;LEN=1;MEANALT=1;MQM=54;MQMR=0;NS=1;NUMALT=1;ODDS=45.5605;PAIRED=0;PAIREDR=0;RO=0;RPP=3.73412;RPPR=0;RUN=1;SAP=3.73412;SRP=0;TYPE=snp;XAI=0;XAM=0;XAS=0;XRI=0;XRM=0;XRS=0;BVAR	GT:GQ:DP:RO:QR:AO:QA:GL	1:50000:3:0:0:3:212:-19.7867,0
-gi|360034408|ref|NC_016445.1|_2000000_2400000	256	.	A	C	250.1	.	AB=0;ABP=0;AC=1;AF=1;AN=1;AO=6;CIGAR=1X;DP=8;DPRA=0;EPP=8.80089;EPPR=3.0103;HWE=-0;LEN=1;MEANALT=1;MQM=54;MQMR=54;NS=1;NUMALT=1;ODDS=57.5877;PAIRED=0;PAIREDR=0;RO=2;RPP=8.80089;RPPR=7.35324;RUN=1;SAP=4.45795;SRP=3.0103;TYPE=snp;XAI=0;XAM=0;XAS=0;XRI=0;XRM=0;XRS=0;BVAR	GT:GQ:DP:RO:QR:AO:QA:GL	1:50000:8:2:142:6:420:-38.5,-13.49
-gi|360034408|ref|NC_016445.1|_2000000_2400000	512	.	AT	C	250.1	.	AB=0;ABP=0;AC=1;AF=1;AN=1;AO=6;CIGAR=1X;DP=8;DPRA=0;EPP=8.80089;EPPR=3.0103;HWE=-0;LEN=1;MEANALT=1;MQM=54;MQMR=54;NS=1;NUMALT=1;ODDS=57.5877;PAIRED=0;PAIREDR=0;RO=2;RPP=8.80089;RPPR=7.35324;RUN=1;SAP=4.45795;SRP=3.0103;TYPE=snp;XAI=0;XAM=0;XAS=0;XRI=0;XRM=0;XRS=0;BVAR	GT:GQ:DP:RO:QR:AO:QA:GL	1:50000:8:2:142:6:420:-38.5,-13.49
+gi|360034408|ref|NC_016445.1|_2000000_2400000	128	.	GA	AT	197.867	.	AB=0;ABP=0;AC=1;AF=1;AN=1;AO=3;CIGAR=1X;DP=3;DPRA=0;EPP=3.73412;EPPR=0;HWE=-0;LEN=1;MEANALT=1;MQM=54;MQMR=0;NS=1;NUMALT=1;ODDS=45.5605;PAIRED=0;PAIREDR=0;RO=0;RPP=3.73412;RPPR=0;RUN=1;SAP=3.73412;SRP=0;TYPE=snv;XAI=0;XAM=0;XAS=0;XRI=0;XRM=0;XRS=0;BVAR	GT:GQ:DP:RO:QR:AO:QA:GL	1:50000:3:0:0:3:212:-19.7867,0
+gi|360034408|ref|NC_016445.1|_2000000_2400000	256	.	A	C	250.1	.	AB=0;ABP=0;AC=1;AF=1;AN=1;AO=6;CIGAR=1X;DP=8;DPRA=0;EPP=8.80089;EPPR=3.0103;HWE=-0;LEN=1;MEANALT=1;MQM=54;MQMR=54;NS=1;NUMALT=1;ODDS=57.5877;PAIRED=0;PAIREDR=0;RO=2;RPP=8.80089;RPPR=7.35324;RUN=1;SAP=4.45795;SRP=3.0103;TYPE=snv;XAI=0;XAM=0;XAS=0;XRI=0;XRM=0;XRS=0;BVAR	GT:GQ:DP:RO:QR:AO:QA:GL	1:50000:8:2:142:6:420:-38.5,-13.49
+gi|360034408|ref|NC_016445.1|_2000000_2400000	512	.	AT	C	250.1	.	AB=0;ABP=0;AC=1;AF=1;AN=1;AO=6;CIGAR=1X;DP=8;DPRA=0;EPP=8.80089;EPPR=3.0103;HWE=-0;LEN=1;MEANALT=1;MQM=54;MQMR=54;NS=1;NUMALT=1;ODDS=57.5877;PAIRED=0;PAIREDR=0;RO=2;RPP=8.80089;RPPR=7.35324;RUN=1;SAP=4.45795;SRP=3.0103;TYPE=snv;XAI=0;XAM=0;XAS=0;XRI=0;XRM=0;XRS=0;BVAR	GT:GQ:DP:RO:QR:AO:QA:GL	1:50000:8:2:142:6:420:-38.5,-13.49
