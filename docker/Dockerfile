@@ -17,6 +17,8 @@ ADD ./galaxy/install_workflow_wrapper.sh /usr/bin/install-workflow
 RUN chmod +x /usr/bin/install-workflow
 ADD ./galaxy/snvphyl-workflow-1.0.ga /tmp/snvphyl-workflow-1.0.ga
 ADD ./galaxy/snvphyl-workflow-1.0-invalid-positions.ga /tmp/snvphyl-workflow-1.0-invalid-positions.ga
+ADD ./galaxy/snvphyl-workflow-1.0-single-end-invalid-positions.ga /tmp/snvphyl-workflow-1.0-single-end-invalid-positions.ga
+ADD ./galaxy/snvphyl-workflow-1.0-single-end.ga /tmp/snvphyl-workflow-1.0-single-end.ga
 
 # workaround for a Docker AUFS bug: https://github.com/docker/docker/issues/783#issuecomment-56013588
 RUN mkdir /etc/ssl/private-copy; mv /etc/ssl/private/* /etc/ssl/private-copy/; rm -r /etc/ssl/private; mv /etc/ssl/private-copy /etc/ssl/private; chmod -R 0700 /etc/ssl/private; chown -R postgres /etc/ssl/private
