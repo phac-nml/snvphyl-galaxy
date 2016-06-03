@@ -1,8 +1,8 @@
-# Galaxy - SNVPhyl
+#Galaxy - SNVPhyl
 #
 # VERSION       1.0
 
-FROM bgruening/galaxy-stable:15.05
+FROM bgruening/galaxy-stable:16.01
 
 MAINTAINER Aaron Petkau, aaron.petkau@gmail.com
 
