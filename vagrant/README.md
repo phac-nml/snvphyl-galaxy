@@ -23,7 +23,7 @@ Usage
 To launch a virtual machine with SNVPhyl and Galaxy, please run:
 
 ```bash
-git clone https://irida.corefacility.ca/analysis-pipelines/snvphyl-galaxy.git
+git clone https://github.com/phac-nml/snvphyl-galaxy.git
 cd snvphyl-galaxy/vagrant
 vagrant up
 ```
