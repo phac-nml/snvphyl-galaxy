@@ -13,22 +13,24 @@ pip install -r snvphyl-galaxy-cli/requirements.txt
 
 # Usage
 
-The SNVPhyl CLI can be run using two separate methods.  The first connects to an existing Galaxy instance and executes the SNVPhyl pipeline.  The second method will start a Galaxy instance using [Docker][], and then run the SNVPhyl pipeline, cleaning up the Docker instance after completion.
+The SNVPhyl CLI can be run using two separate methods.  The first connects to an existing Galaxy instance and executes the SNVPhyl pipeline.  The second method will start a Galaxy instance using [Docker][], and then run the SNVPhyl pipeline, cleaning up the Docker instance after completion.  For example input data please see the provided **example-data/** directory.
 
 ## Galaxy
 
 To execute SNVPhyl within an existing Galaxy installation, please run:
 
 ```bash
-python bin/snvphyl.py --galaxy-url http://galaxy --galaxy-api-key 1234abcd --fastq-dir example-data/fastqs --reference-file example-data/reference.fasta --output-dir output
+bin/snvphyl.py --galaxy-url http://galaxy --galaxy-api-key 1234 --fastq-dir fastqs/ --reference-file reference.fasta --output-dir output
 ```
+
+This assumes your Galaxy instance has all the SNVPhyl dependency tools and workflows pre-installed.  If this is not the case, an alternative is to use the Docker method.
 
 ## Docker
 
 Assuming you have Docker installed and configured to run without `sudo`, then the SNVPhyl pipeline can be run without an existing Galaxy installation with:
 
 ```bash
-python bin/snvphyl.py --deploy-docker --fastq-dir example-data/fastqs --reference-file example-data/reference.fasta --output-dir output1
+bin/snvphyl.py --deploy-docker --fastq-dir fastqs/ --reference-file reference.fasta --output-dir output1
 ```
 
 Please see the [SNVPhyl Galaxy CLI][] project for additional details.
