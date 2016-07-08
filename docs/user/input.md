@@ -19,9 +19,11 @@ The invalid positions file is used to mask out regions on the reference genome w
 reference      1        10
 ```
 
+The difference between this format and a true BED-formatted file is that coordinates are given starting with base 1 and are inclusive of the end position.  That is, for this example, the positions defined start at the first base in a sequence (1) and include the end base (10).
+
 # Sequence Reads
 
-The sequence reads are the set of reads to use for mapping and variant calling.  The provided workflow currently only supports paired-end sequence reads.  These should be in [FASTQ][] format.  Within Galaxy these should be imported with the **fastqsanger** data type and structured within a paired-end dataset collection.
+The sequence reads are the set of reads to use for mapping and variant calling.  The provided workflows support both paired-end and single-end sequence reads but not a mixture of both in the same workflow.  These should be in [FASTQ][] format.  Within Galaxy these should be imported with the **fastqsanger** data type and structured within a dataset collection of type list or list of paired-end files.
 
 ![galaxy-paired-sequence-reads][]
 
