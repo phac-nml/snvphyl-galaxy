@@ -67,7 +67,7 @@ An example file, `invalid-positions.bed`, is provided in the test dataset.  Sele
 
 ## Sequence Reads
 
-Sequence reads should be uploaded to Galaxy in the **fastqsanger** format.  From the upload window, select all the sequence reads under `reads/` and set the type to **fastqsanger** (Galaxy defaults to type **fastq**, which is not as useful).  This should look like the following.
+Sequence reads should be uploaded to Galaxy in the **fastqsanger** format.  From the upload window, select all the sequence reads under `reads/` and set the type to **fastqsanger** (Galaxy defaults to type **fastq**, which is not as useful).  This should look like:
 
 ![upload-sequence-reads][]
 
@@ -162,7 +162,7 @@ On completion each item in the Galaxy history should show up as green.  The very
 
 ![output-files][]
 
-In particular, the file **phylogeneticTree.newick** contains the ouput phylgeny.  This can be quickly visualied using the built-in viewer in Galaxy by selecting **Visualize** and **Phyloviz**.
+In particular, the file **phylogeneticTree.newick** contains the ouput phylogeny.  This can be quickly visualized using the built-in viewer in Galaxy by selecting **Visualize** and **Phyloviz**.
 
 ![phylogeny-vis][]
 
@@ -192,7 +192,7 @@ In this case, the message reports no valid phylip alignment.  Checking the [SNV/
 
 ![snp-alignment-error][]
 
-This indicates no valid SNVs were detected, which could be caused by very little data in one more more samples.  Confirming this can be done by examining some of the additional output files decribed in the [Output][] section, such as the **filterStats.txt** file:
+This indicates no valid SNVs were detected, which could be caused by very little data in one or more samples.  Confirming this can be done by examining some of the additional output files decribed in the [Output][] section, such as the **filterStats.txt** file:
 
 ![filter-stats-error][]
 

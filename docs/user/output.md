@@ -10,7 +10,7 @@ The file `phylogeneticTree.newick` is the maximum likelihood phylogeny generated
 
 # SNV/SNP Table
 
-The file `snvTable.tsv` represents a table of all detected variant sites.  The position of each site is given by a combination of **Chromsome** (contig/sequence name) and **Position** on the reference genome.  The **Status** column represents whether this position was kept for constructing a phylogeny/distance matrix (**valid**) or filtered out.  The posible status values are:
+The file `snvTable.tsv` represents a table of all detected variant sites.  The position of each site is given by a combination of **Chromsome** (contig/sequence name) and **Position** on the reference genome.  The **Status** column represents whether this position was kept for constructing a phylogeny/distance matrix (**valid**) or filtered out.  The possible status values are:
 
    * **valid**: Represents a position that passed all filtering criteria for every genome.  These positions are used in the SNV alignment used to construct a phylogenetic tree and a distance matrix.
    * **filtered-invalid**: Represents a position that was removed due to either being present on a repeat region, within a region with a high-SNV density, or within a region passed in the `invalid_positions` file.
