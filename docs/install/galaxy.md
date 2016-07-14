@@ -12,7 +12,7 @@ Installing Galaxy tools involves building many packages from source.  Please mak
 
 ## Installing the SNVPhyl Tools
 
-The SNVPhyl tools are managed within a Galaxy Toolshed.  In particular, within one of the `suite_snvphyl_x_y_z` repositories at <https://irida.corefacility.ca/galaxy-shed/> (the [IRIDA][] toolshed).  The most recent version is `suite_snvphyl_0_3_0`.  For more information about each version please see the [versions][] document.
+The SNVPhyl tools are managed within a Galaxy Toolshed.  In particular, within one of the `suite_snvphyl_x_y_z` repositories at <https://irida.corefacility.ca/galaxy-shed/> (the [IRIDA][] toolshed).  The most recent version is `suite_snvphyl_1_0_0`.  For more information about each version please see the [versions][] document.
 
 You will have to enable this toolshed within Galaxy before SNVPhyl can be used.  The toolshed can be enabled by adding it to the `config/tool_sheds_conf.xml` Galaxy configuration file.  Please find this file and add the line:
 
@@ -34,7 +34,7 @@ Please select the version you wish to install and follow the steps to install th
 
 ## Import SNVPhyl Galaxy workflows
 
-The current SNVPhyl Galaxy workflows for version 0.3 can be found at [SNVPhyl 0.3 Paired-end][] and [SNVPhyl 0.3 Paired-end invalid positions][].  Please import these files by navigating to **Workflow > Upload or import workflow**.  On completion you should have a set of workflows available.
+The current SNVPhyl Galaxy workflows for version 1.0 can be found at [SNVPhyl 1.0 Paired-end][] and [SNVPhyl 1.0 Paired-end invalid positions][] for paired-end and [SNVPhyl 1.0 Single-end][] and [SNVPhyl 1.0 Single-end invalid positions][] for single-end data.  Please import these files by navigating to **Workflow > Upload or import workflow**.  On completion you should have a set of workflows available.
 
 ![snvphyl-import-workflows][]
 
@@ -46,6 +46,8 @@ Installation should now be complete.  Please see the [Usage][] documentation for
 [snvphyl-tool-dependencies]: images/snvphyl-tool-dependencies.png
 [Usage]: ../user/usage.md
 [snvphyl-import-workflows]: images/snvphyl-import-workflows.png
-[SNVPhyl 0.3 Paired-end]: ../workflows/SNVPhyl/0.3/snvphyl-workflow-0.3-invalid-positions.ga
-[SNVPhyl 0.3 Paired-end invalid positions]: ../workflows/SNVPhyl/0.3/snvphyl-workflow-0.3-invalid-positions.ga
+[SNVPhyl 1.0 Paired-end]: ../workflows/SNVPhyl/1.0/snvphyl-workflow-1.0-invalid-positions.ga
+[SNVPhyl 1.0 Paired-end invalid positions]: ../workflows/SNVPhyl/1.0/snvphyl-workflow-1.0-invalid-positions.ga
+[SNVPhyl 1.0 Single-end]: ../workflows/SNVPhyl/1.0/snvphyl-workflow-1.0-single-end.ga
+[SNVPhyl 1.0 Single-end invalid positions]: ../workflows/SNVPhyl/1.0/snvphyl-workflow-1.0-single-end-invalid-positions.ga
 [versions]: versions.md

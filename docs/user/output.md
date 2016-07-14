@@ -1,6 +1,6 @@
 # Output
 
-This describes the main output files of SNVPhyl.  This includes the phylogenetic tree, distance matrix, along with additional quality, filtering, and mapping information.
+This describes the main output files of SNVPhyl.  This includes the phylogenetic tree, SNV distance matrix, along with additional quality, filtering, and mapping information.
 
 # Phylogeny
 
@@ -10,10 +10,10 @@ The file `phylogeneticTree.newick` is the maximum likelihood phylogeny generated
 
 # SNV/SNP Table
 
-The file `snpTable.tsv` represents a table of all detected variant sites.  The position of each site is given by a combination of **Chromsome** (contig/sequence name) and **Position** on the reference genome.  The **Status** column represents whether this position was kept for constructing a phylogeny/distance matrix (**valid**) or filtered out.  The posible status values are:
+The file `snvTable.tsv` represents a table of all detected variant sites.  The position of each site is given by a combination of **Chromsome** (contig/sequence name) and **Position** on the reference genome.  The **Status** column represents whether this position was kept for constructing a phylogeny/distance matrix (**valid**) or filtered out.  The possible status values are:
 
    * **valid**: Represents a position that passed all filtering criteria for every genome.  These positions are used in the SNV alignment used to construct a phylogenetic tree and a distance matrix.
-   * **filtered-invalid**: Represents a position that was removed due to either being present on a repeat region, or within a region passed in the `invalid_positions` file.
+   * **filtered-invalid**: Represents a position that was removed due to either being present on a repeat region, within a region with a high-SNV density, or within a region passed in the `invalid_positions` file.
    * **filtered-coverage**: Represents a position where at least one genome did not meet the minimum coverage criteria.  The value inserted in the table in this case is a `-`.
    * **filtered-mpileup**: Represents a position where there was a mismatch in variant calls between **FreeBayes** and **SAMtools/mpileup/BCFtools**.  This often occurs in positions which met the **min_coverage** criteria, but did not meet the other criteria for calling a variant with FreeBayes, such as the minimum alternative allele ratio, or mapping quality scores. The value inserted in the table in this case is an `N`.
 
@@ -27,7 +27,7 @@ A summary of the number of SNVs filtered within in the SNV Table.
 
 # SNV/SNP Matrix
 
-The file `snpMatrix.tsv` represents a pair-wise distance matrix of SNVs that passed all filtering criteria (has status **valid** in the `snpTable.txt`).
+The file `snvMatrix.tsv` represents a pair-wise distance matrix of SNVs that passed all filtering criteria (has status **valid** in the `snvTable.txt`).
 
 ![snv-matrix-galaxy][]
 
@@ -35,20 +35,25 @@ The file `snpMatrix.tsv` represents a pair-wise distance matrix of SNVs that pas
 
 The file `vcf2core.tsv` is a table of the evaluated core positions in each reference fasta sequence.
 
-![core-positions-table][]
+![core-positions-table-1][]
+
+![core-positions-table-2][]
+
+![core-positions-table-3][]
 
 The columns are as follows:
 
-   * **Reference**:  The reference fasta sequence name.  The value of **all** represents the sum of all sequences.
-   * **total length**:   The total length of the fasta sequence.
-   * **total invalid pos**:  The total number of invalid positions removed from analysis.
-   * **total valid pos**:  The total number of valid positions to be evaluated.
-   * **total core**:  The total number of positions within the core genome on this fasta sequence.  That is, the total positions with enough coverage to be evaluated.
-   * **Percentage in core**:  The percent of core positions evaluated out of the valid positions.  That is _100*(total core)/(total valid pos)_.
+   * **Reference name**:  The reference fasta sequence name.  The value of **all** represents the sum of all sequences.
+   * **Total length**:   The total length of the fasta sequence.
+   * **Total invalid and excluded positions**:  The total number of invalid positions removed from analysis.
+   * **Total valid and included positions**:  The total number of valid positions to be evaluated.
+   * **Total valid and included positions in core genome**:  The total number of valid positions within the core genome.  That is, the total positions with enough coverage to be evaluated.
+   * **Percentage of valid and included positions in core genome**:  The percent of valid and included positions within the core genome.  That is _100*(valid and included positions in core)/(valid and included positions)_.
+   * **Percentage of all positions that are valid, included, and part of the core genome**:  The percent of valid and included core positions out of the total length.  That is _100*(valid and included positions in core)/(Total length)_.
 
 # SNV/SNP Alignment
 
-An alignment of SNVs used to generate the phylogenetic tree.
+The file `snvAlignment.phy` contains an alignment of SNVs used to generate the phylogenetic tree.
 
 ![snv-alignment][]
 
@@ -64,7 +69,9 @@ The tool to generate this file takes two parameters, **min coverage** and **min 
 [snv-tree]: images/snv-tree.png
 [snv-matrix-galaxy]: images/snv-matrix-galaxy.png
 [snv-table-galaxy]: images/snv-table-galaxy.png
-[core-positions-table]: images/core-positions-table.png
+[core-positions-table-1]: images/core-positions-table-1.png
+[core-positions-table-2]: images/core-positions-table-2.png
+[core-positions-table-3]: images/core-positions-table-3.png
 [snv-alignment]: images/snv-alignment.png
 [filter-stats]: images/filter-stats.png
 [mapping-quality]: images/mapping-quality.png
