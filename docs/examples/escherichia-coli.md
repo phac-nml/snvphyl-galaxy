@@ -147,7 +147,7 @@ The SNVPhyl pipeline outputs several files which are useful for evaluating the q
 
   In the viewing window, the output should look like:
 
-  ![ec-vcf2core-data][]
+  [![ec-vcf2core-data][]][ec-vcf2core-data]
 
   From this view, we can see several important statistics.  The most important of these is the **Percentage in core** statistic.  This stat indicates the percentage of genome positions that were queried to identify SNVs within the SNVPhyl pipeline.  Typically, a value of 90% or greater is considered good for any given run. Also, we can see from above that two of the contigs analyzed were found to contain no valid positions, and were excluded entirely from the downstream analysis.
 
