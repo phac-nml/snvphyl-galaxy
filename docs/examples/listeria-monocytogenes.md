@@ -170,9 +170,9 @@ The SNVPhyl pipeline outputs several files which are useful for evaluating the q
   
   Only isolates that fail the thresholds set for the mapping quality check are listed in the **mappingQuality.txt** output file.  
   
-  For our run, in order to pass the mapping quality check, each strain would have to map to over 95% of the reference genome with a minimum depth of coverage of 15 at each  position.  We can see that only a single strain failed the mapping quality check, **CFSAN023466**, where it mapped to only 92.45% of the reference genome with a minimum depth of coverage of 15 at each position.  At 92.45%, it is unlikely that this strain would effect the pipeline results in a serious way.
+  For our run, in order to pass the mapping quality check, each strain would have to map to over 95% of the reference genome with a minimum depth of coverage of 15 at each  position.  We can see that only a single strain failed the mapping quality check, **CFSAN023466**, where it mapped to only 92.45% of the reference genome with a minimum depth of coverage of 15 at each position.  At 92.45%, it is unlikely that this strain would affect the pipeline results in a serious way.
   
-  In situations where there are strains with very poor mapping quality (<80%), the pipeline output can be effected drastically.  In these situations, large sections of the genome will be excluded from the **core genome** from which variants are called and many informative SNV's may be excluded from the final pipeline output.  In these cases, it can be useful to exclude poorly mapping isolates and re-run the pipeline.
+  In situations where there are strains with very poor mapping quality (<80%), the pipeline output can be affected drastically.  In these situations, large sections of the genome will be excluded from the **core genome** from which variants are called and many informative SNV's may be excluded from the final pipeline output.  In these cases, it can be useful to exclude poorly mapping isolates and re-run the pipeline.
   
   Furthermore, if a large proportion of the strains in a given run are mapping poorly to the reference, it may be useful to change the reference strain used.             
 
