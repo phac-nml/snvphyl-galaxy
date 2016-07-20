@@ -105,7 +105,7 @@ SNVPhyl makes use of dataset collections in Galaxy to properly structure paired-
 
 Once a proper paired-end dataset collection **ec-paired-reads** is constructed, the SNVPhyl workflow can be run on the uploaded data.  To run the workflow, please do the following.
 
-1.  At the very top of the Galaxy page, select **Workflow**.  This should bring you to a page where you can select from a number of installed workflows.  Please select **imported: SNVPhyl v0.2 Paired-End (invalid positions)** and click **Run**.
+1.  At the very top of the Galaxy page, select **Workflow**.  This should bring you to a page where you can select from a number of installed workflows.  Please select the **Paired-End invalid positions workflow** and click **Run**.
 
 2.  Adjust the main parameters.  Displayed in the **Workflow Parameters** at the top of the screen.  For this example, please set to:
 
