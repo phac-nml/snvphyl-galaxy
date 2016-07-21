@@ -9,6 +9,7 @@ pages:
     - 'Input': 'user/input.md'
     - 'Output': 'user/output.md'
     - 'Parameters': 'user/parameters.md'
+    - 'Command-line': 'user/command-line.md'
 - Installation:
     - 'Home': 'install/index.md'
     - 'Docker': 'install/docker.md'

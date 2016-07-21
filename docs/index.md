@@ -26,6 +26,8 @@ SNVPhyl is implemented as a [Galaxy][] workflow, with each of these stages imple
 
 More information on the operation and installation of the pipeline can be found in the [Usage][] and [Installation][] sections.
 
+Code is available on GitHub under the <https://github.com/phac-nml/snvphyl-galaxy>, <https://github.com/phac-nml/snvphyl-tools>, and <https://github.com/phac-nml/snvphyl-galaxy-cli> projects.
+
 # Contact
 
 Comments, questions, or issues can be sent to Aaron Petkau - <aaron.petkau@phac-aspc.gc.ca>.

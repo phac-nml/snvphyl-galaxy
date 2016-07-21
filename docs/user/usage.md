@@ -1,14 +1,16 @@
 # Usage
 
-SNVPhyl is implemented as a set of tools and a workflow within the [Galaxy][] platform.  SNVPhyl can be installed within an existing Galaxy infrastructure, or provided virtual machines and [Docker][] images can be downloaded with both Galaxy and SNVPhyl.  Please see the [Install][] guide for more details.
+SNVPhyl is implemented as a set of tools and a workflow within the [Galaxy][] platform.  SNVPhyl can be installed within existing Galaxy infrastructure, or provided virtual machines and [Docker][] images can be downloaded with both Galaxy and SNVPhyl.  Please see the [Install][] guide for more details.
 
 ## Install
 
-The easiest way to get started is to use [Docker][].  To both install Docker and get SNVPhyl, please run:
+The easiest way to get started is to use [Docker][] to launch Galaxy with the installed SNVPhyl workflows.  This can be done directly, as described below, or indirectly through the [Command-line][] interface to SNVPhyl for batch execution.
+
+To both install Docker and get SNVPhyl, please run:
 
 ```bash
 curl -sSL https://get.docker.com/ | sh # Installs Docker
-sudo docker run -t -p 48888:80 apetkau/snvphyl-galaxy-0.3 # Downloads and runs SNVPhyl and Galaxy 
+sudo docker run -t -p 48888:80 apetkau/snvphyl-galaxy-1.0 # Downloads and runs SNVPhyl and Galaxy 
 ```
 
 This will install Docker, download the SNVPhyl Galaxy docker image, and run this image in a Docker container.  This will take a while to fully download and start up.  You may have to start the `docker` service after installation for Docker to work.  This should be a command like `sudo service docker start`, or `sudo systemctl start docker` depending on your system.  See the [Docker Install][] guide for more details.
@@ -57,7 +59,7 @@ The **Chromosome** field references the chromosome/contig/fasta sequence name in
 TCCACAAGCCATTGTGTGTAATTAACCACTAATTGTGTATAAGTTTAAACTAATTGAAAAGGTTATCCAC
 ```
 
-The start and end are start/end coordinates on this fasta sequence.
+The start and end are start/end coordinates on this fasta sequence, starting with position 1 and inclusive of the end position.
 
 An example file, `invalid-positions.bed`, is provided in the test dataset.  Select and upload this file similar to uploading the reference genome.  When complete, the file should show up in your Galaxy history.
 
@@ -65,7 +67,7 @@ An example file, `invalid-positions.bed`, is provided in the test dataset.  Sele
 
 ## Sequence Reads
 
-Sequence reads should be uploaded to Galaxy in the **fastqsanger** format.  From the upload window, select the all the sequence reads under `reads/` and set the type to **fastqsanger** (Galaxy defaults to type **fastq**, which is not as useful).  This should look like the following.
+Sequence reads should be uploaded to Galaxy in the **fastqsanger** format.  From the upload window, select all the sequence reads under `reads/` and set the type to **fastqsanger** (Galaxy defaults to type **fastq**, which is not as useful).  This should look like:
 
 ![upload-sequence-reads][]
 
@@ -75,7 +77,7 @@ When all the reads are uploaded, you should see the following in your Galaxy his
 
 ## Preparing Sequence Reads
 
-SNVPhyl makes use of a data structure in Galaxy called [Dataset Collections][].  Dataset collections allow the grouping of files into a single entry in Galaxy to execute in a workflow.  The SNVPhyl workflow assumes all sequence reads are combined in a paired-end dataset collection, which will properly associated each pair of sequence reads files.
+SNVPhyl makes use of a data structure in Galaxy called [Dataset Collections][].  Dataset collections allow the grouping of files into a single entry in Galaxy to execute in a workflow.  The SNVPhyl workflow assumes all sequence reads are combined in either a single-end or paired-end dataset collection, depending on the type of workflow chosen to run (a mixture of paired and single-end fastq files for the same analysis is currently not supported).
 
 To construct a paired dataset collection of reads in Galaxy, please do the following:
 
@@ -103,6 +105,8 @@ To construct a paired dataset collection of reads in Galaxy, please do the follo
 
     ![paired-data-list][]
 
+This procedure is similar for constructing a single-end dataset collection.
+
 # Running the Workflow
 
 Once all the data has been prepared, the workflow can be run.  The installed workflows can be found in the Galaxy **Tools** panel at the left of the screen.
@@ -117,7 +121,7 @@ Or, alternatively, by clicking on the **Workflows** menu at the top ![workflow-t
 
 ![workflows-list][]
 
-There are two installed workflows, **SNVPhyl v0.3 Paired-End** and **SNVPhyl v0.3 Paired-End (invalid positions)** which differ only in that one workflow includes the addition of an invalid positions masking file.  Selecting the appropriate workflow brings up the **Parameters** screen.
+There are a few installed workflows, **SNVPhyl v1.0 Single-End** or **Paired-End**, and the **(invalid positions)** workflows.  These differ in the type of sequence reads they accept (paired-end or single-end), and whether or not they accept an additional invalid positions masking file.  Selecting the appropriate workflow brings up the **Parameters** screen.
 
 ## Parameters
 
@@ -130,15 +134,15 @@ These parameters represent:
 1. **min_coverage**:  The minimum coverage for any given position on the reference genome to be included in the analysis.  A reasonable value here is **10** or **15**.
 2. **min_mean_mapping**: The minimum mean mapping quality score for all reads in a pileup to be included for analysis.  A reasonable value here is **30**.
 3. **alternative_allele_proportion**:  The proportion of reads required to support a variant to be included in the analysis.  A reasonable value here is **0.75**.
-4. **run_name**: A unique descriptor for the particular Galaxy run.
 
-Once parameters are selected, the input files can be selected.
+
+An additional parameter, **run_name**, is used to override the default name of datasets in the Galaxy workflow.  This is not present in all versions of the SNVPhyl workflows.
 
 For information on more advanced user parameters, please refer to [Parameters][].
 
 ## Input files
 
-Galaxy should automatically detect the appropriate input files from the current history.  However, please verify that it has picked up the correct files.  If the workflow **SNVPhyl v0.3 Paired-End** has been selected then there will be no option for selecting an **invalid_positions** file.
+Galaxy should automatically detect the appropriate input files from the current history.  However, please verify that it has picked up the correct files.  If the **invalid positions** workflow types have been selected then there will be an option for selecting an **invalid_positions** file.  For **Single-end** or **Paired-end** workflow types, the input dataset collection must consist of single-end fastq or paired-end fastq files respectively.
 
 ![input-files-selection][]
 
@@ -158,7 +162,7 @@ On completion each item in the Galaxy history should show up as green.  The very
 
 ![output-files][]
 
-In particular, the file **phylogeneticTree.newick** contains the ouput phylgeny.  This can be quickly visualied using the built-in viewer in Galaxy by selecting **Visuzlize in Phyloviz**.
+In particular, the file **phylogeneticTree.newick** contains the ouput phylogeny.  This can be quickly visualized using the built-in viewer in Galaxy by selecting **Visualize** and **Phyloviz**.
 
 ![phylogeny-vis][]
 
@@ -188,12 +192,15 @@ In this case, the message reports no valid phylip alignment.  Checking the [SNV/
 
 ![snp-alignment-error][]
 
-This indicates no valid SNVs were detected, which could be caused by very little data in one more more samples.  Confirming this can be done by examining some of the additional output files decribed in the [Output][] section.
+This indicates no valid SNVs were detected, which could be caused by very little data in one or more samples.  Confirming this can be done by examining some of the additional output files decribed in the [Output][] section, such as the **filterStats.txt** file:
+
+![filter-stats-error][]
 
 If examining the datasets does not help diagnose the issue, then examining the Galaxy log files can be helpful.  With Docker, these should be printed to the screen.  With other installation methods the location may vary.  Please refer to the [Install][] section for more details.
 
 [Galaxy]: http://galaxyproject.org/
 [Docker]: https://www.docker.com/
+[Command-line]: command-line.md
 [Docker Install]: https://docs.docker.com/installation/
 [Install]: ../install/
 [Parameters]: parameters.md 
@@ -230,6 +237,7 @@ If examining the datasets does not help diagnose the issue, then examining the G
 [galaxy-dataset-error]: images/galaxy-dataset-error.png
 [galaxy-dataset-error-details]: images/galaxy-dataset-error-details.png
 [snp-alignment-error]: images/snp-alignment-error.png
+[filter-stats-error]: images/filter-stats-error.png
 [SNV/SNP Alignment]: output.md#snvsnp-alignment
 [Output]: output.md
 [workflows-list]: images/workflows-list.png
