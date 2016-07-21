@@ -113,7 +113,7 @@ Once a proper paired-end dataset collection **lm-paired-reads** is constructed, 
 
 ## Step 5: Examine Results
 
-The pipeline is complete when all steps have finished executing (all steps are green) a new phylogenetic tree will be generated.
+The pipeline is complete when all steps have finished executing (all steps are green).  A new phylogenetic tree will be generated.
 
 The main output files for the pipeline can be found [here](data/Listeria_monocytogenes_results.tar.gz) and are:
 

@@ -125,7 +125,7 @@ Once a proper paired-end dataset collection **ec-paired-reads** is constructed, 
 
 ## Step 5: Examine Results
 
-The pipeline is complete when all steps have finished executing (all steps are green) a new phylogenetic tree will be generated.
+The pipeline is complete when all steps have finished executing (all steps are green).  A new phylogenetic tree will be generated.
 
 The main output files for the pipeline can be found [here](data/Escherichia_coli_results.tar.gz).  They are:
 
