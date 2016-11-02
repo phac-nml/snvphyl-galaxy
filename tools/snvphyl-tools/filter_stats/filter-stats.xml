@@ -1,7 +1,7 @@
-<tool id="filterstat" name="Filter Stats" version ="1.7.0">
+<tool id="filterstat" name="Filter Stats" version ="1.8.0">
   <description>Identify number of positions excluded based on filtered status</description>
   <requirements>
-    <requirement type="package" version="1.7">snvphyl</requirement>
+    <requirement type="package" version="1.8">snvphyl</requirement>
   </requirements>
   <stdio>
     <exit_code range="1:" level="fatal" description="Unknown error has occured"/>
@@ -14,7 +14,7 @@
 	> $out
   </command>
   <inputs>
-    <param name="tabfile" type="data"  label="Pseudo-alignment positions tab delimited file" format="tabular"/>
+    <param name="tabfile" type="data"  label="SNV-alignment positions tab delimited file" format="tabular"/>
     <param name="summary" type="select" display="checkboxes" label="Summary Options" multiple="true">
         <option value="invalids">Include all entries marked as 'filtered-invalid'</option>
     </param>
@@ -33,20 +33,19 @@
 What it does
 ============
 
-This script prints a stat summary of the number of N's and -'s found in the pseudo-alignment positions tab delimited file.
+This script prints a stat summary of the number of N's and -'s found in the SNV-alignment positions tab delimited file.
 
 
 Usage
 =====
 
 **Parameters**
-  - input - The psudo-alignment positions tab delimited file
+  - input - The SNV-alignment positions tab delimited file
 
 
 **Options**
   - -all When this option is set, the summary will include all the entries marked as 'filtered-invalid'
   </help>
 <citations>
-<citation></citation>
 </citations>
 </tool>

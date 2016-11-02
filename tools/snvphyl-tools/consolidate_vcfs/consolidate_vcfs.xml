@@ -1,7 +1,7 @@
-<tool id="consolidate_vcfs" name="Consolidate VCFs" version ="1.7.0">
+<tool id="consolidate_vcfs" name="Consolidate VCFs" version ="1.8.0">
   <description>combine freebayes and mpileup files for use by vcf2snvalignment</description>
     <requirements>
-      <requirement type="package" version="1.7">snvphyl</requirement>
+      <requirement type="package" version="1.8">snvphyl</requirement>
     </requirements>
   <stdio>
   	<exit_code range="1:" level="fatal" description="Unknown error has occurred"/>
@@ -20,7 +20,7 @@
 
         -c "$coverage"
       	--min-mean-mapping "$mean_mapping"
-      	--ao "$ao"
+      	--snv-abundance-ratio "$snv_abundance_ratio"
 
         #set $path = str($freebayes).split('/')[-1]
         --vcfsplit "$path"
@@ -51,7 +51,7 @@
   <inputs>
     <param name="coverage" type="integer" value="15" label="Minimum coverage"/>
     <param name="mean_mapping" type="integer" value="30" label="Minimum mean mapping quality"/>
-    <param name="ao" type="text" value="0.75" optional="false" label="Alternative allele ratio"/>
+    <param name="snv_abundance_ratio" type="text" value="0.75" optional="false" label="SNV abundance ratio"/>
     <param name="freebayes" type="data" label="FreeBayes filtered BCF" help="" optional="false" format="bcf_bgzip" />
     <param name="mpileup" type="data" label="Mpileup BCF" help="" optional="false" format="bcf_bgzip" />
     <conditional name="use_density_filter">
@@ -89,7 +89,7 @@
   </tests>
 
   <help>
-    Best VCF consolidation program ever!
+  Merges variant and non-variant calls (in VCF format) produced from two independent base callers, FreeBayes, and SAMtools/BCFtools. Produces a merged set of high-quality variant and non-variant calls (in BCF format).  Optionally, produces a list of SNV-dense regions above the passed thresholds.
   </help>
 
   <citations>
