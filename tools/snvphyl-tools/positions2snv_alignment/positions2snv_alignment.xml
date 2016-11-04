@@ -5,15 +5,22 @@
   </requirements>
   <stdio>
   </stdio>
-  <command interpreter="perl">
-	/\$VCF2PSEUDO/positions2snv_alignment.pl -i $snv_table -o $output -f $out_format
-  </command>
+  <command interpreter="perl"><![CDATA[
+	/\$VCF2PSEUDO/positions2snv_alignment.pl -i $snv_table -o $output -f $out_format $keep_all 
+        #if $reference_name:
+          --reference-name $reference_name
+        #end if
+  ]]></command>
   <inputs>
     <param name="snv_table" type="data" label="SNV table" format="tabular"/>
     <param name="out_format" type="select" label="Output alignment format">
       <option value="phylip">Phylip alignment format</option>
       <option value="fasta">FASTA alignment format</option>
     </param>
+    <param name="keep_all" type="boolean" checked="false" label="Keep all positions"
+      help="Keep all positions with status 'filtered' in the SNV alignment" truevalue="--keep-all" falsevalue="" />
+    <param name="reference_name" type="text" label="Reference genome name" value="Reference"
+      help="Name of reference genome in produced alignment" />
   </inputs>
   <outputs>
     <data format="phylip" name="output">
@@ -25,10 +32,36 @@
   </outputs>
   <tests>
     <test>
-      <param name="snv_table" value="1_positions.tsv"/>
+      <param name="snv_table" value="positions.tsv"/>
       <param name="out_format" value="phylip"/>
 
-      <output name="output" file="1_expected.phy"/>
+      <output name="output" file="expected.phy"/>
+    </test>
+    <test>
+      <param name="snv_table" value="positions.tsv"/>
+      <param name="out_format" value="fasta"/>
+
+      <output name="output" file="expected.fasta"/>
+    </test>
+    <test>
+      <param name="snv_table" value="positions.tsv"/>
+      <param name="out_format" value="fasta"/>
+      <param name="keep_all" value="true" />
+
+      <output name="output" file="expected-all.fasta"/>
+    </test>
+    <test>
+      <param name="snv_table" value="positions.tsv"/>
+      <param name="out_format" value="fasta"/>
+
+      <output name="output" file="expected.fasta"/>
+    </test>
+    <test>
+      <param name="snv_table" value="positions.tsv"/>
+      <param name="out_format" value="fasta"/>
+      <param name="reference_name" value="ChangedRefName" />
+
+      <output name="output" file="expected-changed-ref-name.fasta"/>
     </test>
   </tests>
 
