@@ -1,0 +1,5 @@
+categories: [Sequence Analysis]
+description: Generate alignment of SNVs and non-variant positions from SNVPhyl variant table.
+name: positions2snv_invariant_alignment
+owner: nml
+remote_repository_url: https://github.com/phac-nml/snvphyl-galaxy

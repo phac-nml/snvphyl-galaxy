@@ -1,0 +1,62 @@
+<tool id="positions2snv_invariant_alignment" name="Positions to SNV invariant alignment" version ="1.8.0">
+  <description>Create a SNV and non-variant alignment from the SNVPhyl positions table and a reference genome.</description>
+  <requirements>
+    <requirement type="package" version="1.8">snvphyl</requirement>
+  </requirements>
+  <stdio>
+  </stdio>
+  <command interpreter="perl"><![CDATA[
+	/\$VCF2PSEUDO/positions2snv_invariant_alignment.pl -i $snv_table --reference-file $reference_genome -o outputs -f $out_format $keep_all $merge_alignment
+  ]]></command>
+  <inputs>
+    <param name="snv_table" type="data" label="SNV table" format="tabular"/>
+    <param name="reference_genome" type="data" label="Reference genome" format="fasta"/>
+    <param name="out_format" type="select" label="Output alignment format">
+      <option value="phylip">Phylip alignment format</option>
+      <option value="fasta">FASTA alignment format</option>
+    </param>
+    <param name="merge_alignment" type="boolean" checked="false" label="Merge alignment to single file" 
+      help="Merge individual sequences in reference file to single sequence in final alignment" truevalue="--merge-alignment" falsevalue="" />
+    <param name="keep_all" type="boolean" checked="false" label="Keep all positions"
+      help="Keep all positions with status 'filtered' in the SNV alignment" truevalue="--keep-all" falsevalue="" />
+  </inputs>
+  <outputs>
+    <collection name="alignments" type="list" label="The individual alignment files">
+      <discover_datasets pattern="__name_and_ext__" directory="outputs" />
+    </collection>
+  </outputs>
+  <tests>
+    <test>
+      <param name="snv_table" value="positions.tsv"/>
+      <param name="reference_genome" value="reference.fasta"/>
+      <param name="out_format" value="fasta"/>
+      <param name="merge_alignment" value="true" />
+
+      <output_collection name="alignments" type="list">
+        <element name="alignment_merged" file="expected-merged.fasta"/>
+      </output_collection>
+    </test>
+    <test>
+      <param name="snv_table" value="positions.tsv"/>
+      <param name="reference_genome" value="reference.fasta"/>
+      <param name="out_format" value="fasta"/>
+      <param name="merge_alignment" value="true" />
+      <param name="keep_all" value="true" />
+
+      <output_collection name="alignments" type="list">
+        <element name="alignment_merged" file="expected-merged-all.fasta"/>
+      </output_collection>
+    </test>
+  </tests>
+
+  <help>
+What it does
+============
+
+Creates a SNV and non-variant alignment from the SNVPhyl SNV positions table and a reference genome.
+
+  </help>
+
+  <citations>
+  </citations>
+</tool>
