@@ -19,4 +19,5 @@
 	<repository name="regex_find_replace" owner="jjohnson"/>
 	<repository name="filter_density" owner="nml"/>
 	<repository name="collapse_collections" owner="nml"/>
+	<repository name="positions2snv_alignment" owner="nml"/>
 </repositories>

@@ -15,3 +15,4 @@ snvphyl-tools/consolidate_vcfs
 snvphyl-tools/vcf2snvalignment
 snvphyl-tools/verify_map
 snvphyl-tools/filter_density
+snvphyl-tools/positions2snv_alignment
