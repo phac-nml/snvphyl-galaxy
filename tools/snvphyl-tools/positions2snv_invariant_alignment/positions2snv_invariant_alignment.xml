@@ -21,7 +21,7 @@
       help="Keep all positions with status 'filtered' in the SNV alignment" truevalue="--keep-all" falsevalue="" />
   </inputs>
   <outputs>
-    <collection name="alignments" type="list" label="The individual alignment files">
+    <collection name="alignments" type="list" label="Alignment files">
       <discover_datasets pattern="__name_and_ext__" directory="outputs" />
     </collection>
   </outputs>
@@ -39,12 +39,43 @@
     <test>
       <param name="snv_table" value="positions.tsv"/>
       <param name="reference_genome" value="reference.fasta"/>
+      <param name="out_format" value="phylip"/>
+      <param name="merge_alignment" value="true" />
+
+      <output_collection name="alignments" type="list">
+        <element name="alignment_merged" file="expected-merged.phy"/>
+      </output_collection>
+    </test>
+    <test>
+      <param name="snv_table" value="positions.tsv"/>
+      <param name="reference_genome" value="reference.fasta"/>
       <param name="out_format" value="fasta"/>
       <param name="merge_alignment" value="true" />
       <param name="keep_all" value="true" />
 
       <output_collection name="alignments" type="list">
         <element name="alignment_merged" file="expected-merged-all.fasta"/>
+      </output_collection>
+    </test>
+    <test>
+      <param name="snv_table" value="positions.tsv"/>
+      <param name="reference_genome" value="reference.fasta"/>
+      <param name="out_format" value="fasta"/>
+
+      <output_collection name="alignments" type="list">
+        <element name="ref1" file="ref1.fasta"/>
+        <element name="ref2" file="ref2.fasta"/>
+      </output_collection>
+    </test>
+    <test>
+      <param name="snv_table" value="positions.tsv"/>
+      <param name="reference_genome" value="reference.fasta"/>
+      <param name="out_format" value="fasta"/>
+      <param name="keep_all" value="true" />
+
+      <output_collection name="alignments" type="list">
+        <element name="ref1" file="ref1-all.fasta"/>
+        <element name="ref2" file="ref2-all.fasta"/>
       </output_collection>
     </test>
   </tests>
