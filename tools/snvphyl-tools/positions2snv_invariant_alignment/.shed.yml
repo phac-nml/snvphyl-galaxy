@@ -1,4 +1,4 @@
-categories: [Sequence Analysis]
+categories: [Variant Analysis]
 description: Generate alignment of SNVs and non-variant positions from SNVPhyl variant table.
 name: positions2snv_invariant_alignment
 owner: nml
