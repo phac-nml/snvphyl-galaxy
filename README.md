@@ -6,11 +6,13 @@ The SNVPhyl (SNV PHYLogenomics) pipeline is a pipeline for identifying Single Nu
 
 ## Command-line interface
 
-A command-line interface for SNVPhyl is available at <https://github.com/phac-nml/snvphyl-galaxy-cli>.  This can be used to automatically prepare data and run SNVPhyl in a pre-existing Galaxy instance, or in a custom [Docker][] container.  To quickly try out SNVPhyl, the following can be run (assuming Python is installed and Docker is setup and configured to run the `docker` command without `sudo`).
+A command-line interface for SNVPhyl is available at <https://github.com/phac-nml/snvphyl-galaxy-cli>.  This can be used to automatically prepare data and run SNVPhyl in a pre-existing Galaxy instance, or in a custom [Docker][] container.  To quickly try out SNVPhyl, the following can be run (assuming Python and Docker are installed).
 
 ```bash
 git clone https://github.com/phac-nml/snvphyl-galaxy-cli.git
 cd snvphyl-galaxy && pip install -r requirements.txt
+
+# append `--with-docker-sudo` if docker command requires sudo
 python bin/snvphyl.py --deploy-docker --fastq-dir example-data/fastqs --reference-file example-data/reference.fasta --min-coverage 5 --output-dir output1
 ```
 
@@ -41,7 +43,7 @@ Please see <http://snvphyl.readthedocs.io/en/latest/install/virtualmachine/> for
 A [Docker][] image of SNVPhyl and Galaxy can be launched by running:
 
 ```bash
-docker run -d -p 48888:80 apetkau/snvphyl-galaxy-1.0:1.0
+docker run -d -p 48888:80 apetkau/snvphyl-galaxy-1.0
 ```
 
 Galaxy and SNVPhyl can then be access through <http://localhost:48888> with username `admin@galaxy.org` and password `admin`.
