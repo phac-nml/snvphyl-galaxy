@@ -1,8 +1,29 @@
 # SNVPhyl: Whole Genome SNV Phylogenomics Pipeline
 
-The SNVPhyl (__S__ingle __N__ucleotide __V__ariant __PHYL__ogenomics) pipeline is a pipeline for identifying Single Nucleotide Variants (SNV) within a collection of microbial genomes and constructing a phylogenetic tree.  [Input][] is provided in the form of a collection of whole genome sequence reads as well as an assembled reference genome.  The [output][] for the pipeline consists of a whole genome phylogenetic tree constructed from the detected SNVs, as well as a list of all detected SNVs and other information.
+The SNVPhyl (__S__ingle __N__ucleotide __V__ariant __PHYL__ogenomics) pipeline is a pipeline for identifying Single Nucleotide Variants (SNV) within a collection of microbial genomes and constructing a phylogenetic tree.  [Input][] is provided in the form of a collection of whole genome sequence reads as well as an assembled reference genome.  The [output][] for the pipeline consists of a whole genome phylogenetic tree constructed from the detected SNVs, as well as a list of all detected SNVs and other information.  The pipeline is implemented using the [Galaxy][] bioinformatics analysis platform.
 
 [![snv-tree][]][snv-tree]
+
+# Quick Usage
+
+To quickly get started with SNVPhyl, a [command-line interface][] is provided to interact with Galaxy.  This can be configured to deploy a [Docker][] image which includes all the SNVPhyl tools and an instance of Galaxy.
+
+```bash
+git clone https://github.com/phac-nml/snvphyl-galaxy-cli.git
+cd snvphyl-galaxy && pip install -r requirements.txt
+
+python bin/snvphyl.py --deploy-docker --fastq-dir example-data/fastqs --reference-file example-data/reference.fasta --min-coverage 5 --output-dir output1
+```
+
+This assumes that both Python and [Docker][] are installed.  If Docker requires **sudo** to run, please append `--with-docker-sudo` to the above command.
+
+Alternatively, the Docker instance can be launched directly with:
+
+```bash
+docker run -d -p 48888:80 apetkau/snvphyl-galaxy-1.0
+```
+
+Once running, SNVPhyl/Galaxy can be accessed from <http://localhost:48888> with username `admin@galaxy.org` and password `admin`.  Please see [Usage][] and [Installation][] for more details.
 
 # Operation
 
@@ -33,6 +54,8 @@ Comments, questions, or issues can be sent to Aaron Petkau - <aaron.petkau@phac-
 
 [Galaxy]: http://galaxyproject.org/
 [Installation]: install/index.md
+[command-line interface]: https://github.com/phac-nml/snvphyl-galaxy-cli
+[Docker]: https://www.docker.com/
 [tsv formatted file]: user/input/#invalid-positions-masking-file
 [Overview]: user/index.md
 [SMALT]: http://www.sanger.ac.uk/science/tools/smalt-0
