@@ -11,14 +11,13 @@ SNVPhyl identifies variants and generates a phylogenetic tree by mapping the inp
 [![snvphyl-overview][]][snvphyl-overview]
 
 1. Preparing input files including:
-    1. A set of sequence reads.
-    2. A reference genome.
-    3. An optional file of regions to mask on the reference genome.
+    1. A set of sequence reads (`fastq` format).
+    2. A reference genome (`fasta` format).
+    3. An optional file of regions to mask on the reference genome (a special [tsv formatted file][]).
 2. Identification of repeat regions on the reference genome using [MUMMer][].
-3. Reference mapping and variant calling using [SMALT][], [FreeBayes][] and [SAMtools/BCFtools][].
-4. Merging and filtering variant calls to produce a set of high quality SNVs.
-5. Generating an alignment of SNVs.
-6. Building a maximum likelihood tree with [PhyML][] and generating other output files.
+3. Reference mapping and variant calling to identify high-quality SNVs (hqSNVs) using [SMALT][], [FreeBayes][] and [SAMtools/BCFtools][].
+4. Merging the identified hqSNVs to construct a multiple sequence alignment.
+5. Building a maximum likelihood tree with [PhyML][] and generating other output files.
 
 SNVPhyl is implemented as a [Galaxy][] workflow, with each of these stages implemented using a specific Galaxy tool.
 
@@ -34,11 +33,12 @@ Comments, questions, or issues can be sent to Aaron Petkau - <aaron.petkau@phac-
 
 [Galaxy]: http://galaxyproject.org/
 [Installation]: install/index.md
+[tsv formatted file]: user/input/#invalid-positions-masking-file
 [Overview]: user/index.md
-[SMALT]: http://www.sanger.ac.uk/resources/software/smalt/
+[SMALT]: http://www.sanger.ac.uk/science/tools/smalt-0
 [MUMMer]: http://mummer.sourceforge.net/
 [FreeBayes]: https://github.com/ekg/freebayes
-[SAMtools/BCFtools]: http://samtools.sourceforge.net/mpileup.shtml
+[SAMtools/BCFtools]: http://www.htslib.org/
 [PhyML]: http://www.atgc-montpellier.fr/phyml/
 [Usage]: user/usage.md
 [snvphyl-overview]: images/snvphyl-overview.png
