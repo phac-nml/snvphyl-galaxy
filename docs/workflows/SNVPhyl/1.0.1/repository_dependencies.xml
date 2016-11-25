@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositories description="SNVPhyl dependencies">
+	<repository toolshed="http://jupiter:9009/" name="suite_snvphyl_1_0_1" owner="nml" changeset_revision="9a3a028b8bb7" />
+</repositories>
