@@ -22,5 +22,5 @@ pages:
 - Comparison:
     - 'ASM NGS Challenge 2015': 'comparison/asm-ngs-2015.md'
 - Developer:
-    - 'Upgrading' : 'developer/upgrading.md'
+    - 'Upgrading SNVPhyl Toolshed' : 'developer/upgrading.md'
 theme: readthedocs

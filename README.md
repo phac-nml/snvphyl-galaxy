@@ -1,6 +1,54 @@
 # SNVPhyl: Whole Genome SNV Phylogenomics Pipeline
 
-The SNVPhyl (SNV PHYLogenomics) pipeline is a pipeline for identifying Single Nucleotide Variants (SNV) within a collection of microbial genomes and constructing a phylogenetic tree.  Detailed documentation can be found at http://snvphyl.readthedocs.org/.  This repository contains the customized [Galaxy][] tools for this pipeline as well as the source for the documentation.
+The SNVPhyl (SNV PHYLogenomics) pipeline is a pipeline for identifying Single Nucleotide Variants (SNV) within a collection of microbial genomes and constructing a phylogenetic tree.  Detailed documentation can be found at <http://snvphyl.readthedocs.io/>.  This repository contains the customized [Galaxy][] tools for this pipeline as well as the source for the documentation.
+
+# Availability
+
+## Command-line interface
+
+A command-line interface for SNVPhyl is available at <https://github.com/phac-nml/snvphyl-galaxy-cli>.  This can be used to automatically prepare data and run SNVPhyl in a pre-existing Galaxy instance, or in a custom [Docker][] container.  To quickly try out SNVPhyl, the following can be run (assuming Python and Docker are installed).
+
+```bash
+git clone https://github.com/phac-nml/snvphyl-galaxy-cli.git
+cd snvphyl-galaxy && pip install -r requirements.txt
+
+# append `--with-docker-sudo` if docker command requires sudo
+python bin/snvphyl.py --deploy-docker --fastq-dir example-data/fastqs --reference-file example-data/reference.fasta --min-coverage 5 --output-dir output1
+```
+
+Please see <https://github.com/phac-nml/snvphyl-galaxy-cli> for more details.
+
+## Galaxy
+
+The SNVPhyl pipeline is available via a Galaxy toolshed at <http://irida.corefacility.ca/galaxy-shed>.  Dependency tools are installable via the `suite_snvphyl_x_y_z` tool suite.  Workflow files are available at [docs/workflows/SNVPhyl/](docs/workflows/SNVPhyl/).
+
+Please see <http://snvphyl.readthedocs.io/en/latest/install/galaxy/> for more details.
+
+## Virtual Machine
+
+A virtual machine containing the SNVPhyl workflow pipeline and Galaxy is available for download at <https://irida.corefacility.ca/downloads/snvphyl-galaxy/snvphyl-galaxy-current.zip> or, using [Vagrant][], can be launched like:
+
+```bash
+git clone https://github.com/phac-nml/snvphyl-galaxy.git
+cd snvphyl-galaxy/vagrant
+vagrant up
+```
+
+Galaxy and SNVPhyl can then be accessed through <http://localhost:48888> with username `admin@localhost.localdomain` and password `adminpassword`.
+
+Please see <http://snvphyl.readthedocs.io/en/latest/install/virtualmachine/> for more details.
+
+## Docker
+
+A [Docker][] image of SNVPhyl and Galaxy can be launched by running:
+
+```bash
+docker run -d -p 48888:80 apetkau/snvphyl-galaxy-1.0
+```
+
+Galaxy and SNVPhyl can then be access through <http://localhost:48888> with username `admin@galaxy.org` and password `admin`.
+
+Please see <http://snvphyl.readthedocs.io/en/latest/install/docker/> for more details, or <https://github.com/bgruening/docker-galaxy-stable> for details on the underlying Galaxy Docker image.
 
 # Legal
 
@@ -17,43 +65,7 @@ under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
 CONDITIONS OF ANY KIND, either express or implied. See the License for the
 specific language governing permissions and limitations under the License.
 
-## Documentation
-
-Documentation is written using [Markdown][] and can be compiled using [mkdocs][].  To install [mkdocs][] please run:
-
-```bash
-pip install mkdocs
-```
-
-To quickly generate a site for the documentation please run:
-
-```bash
-mkdocs serve
-```
-
-This will build a site under http://localhost:8000.
-
-## Tools
-
-The tools for this pipeline are maintained in a Galaxy toolshed at <https://irida.corefacility.ca/galaxy-shed>.  To update the Galaxy tools or transfer to a different toolshed, please use [Planemo][].  A quick way to upload all relevent tools in the correct order is the script `scripts/run_planemo_for_tools.sh`.  This can be run as:
-
-```bash
-./scripts/run_planemo_for_tools.sh shed_create --shed_target http://toolshed --shed_key KEY --message 'message'
-```
-
-This will create repositories for each tool defined in [tools/tools-to-install.txt][] within the Toolshed at http://toolshed.
-
-In order to check for any differences with the current tools from an existing toolshed install, please run:
-
-```
-./scripts/planemo_diff_recursive.sh --shed_target http://toolshed --shed_key KEY
-```
-
-Please see the [Planemo][] documentation for more details.
 
 [Galaxy]: http://galaxyproject.org/
-[Markdown]: http://daringfireball.net/projects/markdown/syntax
-[mkdocs]: http://www.mkdocs.org
-[Install Tools in Local Toolshed]: InstallLocalToolshed.md
-[Planemo]: http://planemo.readthedocs.org/
-[tools/tools-to-install.txt]: tools/tools-to-install.txt
+[Vagrant]: https://www.vagrantup.com/
+[Docker]: https://www.docker.com/
