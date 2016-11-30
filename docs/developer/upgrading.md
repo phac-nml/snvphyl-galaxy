@@ -1,6 +1,8 @@
 # SNVPhyl Release
 
-This document describes how to update and release new versions of the SNVPhyl pipeline.  This can be accomplished, briefly, by the following steps.
+This document describes how to update and release new versions of the SNVPhyl pipeline.  This is meant for users who wish to create a local [Galaxy Toolshed][] with all the SNVPhyl tools available.  This is not meant for users who wish to install SNVPhyl (please refer to the [Installation][] documentation if this is the case.
+
+Releasing a new version of the SNVPhyl pipeline in a Galaxy toolshed can be accomplished, briefly, by the following steps.
 
 1. Package SNVPhyl
     1. Update version in `tool_dependencies.xml` and `.shed.yml`.
@@ -167,6 +169,8 @@ Once the Docker image is build it can be pushed to <https://hub.docker.com/>.
 
 Once the workflow is updated, the documentation, under the `docs/` directory should be updated to reflect any changes.
 
+[Galaxy Toolshed]: https://wiki.galaxyproject.org/ToolShed
+[Installation]: ../install/index.md
 [tools/]: https://irida.corefacility.ca/analysis-pipelines/snvphyl-galaxy/tree/development/tools
 [tools/snvphyl-tools]: https://irida.corefacility.ca/analysis-pipelines/snvphyl-galaxy/tree/development/tools/snvphyl-tools
 [tools/package_snvphyl]: https://irida.corefacility.ca/analysis-pipelines/snvphyl-galaxy/tree/development/tools/package_snvphyl
