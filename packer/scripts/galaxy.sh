@@ -19,7 +19,7 @@ export GALAXY_DATABASE=galaxy
 # install tools that we need to build and run galaxy:
 yum -y makecache
 yum -y install epel-release
-yum -y install mercurial pwgen python zlib-devel ncurses-devel tcsh db4-devel expat-devel java-1.8.0-openjdk-headless python-pip perl-App-cpanminus gnuplot libyaml-devel python-devel cmake mariadb-server mariadb
+yum -y install mercurial pwgen python zlib-devel ncurses-devel tcsh db4-devel expat-devel java-1.8.0-openjdk-headless python-pip perl-App-cpanminus gnuplot libyaml-devel python-devel cmake mariadb-server mariadb mariadb-devel
 yum -y groupinstall "Development Tools"
 
 # install perl dependencies (force because bioperl fails spuriously)
@@ -54,7 +54,7 @@ EOF
 
 	git clone https://github.com/galaxyproject/galaxy/ galaxy
 	cd galaxy
-	git checkout f01300d7da5625ac264552258b29818598d4d535 # tag 'v15.05.1' as of September 1, 2015
+	git checkout v15.05.1
 
 	sh scripts/common_startup.sh 2>&1 | tee common_startup.log
 
