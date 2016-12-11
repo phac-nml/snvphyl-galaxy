@@ -50,6 +50,10 @@ Galaxy and SNVPhyl can then be access through <http://localhost:48888> with user
 
 Please see <http://snvphyl.readthedocs.io/en/latest/install/docker/> for more details, or <https://github.com/bgruening/docker-galaxy-stable> for details on the underlying Galaxy Docker image.
 
+# Citation
+
+Aaron Petkau, Philip Mabon, Cameron Sieffert, Natalie Knox, Jennifer Cabral, Mariam Iskander, Mark Iskander, Kelly Weedmark, Rahat Zaheer, Lee S. Katz, Celine Nadon, Aleisha Reimer, Eduardo Taboada, Robert G. Beiko, William Hsiao, Fiona Brinkman, Morag Graham, The IRIDA Consortium, Gary Van Domselaar. 2016. [SNVPhyl: A Single Nucleotide Variant Phylogenomics pipeline for microbial genomic epidemiology](http://biorxiv.org/content/early/2016/12/10/092940). bioRxiv doi: http://dx.doi.org/10.1101/092940.
+
 # Legal
 
 Copyright 2012-2016 Government of Canada
