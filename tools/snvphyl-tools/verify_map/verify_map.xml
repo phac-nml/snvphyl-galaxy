@@ -1,7 +1,7 @@
-<tool id="verify_map" name="Verify Mapping Quality" version="1.7.0">
+<tool id="verify_map" name="Verify Mapping Quality" version="1.8.0">
 	<description>Checks the mapping quality of all BAM files generated in the core SNV pipeline.</description>
 	<requirements>
-		<requirement type="package" version="1.7">snvphyl</requirement>
+		<requirement type="package" version="1.8">snvphyl</requirement>
 		<requirement type="package" version="0.1.19">samtools</requirement>
 	</requirements>
 	<stdio>
@@ -50,7 +50,7 @@
 What it does
 ============
 
-This script checks the mapping quality of all BAM files generated in the core SNV pipeline.
+This script checks the mapping quality of all BAM files generated from the SNVPhyl pipeline.
 
 
 Usage
@@ -65,7 +65,5 @@ Usage
   - min-map - The minimum perecent coverage required in each BAM file.
 
 	</help>
-<citations>
-<citation></citation>
-</citations>
+	<citations/>
 </tool>

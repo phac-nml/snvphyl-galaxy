@@ -1,0 +1,5 @@
+categories: [Variant Analysis]
+description: Generate alignment of SNVs from SNVPhyl variant table.
+name: positions2snv_alignment
+owner: nml
+remote_repository_url: https://github.com/phac-nml/snvphyl-galaxy

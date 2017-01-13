@@ -3,7 +3,7 @@
     <package name="perl" version="5.18.1">
         <repository  name="package_perl_5_18" owner="iuc" prior_installation_required="True" />
     </package>
-    <package name="snvphyl" version="1.7">
+    <package name="snvphyl" version="1.8">
         <install version="1.0">
             <actions>
                 <action type="setup_perl_environment">
@@ -31,7 +31,7 @@
                 <action type="change_directory">../</action>
                 <action type="shell_command">git clone https://github.com/phac-nml/snvphyl-tools.git</action>
                 <action type="change_directory">snvphyl-tools</action>
-                <action type="shell_command">git checkout dbce3d37f8b00d84e59b3271d6f447601bd853ca</action>
+                <action type="shell_command">git checkout 026f9ab9b90b3515423e21d0ebbd171bcbe94000</action> <!--git checkout 1.8.0-->
                 <action type="change_directory">bcfplugins/bcftools-1.3</action>
                 <action type="shell_command">make</action>
                 <action type="change_directory">../..</action>
