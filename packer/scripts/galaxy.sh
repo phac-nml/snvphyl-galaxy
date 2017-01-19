@@ -84,7 +84,7 @@ EOF
 	sed -i "s@#environment_setup_file = None@environment_setup_file = $GALAXY_ENV@" $GALAXY_HOME/galaxy/config/galaxy.ini
 
 	## tool_sheds_conf.xml
-	sed -i 's@</tool_sheds>@    <tool_shed name="IRIDA tool shed" url="http://jupiter:9009/"/>\n</tool_sheds>@' $GALAXY_HOME/galaxy/config/tool_sheds_conf.xml
+	sed -i 's@</tool_sheds>@    <tool_shed name="IRIDA tool shed" url="https://irida.corefacility.ca/galaxy-shed/"/>\n</tool_sheds>@' $GALAXY_HOME/galaxy/config/tool_sheds_conf.xml
 }
 
 export -f config_galaxy
