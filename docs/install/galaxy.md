@@ -28,7 +28,7 @@ Once the IRIDA toolshed is installed, you should be able to search for a `suite_
 
 ![suite-snvphyl-repository][]
 
-Please select the version you wish to install and follow the steps to install this suite of tools, making sure to leave the **Handle repository dependencies?** and the **Handle tool dependencies?** options checked.
+Please select the version you wish to install and follow the steps to install this suite of tools, making sure to leave the **Handle repository dependencies?** and the **Handle tool dependencies?** options checked if those options exist in your Galaxy install.
 
 ![snvphyl-tool-dependencies][]
 
