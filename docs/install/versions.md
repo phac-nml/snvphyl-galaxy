@@ -25,6 +25,7 @@ Changelog
 * Re-named parameter **alternative-allele-ratio** to **snv-abundance-ratio**.
 * Added tool `positions2snv_alignment` to Galaxy to generate an alignment of only variant-containing positions.
 * Added tool `positions2snv_invariant_alignment` to Galaxy to generate an alignment of all (variant or non-variant) positions.
+* Updated **density window size** parameter to a default value of 500.
 * Updated download location of dependency `package_zlib_1_2_8`.
 * Formatting/text changes to some Galaxy tools.
 
