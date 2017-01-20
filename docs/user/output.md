@@ -15,7 +15,7 @@ The file `snvTable.tsv` represents a table of all detected variant sites.  The p
    * **valid**: Represents a position that passed all filtering criteria for every genome.  These positions are used in the SNV alignment used to construct a phylogenetic tree and a distance matrix.
    * **filtered-invalid**: Represents a position that was removed due to either being present on a repeat region, within a region with a high-SNV density, or within a region passed in the `invalid_positions` file.
    * **filtered-coverage**: Represents a position where at least one genome did not meet the minimum coverage criteria.  The value inserted in the table in this case is a `-`.
-   * **filtered-mpileup**: Represents a position where there was a mismatch in variant calls between **FreeBayes** and **SAMtools/mpileup/BCFtools**.  This often occurs in positions which met the **min_coverage** criteria, but did not meet the other criteria for calling a variant with FreeBayes, such as the minimum alternative allele ratio (snv abundance ratio), or mapping quality scores. The value inserted in the table in this case is an `N`.
+   * **filtered-mpileup**: Represents a position where there was a mismatch in variant calls between **FreeBayes** and **SAMtools/mpileup/BCFtools**.  This often occurs in positions which met the **min_coverage** criteria, but did not meet the other criteria for calling a variant with FreeBayes, such as the minimum snv abundance ratio (alternative allele ratio), or mapping quality scores. The value inserted in the table in this case is an `N`.
 
 ![snv-table-galaxy][]
 

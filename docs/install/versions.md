@@ -3,6 +3,31 @@ SNVPhyl Versions
 
 This describes the different release versions of SNVPhyl.
 
+Version 1.0.1
+=============
+
+Released on **January 20, 2017**.
+
+Install
+-------
+
+* Docker - `apetkau/snvphyl-galaxy-1.0.1`
+* Virtual Machine - [snvphyl-galaxy-1.0.1.zip](https://irida.corefacility.ca/downloads/snvphyl-galaxy/snvphyl-galaxy-1.0.1.zip)
+* Galaxy Tools - [suite_snvphyl_1_0_1](https://irida.corefacility.ca/galaxy-shed/view/nml/suite_snvphyl_1_0_1/4841b7148c44)
+* Galaxy Workflows
+    * Paired-end: [SNVPhyl Paired-End 1.0.1](../workflows/SNVPhyl/1.0.1/snvphyl-workflow-1.0.1.ga) and [SNVPhyl Paired-End 1.0.1 (invalid-positions)](../workflows/SNVPhyl/1.0.1/snvphyl-workflow-1.0.1-invalid-positions.ga)
+    * Single-end: [SNVPhyl Single-End 1.0.1](../workflows/SNVPhyl/1.0.1/snvphyl-workflow-1.0.1-single-end.ga) and [SNVPhyl Single-End 1.0.1 (invalid-positions)](../workflows/SNVPhyl/1.0.1/snvphyl-workflow-1.0.1-single-end-invalid-positions.ga)
+* Git - <https://github.com/phac-nml/snvphyl-galaxy/tree/1.0.1>
+
+Changelog
+---------
+
+* Re-named parameter **alternative-allele-ratio** to **snv-abundance-ratio**.
+* Added tool `positions2snv_alignment` to Galaxy to generate an alignment of only variant-containing positions.
+* Added tool `positions2snv_invariant_alignment` to Galaxy to generate an alignment of all (variant or non-variant) positions.
+* Updated download location of dependency `package_zlib_1_2_8`.
+* Formatting/text changes to some Galaxy tools.
+
 Version 1.0
 ===========
 
