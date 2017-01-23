@@ -9,7 +9,7 @@ The SNVPhyl (__S__ingle __N__ucleotide __V__ariant __PHYL__ogenomics) pipeline i
 To quickly get started with SNVPhyl, a [command-line interface][] is provided to interact with Galaxy.  This can be configured to deploy a [Docker][] image which includes all the SNVPhyl tools and an instance of Galaxy.
 
 ```bash
-git clone https://github.com/phac-nml/snvphyl-galaxy-cli.git
+git clone -b master https://github.com/phac-nml/snvphyl-galaxy-cli.git
 cd snvphyl-galaxy && pip install -r requirements.txt
 
 python bin/snvphyl.py --deploy-docker --fastq-dir example-data/fastqs --reference-file example-data/reference.fasta --min-coverage 5 --output-dir output1
