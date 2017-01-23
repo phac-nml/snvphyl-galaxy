@@ -10,7 +10,7 @@ To both install Docker and get SNVPhyl, please run:
 
 ```bash
 curl -sSL https://get.docker.com/ | sh # Installs Docker
-sudo docker run -t -p 48888:80 apetkau/snvphyl-galaxy-1.0 # Downloads and runs SNVPhyl and Galaxy 
+docker run -t -p 48888:80 apetkau/snvphyl-galaxy-1.0.1 # Downloads and runs SNVPhyl and Galaxy 
 ```
 
 This will install Docker, download the SNVPhyl Galaxy docker image, and run this image in a Docker container.  This will take a while to fully download and start up.  You may have to start the `docker` service after installation for Docker to work.  This should be a command like `sudo service docker start`, or `sudo systemctl start docker` depending on your system.  See the [Docker Install][] guide for more details.
@@ -121,7 +121,7 @@ Or, alternatively, by clicking on the **Workflows** menu at the top ![workflow-t
 
 ![workflows-list][]
 
-There are a few installed workflows, **SNVPhyl v1.0 Single-End** or **Paired-End**, and the **(invalid positions)** workflows.  These differ in the type of sequence reads they accept (paired-end or single-end), and whether or not they accept an additional invalid positions masking file.  Selecting the appropriate workflow brings up the **Parameters** screen.
+There are a few installed workflows, **SNVPhyl v1.0.1 Single-End** or **Paired-End**, and the **(invalid positions)** workflows.  These differ in the type of sequence reads they accept (paired-end or single-end), and whether or not they accept an additional invalid positions masking file.  Selecting the appropriate workflow brings up the **Parameters** screen.
 
 ## Parameters
 
@@ -133,7 +133,7 @@ These parameters represent:
 
 1. **min_coverage**:  The minimum coverage for any given position on the reference genome to be included in the analysis.  A reasonable value here is **10** or **15**.
 2. **min_mean_mapping**: The minimum mean mapping quality score for all reads in a pileup to be included for analysis.  A reasonable value here is **30**.
-3. **alternative_allele_proportion**:  The proportion of reads required to support a variant to be included in the analysis.  A reasonable value here is **0.75**.
+3. **snv_abundance_ratio (alternative allele proportion)**:  The proportion of reads required to support a variant to be included in the analysis.  A reasonable value here is **0.75**.
 
 
 An additional parameter, **run_name**, is used to override the default name of datasets in the Galaxy workflow.  This is not present in all versions of the SNVPhyl workflows.

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositories description="SNVPhyl dependencies">
+	<repository toolshed="https://irida.corefacility.ca/galaxy-shed/" name="suite_snvphyl_1_0_1" owner="nml" changeset_revision="4841b7148c44" />
+</repositories>
