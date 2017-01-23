@@ -6,7 +6,7 @@ This describes the different release versions of SNVPhyl.
 Version 1.0.1
 =============
 
-Released on **January 20, 2017**.
+Released on **January 23, 2017**.
 
 Install
 -------
