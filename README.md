@@ -43,7 +43,7 @@ Please see <http://snvphyl.readthedocs.io/en/latest/install/virtualmachine/> for
 A [Docker][] image of SNVPhyl and Galaxy can be launched by running:
 
 ```bash
-docker run -d -p 48888:80 apetkau/snvphyl-galaxy-1.0
+docker run -d -p 48888:80 apetkau/snvphyl-galaxy-1.0.1
 ```
 
 Galaxy and SNVPhyl can then be access through <http://localhost:48888> with username `admin@galaxy.org` and password `admin`.
