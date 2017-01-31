@@ -48,14 +48,6 @@ More information on the operation and installation of the pipeline can be found 
 
 Code is available on GitHub under the <https://github.com/phac-nml/snvphyl-galaxy>, <https://github.com/phac-nml/snvphyl-tools>, and <https://github.com/phac-nml/snvphyl-galaxy-cli> projects.
 
-# Citation
-
-Aaron Petkau, Philip Mabon, Cameron Sieffert, Natalie Knox, Jennifer Cabral, Mariam Iskander, Mark Iskander, Kelly Weedmark, Rahat Zaheer, Lee S. Katz, Celine Nadon, Aleisha Reimer, Eduardo Taboada, Robert G. Beiko, William Hsiao, Fiona Brinkman, Morag Graham, The IRIDA Consortium, Gary Van Domselaar. 2016. [SNVPhyl: A Single Nucleotide Variant Phylogenomics pipeline for microbial genomic epidemiology](http://biorxiv.org/content/early/2016/12/10/092940). bioRxiv doi: http://dx.doi.org/10.1101/092940.
-
-# Contact
-
-Comments, questions, or issues can be sent to Aaron Petkau - <aaron.petkau@phac-aspc.gc.ca>.
-
 [Galaxy]: http://galaxyproject.org/
 [Installation]: install/index.md
 [command-line interface]: https://github.com/phac-nml/snvphyl-galaxy-cli
