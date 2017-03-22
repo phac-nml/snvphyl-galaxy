@@ -133,7 +133,7 @@ These parameters represent:
 
 1. **min_coverage**:  The minimum coverage for any given position on the reference genome to be included in the analysis.  A reasonable value here is **10** or **15**.
 2. **min_mean_mapping**: The minimum mean mapping quality score for all reads in a pileup to be included for analysis.  A reasonable value here is **30**.
-3. **snv_abundance_ratio (alternative allele proportion)**:  The proportion of reads required to support a variant to be included in the analysis.  A reasonable value here is **0.75**.
+3. **snv_abundance_ratio (relative snv abundance)**:  The proportion of reads required to support a variant to be included in the analysis.  A reasonable value here is **0.75**.
 
 
 An additional parameter, **run_name**, is used to override the default name of datasets in the Galaxy workflow.  This is not present in all versions of the SNVPhyl workflows.
