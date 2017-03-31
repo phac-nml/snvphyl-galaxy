@@ -111,7 +111,7 @@ Once a proper paired-end dataset collection **ec-paired-reads** is constructed, 
 
     * **min_coverage**: 15
     * **min_mean_mapping**: 30
-    * **alternative_allele_proportion (snv abundance ratio)**: 0.75
+    * **relative_snv_abundance (snv_abundance_ratio, or alternative_allele_proportion)**: 0.75
 
 3.  Verify that **Step 1: Input dataset collection** is set to **ec-paired-reads** that **Step 2: Input dataset** is set to **2011C-3609.fasta** and that **Step 3: Input dataset** is set to **invalid-positions.bed**.
 
