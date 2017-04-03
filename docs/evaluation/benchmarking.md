@@ -4,7 +4,7 @@ A number of datasets have been used to benchmark the runtime of SNVPhyl across a
 
 ## Manuscript datasets
 
-The datasets from the [SNVPhyl manuscript][] were run on a single machine using the Docker version.  The following table presents the run times (to go from sequence reads to a phylogeny) and data sizes of each case.
+The datasets from the [SNVPhyl manuscript][] were run on a single machine using the Docker version of the pipeline.  The following table presents the run times (to go from sequence reads to a phylogeny) and data sizes of each case.
 
 | Case                  | Number of genomes | Total size of reads (GB) | Runtime (min) |
 |:---------------------:|:-----------------:|:------------------------:|:-------------:|
