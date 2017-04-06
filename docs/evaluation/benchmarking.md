@@ -9,7 +9,7 @@ The datasets from the [SNVPhyl manuscript][] were run on a single machine using 
 | Case                    | Number of genomes | Total size of reads (GB) | Runtime (min) |
 |:-----------------------:|:-----------------:|:------------------------:|:-------------:|
 | Simulated data          | 4                 | 1.4                      | 16            |
-| SNV density filtering   | 11                | 13                       | 21            |
+| SNV density filtering   | 11                | 13                       | 63            |
 | *Salmonella* Heidelberg | 59                | 40                       | 192           |
 
 The **Simulated data** case was run using a set of simulated reads through SNVPhyl, based off of *E. coli* str. Sakai (NC_002695) and two plasmids (NC_002128 and NC_002127).  The other two cases were run with real-world data. The **SNV density filtering** case was run using a set of 11 *Streptococcus pneumoniae* genomes through SNVPhyl, in particular the runtime presented was recorded when no SNV density filtering was applied. The **_Salmonella_ Heidelberg** case was run using a set of 59 *Salmonella* Heidelberg genomes, and in particular the runtime presented corresponds to the case of using a minimum coverage threshold of 10X while keeping all other parameters at default values.
