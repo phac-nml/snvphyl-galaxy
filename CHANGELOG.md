@@ -67,7 +67,7 @@ Released on **November 13, 2015**.
 Install
 -------
 
-* Docker - `apetkau/snvphyl-galaxy-0.3`
+* Docker - `phacnml/snvphyl-galaxy-0.3`
 * Virtual Machine - [snvphyl-galaxy-0.3.zip](https://irida.corefacility.ca/downloads/snvphyl-galaxy/snvphyl-galaxy-0.3.zip)
 * Galaxy Tools - [suite_snvphyl_0_3_0](https://irida.corefacility.ca/galaxy-shed/view/nml/suite_snvphyl_0_3_0/bb2e651149da)
 * Galaxy Workflow - [SNVPhyl Paired-End 0.3](../workflows/SNVPhyl/0.3/snvphyl-workflow-0.3.ga) and [SNVPhyl Paired-End 0.3 (invalid-positions)](../workflows/SNVPhyl/0.3/snvphyl-workflow-0.3-invalid-positions.ga)
@@ -89,7 +89,7 @@ Released on **September 21, 2015**.
 Install
 -------
 
-* Docker - `apetkau/snvphyl-galaxy:0.2-beta-1`
+* Docker - `phacnml/snvphyl-galaxy-0.2-beta-1`
 * Virtual Machine - [snvphyl-galaxy-0.2-beta-1.zip](https://irida.corefacility.ca/downloads/snvphyl-galaxy/snvphyl-galaxy-0.2-beta-1.zip)
 * Galaxy Tools - [suite_snvphyl_0_2_0](https://irida.corefacility.ca/galaxy-shed/repository?repository_id=8cbe70cdff6b156a&changeset_revision=9c9c6f7e0d43)
 * Galaxy Workflow - [SNVPhyl Paired-End 0.2](../workflows/SNVPhyl/0.2/snvphyl-workflow-0.2.ga) and [SNVPhyl Paired-End 0.2 (invalid-positions)](../workflows/SNVPhyl/0.2/snvphyl-workflow-0.2-invalid-positions.ga)
