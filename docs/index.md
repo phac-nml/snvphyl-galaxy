@@ -20,7 +20,7 @@ This assumes that both Python and [Docker][] are installed.  If Docker requires 
 Alternatively, the Docker instance can be launched directly with:
 
 ```bash
-docker run -d -p 48888:80 apetkau/snvphyl-galaxy-1.0.1
+docker run -d -p 48888:80 phacnml/snvphyl-galaxy-1.0.1
 ```
 
 Once running, SNVPhyl/Galaxy can be accessed from <http://localhost:48888> with username `admin@galaxy.org` and password `admin`.  Please see [Usage][] and [Installation][] for more details.
