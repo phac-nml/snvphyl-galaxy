@@ -6,4 +6,5 @@ FROM apetkau/snvphyl-galaxy-1.0.1:1.0.1
 
 MAINTAINER Aaron Petkau, aaron.petkau@gmail.com
 
-RUN sed -i -e 's/^#allow_library_path_paste.*/allow_library_path_paste = True/' /etc/galaxy/galaxy.ini
+RUN sed -i -e 's/^#allow_library_path_paste.*/allow_library_path_paste = True/' /etc/galaxy/galaxy.ini && \
+    sed -i -e 's/ --share//' /etc/galaxy/job_conf.xml
