@@ -37,7 +37,7 @@ Released on **May 25, 2016**.
 Install
 -------
 
-* Docker - `apetkau/snvphyl-galaxy-1.0`
+* Docker - `phacnml/snvphyl-galaxy-1.0`
 * Virtual Machine - [snvphyl-galaxy-1.0.zip](https://irida.corefacility.ca/downloads/snvphyl-galaxy/snvphyl-galaxy-1.0.zip)
 * Galaxy Tools - [suite_snvphyl_1_0_0](https://irida.corefacility.ca/galaxy-shed/view/nml/suite_snvphyl_1_0_0/4e41de612a14)
 * Galaxy Workflows
