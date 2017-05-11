@@ -6,11 +6,14 @@ A number of datasets have been used to benchmark the runtime of SNVPhyl across a
 
 The datasets from the [SNVPhyl manuscript][] were run on a single machine using the Docker version of the pipeline.  The following table presents the run times (to go from sequence reads to a phylogeny) and data sizes of each case.
 
-| Case                    | Number of genomes | Total size of reads (GB) | Runtime (min) |
-|:-----------------------:|:-----------------:|:------------------------:|:-------------:|
-| Simulated data          | 4                 | 1.4                      | 15.6          |
-| SNV density filtering   | 11                | 13                       | 25.25         |
-| *Salmonella* Heidelberg | 59                | 40                       | 159           |
+| Case                       | Number of genomes | Total size of reads (GB) | Runtime (hours) | Peak RSS (GB) | Peak Memory (GB) | Temporary Disk Space (GB) |
+|:--------------------------:|:-----------------:|:------------------------:|:---------------:|:-------------:|:----------------:|:-------------------------:|
+| Docker no data             | -                 | -                        | -               | 0.662         |                  | 2.4                       |
+| Simulated data             | 4                 | 1.4                      | 0.261           | 3.04          | 9.90             | 6.8                       |
+| SNV density filtering      | 11                | 13                       | 0.439           | 4.18          | 14.1             | 9.6                       |
+| *Salmonella* Heidelberg    | 59                | 40                       | 3.04            | 4.07          | 21.4             | 66.6                      |
+| *Streptococcus pneumoniae* | 189               | 169                      | 8.04            | 
+
 
 The **Simulated data** case was run using a set of simulated reads through SNVPhyl, based off of *E. coli* str. Sakai (NC_002695) and two plasmids (NC_002128 and NC_002127).  The other two cases were run with real-world data. The **SNV density filtering** case was run using a set of 11 *Streptococcus pneumoniae* genomes through SNVPhyl, in particular the runtime presented was recorded when no SNV density filtering was applied. The **_Salmonella_ Heidelberg** case was run using a set of 59 *Salmonella* Heidelberg genomes, and in particular the runtime presented corresponds to the case of using a minimum coverage threshold of 10X while keeping all other parameters at default values.
 
