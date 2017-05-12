@@ -22,7 +22,7 @@ In addition to running the 189 *Streptococcus pneumoniae* genomes using Docker, 
 |:--------------------------------:|:---------:|:------:|:--------------------------:|:---------------------------:|:----------------------------:|
 | Default <br/> (2 SNVs in 500 bp) | 1111      | 36.81  | 8.23                       | 2.33\*                        | [Comparison][1-tree-2-500]   |
 
-We note that this try is not highly resolved when compared to the tree available on Microreact.  We suspect this is due to the default filtering criteria (removal of SNVs in any region with at least 2 SNVs in a 500 bp window). For comparison, we extracted all SNVs from the `snvTable.tsv` file (including SNVs in regions with low coverage in one or more genomes, or in repetitive regions) to construct an alignment with both polymorphic and monomorphic SNVs. This alignment was then run through [Gubbins][] (with default parameters).  This took approximately x minutes and produced the following [phylogenetic tree][1-tree-gubbins] (Gubbins tree is tree 1 on the left, Microreact tree is tree 2 on the right). We note that this gives a phylogenetic tree that is a bit more resolved and a closer match to the Microreact tree.
+We note that this try is not highly resolved when compared to the tree available on Microreact.  We suspect this is due to the default filtering criteria (removal of SNVs in any region with at least 2 SNVs in a 500 bp window). For comparison, we extracted all SNVs from the `snvTable.tsv` file (including SNVs in regions with low coverage in one or more genomes, or in repetitive regions) to construct an alignment with both polymorphic and monomorphic SNVs. This alignment was then run through [Gubbins][] (with default parameters).  This produced the following [phylogenetic tree][1-tree-gubbins] (Gubbins tree is tree 1 on the left, Microreact tree is tree 2 on the right). We note that this gives a phylogenetic tree that is a bit more resolved and a closer match to the Microreact tree.
 
 [docker version of SNVPhyl]: ../install/docker
 [SNVPhyl manuscript]: http://biorxiv.org/content/early/2016/12/10/092940
@@ -31,4 +31,4 @@ We note that this try is not highly resolved when compared to the tree available
 [Gubbins]: https://sanger-pathogens.github.io/gubbins/
 [methods]: benchmarking-methods/methods.md
 [1-tree-2-500]: http://phylo.io/#db3f0e933657efbab5b732f19c3b3276%23e5f863ba72a3551780bdebc610e87dd1
-[1-tree-gubbins]: http://phylo.io/#e6ade76551bfb717c90f5b0e870478cd%23ff42dc3ffc873cd87684d9d44a5afabc
+[1-tree-gubbins]: http://phylo.io/#009e855b17db1ec897c19791c14f4ea6%235ca06bb267033a22112c202c82e981ff
