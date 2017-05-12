@@ -16,8 +16,8 @@ du -sh /var/lib/docker/
 
 echo "Start docker"
 docker_id=`docker run -d -p 48888:80 -v $fastq_dir:$fastq_dir phacnml/snvphyl-galaxy-1.0.1:1.0.1b | tr -d '\n'`
-echo -n "Waiting 60s for docker to start..."
-sleep 60
+echo -n "Waiting 90s for docker to start..."
+sleep 90
 echo "started"
 
 echo "Disk before SNVPhyl - `date`"
