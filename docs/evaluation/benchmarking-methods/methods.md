@@ -10,7 +10,7 @@ The SNVPhyl Docker container was run using:
 docker run -d -p 48888:80 phacnml/snvphyl-galaxy-1.0.1:1.0.1b
 ```
 
-The following presentes how each field was obtained, mostly from the Docker [cgroups](https://docs.docker.com/engine/admin/runmetrics/).
+The following presents how each field was obtained, mostly from the Docker [cgroups](https://docs.docker.com/engine/admin/runmetrics/).
 
 1. Max RSS
 

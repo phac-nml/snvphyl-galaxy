@@ -18,7 +18,7 @@ All datasets were run using the default SNVPhyl parameters on a 16-core Intel Xe
 
 In addition to running the 189 *Streptococcus pneumoniae* genomes using Docker, we also ran the dataset on a 2000-core cluster for comparison of the runtime and a rough estimate of scalability (runtime on the cluster is highly variable depending on usage). We also provide a comparison of the produced phylogenetic tree to the one available from [Microreact][] for this same dataset (the SNVPhyl tree is tree 1 on the left, Microreact tree is tree 2 on the right).
 
-As an additional comparison to the default tree procued by SNVPhyl, we extracted all SNVs from the `snvTable.tsv` file (including SNVs in regions with low coverage in one or more genomes, or in repetitive regions) to construct an alignment with both polymorphic and monomorphic sites. This alignment was then run through [Gubbins][] (with default parameters).  This produced the tree shown for the case labeled **Gubbins (all positions detected by SNVPhyl)**.
+As an additional comparison to the default tree produced by SNVPhyl, we extracted all SNVs from the `snvTable.tsv` file (including SNVs in regions with low coverage in one or more genomes, or in repetitive regions) to construct an alignment with both polymorphic and monomorphic sites. This alignment was then run through [Gubbins][] (with default parameters).  This produced the tree shown for the case labeled **Gubbins (all positions detected by SNVPhyl)**.
 
 In both cases, the SNVPhyl tree is tree 1 on the left while the tree available from Microreact - <https://microreact.org/project/N1TRn11L> is tree 2 on the right.
 
