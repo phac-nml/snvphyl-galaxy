@@ -2,7 +2,7 @@
 
 A number of datasets have been used to benchmark the runtime, memory, and disk usage of SNVPhyl across a range of scenarios using the Docker version of SNVPhyl on a 16-core machine. The results are presented in the table below.
 
-| Case            | # Genomes | Read size <br/> (GB) | Runtime <br/> (hrs) | Max Mem. (RSS)<br/> (GB) | Max Mem. (All)<br/> (GB) | Disk Space <br/> (GB) |
+| Case            | # Genomes | Total read size <br/> (GB) | Runtime <br/> (hrs) | Max Mem. (RSS)<br/> (GB) | Max Mem. (All)<br/> (GB) | Disk Space <br/> (GB) |
 |:----------------|:---------:|:--------------------:|:-------------------:|:------------------:|:-------------------:|:---------------------:|
 | Docker only     | -         | -                    | -                   | 0.662              | 1.15                | 2.4                   |
 | Simulated data  | 4         | 1.4                  | 0.261               | 3.04               | 9.90                | 6.8                   |
@@ -10,7 +10,7 @@ A number of datasets have been used to benchmark the runtime, memory, and disk u
 | *S.* Heidelberg | 59        | 40                   | 3.04                | 4.07               | 21.4                | 66.6                  |
 | *S. pneumoniae* | 189       | 169                  | 8.23                | 12.4               | 21.7                | 136                   |
 
-The **Docker only** case represents the resource useage of the `snvphyl-galaxy` Docker image alone, without any data. The next three cases are data analyzed in the [SNVPhyl manuscript][].  The **Simulated data** case was run using a set of simulated reads through SNVPhyl, based off of *E. coli* str. Sakai (NC_002695) and two plasmids (NC_002128 and NC_002127).  The **SNV density filtering** case was run using a set of 11 *Streptococcus pneumoniae* genomes through SNVPhyl. The **_Salmonella_ Heidelberg** case was run using a set of 59 *Salmonella* Heidelberg genomes.  The final case was not analyzed in the SNVPhyl manuscript, but consists of a set of 189 *Streptococcus pneumoniae* genomes analyzed in <http://www.ncbi.nlm.nih.gov/pubmed/24957517>.  Additional details on this dataset are provided below.
+The **Docker only** case represents the resource useage of the snvphyl-galaxy Docker image alone, without any data. The next three cases are data analyzed in the [SNVPhyl manuscript][].  The **Simulated data** case was run using a set of simulated reads through SNVPhyl, based off of *E. coli* str. Sakai (NC_002695) and two plasmids (NC_002128 and NC_002127).  The **SNV density filtering** case was run using a set of 11 *Streptococcus pneumoniae* genomes through SNVPhyl. The **_Salmonella_ Heidelberg** case was run using a set of 59 *Salmonella* Heidelberg genomes.  The final case was not analyzed in the SNVPhyl manuscript, but consists of a set of 189 *Streptococcus pneumoniae* genomes analyzed in <http://www.ncbi.nlm.nih.gov/pubmed/24957517>.  Additional details on this dataset are provided below.
 
 All datasets were run using the default SNVPhyl parameters on a 16-core Intel Xeon CPU (W5590) @ 3.33 GHz with 24 GB of RAM.  Additional details on the methods used to run SNVPhyl for each case can be found [here][methods].
 
