@@ -22,7 +22,6 @@ pages:
 - Evaluation:
     - 'ASM NGS Challenge 2015': 'evaluation/asm-ngs-2015.md'
     - 'Benchmarking': 'evaluation/benchmarking.md'
-    - 'Benchmarking Methods': 'evaluation/benchmarking-methods/methods.md'
 - Developer:
     - 'Upgrading SNVPhyl Toolshed' : 'developer/upgrading.md'
 - Citation/Contact: 'citation.md'

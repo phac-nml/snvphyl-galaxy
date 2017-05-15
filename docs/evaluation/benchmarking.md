@@ -14,22 +14,24 @@ The **Docker only** case represents the resource useage of the `snvphyl-galaxy` 
 
 All datasets were run using the default SNVPhyl parameters on a 16-core Intel Xeon CPU (W5590) @ 3.33 GHz with 24 GB of RAM.  Additional details on the methods used to run SNVPhyl for each case can be found [here][methods].
 
-## Details: 189 *Streptococcus pneumoniae* genomes
+## Details on *Streptococcus pneumoniae* case
 
-In addition to running the 189 *Streptococcus pneumoniae* genomes using Docker, we also ran the dataset on a 2000-core cluster for comparison of the runtime and a rough estimate of scalability (runtime on the cluster is highly variable depending on usage). We also provide a comparison of the produced phylogenetic tree to the one available from [Microreact][] for this same dataset <https://microreact.org/project/N1TRn11L> (the SNVPhyl tree is tree 1 on the left, Microreact tree is tree 2 on the right).
+In addition to running the 189 *Streptococcus pneumoniae* genomes using Docker, we also ran the dataset on a 2000-core cluster for comparison of the runtime and a rough estimate of scalability (runtime on the cluster is highly variable depending on usage). We also provide a comparison of the produced phylogenetic tree to the one available from [Microreact][] for this same dataset (the SNVPhyl tree is tree 1 on the left, Microreact tree is tree 2 on the right).
+
+As an additional comparison to the default tree procued by SNVPhyl, we extracted all SNVs from the `snvTable.tsv` file (including SNVs in regions with low coverage in one or more genomes, or in repetitive regions) to construct an alignment with both polymorphic and monomorphic sites. This alignment was then run through [Gubbins][] (with default parameters).  This produced the tree shown for the case labeled **Gubbins (all positions detected by SNVPhyl)**.
+
+In both cases, the SNVPhyl tree is tree 1 on the left while the tree available from Microreact - <https://microreact.org/project/N1TRn11L> is tree 2 on the right.
 
 | Case                                               | SNVs used | % core | Docker runtime <br/> (hrs) | Cluster runtime <br/> (hrs) | Phylogenetic tree comparison |
 |:--------------------------------------------------:|:---------:|:------:|:--------------------------:|:---------------------------:|:----------------------------:|
-| Default <br/> (2 SNVs in 500 bp)                   | 1111      | 36.81  | 8.23                       | 2.33\*                        | [Comparison][1-tree-2-500]   |
+| Default <br/> (2 SNVs in 500 bp)                   | 1111      | 36.81  | 8.23                       | 2.22                        | [Comparison][1-tree-2-500]   |
 | Gubbins\* <br/> (all positions detected by SNVPhyl)| -         | -      | -                          | -                           | [Comparison][1-tree-gubbins] |
-
-\*For comparison, we extracted all SNVs from the `snvTable.tsv` file (including SNVs in regions with low coverage in one or more genomes, or in repetitive regions) to construct an alignment with both polymorphic and monomorphic sites. This alignment was then run through [Gubbins][] (with default parameters).  This produced the following [phylogenetic tree][1-tree-gubbins] (Gubbins tree is tree 1 on the left, Microreact tree is tree 2 on the right). We note that this gives a phylogenetic tree that is a bit more resolved and a closer match to the Microreact tree.
 
 [docker version of SNVPhyl]: ../install/docker
 [SNVPhyl manuscript]: http://biorxiv.org/content/early/2016/12/10/092940
 [snvphyl-validations]: https://github.com/apetkau/snvphyl-validations
 [Microreact]: https://microreact.org
 [Gubbins]: https://sanger-pathogens.github.io/gubbins/
-[methods]: benchmarking-methods/methods.md
+[methods]: https://github.com/phac-nml/snvphyl-galaxy/tree/development/docs/evaluation/benchmarking-methods/
 [1-tree-2-500]: http://phylo.io/#db3f0e933657efbab5b732f19c3b3276%23e5f863ba72a3551780bdebc610e87dd1
 [1-tree-gubbins]: http://phylo.io/#009e855b17db1ec897c19791c14f4ea6%235ca06bb267033a22112c202c82e981ff
