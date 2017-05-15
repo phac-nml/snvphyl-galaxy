@@ -40,7 +40,7 @@ For the other cases, the script [snvphyl-stats.sh](snvphyl-stats.sh) was used to
 
 2. Max RSS
 
-    The value is sampled in `snvphyl-stats.sh` every 10 seconds from the file `cat /sys/fs/cgroup/memory/docker/[docker id]/memory.max_usage_in_bytes` for the time SNVPhyl runs. The maximum value (of `total_rss`) after SNVPhyl completes is recorded.
+    The value is sampled in `snvphyl-stats.sh` every 5 seconds from the file `cat /sys/fs/cgroup/memory/docker/[docker id]/memory.max_usage_in_bytes` for the time SNVPhyl runs. The maximum value (of `total_rss`) after SNVPhyl completes is recorded.
 
 3. Max Memory
 
