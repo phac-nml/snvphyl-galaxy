@@ -26,7 +26,7 @@ du -sh /var/lib/docker/
 echo "Memory before SNVPhyl - `date`"
 cat /sys/fs/cgroup/memory/docker/$docker_id/memory.stat
 
-/home/aaron/software/snvphyl-galaxy-cli/bin/snvphyl.py --galaxy-url http://localhost:48888 --galaxy-api-key admin --fastq-dir $fastq_dir --reference-file $reference --fastq-files-as-links --output-dir $output_dir > $snvphyl_log &
+snvphyl.py --galaxy-url http://localhost:48888 --galaxy-api-key admin --fastq-dir $fastq_dir --reference-file $reference --fastq-files-as-links --output-dir $output_dir > $snvphyl_log &
 
 while [ "`pgrep -f snvphyl.py`" != "" ]
 do
