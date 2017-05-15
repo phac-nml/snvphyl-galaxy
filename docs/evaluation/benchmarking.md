@@ -2,7 +2,7 @@
 
 A number of datasets have been used to benchmark the runtime, memory, and disk usage of SNVPhyl across a range of scenarios using the Docker version of SNVPhyl on a 16-core machine. The results are presented in the table below.
 
-| Case            | # Genomes | Read size <br/> (GB) | Runtime <br/> (hrs) | Max RSS <br/> (GB) | Max Mem. <br/> (GB) | Disk Space <br/> (GB) |
+| Case            | # Genomes | Read size <br/> (GB) | Runtime <br/> (hrs) | Max Mem. (RSS)<br/> (GB) | Max Mem. (All)<br/> (GB) | Disk Space <br/> (GB) |
 |:----------------|:---------:|:--------------------:|:-------------------:|:------------------:|:-------------------:|:---------------------:|
 | Docker only     | -         | -                    | -                   | 0.662              | 1.15                | 2.4                   |
 | Simulated data  | 4         | 1.4                  | 0.261               | 3.04               | 9.90                | 6.8                   |
