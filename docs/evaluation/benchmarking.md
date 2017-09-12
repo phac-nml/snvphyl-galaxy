@@ -22,10 +22,10 @@ As an additional comparison to the default tree produced by SNVPhyl, we extracte
 
 In both cases, the SNVPhyl tree is tree 1 on the left while the tree available from Microreact - <https://microreact.org/project/N1TRn11L> is tree 2 on the right.
 
-| Case                                               | SNVs used | % core | Docker runtime <br/> (hrs) | Cluster runtime <br/> (hrs) | Phylogenetic tree comparison |
-|:--------------------------------------------------:|:---------:|:------:|:--------------------------:|:---------------------------:|:----------------------------:|
-| Default <br/> (2 SNVs in 500 bp)                   | 1111      | 36.81  | 8.23                       | 2.22                        | [Comparison][1-tree-2-500]   |
-| Gubbins\* <br/> (all positions detected by SNVPhyl)| -         | -      | -                          | -                           | [Comparison][1-tree-gubbins] |
+| Case                                               | SNVs used | % core | Docker runtime <br/> (hrs) | Cluster runtime <br/> (hrs) | Phylogenetic tree comparison                                                                          |
+|:--------------------------------------------------:|:---------:|:------:|:--------------------------:|:---------------------------:|:-----------------------------------------------------------------------------------------------------:|
+| Default <br/> (2 SNVs in 500 bp)                   | 1111      | 36.81  | 8.23                       | 2.22                        | [Comparison][1-tree-2-500] ([SNVPhyl][snvphyl-tree], [Microreact][microreact-tree])                   |
+| Gubbins\* <br/> (all positions detected by SNVPhyl)| -         | -      | -                          | -                           | [Comparison][1-tree-gubbins] ([SNVPhyl/Gubbins][snvphyl-gubbins-tree], [Microreact][microreact-tree]) |
 
 [docker version of SNVPhyl]: ../install/docker
 [SNVPhyl manuscript]: http://biorxiv.org/content/early/2016/12/10/092940
@@ -33,5 +33,8 @@ In both cases, the SNVPhyl tree is tree 1 on the left while the tree available f
 [Microreact]: https://microreact.org
 [Gubbins]: https://sanger-pathogens.github.io/gubbins/
 [methods]: https://github.com/phac-nml/snvphyl-galaxy/tree/development/docs/evaluation/benchmarking-methods/
-[1-tree-2-500]: http://phylo.io/#db3f0e933657efbab5b732f19c3b3276%23e5f863ba72a3551780bdebc610e87dd1
-[1-tree-gubbins]: http://phylo.io/#009e855b17db1ec897c19791c14f4ea6%235ca06bb267033a22112c202c82e981ff
+[1-tree-2-500]: http://phylo.io/#d96fb439be6faefb9b7ed7fd75332f46-713df4fc0a529b8d31254c7077b3f6c7
+[1-tree-gubbins]: http://phylo.io/#ecc0d535d3ba18651beedb0ac516076b-b0df11fb955a8b4955044174a60ed58d
+[snvphyl-tree]: results/snvphyl-2-500-filter.nwk
+[snvphyl-gubbins-tree]: results/gubbins-all-positions.nwk
+[microreact-tree]: results/microreact-s-pneumo.nwk
