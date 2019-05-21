@@ -1,7 +1,7 @@
-<tool id="consolidate_vcfs" name="Consolidate VCFs" version ="1.8.0">
+<tool id="consolidate_vcfs" name="Consolidate VCFs" version ="1.8.1">
   <description>combine freebayes and mpileup files for use by vcf2snvalignment</description>
     <requirements>
-      <requirement type="package" version="1.8">snvphyl</requirement>
+      <requirement type="package" version="1.8.1">snvphyl-tools</requirement>
     </requirements>
   <stdio>
   	<exit_code range="1:" level="fatal" description="Unknown error has occurred"/>
@@ -15,7 +15,7 @@
          ln -f -s $mpileup &amp;&amp; bcftools index -f $name  &amp;&amp;
 
 
-        \$VCF2PSEUDO/consolidate_vcfs.pl
+        consolidate_vcfs.pl
 
 
         -c "$coverage"

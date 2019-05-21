@@ -1,12 +1,12 @@
-<tool id="snvmatrix" name="SNV Matrix" version ="1.8.0">
+<tool id="snvmatrix" name="SNV Matrix" version ="1.8.1">
   <description>Create SNV matrix from Phylip file</description>
   <requirements>
-    <requirement type="package" version="1.8">snvphyl</requirement>
+    <requirement type="package" version="1.8.1">snvphyl-tools</requirement>
   </requirements>
   <stdio>
   </stdio>
-  <command interpreter="perl">
-	/\$VCF2PSEUDO/snv_matrix.pl   $phylip
+  <command>
+	snv_matrix.pl   $phylip
 	-o $out
   </command>
   <inputs>
