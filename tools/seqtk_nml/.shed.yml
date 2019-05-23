@@ -1,5 +1,0 @@
-categories: [Sequence Analysis]
-description: seqtk toolkit
-name: seqtk_nml
-owner: nml
-remote_repository_url: https://github.com/phac-nml/snvphyl-galaxy
