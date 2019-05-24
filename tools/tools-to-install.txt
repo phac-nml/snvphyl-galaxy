@@ -1,5 +1,3 @@
-bcftools_call
-bcftools_view
 phyml
 snvphyl-tools/filter_stats
 snvphyl-tools/filter_vcf

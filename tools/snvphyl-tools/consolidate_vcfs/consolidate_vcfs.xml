@@ -52,8 +52,8 @@
     <param name="coverage" type="integer" value="15" label="Minimum coverage"/>
     <param name="mean_mapping" type="integer" value="30" label="Minimum mean mapping quality"/>
     <param name="snv_abundance_ratio" type="text" value="0.75" optional="false" label="SNV abundance ratio"/>
-    <param name="freebayes" type="data" label="FreeBayes filtered BCF" help="" optional="false" format="bcf_bgzip" />
-    <param name="mpileup" type="data" label="Mpileup BCF" help="" optional="false" format="bcf_bgzip" />
+    <param name="freebayes" type="data" label="FreeBayes filtered BCF" help="" optional="false" format="bcf_bgzip,bcf" />
+    <param name="mpileup" type="data" label="Mpileup BCF" help="" optional="false" format="bcf_bgzip,bcf" />
     <conditional name="use_density_filter">
       <param name="select_list" type="select" label= "SNV density filtering">
         <option value="yes">Apply</option>
