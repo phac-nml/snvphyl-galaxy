@@ -2,7 +2,7 @@
 <repositories description="A suite of tools associated with SNVphyl pipeline">
 	<repository name="smalt" owner="nml" />
 	<repository name="freebayes" owner="devteam"/>
-	<repository name="samtools_mpileup" owner="devteam"/>
+	<repository name="bcftools_mpileup" owner="iuc"/>
 	<repository name="bcftools_view" owner="iuc"/>
 	<repository name="bcftools_call" owner="iuc"/>
 	<repository name="filter_vcf" owner="nml"/>

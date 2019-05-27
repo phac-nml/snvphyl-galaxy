@@ -11,10 +11,7 @@ Additionality, tools available from toolshed.g2.bx.psu.edu will also be installe
 * **freebayes by devteam at 156b60c1530f
 * **bcftools call by iuc at 0fba2c15b40d
 * **bcftools view by iuc at d1f8f55f564d
-* **package_ncurses_5_9 by iuc at 5e1760c773ba
-* **package_samtools_0_1_19 by iuc at 96aab723499f
-* **package_samtools_1_2 by iuc at f6ae3ba3f3c1
-* **package_zlib_1_2_8 by iuc at 63a4a902cda2
+* **bcftools mpileup by iuc at cf06b44624c7
 * **regex_find_replace by jjohnson at 9ea374bb0350
 * **samtools_mpileup by devteam at aa0ef6f0ee89
 
