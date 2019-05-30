@@ -1,7 +1,7 @@
-<tool id="findrepeat" name="Find Repeats" version ="1.8.1">
+<tool id="findrepeat" name="Find Repeats" version ="1.8.2">
   <description>Identify repeat elements using Mummer</description>
   <requirements>
-    <requirement type="package" version="1.8.1">snvphyl-tools</requirement>
+    <requirement type="package" version="1.8.2">snvphyl-tools</requirement>
     <requirement type="package" version="3.23">mummer</requirement>
   </requirements>
   <stdio>

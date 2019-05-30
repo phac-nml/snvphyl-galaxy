@@ -1,7 +1,7 @@
-<tool id="filtervcf" name="Filter vcf" version ="1.8.1">
+<tool id="filtervcf" name="Filter vcf" version ="1.8.2">
   <description>filter out indels and complex SNVS</description>
   <requirements>
-    <requirement type="package" version="1.8.1">snvphyl-tools</requirement>
+    <requirement type="package" version="1.8.2">snvphyl-tools</requirement>
   </requirements>
    <stdio>
   </stdio>

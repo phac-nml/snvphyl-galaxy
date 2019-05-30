@@ -1,7 +1,7 @@
 <tool id="snvphyl_reporter" name="Snvphyl Reporter" version="1.8.0">
 	<description>Runs Snvphyl reporter</description>
 	<requirements>
-		<requirement type="package" version="1.8.1">snvphyl-tools</requirement>
+		<requirement type="package" version="1.8.2">snvphyl-tools</requirement>
 	</requirements>
 	<command>
 		reporter.pl --output $output

@@ -1,7 +1,7 @@
-<tool id="positions2snv_alignment" name="Positions to SNV alignment" version ="1.8.1">
+<tool id="positions2snv_alignment" name="Positions to SNV alignment" version ="1.8.2">
   <description>Create a SNV-only alignment from the SNVPhyl positions table.</description>
   <requirements>
-    <requirement type="package" version="1.8.1">snvphyl-tools</requirement>
+    <requirement type="package" version="1.8.2">snvphyl-tools</requirement>
   </requirements>
   <stdio>
   </stdio>

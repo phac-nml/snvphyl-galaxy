@@ -1,7 +1,7 @@
-<tool id="filterstat" name="Filter Stats" version ="1.8.1">
+<tool id="filterstat" name="Filter Stats" version ="1.8.2">
   <description>Identify number of positions excluded based on filtered status</description>
   <requirements>
-    <requirement type="package" version="1.8.1">snvphyl-tools</requirement>
+    <requirement type="package" version="1.8.2">snvphyl-tools</requirement>
   </requirements>
   <stdio>
     <exit_code range="1:" level="fatal" description="Unknown error has occured"/>

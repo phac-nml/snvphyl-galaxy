@@ -1,7 +1,7 @@
-<tool id="vcf2snvalignment" name="VCF 2 snvalignment" version ="1.8.1">
+<tool id="vcf2snvalignment" name="VCF 2 snvalignment" version ="1.8.2">
   <description>create a snv alignment from multiple merged VCF files</description>
   <requirements>
-    <requirement type="package" version="1.8.1">snvphyl-tools</requirement>
+    <requirement type="package" version="1.8.2">snvphyl-tools</requirement>
   </requirements>
   <stdio>
   	<exit_code range="1:" level="fatal" description="Unknown error has occurred"/>

@@ -1,7 +1,7 @@
-<tool id="positions2snv_invariant_alignment" name="Positions to SNV invariant alignment" version ="1.8.1">
+<tool id="positions2snv_invariant_alignment" name="Positions to SNV invariant alignment" version ="1.8.2">
   <description>Create a SNV and non-variant alignment from the SNVPhyl positions table and a reference genome.</description>
   <requirements>
-    <requirement type="package" version="1.8.1">snvphyl-tools</requirement>
+    <requirement type="package" version="1.8.2">snvphyl-tools</requirement>
   </requirements>
   <stdio>
   </stdio>
