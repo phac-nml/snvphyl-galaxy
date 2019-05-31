@@ -8,4 +8,5 @@
 	<repository name="sam_to_bam" owner="devteam" toolshed="http://toolshed.g2.bx.psu.edu/" changeset_revision="c73bf16b45df" />
 	<repository name="samtools_mpileup" owner="devteam" toolshed="http://toolshed.g2.bx.psu.edu/" changeset_revision="973fea5b4bdf" />
 	<repository name="bcftools_view" owner="gregory-minevich" toolshed="http://toolshed.g2.bx.psu.edu/" changeset_revision="6572c40a8505" />
+	<repository name="msa_datatypes" owner="iuc" toolshed="http://toolshed.g2.bx.psu.edu/" changeset_revision="70227007b991" />
 </repositories>
