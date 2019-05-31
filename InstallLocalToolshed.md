@@ -5,21 +5,16 @@ This document describes how to build and install the SNVPhyl tools within a cust
 
 * **phyml**
 * **smalt**
-* **wombac**
 * **bcftools call**
 * **bcftools view**
-* **Seqtk nml**
 * **core-pipeline tools**
 
 Additionality, tools available from toolshed.g2.bx.psu.edu will also be installed in a custom toolshed. The list of tools is given below:
 
 * **freebayes by devteam at 99684adf84de
-* **msa_datatypes by iuc at 70227007b991
 * **package_bcftools_1_3 by iuc at 43a9aebf3adb
 * **package_freebayes_0_9_20_b040236 by devteam at 059e6e3d99cc
-* **package_mummer_3_23 by iuc at 9ddc606546c3
 * **package_ncurses_5_9 by iuc at 5e1760c773ba
-* **package_perl_5_18 by iuc at fd34b72b501b
 * **package_samtools_0_1_18 by devteam at 171cd8bc208d
 * **package_samtools_0_1_19 by iuc at 96aab723499f
 * **package_samtools_1_2 by iuc at f6ae3ba3f3c1

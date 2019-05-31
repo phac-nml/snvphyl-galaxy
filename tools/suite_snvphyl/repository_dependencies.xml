@@ -12,8 +12,6 @@
 	<repository name="vcf2snvalignment" owner="nml"/>
 	<repository name="consolidate_vcfs" owner="nml"/>
 	<repository name="phyml" owner="nml"/>
-	<repository name="bcf_bgzip_datatype" owner="nml"/>
-	<repository name="msa_datatypes" owner="iuc"/>
 	<repository name="verify_map" owner="nml"/>
 	<repository name="filter_stats" owner="nml"/>
 	<repository name="regex_find_replace" owner="jjohnson"/>
