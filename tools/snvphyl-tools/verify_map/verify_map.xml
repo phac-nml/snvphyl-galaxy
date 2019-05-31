@@ -2,7 +2,6 @@
 	<description>Checks the mapping quality of all BAM files generated in the core SNV pipeline.</description>
 	<requirements>
 		<requirement type="package" version="1.8.2">snvphyl-tools</requirement>
-		<requirement type="package" version="0.1.19">samtools</requirement>
 	</requirements>
 	<stdio>
 		<exit_code range="1:" level="fatal" description="Unknown error has occured"/>
