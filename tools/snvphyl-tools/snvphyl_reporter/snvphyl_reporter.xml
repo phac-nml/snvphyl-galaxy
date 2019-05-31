@@ -1,10 +1,10 @@
 <tool id="snvphyl_reporter" name="Snvphyl Reporter" version="1.8.0">
 	<description>Runs Snvphyl reporter</description>
 	<requirements>
-		<requirement type="package" version="1.8">snvphyl</requirement>
+		<requirement type="package" version="1.8.2">snvphyl-tools</requirement>
 	</requirements>
-	<command interpreter="perl">
-		/\$VCF2PSEUDO/reporter.pl --output $output
+	<command>
+		reporter.pl --output $output
 		#if $job_type.type == "bam_quality"
 			--step bam_quality_data
 			#if $job_type.json

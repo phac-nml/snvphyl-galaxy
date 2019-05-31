@@ -1,12 +1,12 @@
-<tool id="filtervcf" name="Filter vcf" version ="1.8.0">
+<tool id="filtervcf" name="Filter vcf" version ="1.8.2">
   <description>filter out indels and complex SNVS</description>
   <requirements>
-    <requirement type="package" version="1.8">snvphyl</requirement>
+    <requirement type="package" version="1.8.2">snvphyl-tools</requirement>
   </requirements>
    <stdio>
   </stdio>
- <command interpreter="perl">
-	/\$VCF2PSEUDO/filterVcf.pl --noindels  $vcf
+ <command>
+	filterVcf.pl --noindels  $vcf
 	-o $vcfout
   </command>
   <inputs>

@@ -1,12 +1,12 @@
-<tool id="positions2snv_alignment" name="Positions to SNV alignment" version ="1.8.0">
+<tool id="positions2snv_alignment" name="Positions to SNV alignment" version ="1.8.2">
   <description>Create a SNV-only alignment from the SNVPhyl positions table.</description>
   <requirements>
-    <requirement type="package" version="1.8">snvphyl</requirement>
+    <requirement type="package" version="1.8.2">snvphyl-tools</requirement>
   </requirements>
   <stdio>
   </stdio>
-  <command interpreter="perl"><![CDATA[
-	/\$VCF2PSEUDO/positions2snv_alignment.pl -i $snv_table -o $output -f $out_format $keep_all 
+  <command><![CDATA[
+	positions2snv_alignment.pl -i $snv_table -o $output -f $out_format $keep_all 
         #if $reference_name:
           --reference-name $reference_name
         #end if

@@ -1,14 +1,13 @@
-<tool id="verify_map" name="Verify Mapping Quality" version="1.8.0">
+<tool id="verify_map" name="Verify Mapping Quality" version="1.8.2">
 	<description>Checks the mapping quality of all BAM files generated in the core SNV pipeline.</description>
 	<requirements>
-		<requirement type="package" version="1.8">snvphyl</requirement>
-		<requirement type="package" version="0.1.19">samtools</requirement>
+		<requirement type="package" version="1.8.2">snvphyl-tools</requirement>
 	</requirements>
 	<stdio>
 		<exit_code range="1:" level="fatal" description="Unknown error has occured"/>
 	</stdio>
-	<command interpreter="perl">
-		/\$VCF2PSEUDO/verify_mapping_quality.pl
+	<command>
+		verify_mapping_quality.pl
  		#for $f in $bams.keys# --bam "$f=$bams[$f]" #end for#
  		#if $mindepth :
         	--min-depth $mindepth

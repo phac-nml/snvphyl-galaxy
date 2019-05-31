@@ -1,5 +1,0 @@
-categories: [Tool Dependency Packages]
-description: SNVPhyl Dependencies
-name: package_snvphyl_1_8
-owner: nml
-remote_repository_url: https://github.com/phac-nml/snvphyl-galaxy
