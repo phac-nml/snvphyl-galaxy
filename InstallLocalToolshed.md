@@ -8,12 +8,12 @@ This document describes how to build and install the SNVPhyl tools within a cust
 
 Additionality, tools available from toolshed.g2.bx.psu.edu will also be installed in a custom toolshed. The list of tools is given below:
 
-* **freebayes by devteam at 156b60c1530f
-* **bcftools call by iuc at 0fba2c15b40d
-* **bcftools view by iuc at d1f8f55f564d
-* **bcftools mpileup by iuc at cf06b44624c7
-* **regex_find_replace by jjohnson at 9ea374bb0350
-* **samtools_mpileup by devteam at aa0ef6f0ee89
+* **freebayes by devteam at 156b60c1530f**
+* **bcftools call by iuc at 0fba2c15b40d**
+* **bcftools view by iuc at d1f8f55f564d**
+* **bcftools mpileup by iuc at cf06b44624c7**
+* **regex_find_replace by jjohnson at 9ea374bb0350**
+* **samtools_mpileup by devteam at aa0ef6f0ee89**
 
 
 ### Initial requirements
