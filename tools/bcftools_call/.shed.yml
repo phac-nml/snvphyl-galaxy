@@ -1,5 +1,0 @@
-categories: [Sequence Analysis]
-description: BCF Tools call
-name: bcftools_call
-owner: nml
-remote_repository_url: https://github.com/phac-nml/snvphyl-galaxy

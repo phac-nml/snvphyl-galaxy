@@ -1,5 +1,0 @@
-categories: [Sequence Analysis]
-description: SMALT map
-name:  smalt_map
-owner: nml
-remote_repository_url: https://github.com/phac-nml/snvphyl-galaxy

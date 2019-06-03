@@ -1,20 +1,19 @@
 <?xml version="1.1"?>
 <repositories description="A suite of tools associated with SNVphyl pipeline">
-	<repository name="smalt_map" owner="nml" />
-	<repository name="smalt_index" owner="nml"/>
+	<repository name="regex_find_replace" owner="jjohnson"/>
 	<repository name="freebayes" owner="devteam"/>
-	<repository name="samtools_mpileup" owner="devteam"/>
-	<repository name="bcftools_view" owner="nml"/>
-	<repository name="bcftools_call" owner="nml"/>
+	<repository name="bcftools_mpileup" owner="iuc"/>
+	<repository name="bcftools_view" owner="iuc"/>
+	<repository name="bcftools_call" owner="iuc"/>
+	<repository name="phyml" owner="iuc"/>
+	<repository name="smalt" owner="nml" />
 	<repository name="filter_vcf" owner="nml"/>
 	<repository name="snv_matrix" owner="nml"/>
 	<repository name="find_repeats" owner="nml"/>
 	<repository name="vcf2snvalignment" owner="nml"/>
 	<repository name="consolidate_vcfs" owner="nml"/>
-	<repository name="phyml" owner="nml"/>
 	<repository name="verify_map" owner="nml"/>
 	<repository name="filter_stats" owner="nml"/>
-	<repository name="regex_find_replace" owner="jjohnson"/>
 	<repository name="filter_density" owner="nml"/>
 	<repository name="collapse_collections" owner="nml"/>
 	<repository name="positions2snv_alignment" owner="nml"/>

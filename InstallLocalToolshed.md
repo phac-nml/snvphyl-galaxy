@@ -3,25 +3,17 @@ SNVPhyl Pipeline Tools
 
 This document describes how to build and install the SNVPhyl tools within a custom toolshed.  The tools are located under `tools/`.  These can be packaged up and uploaded into a [Galaxy Tool Shed][] and then later installed to an instance of Galaxy.  The list of tools is given below:
 
-* **phyml**
-* **smalt**
-* **bcftools call**
-* **bcftools view**
 * **core-pipeline tools**
 
 Additionality, tools available from toolshed.g2.bx.psu.edu will also be installed in a custom toolshed. The list of tools is given below:
 
-* **freebayes by devteam at 99684adf84de
-* **package_bcftools_1_3 by iuc at 43a9aebf3adb
-* **package_freebayes_0_9_20_b040236 by devteam at 059e6e3d99cc
-* **package_ncurses_5_9 by iuc at 5e1760c773ba
-* **package_samtools_0_1_18 by devteam at 171cd8bc208d
-* **package_samtools_0_1_19 by iuc at 96aab723499f
-* **package_samtools_1_2 by iuc at f6ae3ba3f3c1
-* **package_tabix_0_2_6 by iuc at 389d2376b60b
-* **package_zlib_1_2_8 by iuc at 63a4a902cda2
-* **regex_find_replace by jjohnson at 9ea374bb0350
-* **samtools_mpileup by devteam at aa0ef6f0ee89
+* **freebayes by devteam at 156b60c1530f**
+* **bcftools call by iuc at 0fba2c15b40d**
+* **bcftools view by iuc at d1f8f55f564d**
+* **bcftools mpileup by iuc at cf06b44624c7**
+* **regex_find_replace by jjohnson at 9ea374bb0350**
+* **samtools_mpileup by devteam at aa0ef6f0ee89**
+* **phyml by iuc at 850e213bee26**
 
 
 ### Initial requirements
