@@ -37,7 +37,6 @@
 				<collection type="list">
 					<element name="s1" value="sample1.bam"/>
 					<element name="s2" value="sample2.bam"/>
-					<element name="s3" value="sample3.bam"/>
 					<element name="s4" value="sample4.bam"/>
 				</collection>
 			</param>
