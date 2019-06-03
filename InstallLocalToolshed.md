@@ -3,7 +3,6 @@ SNVPhyl Pipeline Tools
 
 This document describes how to build and install the SNVPhyl tools within a custom toolshed.  The tools are located under `tools/`.  These can be packaged up and uploaded into a [Galaxy Tool Shed][] and then later installed to an instance of Galaxy.  The list of tools is given below:
 
-* **phyml**
 * **core-pipeline tools**
 
 Additionality, tools available from toolshed.g2.bx.psu.edu will also be installed in a custom toolshed. The list of tools is given below:
@@ -14,6 +13,7 @@ Additionality, tools available from toolshed.g2.bx.psu.edu will also be installe
 * **bcftools mpileup by iuc at cf06b44624c7**
 * **regex_find_replace by jjohnson at 9ea374bb0350**
 * **samtools_mpileup by devteam at aa0ef6f0ee89**
+* **phyml by iuc at 850e213bee26**
 
 
 ### Initial requirements
