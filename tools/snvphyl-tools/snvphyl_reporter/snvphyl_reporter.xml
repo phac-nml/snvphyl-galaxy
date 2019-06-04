@@ -3,7 +3,7 @@
 	<requirements>
 		<requirement type="package" version="1.8.2">snvphyl-tools</requirement>
 	</requirements>
-	<command>
+	<command detect_errors="exit_code">
 		reporter.pl --output $output
 		#if $job_type.type == "bam_quality"
 			--step bam_quality_data
