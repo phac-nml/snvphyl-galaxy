@@ -1,7 +1,0 @@
-categories: [Sequence Analysis]
-description: Reporter for SNVPhyl pipeline
-name: snvphyl_reporter
-owner: nml
-remote_repository_url: https://github.com/phac-nml/snvphyl-galaxy
-long_description: The SNVPhyl (Single Nucleotide Variant PHYLogenomics) pipeline is a pipeline for identifying Single Nucleotide Variants (SNV) within a collection of microbial genomes and constructing a phylogenetic tree. 
-homepage_url: https://snvphyl.readthedocs.io/en/latest/
