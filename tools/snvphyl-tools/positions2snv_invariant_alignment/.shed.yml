@@ -3,3 +3,5 @@ description: Generate alignment of SNVs and non-variant positions from SNVPhyl v
 name: positions2snv_invariant_alignment
 owner: nml
 remote_repository_url: https://github.com/phac-nml/snvphyl-galaxy
+long_description: The SNVPhyl (Single Nucleotide Variant PHYLogenomics) pipeline is a pipeline for identifying Single Nucleotide Variants (SNV) within a collection of microbial genomes and constructing a phylogenetic tree. 
+homepage_url: https://snvphyl.readthedocs.io/en/latest/
