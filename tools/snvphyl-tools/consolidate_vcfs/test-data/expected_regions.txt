@@ -1,2 +1,1 @@
-gi|360034408|ref|NC_016445.1|_2000000_2400000	151395	151608
 #Calculation and writing of high density regions has completed.
