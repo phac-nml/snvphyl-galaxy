@@ -41,12 +41,10 @@ Once you have uploaded the packages to a Galaxy Tool Shed, you can install to a 
 3. Click on the arrow next to the tool and click on **Preview and install**.
 4. Wait for Galaxy to install your tool.
 
-[Core Phylogenomis Pipeline]: https://github.com/apetkau/core-phylogenomics
+[Core Phylogenomis Pipeline]: https://snvphyl.readthedocs.io/en/latest/
 [Galaxy Tool Shed]: https://wiki.galaxyproject.org/ToolShed
-[Production Server Setup]: https://wiki.galaxyproject.org/Admin/Config/Performance/ProductionServer
-[Testing Installed Tools]: https://wiki.galaxyproject.org/TestingInstalledTools
-[IRIDA Galaxy Setup]: https://irida.corefacility.ca/irida/irida-install-documentation/tree/master/galaxy
+[Production Server Setup]: https://docs.galaxyproject.org/en/latest/admin/production.html
+[IRIDA Galaxy Setup]: https://irida.corefacility.ca/documentation/administrator/galaxy/
 [Automated Tool Tests]: https://wiki.galaxyproject.org/AutomatedToolTests
-[Hosting a Local Tool Shed]: https://wiki.galaxyproject.org/HostingALocalToolShed
-[Install and Test Certification]: https://wiki.galaxyproject.org/InstallAndTestCertification
+[Hosting a Local Tool Shed]: https://galaxyproject.org/toolshed/hosting-a-local-toolshed/
 [Tool Testing Enhancements]: http://dev.list.galaxyproject.org/Tool-Testing-Enhancements-td4663799.html
