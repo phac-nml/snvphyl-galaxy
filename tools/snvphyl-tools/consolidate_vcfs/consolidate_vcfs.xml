@@ -3,17 +3,26 @@
     <requirements>
       <requirement type="package" version="1.8.2">snvphyl-tools</requirement>
     </requirements>
-  <stdio>
-  	<exit_code range="1:" level="fatal" description="Unknown error has occurred"/>
-  </stdio>
-  <command>
+  <command detect_errors="exit_code"><![CDATA[
 
         #set $name = str($freebayes).split('/')[-1]
-         ln -f -s $freebayes  &amp;&amp; bcftools index -f $name  &amp;&amp;
+         ln -f -s $freebayes &&
+
+        #if $freebayes.metadata.bcf_index:
+          ln -s '${$freebayes.metadata.bcf_index}' ${name}.csi &&
+        #else
+	  bcftools index $name &&
+	#end if
+
 
         #set $name = str($mpileup).split('/')[-1]
-         ln -f -s $mpileup &amp;&amp; bcftools index -f $name  &amp;&amp;
+         ln -f -s $mpileup &&
 
+        #if $mpileup.metadata.bcf_index:
+          ln -s '${$mpileup.metadata.bcf_index}' ${name}.csi &&
+        #else
+	  bcftools index $name &&
+	#end if
 
         consolidate_vcfs.pl
 
@@ -46,7 +55,7 @@
 
         ##mark where the output files will be sent to, simply have to match them up later in the xml output section
         -o $bcf_combined
-
+  ]]>
   </command>
   <inputs>
     <param name="coverage" type="integer" value="15" label="Minimum coverage"/>
@@ -73,17 +82,25 @@
   </outputs>
   <tests>
     <test>
-      <param name="coverage" value="4"/>
-      <param name="freebayes" value="freebayes/v1.bcf.gz" />
-      <param name="mpileup" value="mpileup/v1.bcf.gz" />
-      <output name="bcf_combined" file="v1.bcf.gz"/>
+      <param name="coverage" value="5"/>
+      <param name="freebayes" value="freebayes/v1.bcf" />
+      <param name="mpileup" value="mpileup/v1.bcf" />
+      <param name="mean_mapping" value="30" />
+      <param name="snv_abundance_ratio" value="0.75" />
+      <param name="window_size" value="500" />
+      <param name="threshold" value="2" />
+      <output name="bcf_combined" file="v1.bcf.gz" compare="sim_size" delta="500"/>
       <output name="filtered_density" file="expected_regions.txt"/>
     </test>
     <test>
-      <param name="coverage" value="4"/>
-      <param name="freebayes" value="freebayes/v2.bcf.gz" />
-      <param name="mpileup" value="mpileup/v2.bcf.gz" />
-      <output name="bcf_combined" file="v2.bcf.gz"/>
+      <param name="coverage" value="5"/>
+      <param name="freebayes" value="freebayes/v2.bcf" />
+      <param name="mpileup" value="mpileup/v2.bcf" />
+      <param name="mean_mapping" value="30" />
+      <param name="snv_abundance_ratio" value="0.75" />
+      <param name="window_size" value="500" />
+      <param name="threshold" value="2" />
+      <output name="bcf_combined" file="v2.bcf.gz" compare="sim_size" delta="500"/>
       <output name="filtered_density" file="expected_regions.txt"/>
     </test>
   </tests>

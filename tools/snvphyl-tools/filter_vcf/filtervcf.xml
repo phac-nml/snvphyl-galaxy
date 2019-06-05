@@ -3,9 +3,7 @@
   <requirements>
     <requirement type="package" version="1.8.2">snvphyl-tools</requirement>
   </requirements>
-   <stdio>
-  </stdio>
- <command>
+ <command detect_errors="exit_code">
 	filterVcf.pl --noindels  $vcf
 	-o $vcfout
   </command>

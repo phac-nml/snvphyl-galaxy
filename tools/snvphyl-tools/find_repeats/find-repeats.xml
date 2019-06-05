@@ -4,10 +4,7 @@
     <requirement type="package" version="1.8.2">snvphyl-tools</requirement>
     <requirement type="package" version="3.23">mummer</requirement>
   </requirements>
-  <stdio>
-    <exit_code range="1:" level="fatal" description="Unknown error has occured"/>
-  </stdio>
-  <command>
+  <command detect_errors="exit_code">
       find-repeats.pl -l $length -p $pid $fasta > $out
   </command>
   <inputs>

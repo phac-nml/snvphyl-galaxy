@@ -3,15 +3,18 @@
   <requirements>
     <requirement type="package" version="1.8.2">snvphyl-tools</requirement>
   </requirements>
-  <stdio>
-  	<exit_code range="1:" level="fatal" description="Unknown error has occurred"/>
-  </stdio>
-  <command>
+  <command detect_errors="exit_code"><![CDATA[
 
 
         #for $f in $vcf_collection.keys#
-        #set $name = str($vcf_collection[$f]).split('/')[-1]
-         ln -f -s $vcf_collection[$f]  &amp;&amp; bcftools index -f $name  &amp;&amp;
+          #set $name = str($vcf_collection[$f]).split('/')[-1]
+          ln -f -s '$vcf_collection[$f]' &&
+
+          #if $vcf_collection[$f].metadata.bcf_index:
+	     ln -s '${$vcf_collection[$f].metadata.bcf_index}' ${name}.csi &&
+	  #else
+	     bcftools index $name &&
+	  #end if
         #end for#
 
         vcf2snv_alignment.pl
@@ -26,20 +29,19 @@
         --fasta "$ref_fasta"
 
         #for $f in $vcf_collection.keys#
-        #set $beer = $vcf_collection[$f]
-        #set $path = str($beer).split('/')[-1]
-        --consolidate_vcf "$f=$path"
+          #set $path = str($vcf_collection[$f]).split('/')[-1]
+          --consolidate_vcf "$f=$path"
         #end for#
 
         #if $strain_list.select_list == "include":
-              --include $strain_list.include
+              --include '$strain_list.include'
         #elif $strain_list.select_list == "exclude":
-              --exclude $strain_list.exclude
+              --exclude '$strain_list.exclude'
         #end if
 
         ##mark where the output files will be sent to, simply have to match them up later in the xml output section
-        -o snvalign
-
+        -o 'snvalign'
+  ]]>
   </command>
   <inputs>
     <param name="reference" type="text"  label="Reference Name" value='reference' />
@@ -59,7 +61,7 @@
       </when>
       <when value="all"/>
     </conditional>
-    <param name="vcf_collection" type="data_collection" label="Combined VCF Files" help="" optional="false" format="bcf_bgzip" collection_type="list" />
+    <param name="vcf_collection" type="data_collection" label="Combined VCF Files" help="" optional="false" format="bcf,bcf_bgzip" collection_type="list" />
   </inputs>
   <outputs>
     <data format="tabular" name="positions" from_work_dir="snvalign-positions.tsv" />
@@ -77,7 +79,6 @@
           <element name="v2" value="consolidate_vcf/v2.bcf.gz"/>
         </collection>
       </param>
-
       <output name="positions" file="expected_positions.tsv"/>
       <output name="fasta" file="expected_fasta.fasta"/>
       <output name="phylip" file="expected_phylip.phy"/>

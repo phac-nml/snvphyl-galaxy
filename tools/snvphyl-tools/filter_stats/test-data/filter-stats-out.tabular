@@ -2,4 +2,14 @@ Chromosome	Genomes
 chr	ALL	B	query
 Total number of N's and -'s	1	1	0
 Total percent of N's and -'s	50.00	50.00	0.00
+Total number of unfiltered variants in chromosome: 2
+
+================= Filter Summary Statistics =====================
+Number of sites used to generate phylogeny: 1
+Total number of sites identified: 2
+Number of sites filtered: 1
+Percentage of sites filtered: 50.00
+Coverage filtered: 1
+mpileup filtered: 0
+Invalid filtered: Invalid positions not analyzed.  Please use -a flag to analyze.
 

@@ -3,10 +3,7 @@
 	<requirements>
 		<requirement type="package" version="1.8.2">snvphyl-tools</requirement>
 	</requirements>
-	<stdio>
-		<exit_code range="1:" level="fatal" description="Unknown error has occured"/>
-	</stdio>
-	<command>
+	<command detect_errors="exit_code">
 		verify_mapping_quality.pl
  		#for $f in $bams.keys# --bam "$f=$bams[$f]" #end for#
  		#if $mindepth :
@@ -37,7 +34,6 @@
 				<collection type="list">
 					<element name="s1" value="sample1.bam"/>
 					<element name="s2" value="sample2.bam"/>
-					<element name="s3" value="sample3.bam"/>
 					<element name="s4" value="sample4.bam"/>
 				</collection>
 			</param>
