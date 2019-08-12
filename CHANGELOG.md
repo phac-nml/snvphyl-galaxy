@@ -3,6 +3,42 @@ SNVPhyl Versions
 
 This describes the different release versions of SNVPhyl.
 
+Version 1.1.0
+=============
+
+Released on **June  6, 2019**.
+
+Install
+-------
+
+* Docker - `phacnml/snvphyl-galaxy-1.1.0`
+* Virtual Machine - [snvphyl-galaxy-1.1.0.zip](https://irida.corefacility.ca/downloads/snvphyl-galaxy/snvphyl-galaxy-1.1.0.zip)
+* Galaxy Tools - [suite_snvphyl_1_1_0]()
+* Galaxy Workflows
+    * Paired-end: [SNVPhyl Paired-End 1.1.0](../workflows/SNVPhyl/1.1.0/snvphyl-workflow-1.1.0.ga) and [SNVPhyl Paired-End 1.1.0 (invalid-positions)](../workflows/SNVPhyl/1.1.0/snvphyl-workflow-1.1.0-invalid-positions.ga)
+    * Single-end: [SNVPhyl Single-End 1.1.0](../workflows/SNVPhyl/1.1.0/snvphyl-workflow-1.1.0-single-end.ga) and [SNVPhyl Single-End 1.1.0 (invalid-positions)](../workflows/SNVPhyl/1.1.0/snvphyl-workflow-1.1.0-single-end-invalid-positions.ga)
+* Git - <https://github.com/phac-nml/snvphyl-galaxy/tree/1.1.0>
+
+Changelog
+---------
+
+* Convert all SNVPhyl wrappers from tool shed package to bioconda (v1.8.2)
+* Removed following unused/deprecated wrappers & capsules
+	* Wombac
+	* Seqtk NML
+	* package_perl_5_18_iuc
+	* package_msa_datatypes_iuc
+	* package_mummer_3_23
+	* bcf_bgzip
+* Removed following wrappers that are now available on main public tool shed
+	* smalt
+	* freebayes
+	* bcftools mpileup
+	* phyml
+	* bcftools view
+	* bcftools call
+* Enable CI testing with Travis
+
 Version 1.0.1
 =============
 
