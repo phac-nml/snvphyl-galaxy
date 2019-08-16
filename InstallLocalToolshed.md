@@ -10,10 +10,12 @@ Additionality, tools available from toolshed.g2.bx.psu.edu will also be installe
 * **freebayes by devteam at 156b60c1530f**
 * **bcftools call by iuc at 0fba2c15b40d**
 * **bcftools view by iuc at d1f8f55f564d**
-* **bcftools mpileup by iuc at cf06b44624c7**
+* **bcftools mpileup by iuc at 4e1d23e5c691**
 * **regex_find_replace by jjohnson at 9ea374bb0350**
-* **samtools_mpileup by devteam at aa0ef6f0ee89**
 * **phyml by iuc at 850e213bee26**
+* **collapse_collections by nml at 49bd84e136c7**
+* **smalt by nml at 51ad86498414**
+
 
 
 ### Initial requirements
@@ -39,12 +41,10 @@ Once you have uploaded the packages to a Galaxy Tool Shed, you can install to a 
 3. Click on the arrow next to the tool and click on **Preview and install**.
 4. Wait for Galaxy to install your tool.
 
-[Core Phylogenomis Pipeline]: https://github.com/apetkau/core-phylogenomics
+[Core Phylogenomis Pipeline]: https://snvphyl.readthedocs.io/en/latest/
 [Galaxy Tool Shed]: https://wiki.galaxyproject.org/ToolShed
-[Production Server Setup]: https://wiki.galaxyproject.org/Admin/Config/Performance/ProductionServer
-[Testing Installed Tools]: https://wiki.galaxyproject.org/TestingInstalledTools
-[IRIDA Galaxy Setup]: https://irida.corefacility.ca/irida/irida-install-documentation/tree/master/galaxy
+[Production Server Setup]: https://docs.galaxyproject.org/en/latest/admin/production.html
+[IRIDA Galaxy Setup]: https://irida.corefacility.ca/documentation/administrator/galaxy/
 [Automated Tool Tests]: https://wiki.galaxyproject.org/AutomatedToolTests
-[Hosting a Local Tool Shed]: https://wiki.galaxyproject.org/HostingALocalToolShed
-[Install and Test Certification]: https://wiki.galaxyproject.org/InstallAndTestCertification
+[Hosting a Local Tool Shed]: https://galaxyproject.org/toolshed/hosting-a-local-toolshed/
 [Tool Testing Enhancements]: http://dev.list.galaxyproject.org/Tool-Testing-Enhancements-td4663799.html

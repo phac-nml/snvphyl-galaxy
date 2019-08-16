@@ -41,7 +41,7 @@ else
     done
     
     echo "Attempting to create multiple categories for all capsules and NML tools"
-    cats=("Tool Dependency Packages" "Sequence Analysis" "Variant Analysis" "SAM" "Text Manipulation")
+    cats=("Tool Dependency Packages" "Sequence Analysis" "Variant Analysis" "SAM" "Text Manipulation" "Phylogenetics")
     for i in "${cats[@]}" ; do
         curl -s --data "name=$i" -d "session_csrf_token=$token" $api_host/api/categories?key=$api_key > /dev/null
     done
