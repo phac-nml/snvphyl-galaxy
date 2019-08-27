@@ -3,30 +3,19 @@ SNVPhyl Pipeline Tools
 
 This document describes how to build and install the SNVPhyl tools within a custom toolshed.  The tools are located under `tools/`.  These can be packaged up and uploaded into a [Galaxy Tool Shed][] and then later installed to an instance of Galaxy.  The list of tools is given below:
 
-* **phyml**
-* **smalt**
-* **wombac**
-* **bcftools call**
-* **bcftools view**
-* **Seqtk nml**
 * **core-pipeline tools**
 
 Additionality, tools available from toolshed.g2.bx.psu.edu will also be installed in a custom toolshed. The list of tools is given below:
 
-* **freebayes by devteam at 99684adf84de
-* **msa_datatypes by iuc at 70227007b991
-* **package_bcftools_1_3 by iuc at 43a9aebf3adb
-* **package_freebayes_0_9_20_b040236 by devteam at 059e6e3d99cc
-* **package_mummer_3_23 by iuc at 9ddc606546c3
-* **package_ncurses_5_9 by iuc at 5e1760c773ba
-* **package_perl_5_18 by iuc at fd34b72b501b
-* **package_samtools_0_1_18 by devteam at 171cd8bc208d
-* **package_samtools_0_1_19 by iuc at 96aab723499f
-* **package_samtools_1_2 by iuc at f6ae3ba3f3c1
-* **package_tabix_0_2_6 by iuc at 389d2376b60b
-* **package_zlib_1_2_8 by iuc at 63a4a902cda2
-* **regex_find_replace by jjohnson at 9ea374bb0350
-* **samtools_mpileup by devteam at aa0ef6f0ee89
+* **freebayes by devteam at 156b60c1530f**
+* **bcftools call by iuc at 0fba2c15b40d**
+* **bcftools view by iuc at d1f8f55f564d**
+* **bcftools mpileup by iuc at 4e1d23e5c691**
+* **regex_find_replace by jjohnson at 9ea374bb0350**
+* **phyml by iuc at 850e213bee26**
+* **collapse_collections by nml at 49bd84e136c7**
+* **smalt by nml at 51ad86498414**
+
 
 
 ### Initial requirements
@@ -52,12 +41,10 @@ Once you have uploaded the packages to a Galaxy Tool Shed, you can install to a 
 3. Click on the arrow next to the tool and click on **Preview and install**.
 4. Wait for Galaxy to install your tool.
 
-[Core Phylogenomis Pipeline]: https://github.com/apetkau/core-phylogenomics
+[Core Phylogenomis Pipeline]: https://snvphyl.readthedocs.io/en/latest/
 [Galaxy Tool Shed]: https://wiki.galaxyproject.org/ToolShed
-[Production Server Setup]: https://wiki.galaxyproject.org/Admin/Config/Performance/ProductionServer
-[Testing Installed Tools]: https://wiki.galaxyproject.org/TestingInstalledTools
-[IRIDA Galaxy Setup]: https://irida.corefacility.ca/irida/irida-install-documentation/tree/master/galaxy
+[Production Server Setup]: https://docs.galaxyproject.org/en/latest/admin/production.html
+[IRIDA Galaxy Setup]: https://irida.corefacility.ca/documentation/administrator/galaxy/
 [Automated Tool Tests]: https://wiki.galaxyproject.org/AutomatedToolTests
-[Hosting a Local Tool Shed]: https://wiki.galaxyproject.org/HostingALocalToolShed
-[Install and Test Certification]: https://wiki.galaxyproject.org/InstallAndTestCertification
+[Hosting a Local Tool Shed]: https://galaxyproject.org/toolshed/hosting-a-local-toolshed/
 [Tool Testing Enhancements]: http://dev.list.galaxyproject.org/Tool-Testing-Enhancements-td4663799.html

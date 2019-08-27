@@ -1,5 +1,0 @@
-categories: [Sequence Analysis]
-description: Reporter for SNVPhyl pipeline
-name: snvphyl_reporter
-owner: nml
-remote_repository_url: https://github.com/phac-nml/snvphyl-galaxy

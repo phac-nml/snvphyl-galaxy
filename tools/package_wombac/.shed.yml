@@ -1,5 +1,0 @@
-categories: [Tool Dependency Packages]
-description: Wombac dependency
-name: package_wombac
-owner: nml
-remote_repository_url: https://github.com/phac-nml/snvphyl-galaxy

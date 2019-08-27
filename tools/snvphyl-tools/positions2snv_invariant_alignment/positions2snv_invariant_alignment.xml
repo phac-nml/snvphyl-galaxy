@@ -1,12 +1,10 @@
-<tool id="positions2snv_invariant_alignment" name="Positions to SNV invariant alignment" version ="1.8.0">
+<tool id="positions2snv_invariant_alignment" name="Positions to SNV invariant alignment" version ="1.8.2">
   <description>Create a SNV and non-variant alignment from the SNVPhyl positions table and a reference genome.</description>
   <requirements>
-    <requirement type="package" version="1.8">snvphyl</requirement>
+    <requirement type="package" version="1.8.2">snvphyl-tools</requirement>
   </requirements>
-  <stdio>
-  </stdio>
-  <command interpreter="perl"><![CDATA[
-	/\$VCF2PSEUDO/positions2snv_invariant_alignment.pl -i $snv_table --reference-file $reference_genome -o outputs -f $out_format $keep_all $merge_alignment
+  <command detect_errors="exit_code"><![CDATA[
+	positions2snv_invariant_alignment.pl -i $snv_table --reference-file $reference_genome -o outputs -f $out_format $keep_all $merge_alignment
   ]]></command>
   <inputs>
     <param name="snv_table" type="data" label="SNV table" format="tabular"/>

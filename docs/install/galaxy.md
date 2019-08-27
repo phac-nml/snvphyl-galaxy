@@ -46,7 +46,7 @@ Installation should now be complete.  Please see the [Usage][] documentation for
 [snvphyl-tool-dependencies]: images/snvphyl-tool-dependencies.png
 [Usage]: ../user/usage.md
 [snvphyl-import-workflows]: images/snvphyl-import-workflows.png
-[SNVPhyl 1.0.1 Paired-end]: ../workflows/SNVPhyl/1.0.1/snvphyl-workflow-1.0.1-invalid-positions.ga
+[SNVPhyl 1.0.1 Paired-end]: ../workflows/SNVPhyl/1.0.1/snvphyl-workflow-1.0.1.ga
 [SNVPhyl 1.0.1 Paired-end invalid positions]: ../workflows/SNVPhyl/1.0.1/snvphyl-workflow-1.0.1-invalid-positions.ga
 [SNVPhyl 1.0.1 Single-end]: ../workflows/SNVPhyl/1.0.1/snvphyl-workflow-1.0.1-single-end.ga
 [SNVPhyl 1.0.1 Single-end invalid positions]: ../workflows/SNVPhyl/1.0.1/snvphyl-workflow-1.0.1-single-end-invalid-positions.ga

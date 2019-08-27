@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<tool_dependency>
-  <package name="smalt" version="0.7.5">
-      <repository name="package_smalt_0_7_5" owner="nml"  />
-    </package>
-</tool_dependency>

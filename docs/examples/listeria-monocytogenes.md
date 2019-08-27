@@ -99,7 +99,7 @@ Once a proper paired-end dataset collection **lm-paired-reads** is constructed, 
 
     * **min_coverage**: 15
     * **min_mean_mapping**: 30
-    * **alternative_allele_proportion (snv abundance ratio)**: 0.75
+    * **relative_snv_abundance (snv_abundance_ratio, or alternative_allele_proportion)**: 0.75
     
     ![lm-run-parameters][]    
 

@@ -1,5 +1,0 @@
-categories: [Sequence Analysis]
-description: Generates simulated illumina fastq reads from a fasta file
-name: wombac_shred
-owner: nml
-remote_repository_url: https://github.com/phac-nml/snvphyl-galaxy

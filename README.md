@@ -43,7 +43,7 @@ Please see <http://snvphyl.readthedocs.io/en/latest/install/virtualmachine/> for
 A [Docker][] image of SNVPhyl and Galaxy can be launched by running:
 
 ```bash
-docker run -d -p 48888:80 apetkau/snvphyl-galaxy-1.0.1
+docker run -d -p 48888:80 phacnml/snvphyl-galaxy-1.0.1
 ```
 
 Galaxy and SNVPhyl can then be access through <http://localhost:48888> with username `admin@galaxy.org` and password `admin`.
@@ -52,11 +52,11 @@ Please see <http://snvphyl.readthedocs.io/en/latest/install/docker/> for more de
 
 # Citation
 
-Aaron Petkau, Philip Mabon, Cameron Sieffert, Natalie Knox, Jennifer Cabral, Mariam Iskander, Mark Iskander, Kelly Weedmark, Rahat Zaheer, Lee S. Katz, Celine Nadon, Aleisha Reimer, Eduardo Taboada, Robert G. Beiko, William Hsiao, Fiona Brinkman, Morag Graham, The IRIDA Consortium, Gary Van Domselaar. 2016. [SNVPhyl: A Single Nucleotide Variant Phylogenomics pipeline for microbial genomic epidemiology](http://biorxiv.org/content/early/2016/12/10/092940). bioRxiv doi: http://dx.doi.org/10.1101/092940.
+Petkau A, Mabon P, Sieffert C, Knox N, Cabral J, Iskander M, Iskander M, Weedmark K, Zaheer R, Katz L, Nadon C, Reimer A, Taboada E, Beiko R, Hsiao W, Brinkman F, Graham M, Van Domselaar G. [SNVPhyl: a single nucleotide variant phylogenomics pipeline for microbial genomic epidemiology](http://dx.doi.org/10.1099/mgen.0.000116). 08/06/2017. *M Gen* 3(6): doi:[10.1099/mgen.0.000116](https://doi.org/10.1099/mgen.0.000116).
 
 # Legal
 
-Copyright 2012-2016 Government of Canada
+Copyright 2012-2019 Government of Canada
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
 this work except in compliance with the License. You may obtain a copy of the

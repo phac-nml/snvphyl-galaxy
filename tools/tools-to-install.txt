@@ -1,12 +1,3 @@
-bcf_bgzip_datatype
-package_libtool_2_4
-package_bambamc_0_0_50
-package_smalt_0_7_5
-bcftools_call
-bcftools_view
-phyml
-smalt/index
-smalt/map
 snvphyl-tools/filter_stats
 snvphyl-tools/filter_vcf
 snvphyl-tools/find_repeats

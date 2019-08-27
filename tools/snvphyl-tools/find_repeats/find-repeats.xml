@@ -1,14 +1,11 @@
-<tool id="findrepeat" name="Find Repeats" version ="1.8.0">
+<tool id="findrepeat" name="Find Repeats" version ="1.8.2">
   <description>Identify repeat elements using Mummer</description>
   <requirements>
-    <requirement type="package" version="1.8">snvphyl</requirement>
+    <requirement type="package" version="1.8.2">snvphyl-tools</requirement>
     <requirement type="package" version="3.23">mummer</requirement>
   </requirements>
-  <stdio>
-    <exit_code range="1:" level="fatal" description="Unknown error has occured"/>
-  </stdio>
-  <command interpreter="perl">
-      /\$VCF2PSEUDO/find-repeats.pl -l $length -p $pid $fasta > $out
+  <command detect_errors="exit_code">
+      find-repeats.pl -l $length -p $pid $fasta > $out
   </command>
   <inputs>
     <param name="fasta" type="data"  label="Fasta file" format="fasta"/>

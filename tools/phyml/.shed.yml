@@ -1,5 +1,0 @@
-categories: [Sequence Analysis]
-description: PhyML phylogeny
-name: phyml
-owner: nml
-remote_repository_url: https://github.com/phac-nml/snvphyl-galaxy
