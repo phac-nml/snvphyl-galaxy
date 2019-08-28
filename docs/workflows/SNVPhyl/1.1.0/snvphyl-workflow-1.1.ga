@@ -269,7 +269,7 @@
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             }, 
             "tool_state": "{\"minmap\": \"\\\"80\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"mindepth\": \"\\\"${min_coverage}\\\"\", \"bams\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\"}", 
-            "tool_version": null, 
+            "tool_version": "1.8.2", 
             "type": "tool", 
             "uuid": "0dd907ea-1893-45bd-8f88-557ffb31aba7", 
             "workflow_outputs": [
