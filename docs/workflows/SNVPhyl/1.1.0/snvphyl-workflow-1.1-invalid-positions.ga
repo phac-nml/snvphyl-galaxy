@@ -396,7 +396,7 @@
                 "top": 505
             }, 
             "post_job_actions": {}, 
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bcftools_mpileup/bcftools_mpileup/1.9+galaxy1", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bcftools_mpileup/bcftools_mpileup/1.9+galaxy2", 
             "tool_shed_repository": {
                 "changeset_revision": "40f8f853b417", 
                 "name": "bcftools_mpileup", 
@@ -569,7 +569,7 @@
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             }, 
             "tool_state": "{\"__page__\": null, \"sec_filter\": \"{\\\"exclude_types\\\": null, \\\"known_or_novel\\\": null, \\\"max_ac\\\": \\\"\\\", \\\"max_af\\\": \\\"\\\", \\\"max_alleles\\\": \\\"\\\", \\\"min_ac\\\": \\\"\\\", \\\"min_af\\\": \\\"\\\", \\\"min_alleles\\\": \\\"\\\", \\\"phased\\\": null, \\\"private\\\": null, \\\"select_genotype\\\": \\\"__none__\\\", \\\"types\\\": null, \\\"uncalled\\\": null}\", \"sec_restrict\": \"{\\\"apply_filters\\\": \\\"\\\", \\\"exclude\\\": \\\"\\\", \\\"include\\\": \\\"\\\", \\\"regions\\\": {\\\"__current_case__\\\": 0, \\\"regions_src\\\": \\\"__none__\\\"}, \\\"targets\\\": {\\\"__current_case__\\\": 0, \\\"targets_src\\\": \\\"__none__\\\"}}\", \"input_file\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"__rerun_remap_job_id__\": null, \"sec_subset\": \"{\\\"force_samples\\\": \\\"false\\\", \\\"invert_samples\\\": \\\"false\\\", \\\"invert_samples_file\\\": \\\"false\\\", \\\"no_update\\\": \\\"false\\\", \\\"samples\\\": \\\"\\\", \\\"samples_file\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"trim_alt_alleles\\\": \\\"false\\\"}\", \"sec_output\": \"{\\\"compression_level\\\": \\\"\\\", \\\"drop_genotypes\\\": \\\"false\\\", \\\"header\\\": null, \\\"invert_targets_file\\\": \\\"false\\\"}\", \"output_type\": \"\\\"b\\\"\"}", 
-            "tool_version": "1.9", 
+            "tool_version": "1.9+galaxy1", 
             "type": "tool", 
             "uuid": "497bf464-6773-4f49-b724-9e19f0d8fa56", 
             "workflow_outputs": [
