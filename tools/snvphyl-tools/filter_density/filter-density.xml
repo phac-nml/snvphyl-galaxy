@@ -1,7 +1,10 @@
-<tool id="filterdensity" name="Filter Density" version ="1.8.2">
+<tool id="filterdensity" name="Filter Density" version ="@VERSION@+galaxy1">
   <description>Identify high density positions within indvidual genomes</description>
+    <macros>
+      <token name="@VERSION@">1.8.2</token>
+    </macros>
   <requirements>
-    <requirement type="package" version="1.8.2">snvphyl-tools</requirement>
+    <requirement type="package" version="@VERSION@">snvphyl-tools</requirement>
   </requirements>
   <command detect_errors="exit_code">
       bcftools plugin filter_snv_density $vcf -O b -o $filtered_bcf -- --filename $vcf --region_file $out
