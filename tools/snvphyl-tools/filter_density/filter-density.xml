@@ -14,8 +14,8 @@
   </command>
   <inputs>
     <param name="vcf" type="data" label="Input vcf file" format="vcf" />
-    <param name="window_size" type="integer" label="Size of search window" format="" optional="true"/>
-    <param name="threshold"  type="integer" label="Density threshold cutoff" format="" optional="true"/>
+    <param name="window_size" type="integer" min="1" label="Size of search window" format="" optional="true"/>
+    <param name="threshold"  type="integer" min="1" label="Density threshold cutoff" format="" optional="true"/>
   </inputs>
   <outputs>
     <data format="txt" name="out" label="High density regions"/>
