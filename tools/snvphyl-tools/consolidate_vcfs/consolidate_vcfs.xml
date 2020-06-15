@@ -1,7 +1,10 @@
-<tool id="consolidate_vcfs" name="Consolidate VCFs" version ="1.8.2">
+<tool id="consolidate_vcfs" name="Consolidate VCFs" version ="@VERSION@+galaxy1">
   <description>combine freebayes and mpileup files for use by vcf2snvalignment</description>
+    <macros>
+      <token name="@VERSION@">1.8.2</token>
+    </macros>
     <requirements>
-      <requirement type="package" version="1.8.2">snvphyl-tools</requirement>
+      <requirement type="package" version="@VERSION@">snvphyl-tools</requirement>
     </requirements>
   <command detect_errors="exit_code"><![CDATA[
 
