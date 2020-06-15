@@ -1,5 +1,0 @@
-2	101	115
-20	3	95
-20	273	278
-3	10	15
-#Calculation and writing of high density regions has completed.

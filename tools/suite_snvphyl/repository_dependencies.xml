@@ -14,7 +14,6 @@
 	<repository name="consolidate_vcfs" owner="nml"/>
 	<repository name="verify_map" owner="nml"/>
 	<repository name="filter_stats" owner="nml"/>
-	<repository name="filter_density" owner="nml"/>
 	<repository name="collapse_collections" owner="nml"/>
 	<repository name="positions2snv_alignment" owner="nml"/>
 	<repository name="positions2snv_invariant_alignment" owner="nml"/>

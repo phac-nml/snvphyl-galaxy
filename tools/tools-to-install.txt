@@ -5,6 +5,5 @@ snvphyl-tools/snv_matrix
 snvphyl-tools/consolidate_vcfs
 snvphyl-tools/vcf2snvalignment
 snvphyl-tools/verify_map
-snvphyl-tools/filter_density
 snvphyl-tools/positions2snv_alignment
 snvphyl-tools/positions2snv_invariant_alignment
