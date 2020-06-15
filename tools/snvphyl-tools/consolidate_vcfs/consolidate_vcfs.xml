@@ -110,9 +110,20 @@
       <param name="mean_mapping" value="30" />
       <param name="snv_abundance_ratio" value="0.75" />
       <param name="window_size" value="10" />
-      <param name="threshold" value="1" />
+      <param name="threshold" value="3" />
       <output name="bcf_combined" file="v3.bcf.gz" compare="sim_size" delta="250"/>
       <output name="filtered_density" file="expected_regions_v3.txt"/>
+    </test>
+    <test>
+      <param name="coverage" value="5"/>
+      <param name="freebayes" value="freebayes/v3.bcf" />
+      <param name="mpileup" value="mpileup/v3.bcf" />
+      <param name="mean_mapping" value="30" />
+      <param name="snv_abundance_ratio" value="0.75" />
+      <param name="window_size" value="10" />
+      <param name="threshold" value="4" />
+      <output name="bcf_combined" file="v3.bcf.gz" compare="sim_size" delta="250"/>
+      <output name="filtered_density" file="expected_regions_empty.txt"/>
     </test>
     <test>
       <param name="coverage" value="5"/>
