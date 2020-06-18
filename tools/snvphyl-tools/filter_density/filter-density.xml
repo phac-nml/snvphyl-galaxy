@@ -1,57 +1,35 @@
 <tool id="filterdensity" name="Filter Density" version ="@VERSION@+galaxy1">
   <description>Identify high density positions within indvidual genomes</description>
-    <macros>
-      <token name="@VERSION@">1.8.2</token>
-    </macros>
+  <macros>
+    <token name="@VERSION@">1.8.2</token>
+  </macros>
   <requirements>
     <requirement type="package" version="@VERSION@">snvphyl-tools</requirement>
   </requirements>
   <command detect_errors="exit_code">
-      #if str($use_filter_density.use_filter_density_condition) == 'true':
-        bcftools plugin filter_snv_density '${use_filter_density.vcf}' -O b -o '${filtered_bcf}' -- --filename '${use_filter_density.vcf}' --region_file '$out'
-        #if $use_filter_density.window_size:
-          --window_size '${use_filter_density.window_size}'
-        #end if
-        #if $use_filter_density.threshold:
-          --threshold '${use_filter_density.threshold}'
-        #end if
+      bcftools plugin filter_snv_density $vcf -O b -o $filtered_bcf -- --filename $vcf --region_file $out
+      #if $window_size:
+      --window_size $window_size
       #end if
-
-      #if str($use_filter_density.use_filter_density_condition) == 'false':
-        echo > $out
+      #if $threshold:
+      --threshold $threshold
       #end if
   </command>
   <inputs>
-    <conditional name="use_filter_density">
-      <param name="use_filter_density_condition" type="select" label="Enable Filter Density">
-        <option value="true" selected="true">True</option>
-        <option value="false">False</option>
-      </param>
-      <when value="true">
-        <param name="vcf" type="data" label="Input vcf file" format="vcf" />
-        <param name="window_size" type="integer" min="1" label="Size of search window" format="" optional="true"/>
-        <param name="threshold"  type="integer" min="1" label="Density threshold cutoff" format="" optional="true"/>
-      </when>
-      <when value="false" />
-    </conditional>
+    <param name="vcf" type="data" label="Input vcf file" format="vcf" />
+    <param name="window_size" type="integer" min="1" label="Size of search window" format="" optional="true"/>
+    <param name="threshold"  type="integer"  min="1" label="Density threshold cutoff" format="" optional="true"/>
   </inputs>
   <outputs>
     <data format="txt" name="out" label="High density regions"/>
-    <data format="bcf" name="filtered_bcf">
-      <filter>use_filter_density['use_filter_density_condition'] == 'true'</filter>
-    </data>
+    <data format="bcf" name="filtered_bcf"/>
   </outputs>
   <tests>
     <test>
-      <param name="use_filter_density_condition" value="true"/>
-      <param name="threshold" value="2"/>
-      <param name="window_size" value="100"/>
-      <param name="vcf" value="1.vcf"/>
-      <output name="out" file="density_regions.txt"/>
-    </test>
-    <test>
-      <param name="use_filter_density_condition" value="false"/>
-      <output name="out" file="empty_output.txt"/>
+    <param name="threshold" value="2"/>
+    <param name="window_size" value="100"/>
+    <param name="vcf" value="1.vcf"/>
+    <output name="out" file="density_regions.txt"/>
     </test>
   </tests>
 
