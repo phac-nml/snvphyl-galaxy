@@ -1,11 +1,9 @@
 <tool id="filterdensity" name="Filter Density" version ="@VERSION@+galaxy1">
   <description>Identify high density positions within indvidual genomes</description>
   <macros>
-    <token name="@VERSION@">1.8.2</token>
+    <import>macros.xml</import>
   </macros>
-  <requirements>
-    <requirement type="package" version="@VERSION@">snvphyl-tools</requirement>
-  </requirements>
+  <expand macro="requirements"/>
   <command detect_errors="exit_code">
       bcftools plugin filter_snv_density $vcf -O b -o $filtered_bcf -- --filename $vcf --region_file $out
       #if $window_size:
@@ -48,8 +46,5 @@ Usage
   - threshold - The threshold distance between SNV's in order for them to be considered 'high density'
   - window_size - The size of the window, in base pairs, that will be looked at at any given time to calculate density.
   </help>
-
-  <citations>
-  </citations>
-
+  <expand macro="citations"/>
 </tool>

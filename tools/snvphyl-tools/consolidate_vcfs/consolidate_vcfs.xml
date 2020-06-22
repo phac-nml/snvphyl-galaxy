@@ -1,11 +1,9 @@
 <tool id="consolidate_vcfs" name="Consolidate VCFs" version ="@VERSION@+galaxy1">
   <description>combine freebayes and mpileup files for use by vcf2snvalignment</description>
-    <macros>
-      <token name="@VERSION@">1.8.2</token>
-    </macros>
-    <requirements>
-      <requirement type="package" version="@VERSION@">snvphyl-tools</requirement>
-    </requirements>
+  <macros>
+    <import>macros.xml</import>
+  </macros>
+  <expand macro="requirements"/>
   <command detect_errors="exit_code"><![CDATA[
 
         #set $name = str($freebayes).split('/')[-1]
@@ -158,8 +156,5 @@
   <help>
   Merges variant and non-variant calls (in VCF format) produced from two independent base callers, FreeBayes, and SAMtools/BCFtools. Produces a merged set of high-quality variant and non-variant calls (in BCF format).  Optionally, produces a list of SNV-dense regions above the passed thresholds.
   </help>
-
-  <citations>
-  </citations>
-
+  <expand macro="citations"/>
 </tool>
