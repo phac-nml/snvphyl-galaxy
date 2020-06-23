@@ -1,9 +1,9 @@
 {
-    "uuid": "af4be19c-b7e2-437d-a33f-9546d3c44827",
+    "uuid": "c808c572-e76a-4044-a1c2-65db9dafd7fa",
     "tags": [],
     "format-version": "0.1",
     "name": "SNVPhyl v1.2 Paired-End (invalid-positions)",
-    "version": 1,
+    "version": 2,
     "steps": {
         "0": {
             "tool_id": null,
@@ -12,7 +12,7 @@
             "workflow_outputs": [
                 {
                     "output_name": "output",
-                    "uuid": "28648c0c-92f3-4064-8e24-39f8c5f05047",
+                    "uuid": "ce2aaa9f-2b77-43cd-af28-fad253832797",
                     "label": null
                 }
             ],
@@ -44,7 +44,7 @@
             "workflow_outputs": [
                 {
                     "output_name": "output",
-                    "uuid": "7ac71fd2-816c-457a-bcb3-905d25d0bfa7",
+                    "uuid": "6ebdec76-13a8-4e1b-9056-21a5c4b83c9c",
                     "label": null
                 }
             ],
@@ -62,7 +62,7 @@
                 }
             ],
             "position": {
-                "top": 287.8999938964844,
+                "top": 289.8999938964844,
                 "left": 200
             },
             "annotation": "",
@@ -76,7 +76,7 @@
             "workflow_outputs": [
                 {
                     "output_name": "output",
-                    "uuid": "ba1f35d6-4939-4e51-ba92-45bb711123cb",
+                    "uuid": "03caf36c-39b2-43e9-86b5-ea1ead73d025",
                     "label": null
                 }
             ],
@@ -89,7 +89,7 @@
             "label": "invalid_positions",
             "inputs": [],
             "position": {
-                "top": 375.79998779296875,
+                "top": 379.79998779296875,
                 "left": 200
             },
             "annotation": "",
@@ -97,7 +97,7 @@
             "type": "data_input"
         },
         "3": {
-            "tool_id": "phac5021054.cscscience.ca:9009/repos/nml/find_repeats/findrepeat/1.8.2+galaxy1",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/nml/find_repeats/findrepeat/1.8.2+galaxy1",
             "tool_version": "1.8.2+galaxy1",
             "outputs": [
                 {
@@ -122,9 +122,9 @@
             "id": 3,
             "tool_shed_repository": {
                 "owner": "nml",
-                "changeset_revision": "e3672ffec0d4",
+                "changeset_revision": "7e6be57de1a0",
                 "name": "find_repeats",
-                "tool_shed": "phac5021054.cscscience.ca:9009"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "uuid": "c8cff86f-345b-495b-9356-6b00fc0f96cd",
             "errors": null,
@@ -149,14 +149,14 @@
             "inputs": [],
             "position": {
                 "top": 200,
-                "left": 483.9000244140625
+                "left": 492.9000244140625
             },
             "annotation": "",
-            "content_id": "phac5021054.cscscience.ca:9009/repos/nml/find_repeats/findrepeat/1.8.2+galaxy1",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/nml/find_repeats/findrepeat/1.8.2+galaxy1",
             "type": "tool"
         },
         "4": {
-            "tool_id": "phac5021054.cscscience.ca:9009/repos/nml/smalt/smalt/0.7.6+galaxy0",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/nml/smalt/smalt/0.7.6+galaxy0",
             "tool_version": "0.7.6+galaxy0",
             "outputs": [
                 {
@@ -172,22 +172,22 @@
                 }
             ],
             "input_connections": {
-                "singlePaired|fastq_collection": {
-                    "output_name": "output",
-                    "id": 0
-                },
                 "reference": {
                     "output_name": "output",
                     "id": 1
+                },
+                "singlePaired|fastq_collection": {
+                    "output_name": "output",
+                    "id": 0
                 }
             },
             "tool_state": "{\"minbasq\": \"\\\"\\\"\", \"__page__\": null, \"insertmin\": \"\\\"20\\\"\", \"mincover\": \"\\\"\\\"\", \"reference\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"insfil\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"scordiff\": \"\\\"\\\"\", \"minscor\": \"\\\"\\\"\", \"singlePaired\": \"{\\\"__current_case__\\\": 2, \\\"fastq_collection\\\": {\\\"__class__\\\": \\\"ConnectedValue\\\"}, \\\"pairtype\\\": \\\"pe\\\", \\\"sPaired\\\": \\\"collections\\\"}\", \"minid\": \"\\\"0.5\\\"\", \"search_harder\": \"\\\"false\\\"\", \"s\": \"\\\"\\\"\", \"seed\": \"\\\"1\\\"\", \"sw_weighted\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"oformat\": \"{\\\"__current_case__\\\": 1, \\\"bamOptions\\\": null, \\\"outformat\\\": \\\"bam\\\"}\", \"insertmax\": \"\\\"1000\\\"\", \"k\": \"\\\"13\\\"\"}",
             "id": 4,
             "tool_shed_repository": {
                 "owner": "nml",
-                "changeset_revision": "f6daa21038db",
+                "changeset_revision": "fae9ec82e10f",
                 "name": "smalt",
-                "tool_shed": "phac5021054.cscscience.ca:9009"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "uuid": "3627844f-2b27-4946-b347-8be44ac34e5b",
             "errors": null,
@@ -201,11 +201,11 @@
                 }
             ],
             "position": {
-                "top": 316.8999938964844,
-                "left": 483.9000244140625
+                "top": 319.8999938964844,
+                "left": 492.9000244140625
             },
             "annotation": "",
-            "content_id": "phac5021054.cscscience.ca:9009/repos/nml/smalt/smalt/0.7.6+galaxy0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/nml/smalt/smalt/0.7.6+galaxy0",
             "type": "tool"
         },
         "5": {
@@ -251,15 +251,15 @@
             "label": null,
             "inputs": [],
             "position": {
-                "top": 698.7000122070312,
-                "left": 774.800048828125
+                "top": 713.7000122070312,
+                "left": 794.800048828125
             },
             "annotation": "",
             "content_id": "cat1",
             "type": "tool"
         },
         "6": {
-            "tool_id": "phac5021054.cscscience.ca:9009/repos/devteam/freebayes/freebayes/1.3.1",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/freebayes/freebayes/1.3.1",
             "tool_version": "1.3.1",
             "outputs": [
                 {
@@ -288,9 +288,9 @@
             "id": 6,
             "tool_shed_repository": {
                 "owner": "devteam",
-                "changeset_revision": "1c5a0caa68a1",
+                "changeset_revision": "ef2c525bd8cd",
                 "name": "freebayes",
-                "tool_shed": "phac5021054.cscscience.ca:9009"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "uuid": "593cbf7b-e3ca-420d-bc1c-e6e8b4c4f160",
             "errors": null,
@@ -300,14 +300,14 @@
             "inputs": [],
             "position": {
                 "top": 200,
-                "left": 774.800048828125
+                "left": 794.800048828125
             },
             "annotation": "",
-            "content_id": "phac5021054.cscscience.ca:9009/repos/devteam/freebayes/freebayes/1.3.1",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/freebayes/freebayes/1.3.1",
             "type": "tool"
         },
         "7": {
-            "tool_id": "phac5021054.cscscience.ca:9009/repos/nml/verify_map/verify_map/1.8.2+galaxy1",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/nml/verify_map/verify_map/1.8.2+galaxy1",
             "tool_version": "1.8.2+galaxy1",
             "outputs": [
                 {
@@ -332,9 +332,9 @@
             "id": 7,
             "tool_shed_repository": {
                 "owner": "nml",
-                "changeset_revision": "546566431384",
+                "changeset_revision": "80b7566e62ec",
                 "name": "verify_map",
-                "tool_shed": "phac5021054.cscscience.ca:9009"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "uuid": "94fec262-b428-47b3-8f04-c6dffd6108c1",
             "errors": null,
@@ -351,15 +351,15 @@
             "label": null,
             "inputs": [],
             "position": {
-                "top": 385.8999938964844,
-                "left": 774.800048828125
+                "top": 391.8999938964844,
+                "left": 794.800048828125
             },
             "annotation": "",
-            "content_id": "phac5021054.cscscience.ca:9009/repos/nml/verify_map/verify_map/1.8.2+galaxy1",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/nml/verify_map/verify_map/1.8.2+galaxy1",
             "type": "tool"
         },
         "8": {
-            "tool_id": "phac5021054.cscscience.ca:9009/repos/iuc/bcftools_mpileup/bcftools_mpileup/1.10",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bcftools_mpileup/bcftools_mpileup/1.10",
             "tool_version": "1.10",
             "outputs": [
                 {
@@ -388,9 +388,9 @@
             "id": 8,
             "tool_shed_repository": {
                 "owner": "iuc",
-                "changeset_revision": "e1a5b6b60c10",
+                "changeset_revision": "f65383c7ed49",
                 "name": "bcftools_mpileup",
-                "tool_shed": "phac5021054.cscscience.ca:9009"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "uuid": "f7fd1046-13b4-44c1-b226-cf7325371b7c",
             "errors": null,
@@ -404,15 +404,15 @@
                 }
             ],
             "position": {
-                "top": 502.79998779296875,
-                "left": 774.800048828125
+                "top": 511.79998779296875,
+                "left": 794.800048828125
             },
             "annotation": "",
-            "content_id": "phac5021054.cscscience.ca:9009/repos/iuc/bcftools_mpileup/bcftools_mpileup/1.10",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bcftools_mpileup/bcftools_mpileup/1.10",
             "type": "tool"
         },
         "9": {
-            "tool_id": "phac5021054.cscscience.ca:9009/repos/nml/filter_vcf/filtervcf/1.8.2+galaxy1",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/nml/filter_vcf/filtervcf/1.8.2+galaxy1",
             "tool_version": "1.8.2+galaxy1",
             "outputs": [
                 {
@@ -431,9 +431,9 @@
             "id": 9,
             "tool_shed_repository": {
                 "owner": "nml",
-                "changeset_revision": "0d5cf823dfc1",
+                "changeset_revision": "48922d9ca355",
                 "name": "filter_vcf",
-                "tool_shed": "phac5021054.cscscience.ca:9009"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "uuid": "f14d56db-fa43-44a6-9344-9c50fc36e833",
             "errors": null,
@@ -449,14 +449,14 @@
             "inputs": [],
             "position": {
                 "top": 200,
-                "left": 1103.699951171875
+                "left": 1123.699951171875
             },
             "annotation": "",
-            "content_id": "phac5021054.cscscience.ca:9009/repos/nml/filter_vcf/filtervcf/1.8.2+galaxy1",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/nml/filter_vcf/filtervcf/1.8.2+galaxy1",
             "type": "tool"
         },
         "10": {
-            "tool_id": "phac5021054.cscscience.ca:9009/repos/iuc/bcftools_call/bcftools_call/1.10",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bcftools_call/bcftools_call/1.10",
             "tool_version": "1.10",
             "outputs": [
                 {
@@ -475,9 +475,9 @@
             "id": 10,
             "tool_shed_repository": {
                 "owner": "iuc",
-                "changeset_revision": "ac437d3f0bdb",
+                "changeset_revision": "5801eff9ac7e",
                 "name": "bcftools_call",
-                "tool_shed": "phac5021054.cscscience.ca:9009"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "uuid": "18a1b93d-3a23-4cdd-b8b1-0c1385db1822",
             "errors": null,
@@ -512,15 +512,15 @@
                 }
             ],
             "position": {
-                "top": 317.8999938964844,
-                "left": 1103.699951171875
+                "top": 320.8999938964844,
+                "left": 1123.699951171875
             },
             "annotation": "",
-            "content_id": "phac5021054.cscscience.ca:9009/repos/iuc/bcftools_call/bcftools_call/1.10",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bcftools_call/bcftools_call/1.10",
             "type": "tool"
         },
         "11": {
-            "tool_id": "phac5021054.cscscience.ca:9009/repos/iuc/bcftools_view/bcftools_view/1.10",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bcftools_view/bcftools_view/1.10",
             "tool_version": "1.10",
             "outputs": [
                 {
@@ -545,9 +545,9 @@
             "id": 11,
             "tool_shed_repository": {
                 "owner": "iuc",
-                "changeset_revision": "b02830eda8fb",
+                "changeset_revision": "c4a9b38b435d",
                 "name": "bcftools_view",
-                "tool_shed": "phac5021054.cscscience.ca:9009"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "uuid": "497bf464-6773-4f49-b724-9e19f0d8fa56",
             "errors": null,
@@ -570,14 +570,14 @@
             ],
             "position": {
                 "top": 200,
-                "left": 1389.5999755859375
+                "left": 1420.5999755859375
             },
             "annotation": "",
-            "content_id": "phac5021054.cscscience.ca:9009/repos/iuc/bcftools_view/bcftools_view/1.10",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bcftools_view/bcftools_view/1.10",
             "type": "tool"
         },
         "12": {
-            "tool_id": "phac5021054.cscscience.ca:9009/repos/nml/consolidate_vcfs/consolidate_vcfs/1.8.2+galaxy1",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/nml/consolidate_vcfs/consolidate_vcfs/1.8.2+galaxy1",
             "tool_version": "1.8.2+galaxy1",
             "outputs": [
                 {
@@ -604,9 +604,9 @@
             "id": 12,
             "tool_shed_repository": {
                 "owner": "nml",
-                "changeset_revision": "5428b6e72b88",
+                "changeset_revision": "4c249c0aebad",
                 "name": "consolidate_vcfs",
-                "tool_shed": "phac5021054.cscscience.ca:9009"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "uuid": "c5afeb85-67ab-4f1d-b1e9-d37969a5fdf4",
             "errors": null,
@@ -627,14 +627,14 @@
             "inputs": [],
             "position": {
                 "top": 200,
-                "left": 1675.5
+                "left": 1717.5
             },
             "annotation": "",
-            "content_id": "phac5021054.cscscience.ca:9009/repos/nml/consolidate_vcfs/consolidate_vcfs/1.8.2+galaxy1",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/nml/consolidate_vcfs/consolidate_vcfs/1.8.2+galaxy1",
             "type": "tool"
         },
         "13": {
-            "tool_id": "phac5021054.cscscience.ca:9009/repos/nml/collapse_collections/collapse_dataset/4.2",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/4.2",
             "tool_version": "4.2",
             "outputs": [
                 {
@@ -653,9 +653,9 @@
             "id": 13,
             "tool_shed_repository": {
                 "owner": "nml",
-                "changeset_revision": "1b185133dbc8",
+                "changeset_revision": "830961c48e42",
                 "name": "collapse_collections",
-                "tool_shed": "phac5021054.cscscience.ca:9009"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "uuid": "4dde0d13-c407-4768-9e6d-6465bfc7283a",
             "errors": null,
@@ -671,10 +671,10 @@
             "inputs": [],
             "position": {
                 "top": 200,
-                "left": 1936.39990234375
+                "left": 1987.39990234375
             },
             "annotation": "",
-            "content_id": "phac5021054.cscscience.ca:9009/repos/nml/collapse_collections/collapse_dataset/4.2",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/4.2",
             "type": "tool"
         },
         "14": {
@@ -721,14 +721,14 @@
             "inputs": [],
             "position": {
                 "top": 200,
-                "left": 2265.300048828125
+                "left": 2316.300048828125
             },
             "annotation": "",
             "content_id": "cat1",
             "type": "tool"
         },
         "15": {
-            "tool_id": "phac5021054.cscscience.ca:9009/repos/nml/vcf2snvalignment/vcf2snvalignment/1.8.2+galaxy1",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/nml/vcf2snvalignment/vcf2snvalignment/1.8.2+galaxy1",
             "tool_version": "1.8.2+galaxy1",
             "outputs": [
                 {
@@ -778,18 +778,20 @@
             "id": 15,
             "tool_shed_repository": {
                 "owner": "nml",
-                "changeset_revision": "f909e128e04a",
+                "changeset_revision": "d2096d0c149e",
                 "name": "vcf2snvalignment",
-                "tool_shed": "phac5021054.cscscience.ca:9009"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "uuid": "f4d28263-4b09-4e91-9d00-c6a7b2b41022",
             "errors": null,
             "name": "VCF 2 snvalignment",
             "post_job_actions": {
-                "HideDatasetActionfasta": {
-                    "output_name": "fasta",
-                    "action_type": "HideDatasetAction",
-                    "action_arguments": {}
+                "RenameDatasetActionvcf2core": {
+                    "output_name": "vcf2core",
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "vcf2core.tsv"
+                    }
                 },
                 "RenameDatasetActionpositions": {
                     "output_name": "positions",
@@ -803,26 +805,24 @@
                     "action_type": "HideDatasetAction",
                     "action_arguments": {}
                 },
-                "RenameDatasetActionvcf2core": {
-                    "output_name": "vcf2core",
-                    "action_type": "RenameDatasetAction",
-                    "action_arguments": {
-                        "newname": "vcf2core.tsv"
-                    }
+                "HideDatasetActionfasta": {
+                    "output_name": "fasta",
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {}
                 }
             },
             "label": null,
             "inputs": [],
             "position": {
                 "top": 200,
-                "left": 2537.199951171875
+                "left": 2597.199951171875
             },
             "annotation": "",
-            "content_id": "phac5021054.cscscience.ca:9009/repos/nml/vcf2snvalignment/vcf2snvalignment/1.8.2+galaxy1",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/nml/vcf2snvalignment/vcf2snvalignment/1.8.2+galaxy1",
             "type": "tool"
         },
         "16": {
-            "tool_id": "phac5021054.cscscience.ca:9009/repos/jjohnson/regex_find_replace/regex1/0.1.0",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/jjohnson/regex_find_replace/regex1/0.1.0",
             "tool_version": "0.1.0",
             "outputs": [
                 {
@@ -847,9 +847,9 @@
             "id": 16,
             "tool_shed_repository": {
                 "owner": "jjohnson",
-                "changeset_revision": "4e1863dc1872",
+                "changeset_revision": "9ea374bb0350",
                 "name": "regex_find_replace",
-                "tool_shed": "phac5021054.cscscience.ca:9009"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "uuid": "54321903-8255-4315-b3ef-0982fb9ddd76",
             "errors": null,
@@ -867,14 +867,14 @@
             "inputs": [],
             "position": {
                 "top": 200,
-                "left": 2800.10009765625
+                "left": 2867.10009765625
             },
             "annotation": "",
-            "content_id": "phac5021054.cscscience.ca:9009/repos/jjohnson/regex_find_replace/regex1/0.1.0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/jjohnson/regex_find_replace/regex1/0.1.0",
             "type": "tool"
         },
         "17": {
-            "tool_id": "phac5021054.cscscience.ca:9009/repos/nml/filter_stats/filterstat/1.8.2+galaxy1",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/nml/filter_stats/filterstat/1.8.2+galaxy1",
             "tool_version": "1.8.2+galaxy1",
             "outputs": [
                 {
@@ -899,9 +899,9 @@
             "id": 17,
             "tool_shed_repository": {
                 "owner": "nml",
-                "changeset_revision": "cf87d2ce0679",
+                "changeset_revision": "2fbea749a1d1",
                 "name": "filter_stats",
-                "tool_shed": "phac5021054.cscscience.ca:9009"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "uuid": "7cac538e-d42a-4e5b-b6e4-896468ca7950",
             "errors": null,
@@ -918,15 +918,15 @@
             "label": null,
             "inputs": [],
             "position": {
-                "top": 316.8999938964844,
-                "left": 2800.10009765625
+                "top": 319.8999938964844,
+                "left": 2867.10009765625
             },
             "annotation": "",
-            "content_id": "phac5021054.cscscience.ca:9009/repos/nml/filter_stats/filterstat/1.8.2+galaxy1",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/nml/filter_stats/filterstat/1.8.2+galaxy1",
             "type": "tool"
         },
         "18": {
-            "tool_id": "phac5021054.cscscience.ca:9009/repos/iuc/phyml/phyml/3.3.20190909",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/phyml/phyml/3.3.20190909",
             "tool_version": "3.3.20190909",
             "outputs": [
                 {
@@ -965,30 +965,30 @@
                     "id": 16
                 }
             },
-            "tool_state": "{\"equi_freq\": \"\\\"m\\\"\", \"__page__\": null, \"input\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"seq\": \"{\\\"__current_case__\\\": 0, \\\"model\\\": \\\"GTR\\\", \\\"tstv\\\": \\\"e\\\", \\\"type_of_seq\\\": \\\"nt\\\"}\", \"__rerun_remap_job_id__\": null, \"move\": \"\\\"NNI\\\"\", \"support_condition\": \"{\\\"__current_case__\\\": 3, \\\"branchSupport\\\": \\\"-4\\\"}\", \"numStartSeed\": \"\\\"0\\\"\", \"prop_invar\": \"\\\"e\\\"\", \"optimisationTopology\": \"\\\"tlr\\\"\", \"gamma\": \"\\\"e\\\"\", \"phylip_format\": \"\\\"\\\"\", \"nb_data_set\": \"\\\"1\\\"\", \"userInputTree\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"nbSubstCat\": \"\\\"4\\\"\"}",
+            "tool_state": "{\"equi_freq\": \"\\\"m\\\"\", \"__page__\": null, \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"seq\": \"{\\\"__current_case__\\\": 0, \\\"model\\\": \\\"GTR\\\", \\\"tstv\\\": \\\"e\\\", \\\"type_of_seq\\\": \\\"nt\\\"}\", \"__rerun_remap_job_id__\": null, \"move\": \"\\\"BEST\\\"\", \"support_condition\": \"{\\\"__current_case__\\\": 3, \\\"branchSupport\\\": \\\"-4\\\"}\", \"numStartSeed\": \"\\\"0\\\"\", \"prop_invar\": \"\\\"e\\\"\", \"optimisationTopology\": \"\\\"tlr\\\"\", \"gamma\": \"\\\"e\\\"\", \"phylip_format\": \"\\\"\\\"\", \"nb_data_set\": \"\\\"1\\\"\", \"userInputTree\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"nbSubstCat\": \"\\\"4\\\"\"}",
             "id": 18,
             "tool_shed_repository": {
                 "owner": "iuc",
-                "changeset_revision": "d55f3e111810",
+                "changeset_revision": "2bf47d57ebb5",
                 "name": "phyml",
-                "tool_shed": "phac5021054.cscscience.ca:9009"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "uuid": "9ac549a6-6200-4b0e-ae02-49bbb621b7c3",
             "errors": null,
             "name": "PhyML",
             "post_job_actions": {
-                "RenameDatasetActionoutput_tree": {
-                    "output_name": "output_tree",
-                    "action_type": "RenameDatasetAction",
-                    "action_arguments": {
-                        "newname": "phylogeneticTree.newick"
-                    }
-                },
                 "RenameDatasetActionoutput_stats": {
                     "output_name": "output_stats",
                     "action_type": "RenameDatasetAction",
                     "action_arguments": {
                         "newname": "phylogeneticTreeStats.txt"
+                    }
+                },
+                "RenameDatasetActionoutput_tree": {
+                    "output_name": "output_tree",
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "phylogeneticTree.newick"
                     }
                 }
             },
@@ -997,18 +997,22 @@
                 {
                     "name": "userInputTree",
                     "description": "runtime parameter for tool PhyML"
+                },
+                {
+                    "name": "input",
+                    "description": "runtime parameter for tool PhyML"
                 }
             ],
             "position": {
                 "top": 200,
-                "left": 3129
+                "left": 3196
             },
             "annotation": "",
-            "content_id": "phac5021054.cscscience.ca:9009/repos/iuc/phyml/phyml/3.3.20190909",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/phyml/phyml/3.3.20190909",
             "type": "tool"
         },
         "19": {
-            "tool_id": "phac5021054.cscscience.ca:9009/repos/nml/snv_matrix/snvmatrix/1.8.2+galaxy1",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/nml/snv_matrix/snvmatrix/1.8.2+galaxy1",
             "tool_version": "1.8.2+galaxy1",
             "outputs": [
                 {
@@ -1033,9 +1037,9 @@
             "id": 19,
             "tool_shed_repository": {
                 "owner": "nml",
-                "changeset_revision": "008a8213a7a1",
+                "changeset_revision": "4d3e3d7aa0c4",
                 "name": "snv_matrix",
-                "tool_shed": "phac5021054.cscscience.ca:9009"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "uuid": "ea348760-3225-4995-bf83-2c53e51aedda",
             "errors": null,
@@ -1052,11 +1056,11 @@
             "label": null,
             "inputs": [],
             "position": {
-                "top": 404.8999938964844,
-                "left": 3129
+                "top": 411.8999938964844,
+                "left": 3196
             },
             "annotation": "",
-            "content_id": "phac5021054.cscscience.ca:9009/repos/nml/snv_matrix/snvmatrix/1.8.2+galaxy1",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/nml/snv_matrix/snvmatrix/1.8.2+galaxy1",
             "type": "tool"
         }
     },
