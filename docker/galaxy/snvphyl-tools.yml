@@ -1,0 +1,9 @@
+---
+tools:
+- name: "suite_snvphyl_1_2_0"
+  owner: "nml"
+  tool_shed_url: "http://phac5021054.cscscience.ca:9009/"
+  revisions:
+  - "22906bee0f3e"
+  tool_panel_section_id: "SNVPhyl"
+  install_tool_dependencies: true
