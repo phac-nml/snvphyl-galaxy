@@ -2,8 +2,8 @@
 tools:
 - name: "suite_snvphyl_1_2_0"
   owner: "nml"
-  tool_shed_url: "http://phac5021054.cscscience.ca:9009/"
+  tool_shed_url: "https://toolshed.g2.bx.psu.edu/"
   revisions:
-  - "22906bee0f3e"
+  - "a7094fa1d679"
   tool_panel_section_id: "SNVPhyl"
   install_tool_dependencies: true
