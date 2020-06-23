@@ -1,9 +1,11 @@
-<tool id="findrepeat" name="Find Repeats" version ="1.8.2">
+<tool id="findrepeat" name="Find Repeats" version ="@VERSION@+galaxy1">
   <description>Identify repeat elements using Mummer</description>
-  <requirements>
-    <requirement type="package" version="1.8.2">snvphyl-tools</requirement>
+  <macros>
+    <import>macros.xml</import>
+  </macros>
+  <expand macro="requirements">
     <requirement type="package" version="3.23">mummer</requirement>
-  </requirements>
+  </expand>
   <command detect_errors="exit_code">
       find-repeats.pl -l $length -p $pid $fasta > $out
   </command>
@@ -41,6 +43,7 @@ Usage
   - Minimum length of repeat region (150).
   - Minimum PID of repeat region (90).
   </help>
-<citations>
-</citations>
+  <expand macro="citations">
+    <citation type="doi">10.1186/gb-2004-5-2-r12</citation>
+  </expand>
 </tool>

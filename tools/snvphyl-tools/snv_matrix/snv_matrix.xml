@@ -1,8 +1,9 @@
-<tool id="snvmatrix" name="SNV Matrix" version ="1.8.2">
+<tool id="snvmatrix" name="SNV Matrix" version ="@VERSION@+galaxy1">
   <description>Create SNV matrix from Phylip file</description>
-  <requirements>
-    <requirement type="package" version="1.8.2">snvphyl-tools</requirement>
-  </requirements>
+  <macros>
+    <import>macros.xml</import>
+  </macros>
+  <expand macro="requirements"/>
   <command detect_errors="exit_code">
 	snv_matrix.pl   $phylip
 	-o $out
@@ -34,6 +35,5 @@ Usage
   - Phylip file: Phylogenetic file (.ph, .phy)
 
   </help>
-<citations>
-</citations>
+  <expand macro="citations"/>
 </tool>

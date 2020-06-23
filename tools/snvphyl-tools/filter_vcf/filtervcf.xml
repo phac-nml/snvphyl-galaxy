@@ -1,8 +1,9 @@
-<tool id="filtervcf" name="Filter vcf" version ="1.8.2">
+<tool id="filtervcf" name="Filter vcf" version ="@VERSION@+galaxy1">
   <description>filter out indels and complex SNVS</description>
-  <requirements>
-    <requirement type="package" version="1.8.2">snvphyl-tools</requirement>
-  </requirements>
+  <macros>
+   <import>macros.xml</import>
+  </macros>
+  <expand macro="requirements"/>
  <command detect_errors="exit_code">
 	filterVcf.pl --noindels  $vcf
 	-o $vcfout
@@ -22,6 +23,5 @@
   <help>
   Filter out indels and complex variants from VCF file
   </help>
-<citations>
-</citations>
+  <expand macro="citations"/>
 </tool>

@@ -1,8 +1,9 @@
-<tool id="positions2snv_invariant_alignment" name="Positions to SNV invariant alignment" version ="1.8.2">
+<tool id="positions2snv_invariant_alignment" name="Positions to SNV invariant alignment" version ="@VERSION@+galaxy1">
   <description>Create a SNV and non-variant alignment from the SNVPhyl positions table and a reference genome.</description>
-  <requirements>
-    <requirement type="package" version="1.8.2">snvphyl-tools</requirement>
-  </requirements>
+  <macros>
+    <import>macros.xml</import>
+  </macros>
+  <expand macro="requirements"/>
   <command detect_errors="exit_code"><![CDATA[
 	positions2snv_invariant_alignment.pl -i $snv_table --reference-file $reference_genome -o outputs -f $out_format $keep_all $merge_alignment
   ]]></command>
@@ -85,7 +86,5 @@ What it does
 Creates a SNV and non-variant alignment from the SNVPhyl SNV positions table and a reference genome.
 
   </help>
-
-  <citations>
-  </citations>
+  <expand macro="citations"/>
 </tool>

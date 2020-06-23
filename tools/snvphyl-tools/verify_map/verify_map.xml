@@ -1,8 +1,9 @@
-<tool id="verify_map" name="Verify Mapping Quality" version="1.8.2">
+<tool id="verify_map" name="Verify Mapping Quality" version="@VERSION@+galaxy1">
 	<description>Checks the mapping quality of all BAM files generated in the core SNV pipeline.</description>
-	<requirements>
-		<requirement type="package" version="1.8.2">snvphyl-tools</requirement>
-	</requirements>
+	<macros>
+		<import>macros.xml</import>
+	</macros>
+	<expand macro="requirements"/>
 	<command detect_errors="exit_code">
 		verify_mapping_quality.pl
  		#for $f in $bams.keys# --bam "$f=$bams[$f]" #end for#
@@ -60,5 +61,5 @@ Usage
   - min-map - The minimum perecent coverage required in each BAM file.
 
 	</help>
-	<citations/>
+	<expand macro="citations"/>
 </tool>
