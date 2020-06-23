@@ -1,8 +1,9 @@
-<tool id="filterstat" name="Filter Stats" version ="1.8.2">
+<tool id="filterstat" name="Filter Stats" version ="@VERSION@+galaxy1">
   <description>Identify number of positions excluded based on filtered status</description>
-  <requirements>
-    <requirement type="package" version="1.8.2">snvphyl-tools</requirement>
-  </requirements>
+  <macros>
+    <import>macros.xml</import>
+  </macros>
+  <expand macro="requirements"/>
   <command detect_errors="exit_code">
       filter-stats.pl -i $tabfile
       #if $summary:
@@ -43,6 +44,5 @@ Usage
 **Options**
   - -all When this option is set, the summary will include all the entries marked as 'filtered-invalid'
   </help>
-<citations>
-</citations>
+  <expand macro="citations"/>
 </tool>

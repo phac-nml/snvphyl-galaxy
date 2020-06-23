@@ -1,8 +1,9 @@
-<tool id="vcf2snvalignment" name="VCF 2 snvalignment" version ="1.8.2">
+<tool id="vcf2snvalignment" name="VCF 2 snvalignment" version="@VERSION@+galaxy1">
   <description>create a snv alignment from multiple merged VCF files</description>
-  <requirements>
-    <requirement type="package" version="1.8.2">snvphyl-tools</requirement>
-  </requirements>
+  <macros>
+    <import>macros.xml</import>
+  </macros>
+  <expand macro="requirements"/>
   <command detect_errors="exit_code"><![CDATA[
 
 
@@ -89,8 +90,5 @@
   <help>
   Produces an alignment of SNVs from the merged variant/non-variant calls produced from the "consolidate_vcfs" tool.
   </help>
-
-  <citations>
-  </citations>
-
+  <expand macro="citations"/>
 </tool>
