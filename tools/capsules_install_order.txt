@@ -6,3 +6,4 @@ capsule_toolshed.g2.bx.psu.edu_regex_find_replace_jjohnson_9ea374bb0350.tar.gz
 capsule_toolshed.g2.bx.psu.edu_collapse_collections_nml_49bd84e136c7.tar.gz
 capsule_toolshed.g2.bx.psu.edu_bcftools_view_iuc_d1f8f55f564d.tar.gz
 capsule_toolshed.g2.bx.psu.edu_bcftools_call_iuc_0fba2c15b40d.tar.gz
+capsule_toolshed.g2.bx.psu.edu_bundle_collections_nml_705ebd286b57.tar.gz
