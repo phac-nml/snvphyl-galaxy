@@ -35,7 +35,7 @@ fi
 
 for file in "$@"
 do
-    workflow-install -g http://localhost:$PORT -a admin --publish_workflows -w "$file"
+    workflow-install -g http://localhost:$PORT -a fakekey --publish_workflows -w "$file"
 done
 
 exit_code=$?
