@@ -3,7 +3,7 @@ FROM bgruening/galaxy-stable:20.05
 
 MAINTAINER Aaron Petkau, aaron.petkau@gmail.com
 
-ENV GALAXY_CONFIG_BRAND SNVPhyl v1.2.0 (Galaxy 20.05)
+ENV GALAXY_CONFIG_BRAND SNVPhyl v1.2.1 (Galaxy 20.05)
 
 WORKDIR /galaxy-central
 
