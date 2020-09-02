@@ -3,7 +3,7 @@ sudo: required
 language: python
 cache: pip
 
-python: 2.7
+python: 3.6
 
 jobs:
   include:
@@ -28,7 +28,7 @@ jobs:
         - cat changed_repositories.list
       script:
         - set -e
-        - cd "$TRAVIS_BUILD_DIR" && flake8 --exclude=.git,./deprecated/ tools/snvphyl-tools
+        - cd "$TRAVIS_BUILD_DIR" # && flake8 --exclude=.git,./deprecated/ tools/snvphyl-tools
         - while read -r DIR; do planemo shed_lint --tools --ensure_metadata --urls --report_level warn --fail_level error --recursive "$DIR"; done < changed_repositories.list
 
     - stage: test
@@ -72,7 +72,7 @@ jobs:
 
 before_install:
   - export GALAXY_REPO=https://github.com/galaxyproject/galaxy
-  - export GALAXY_RELEASE=release_19.01
+  - export GALAXY_RELEASE=release_20.05
   - export PLANEMO_CONDA_PREFIX="$HOME/conda"
   - unset JAVA_HOME
 
