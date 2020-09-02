@@ -18,13 +18,13 @@ RUN install-tools $GALAXY_ROOT/snvphyl-tools.yml \
 # Install workflows
 ADD ./galaxy/install-workflows /usr/bin/install-workflows
 RUN chmod +x /usr/bin/install-workflows
-ADD ./galaxy/snvphyl-workflow-1.2.0.ga /tmp/snvphyl-workflow-1.2.0.ga
-ADD ./galaxy/snvphyl-workflow-1.2.0-invalid-positions.ga /tmp/snvphyl-workflow-1.2.0-invalid-positions.ga
-ADD ./galaxy/snvphyl-workflow-1.2.0-single-end.ga /tmp/snvphyl-workflow-1.2.0-single-end.ga
-ADD ./galaxy/snvphyl-workflow-1.2.0-single-end-invalid-positions.ga /tmp/snvphyl-workflow-1.2.0-single-end-invalid-positions.ga
+ADD ./galaxy/snvphyl-workflow-1.2.1.ga /tmp/snvphyl-workflow-1.2.1.ga
+ADD ./galaxy/snvphyl-workflow-1.2.1-invalid-positions.ga /tmp/snvphyl-workflow-1.2.1-invalid-positions.ga
+ADD ./galaxy/snvphyl-workflow-1.2.1-single-end.ga /tmp/snvphyl-workflow-1.2.1-single-end.ga
+ADD ./galaxy/snvphyl-workflow-1.2.1-single-end-invalid-positions.ga /tmp/snvphyl-workflow-1.2.1-single-end-invalid-positions.ga
 
-RUN install-workflows "/tmp/snvphyl-workflow-1.2.0.ga" "/tmp/snvphyl-workflow-1.2.0-invalid-positions.ga" \
-                      "/tmp/snvphyl-workflow-1.2.0-single-end.ga" "/tmp/snvphyl-workflow-1.2.0-single-end-invalid-positions.ga"
+RUN install-workflows "/tmp/snvphyl-workflow-1.2.1.ga" "/tmp/snvphyl-workflow-1.2.1-invalid-positions.ga" \
+                      "/tmp/snvphyl-workflow-1.2.1-single-end.ga" "/tmp/snvphyl-workflow-1.2.1-single-end-invalid-positions.ga"
 
 # Mark folders as imported from the host.
 VOLUME ["/export/", "/data/", "/var/lib/docker"]
