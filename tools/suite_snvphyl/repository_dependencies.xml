@@ -1,6 +1,6 @@
 <?xml version="1.1"?>
 <repositories description="A suite of tools associated with SNVphyl pipeline">
-	<repository name="regex_find_replace" owner="jjohnson"/>
+	<repository name="regex_find_replace" owner="galaxyp"/>
 	<repository name="freebayes" owner="devteam"/>
 	<repository name="bcftools_mpileup" owner="iuc"/>
 	<repository name="bcftools_view" owner="iuc"/>
