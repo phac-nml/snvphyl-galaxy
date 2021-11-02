@@ -1,6 +1,6 @@
 # Listeria monocytogenes 1408MLGX6-3WGS
 
-This example goes through the analysis of a *Listeria monocytogenes* dataset through SNVPhyl.  The source of this data can be found in the [WGS Standards and Analysis][] project.  The necessary reference and sequence reads can be downloaded from <https://irida.corefacility.ca/downloads/snvphyl-galaxy/examples/snvphyl-example-lm.tar.gz> (7.6 GB).
+This example goes through the analysis of a *Listeria monocytogenes* dataset through SNVPhyl.  The source of this data can be found in the [WGS Standards and Analysis][] project.  The necessary reference and sequence reads can be downloaded from <https://sairidapublic.blob.core.windows.net/downloads/snvphyl-galaxy/examples/snvphyl-example-lm.tar.gz> (7.6 GB).
 
 This example assumes you have a working version of SNVPhyl up and running within Galaxy.  For instructions on how to get to this stage, please refer to the [Install] documentation.
 ## Step 1: Generate Invalid Positions File

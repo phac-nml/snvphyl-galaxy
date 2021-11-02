@@ -26,7 +26,7 @@ Please see <http://snvphyl.readthedocs.io/en/latest/install/galaxy/> for more de
 
 ## Virtual Machine
 
-A virtual machine containing the SNVPhyl workflow pipeline and Galaxy is available for download at <https://irida.corefacility.ca/downloads/snvphyl-galaxy/snvphyl-galaxy-current.zip> or, using [Vagrant][], can be launched like:
+A virtual machine containing the SNVPhyl workflow pipeline and Galaxy is available for download at <https://sairidapublic.blob.core.windows.net/downloads/snvphyl-galaxy/snvphyl-galaxy-current.zip> or, using [Vagrant][], can be launched like:
 
 ```bash
 git clone https://github.com/phac-nml/snvphyl-galaxy.git

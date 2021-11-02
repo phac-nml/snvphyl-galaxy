@@ -51,7 +51,7 @@ vagrant destroy
 VirtualBox Import
 -----------------
 
-As an alternative to [Vagrant][], a [VirtualBox][] image can be downloaded and imported from <https://irida.corefacility.ca/downloads/snvphyl-galaxy/snvphyl-galaxy-current.zip>.
+As an alternative to [Vagrant][], a [VirtualBox][] image can be downloaded and imported from <https://sairidapublic.blob.core.windows.net/downloads/snvphyl-galaxy/snvphyl-galaxy-current.zip>.
 
 Building Custom Virtual Machines
 --------------------------------
