@@ -1,6 +1,6 @@
 # SNVPhyl: Whole Genome SNV Phylogenomics Pipeline
 
-The SNVPhyl (__S__ingle __N__ucleotide __V__ariant __PHYL__ogenomics) pipeline is a pipeline for identifying Single Nucleotide Variants (SNV) within a collection of microbial genomes and constructing a phylogenetic tree.  [Input][] is provided in the form of a collection of whole genome sequence reads as well as an assembled reference genome.  The [output][] for the pipeline consists of a whole genome phylogenetic tree constructed from the detected SNVs, as well as a list of all detected SNVs and other information.  The pipeline is implemented using the [Galaxy][] bioinformatics analysis platform.
+The SNVPhyl (Single Nucleotide Variant PHYLogenomics) pipeline is a pipeline for identifying Single Nucleotide Variants (SNV) within a collection of microbial genomes and constructing a phylogenetic tree.  [Input][] is provided in the form of a collection of whole genome sequence reads as well as an assembled reference genome.  The [output][] for the pipeline consists of a whole genome phylogenetic tree constructed from the detected SNVs, as well as a list of all detected SNVs and other information.  The pipeline is implemented using the [Galaxy][] bioinformatics analysis platform.
 
 [![snv-tree][]][snv-tree]
 
@@ -24,6 +24,10 @@ docker run -d -p 48888:80 phacnml/snvphyl-galaxy-1.0.1
 ```
 
 Once running, SNVPhyl/Galaxy can be accessed from <http://localhost:48888> with username `admin@galaxy.org` and password `admin`.  Please see [Usage][] and [Installation][] for more details.
+
+## Nextflow
+
+A version of SNVPhyl developed for [Nextflow](https://www.nextflow.io/) by *Jill Hagey* is available at <https://github.com/DHQP/SNVPhyl_Nextflow>.
 
 # Operation
 

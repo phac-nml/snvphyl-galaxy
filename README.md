@@ -18,6 +18,10 @@ python bin/snvphyl.py --deploy-docker --fastq-dir example-data/fastqs --referenc
 
 Please see <https://github.com/phac-nml/snvphyl-galaxy-cli> for more details.
 
+## Nextflow
+
+A version of SNVPhyl available for execution in [Nextflow](https://www.nextflow.io/) has been developed by *Jill Hagey* and is available at <https://github.com/DHQP/SNVPhyl_Nextflow>.
+
 ## Galaxy
 
 The SNVPhyl pipeline is available via a Galaxy toolshed at <http://irida.corefacility.ca/galaxy-shed>.  Dependency tools are installable via the `suite_snvphyl_x_y_z` tool suite.  Workflow files are available at [docs/workflows/SNVPhyl/](docs/workflows/SNVPhyl/).
