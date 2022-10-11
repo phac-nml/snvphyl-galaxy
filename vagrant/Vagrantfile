@@ -17,7 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  config.vm.box_url = "https://sairidapublic.blob.core.windows.net/downloads/snvphyl-galaxy/vagrant/snvphyl-galaxy-1.0.1.box"
+  config.vm.box_url = "https://sairidapublic.blob.core.windows.net/downloads/vagrant/snvphyl-galaxy-1.0.1.box"
   config.vm.box_download_checksum = "8d21cd35a1651741d4ac18b48b8772f82da07460cfa6142df3ef0956aa598cd0"
   config.vm.box_download_checksum_type = "sha256"
 end
